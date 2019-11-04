@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		091925C285447A2B54292A40 /* Pods_SuCasa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9A42759A6AEB44F15643F6 /* Pods_SuCasa.framework */; };
 		BAB9EFB5237095CD00B480F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB9EFB4237095CD00B480F1 /* AppDelegate.swift */; };
 		BAB9EFB7237095CD00B480F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB9EFB6237095CD00B480F1 /* SceneDelegate.swift */; };
 		BAB9EFB9237095CD00B480F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB9EFB8237095CD00B480F1 /* ViewController.swift */; };
@@ -18,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		338DA7825B0047A78C499018 /* Pods-SuCasa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuCasa.release.xcconfig"; path = "Target Support Files/Pods-SuCasa/Pods-SuCasa.release.xcconfig"; sourceTree = "<group>"; };
+		8F6CA9F7B8D35C36B0A15AB3 /* Pods-SuCasa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuCasa.debug.xcconfig"; path = "Target Support Files/Pods-SuCasa/Pods-SuCasa.debug.xcconfig"; sourceTree = "<group>"; };
+		AB9A42759A6AEB44F15643F6 /* Pods_SuCasa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuCasa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB9EFB1237095CD00B480F1 /* SuCasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuCasa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB9EFB4237095CD00B480F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAB9EFB6237095CD00B480F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,17 +39,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				091925C285447A2B54292A40 /* Pods_SuCasa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		582C0BA3013E8764EE553295 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F6CA9F7B8D35C36B0A15AB3 /* Pods-SuCasa.debug.xcconfig */,
+				338DA7825B0047A78C499018 /* Pods-SuCasa.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BAB9EFA8237095CD00B480F1 = {
 			isa = PBXGroup;
 			children = (
 				BAB9EFB3237095CD00B480F1 /* SuCasa */,
 				BAB9EFB2237095CD00B480F1 /* Products */,
+				582C0BA3013E8764EE553295 /* Pods */,
+				C42B3FCD48A1E699D8125887 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +90,14 @@
 			path = SuCasa;
 			sourceTree = "<group>";
 		};
+		C42B3FCD48A1E699D8125887 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB9A42759A6AEB44F15643F6 /* Pods_SuCasa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +105,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAB9EFC8237095D000B480F1 /* Build configuration list for PBXNativeTarget "SuCasa" */;
 			buildPhases = (
+				18EEA991BD434F9EBAAF69E2 /* [CP] Check Pods Manifest.lock */,
 				BAB9EFAD237095CD00B480F1 /* Sources */,
 				BAB9EFAE237095CD00B480F1 /* Frameworks */,
 				BAB9EFAF237095CD00B480F1 /* Resources */,
+				CE2BED45CDF73C6382E0ED4E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -139,6 +166,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18EEA991BD434F9EBAAF69E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SuCasa-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE2BED45CDF73C6382E0ED4E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuCasa/Pods-SuCasa-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuCasa/Pods-SuCasa-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuCasa/Pods-SuCasa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BAB9EFAD237095CD00B480F1 /* Sources */ = {
@@ -290,6 +359,7 @@
 		};
 		BAB9EFC9237095D000B480F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F6CA9F7B8D35C36B0A15AB3 /* Pods-SuCasa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -309,6 +379,7 @@
 		};
 		BAB9EFCA237095D000B480F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 338DA7825B0047A78C499018 /* Pods-SuCasa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
