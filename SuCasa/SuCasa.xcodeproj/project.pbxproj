@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		091925C285447A2B54292A40 /* Pods_SuCasa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9A42759A6AEB44F15643F6 /* Pods_SuCasa.framework */; };
+		BAB8D9FF2371DD400039CBC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAB8D9FE2371DD400039CBC5 /* GoogleService-Info.plist */; };
 		BAB9EFB5237095CD00B480F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB9EFB4237095CD00B480F1 /* AppDelegate.swift */; };
 		BAB9EFB7237095CD00B480F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB9EFB6237095CD00B480F1 /* SceneDelegate.swift */; };
 		BAB9EFB9237095CD00B480F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB9EFB8237095CD00B480F1 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 		338DA7825B0047A78C499018 /* Pods-SuCasa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuCasa.release.xcconfig"; path = "Target Support Files/Pods-SuCasa/Pods-SuCasa.release.xcconfig"; sourceTree = "<group>"; };
 		8F6CA9F7B8D35C36B0A15AB3 /* Pods-SuCasa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuCasa.debug.xcconfig"; path = "Target Support Files/Pods-SuCasa/Pods-SuCasa.debug.xcconfig"; sourceTree = "<group>"; };
 		AB9A42759A6AEB44F15643F6 /* Pods_SuCasa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuCasa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAB8D9FE2371DD400039CBC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BAB9EFB1237095CD00B480F1 /* SuCasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuCasa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB9EFB4237095CD00B480F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAB9EFB6237095CD00B480F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,7 +54,6 @@
 				8F6CA9F7B8D35C36B0A15AB3 /* Pods-SuCasa.debug.xcconfig */,
 				338DA7825B0047A78C499018 /* Pods-SuCasa.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -84,6 +85,7 @@
 				BAB9EFCB2370AD2C00B480F1 /* Form.storyboard */,
 				BAB9EFC0237095D000B480F1 /* Assets.xcassets */,
 				BAB9EFC2237095D000B480F1 /* LaunchScreen.storyboard */,
+				BAB8D9FE2371DD400039CBC5 /* GoogleService-Info.plist */,
 				BAB9EFC5237095D000B480F1 /* Info.plist */,
 				BAB9EFBD237095CD00B480F1 /* SuCasa.xcdatamodeld */,
 			);
@@ -160,6 +162,7 @@
 			files = (
 				BAB9EFC4237095D000B480F1 /* LaunchScreen.storyboard in Resources */,
 				BAB9EFC1237095D000B480F1 /* Assets.xcassets in Resources */,
+				BAB8D9FF2371DD400039CBC5 /* GoogleService-Info.plist in Resources */,
 				BAB9EFCC2370AD2C00B480F1 /* Form.storyboard in Resources */,
 				BAB9EFBC237095CD00B480F1 /* Main.storyboard in Resources */,
 			);
