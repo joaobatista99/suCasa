@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UXd-qk-WEO">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
@@ -11,7 +11,7 @@
         <!--Intro-->
         <scene sceneID="ZDg-QC-S9l">
             <objects>
-                <viewController title="Intro" id="UXd-qk-WEO" customClass="IntroViewController" customModule="SuCasa" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Intro" title="Intro" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UXd-qk-WEO" customClass="IntroViewController" customModule="SuCasa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VfS-qV-9sk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,13 +26,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Somos a SuCasa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbZ-1M-1MY">
-                                                        <rect key="frame" x="23" y="68.5" width="161.5" height="26.5"/>
+                                                        <rect key="frame" x="23" y="68.666666666666671" width="161.33333333333334" height="26.333333333333329"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Faça propostas de aluguel com um valor acessível." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fb-AL-TRP">
-                                                        <rect key="frame" x="23" y="115" width="248" height="97"/>
+                                                        <rect key="frame" x="23.000000000000014" y="115.33333333333334" width="248.33333333333337" height="96.666666666666657"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -51,13 +51,13 @@
                                                 <rect key="frame" x="414" y="0.0" width="414" height="818"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Somos a SuCasa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1u-nq-vwg">
-                                                        <rect key="frame" x="23" y="68.5" width="161.5" height="26.5"/>
+                                                        <rect key="frame" x="23" y="68.666666666666671" width="161.33333333333334" height="26.333333333333329"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Compartilhe experiências e viva novas culturas." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzQ-tA-mgq">
-                                                        <rect key="frame" x="23" y="115" width="248" height="97"/>
+                                                        <rect key="frame" x="23.000000000000014" y="115.33333333333334" width="248.33333333333337" height="96.666666666666657"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -76,13 +76,13 @@
                                                 <rect key="frame" x="828" y="0.0" width="414" height="818"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Somos a SuCasa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZD-GI-maS">
-                                                        <rect key="frame" x="23" y="68.5" width="161.5" height="26.5"/>
+                                                        <rect key="frame" x="23" y="68.666666666666671" width="161.33333333333334" height="26.333333333333329"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Flexibilidade e segurança para ambas as partes." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhE-ud-mzf">
-                                                        <rect key="frame" x="23" y="115" width="248" height="97"/>
+                                                        <rect key="frame" x="23.000000000000014" y="115.33333333333334" width="248.33333333333337" height="96.666666666666657"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -119,19 +119,22 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="eXK-yh-fXO"/>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="QR2-HA-2sC">
-                                <rect key="frame" x="187.5" y="706.5" width="39" height="37"/>
+                                <rect key="frame" x="187.66666666666666" y="706.33333333333337" width="39" height="37"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8qb-UH-HJ6">
-                                <rect key="frame" x="41.5" y="770.5" width="331" height="44.5"/>
+                                <rect key="frame" x="41.333333333333343" y="770.33333333333337" width="331.33333333333326" height="44.666666666666629"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37X-KH-EC4">
-                                        <rect key="frame" x="0.0" y="0.0" width="331" height="44.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="331.33333333333331" height="44.666666666666664"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="ENTRAR">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="startApp:" destination="UXd-qk-WEO" eventType="touchUpInside" id="Lu6-tk-W63"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -167,11 +170,57 @@
                     <connections>
                         <outlet property="pageControl" destination="QR2-HA-2sC" id="TmO-6a-KmN"/>
                         <outlet property="scrollView" destination="QYP-XU-rHm" id="Mgl-jx-3DF"/>
+                        <segue destination="98V-x9-a6x" kind="show" identifier="startApp" id="P3e-FW-eOo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2r4-8v-Mxn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-24" y="-37"/>
+            <point key="canvasLocation" x="-23" y="-70"/>
+        </scene>
+        <!--Explore-->
+        <scene sceneID="hYn-58-H52">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8AB-Xn-eJP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="Explore" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Sgr-Pj-lgc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h1f-yf-lTG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bgB-V3-uSf"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Explore" id="NDd-gS-Wxl"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="3068.115942028986" y="780.80357142857144"/>
+        </scene>
+        <!--Form-->
+        <scene sceneID="euK-eO-Lcf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Form" referencedIdentifier="Form" id="id2-KL-kZs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="KUC-q0-bC2"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="USW-YM-NKZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="490"/>
+        </scene>
+        <!--Start-->
+        <scene sceneID="wao-Ij-Jab">
+            <objects>
+                <tabBarController storyboardIdentifier="Start" title="Start" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="98V-x9-a6x" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Q8e-cz-OLS"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KnW-ff-iYw">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Sgr-Pj-lgc" kind="relationship" relationship="viewControllers" id="m2s-S0-thZ"/>
+                        <segue destination="id2-KL-kZs" kind="relationship" relationship="viewControllers" id="kUD-Qr-hFS"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jXJ-cb-eFI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1980" y="-70"/>
         </scene>
     </scenes>
 </document>

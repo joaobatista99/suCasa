@@ -25,6 +25,12 @@ class IntroViewController: UIViewController {
         scrollView.delegate = self
                
     }
+    
+    
+    @IBAction func startApp(_ sender: Any) {
+        UserDefaults.standard.set(true, forKey: "tutorialSeen")
+        performSegue(withIdentifier: "startApp", sender: self)
+    }
 }
 
 extension IntroViewController: UIScrollViewDelegate {
