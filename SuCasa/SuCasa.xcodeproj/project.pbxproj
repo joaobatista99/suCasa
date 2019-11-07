@@ -18,6 +18,7 @@
 		BA670EDA237457F9005E3FDA /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA670ED0237457F9005E3FDA /* OpenSans-Semibold.ttf */; };
 		BA670EDB237457F9005E3FDA /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA670ED1237457F9005E3FDA /* OpenSans-Light.ttf */; };
 		BA670EDC237457F9005E3FDA /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA670ED2237457F9005E3FDA /* OpenSans-SemiboldItalic.ttf */; };
+		BA670EDF23746054005E3FDA /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA670EDE23746054005E3FDA /* Profile.storyboard */; };
 		BA7794B623735DB700F8D024 /* Form.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA7794B523735DB700F8D024 /* Form.storyboard */; };
 		BAB8D9FF2371DD400039CBC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAB8D9FE2371DD400039CBC5 /* GoogleService-Info.plist */; };
 		BAB8DA022371E8AE0039CBC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB8DA012371E8AE0039CBC5 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		BA670ED0237457F9005E3FDA /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		BA670ED1237457F9005E3FDA /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		BA670ED2237457F9005E3FDA /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		BA670EDE23746054005E3FDA /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		BA7794B523735DB700F8D024 /* Form.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Form.storyboard; sourceTree = "<group>"; };
 		BAB8D9FE2371DD400039CBC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BAB8DA012371E8AE0039CBC5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				BAB9EFC2237095D000B480F1 /* LaunchScreen.storyboard */,
 				BAB8DA012371E8AE0039CBC5 /* Main.storyboard */,
 				BA7794B523735DB700F8D024 /* Form.storyboard */,
+				BA670EDE23746054005E3FDA /* Profile.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				BA670ED4237457F9005E3FDA /* OpenSans-ExtraBold.ttf in Resources */,
 				BA7794B623735DB700F8D024 /* Form.storyboard in Resources */,
 				BAB9EFC1237095D000B480F1 /* Assets.xcassets in Resources */,
+				BA670EDF23746054005E3FDA /* Profile.storyboard in Resources */,
 				BAB8D9FF2371DD400039CBC5 /* GoogleService-Info.plist in Resources */,
 				BAB8DA022371E8AE0039CBC5 /* Main.storyboard in Resources */,
 				BA670ED9237457F9005E3FDA /* OpenSans-Italic.ttf in Resources */,
