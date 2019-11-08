@@ -202,7 +202,7 @@
                     <connections>
                         <outlet property="pageControl" destination="QR2-HA-2sC" id="TmO-6a-KmN"/>
                         <outlet property="scrollView" destination="QYP-XU-rHm" id="Mgl-jx-3DF"/>
-                        <segue destination="98V-x9-a6x" kind="show" identifier="startApp" id="P3e-FW-eOo"/>
+                        <segue destination="98V-x9-a6x" kind="presentation" identifier="startApp" animates="NO" modalPresentationStyle="fullScreen" id="ZdW-d0-2nT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2r4-8v-Mxn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -214,7 +214,7 @@
             <objects>
                 <viewController storyboardIdentifier="Explore" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Sgr-Pj-lgc" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h1f-yf-lTG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="bgB-V3-uSf"/>
@@ -225,10 +225,10 @@
             </objects>
             <point key="canvasLocation" x="1310" y="785"/>
         </scene>
-        <!--Form-->
+        <!--Ad-->
         <scene sceneID="euK-eO-Lcf">
             <objects>
-                <viewControllerPlaceholder storyboardName="Form" referencedIdentifier="Form" id="id2-KL-kZs" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="Ad" storyboardName="Ad" referencedIdentifier="Ad" id="id2-KL-kZs" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="KUC-q0-bC2"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="USW-YM-NKZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
