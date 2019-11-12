@@ -27,6 +27,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Myg-xd-RUr">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="yR6-Tb-gLL" kind="relationship" relationship="rootViewController" id="AhF-Ef-gYo"/>
@@ -36,10 +37,10 @@
             </objects>
             <point key="canvasLocation" x="-971" y="101"/>
         </scene>
-        <!--View Controller-->
+        <!--Space View Controller-->
         <scene sceneID="7wd-sq-wnD">
             <objects>
-                <viewController id="yR6-Tb-gLL" sceneMemberID="viewController">
+                <viewController id="yR6-Tb-gLL" customClass="SpaceViewController" customModule="SuCasa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yw3-aa-3ht">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,15 +90,15 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
+                                        <integer key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="MEj-Sw-fQ0" kind="show" id="euo-98-yyS"/>
+                                    <segue destination="PAW-ok-E21" kind="show" id="jfG-8e-lyh"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="VxP-A5-IyD" firstAttribute="centerY" secondItem="1LD-S1-gL0" secondAttribute="centerY" multiplier="1.65" id="2Kg-nN-qxb"/>
                             <constraint firstItem="xpu-u7-dOE" firstAttribute="top" secondItem="U8U-aM-epX" secondAttribute="bottom" constant="10" id="4hv-fp-Nxx"/>
@@ -149,16 +150,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O marcador está no local correto?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dMM-Pj-HZV">
-                                <rect key="frame" x="15" y="98" width="372.5" height="89"/>
+                                <rect key="frame" x="15" y="54" width="372.5" height="164"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="34"/>
                                 <color key="textColor" red="0.39241147040000002" green="0.40347844360000001" blue="0.443143338" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pyW-y4-0Tg">
-                                <rect key="frame" x="0.0" y="217.5" width="414" height="681"/>
+                                <rect key="frame" x="0.0" y="192" width="414" height="681"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llU-lj-bPH">
-                                <rect key="frame" x="270.5" y="763.5" width="103.5" height="40.5"/>
+                                <rect key="frame" x="270.5" y="727.5" width="103.5" height="40"/>
                                 <color key="backgroundColor" red="0.38467586040000001" green="0.097716085610000003" blue="0.15748378630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
                                 <state key="normal" title="Próximo">
@@ -169,12 +170,9 @@
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="NYI-Li-GoT" kind="show" id="egj-SH-LBz"/>
-                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="llU-lj-bPH" firstAttribute="height" secondItem="VeA-xW-OSU" secondAttribute="height" multiplier="0.045" id="55U-cD-NtH"/>
                             <constraint firstItem="llU-lj-bPH" firstAttribute="width" secondItem="VeA-xW-OSU" secondAttribute="width" multiplier="0.25" id="5CS-iX-cfH"/>
@@ -195,31 +193,70 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caN-OZ-xWT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1037" y="103"/>
+            <point key="canvasLocation" x="997" y="-634"/>
         </scene>
-        <!--View Controller-->
+        <!--Guests View Controller-->
+        <scene sceneID="Tg3-fP-mCm">
+            <objects>
+                <viewController id="PAW-ok-E21" customClass="GuestsViewController" customModule="SuCasa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="666-Db-bR3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantos hóspedes podem ficar?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UIP-44-0zE">
+                                <rect key="frame" x="15" y="96" width="372.5" height="93"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="34"/>
+                                <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verifique se você tem camas suficientes para acomodar confortavelmente todos os seus hóspedes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dts-vJ-OMi">
+                                <rect key="frame" x="15" y="209" width="372.5" height="69.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
+                                <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="UIP-44-0zE" firstAttribute="leading" secondItem="bp1-Kz-17w" secondAttribute="leading" constant="15" id="LM4-5n-Kay"/>
+                            <constraint firstItem="dts-vJ-OMi" firstAttribute="leading" secondItem="bp1-Kz-17w" secondAttribute="leading" constant="15" id="Mu9-Yn-NXE"/>
+                            <constraint firstItem="UIP-44-0zE" firstAttribute="top" secondItem="bp1-Kz-17w" secondAttribute="top" constant="8" id="UyI-Hh-K5e"/>
+                            <constraint firstItem="UIP-44-0zE" firstAttribute="centerY" secondItem="bp1-Kz-17w" secondAttribute="centerY" multiplier="0.3" id="Ysf-RJ-p4u"/>
+                            <constraint firstItem="dts-vJ-OMi" firstAttribute="width" secondItem="666-Db-bR3" secondAttribute="width" multiplier="0.9" id="n8c-wM-tZy"/>
+                            <constraint firstItem="UIP-44-0zE" firstAttribute="width" secondItem="666-Db-bR3" secondAttribute="width" multiplier="0.9" id="qoy-UW-D0N"/>
+                            <constraint firstItem="dts-vJ-OMi" firstAttribute="top" secondItem="UIP-44-0zE" secondAttribute="bottom" constant="20" id="vrS-fw-hKv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bp1-Kz-17w"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4Xe-nw-gXC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bf1-hy-WIj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="102"/>
+        </scene>
+        <!--Add Photos View Controller-->
         <scene sceneID="Q2e-n5-9Cg">
             <objects>
-                <viewController id="NYI-Li-GoT" sceneMemberID="viewController">
+                <viewController id="NYI-Li-GoT" customClass="AddPhotosViewController" customModule="SuCasa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mYQ-2l-PrZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adicione fotos do seu espaço" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7Yf-tV-XAG">
-                                <rect key="frame" x="15" y="98" width="372.5" height="89"/>
+                                <rect key="frame" x="15" y="54" width="372.5" height="164"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="34"/>
                                 <color key="textColor" red="0.38761192560000002" green="0.40315389629999998" blue="0.44882738589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84r-ja-z2W">
-                                <rect key="frame" x="15" y="202" width="372.5" height="61.5"/>
+                                <rect key="frame" x="15" y="233" width="372.5" height="61.5"/>
                                 <string key="text">As fotos ajudam os  hóspedes a imaginarem como é ficar na sua acomodação. Você pode começar com uma foto e adicionar outras depois de publicar.</string>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                 <color key="textColor" red="0.38761192560000002" green="0.40315389629999998" blue="0.44882738589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7d-eY-IXf">
-                                <rect key="frame" x="20.5" y="303.5" width="373" height="54"/>
+                                <rect key="frame" x="20.5" y="334.5" width="373" height="53.5"/>
                                 <color key="backgroundColor" red="0.38467586040000001" green="0.097716085610000003" blue="0.15748378630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
                                 <state key="normal" title="Adicionar Fotos">
@@ -227,7 +264,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjP-vQ-Wbf">
-                                <rect key="frame" x="270.5" y="764.5" width="103.5" height="40.5"/>
+                                <rect key="frame" x="270.5" y="728.5" width="103.5" height="40"/>
                                 <color key="backgroundColor" red="0.38467586040000001" green="0.097716085610000003" blue="0.15748378630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
                                 <state key="normal" title="Próximo">
@@ -243,7 +280,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="y7d-eY-IXf" firstAttribute="centerX" secondItem="zn5-ug-JVz" secondAttribute="centerX" id="1oS-HB-Wpq"/>
                             <constraint firstItem="84r-ja-z2W" firstAttribute="width" secondItem="mYQ-2l-PrZ" secondAttribute="width" multiplier="0.9" id="ABY-FU-pfy"/>
@@ -269,58 +306,58 @@
             </objects>
             <point key="canvasLocation" x="1770" y="103"/>
         </scene>
-        <!--View Controller-->
+        <!--Title View Controller-->
         <scene sceneID="wiC-2Q-tzF">
             <objects>
-                <viewController id="1Cl-bj-BOE" sceneMemberID="viewController">
+                <viewController id="1Cl-bj-BOE" customClass="TitleViewController" customModule="SuCasa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SsG-OD-Zvb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dê um título ao seu espaço" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PMM-QG-wo0">
-                                <rect key="frame" x="15" y="98" width="372.5" height="89"/>
+                                <rect key="frame" x="15" y="10" width="372.5" height="222.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="34"/>
                                 <color key="textColor" red="0.38761192560000002" green="0.40315389629999998" blue="0.44882738589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Atraia os hóspedes com um título de anúncio que destaque o que há de especial em sua acomodação." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Fhp-49-kgx">
-                                <rect key="frame" x="15" y="202" width="372.5" height="41"/>
+                                <rect key="frame" x="15" y="247.5" width="372.5" height="41"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                 <color key="textColor" red="0.38761192560000002" green="0.40315389629999998" blue="0.44882738589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DpX-p8-uOh">
-                                <rect key="frame" x="15" y="278" width="372.5" height="20"/>
+                                <rect key="frame" x="15" y="323.5" width="372.5" height="20"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
                                 <color key="textColor" red="0.38761192560000002" green="0.40315389629999998" blue="0.44882738589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2OF-4o-c46">
-                                <rect key="frame" x="15" y="308" width="372.5" height="54"/>
+                                <rect key="frame" x="15" y="353.5" width="372.5" height="50.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ON9-sY-BSG">
-                                <rect key="frame" x="15" y="363" width="372.5" height="1.5"/>
+                                <rect key="frame" x="15" y="405" width="372.5" height="1.5"/>
                                 <color key="backgroundColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descreva as regras da casa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVA-5z-Cif">
-                                <rect key="frame" x="15" y="424.5" width="372.5" height="20.5"/>
+                                <rect key="frame" x="15" y="466.5" width="372.5" height="20.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kWp-ma-xGL">
-                                <rect key="frame" x="15" y="455" width="372.5" height="54"/>
+                                <rect key="frame" x="15" y="497" width="372.5" height="50.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2mN-MO-iNZ">
-                                <rect key="frame" x="15" y="510" width="372.5" height="1.5"/>
+                                <rect key="frame" x="15" y="548.5" width="372.5" height="2"/>
                                 <color key="backgroundColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="db6-bB-vKm">
-                                <rect key="frame" x="270.5" y="763.5" width="103.5" height="40.5"/>
+                                <rect key="frame" x="270.5" y="647.5" width="103.5" height="38"/>
                                 <color key="backgroundColor" red="0.38467586040000001" green="0.097716085610000003" blue="0.15748378630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
                                 <state key="normal" title="Próximo">
@@ -336,7 +373,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2mN-MO-iNZ" firstAttribute="width" secondItem="SsG-OD-Zvb" secondAttribute="width" multiplier="0.9" id="2ab-KR-CLP"/>
                             <constraint firstItem="PMM-QG-wo0" firstAttribute="centerY" secondItem="wUd-KJ-LjC" secondAttribute="centerY" multiplier="0.3" id="3WC-Rp-6oT"/>
@@ -378,22 +415,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3He-2x-QKj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2624.6376811594205" y="101.78571428571428"/>
+            <point key="canvasLocation" x="2519" y="102"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="BoZ-4r-20m">
             <objects>
                 <viewController id="d9O-GD-ffu" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Ml-GL-pbW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xYg-hs-abA">
-                                <rect key="frame" x="0.0" y="7.5" width="414" height="251"/>
+                                <rect key="frame" x="0.0" y="-5" width="414" height="236"/>
                                 <color key="backgroundColor" red="0.62640708680000001" green="0.2191473246" blue="0.29411816600000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xYg-hs-abA" firstAttribute="centerX" secondItem="1OT-mM-ehn" secondAttribute="centerX" id="Akc-dE-Ta0"/>
                             <constraint firstItem="xYg-hs-abA" firstAttribute="centerY" secondItem="1OT-mM-ehn" secondAttribute="centerY" multiplier="0.28" id="jkB-F9-r5U"/>
@@ -406,7 +443,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RAB-Op-iSG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3552" y="100"/>
+            <point key="canvasLocation" x="3293" y="100"/>
         </scene>
     </scenes>
     <resources>
