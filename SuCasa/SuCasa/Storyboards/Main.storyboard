@@ -212,21 +212,41 @@
             </objects>
             <point key="canvasLocation" x="1980" y="-809"/>
         </scene>
-        <!--Explore-->
+        <!--Explore View Controller-->
         <scene sceneID="hYn-58-H52">
             <objects>
-                <viewController storyboardIdentifier="Explore" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Sgr-Pj-lgc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Explore" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Sgr-Pj-lgc" customClass="ExploreViewController" customModule="SuCasa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h1f-yf-lTG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="5Ax-bw-Cal">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5Ax-bw-Cal" firstAttribute="bottom" secondItem="bgB-V3-uSf" secondAttribute="bottom" id="Blf-BS-6rR"/>
+                            <constraint firstItem="bgB-V3-uSf" firstAttribute="bottom" secondItem="5Ax-bw-Cal" secondAttribute="bottom" id="LLP-1b-qNl"/>
+                            <constraint firstItem="5Ax-bw-Cal" firstAttribute="trailing" secondItem="bgB-V3-uSf" secondAttribute="trailing" id="RWw-zo-tHX"/>
+                            <constraint firstItem="5Ax-bw-Cal" firstAttribute="leading" secondItem="bgB-V3-uSf" secondAttribute="leading" id="SoF-ig-iSh"/>
+                            <constraint firstItem="5Ax-bw-Cal" firstAttribute="top" secondItem="bgB-V3-uSf" secondAttribute="top" id="iWW-wk-iN2"/>
+                            <constraint firstItem="bgB-V3-uSf" firstAttribute="trailing" secondItem="5Ax-bw-Cal" secondAttribute="trailing" id="lsy-0N-9IM"/>
+                            <constraint firstItem="5Ax-bw-Cal" firstAttribute="leading" secondItem="bgB-V3-uSf" secondAttribute="leading" id="tKt-Ne-Mjc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bgB-V3-uSf"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Explore" id="NDd-gS-Wxl"/>
+                    <navigationItem key="navigationItem" id="1rm-Bx-qgu"/>
+                    <connections>
+                        <outlet property="tableView" destination="5Ax-bw-Cal" id="Yub-Ru-fGC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8AB-Xn-eJP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1310" y="785"/>
+            <point key="canvasLocation" x="1309" y="1489"/>
         </scene>
         <!--Ad-->
         <scene sceneID="euK-eO-Lcf">
@@ -236,7 +256,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="USW-YM-NKZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1979" y="471"/>
+            <point key="canvasLocation" x="2888.4057971014495" y="470.75892857142856"/>
         </scene>
         <!--Profile-->
         <scene sceneID="eS9-o5-xAc">
@@ -246,7 +266,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nez-cB-YbB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2578" y="471"/>
+            <point key="canvasLocation" x="3486.9565217391305" y="470.75892857142856"/>
         </scene>
         <!--Start-->
         <scene sceneID="wao-Ij-Jab">
@@ -261,7 +281,7 @@
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Sgr-Pj-lgc" kind="relationship" relationship="viewControllers" id="m2s-S0-thZ"/>
+                        <segue destination="O53-D9-b9l" kind="relationship" relationship="viewControllers" id="m2s-S0-thZ"/>
                         <segue destination="id2-KL-kZs" kind="relationship" relationship="viewControllers" id="kUD-Qr-hFS"/>
                         <segue destination="zfC-YB-S3b" kind="relationship" relationship="viewControllers" id="LNE-bH-CDo"/>
                     </connections>
@@ -269,6 +289,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jXJ-cb-eFI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1980" y="-70"/>
+        </scene>
+        <!--Explore-->
+        <scene sceneID="9hD-88-HdC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O53-D9-b9l" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Explore" id="NDd-gS-Wxl"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GFD-S2-YVr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Sgr-Pj-lgc" kind="relationship" relationship="rootViewController" id="o3u-Hf-Q9g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YCW-7x-0Zn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1308.6956521739132" y="784.82142857142856"/>
         </scene>
     </scenes>
 </document>
