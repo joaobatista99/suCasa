@@ -23,8 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //determines where the app will launch
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let rootViewController = storyboard.instantiateViewController(withIdentifier: UserDefaults.standard.bool(forKey: "tutorialSeen") ? "Start" : "Intro")
-        
+        let rootViewController = storyboard.instantiateViewController(withIdentifier: "House Detail")
         window?.rootViewController = rootViewController
         
         return true

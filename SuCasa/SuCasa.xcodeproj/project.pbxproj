@@ -33,6 +33,11 @@
 		BAB9EFBF237095CD00B480F1 /* SuCasa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAB9EFBD237095CD00B480F1 /* SuCasa.xcdatamodeld */; };
 		BAB9EFC1237095D000B480F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB9EFC0237095D000B480F1 /* Assets.xcassets */; };
 		BAB9EFC4237095D000B480F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB9EFC2237095D000B480F1 /* LaunchScreen.storyboard */; };
+		BAEB14562379D973008438D4 /* HouseDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAEB14552379D973008438D4 /* HouseDetail.storyboard */; };
+		BAEB145A2379EEF5008438D4 /* HousePhoto.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAEB14592379EEF5008438D4 /* HousePhoto.xib */; };
+		BAEB145C2379F070008438D4 /* HouseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEB145B2379F070008438D4 /* HouseDetailViewController.swift */; };
+		BAEB145E2379F157008438D4 /* HousePhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEB145D2379F157008438D4 /* HousePhotoItem.swift */; };
+		BAEB14602379F35E008438D4 /* CarouselPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEB145F2379F35E008438D4 /* CarouselPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +68,11 @@
 		BAB9EFC0237095D000B480F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAB9EFC3237095D000B480F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAB9EFC5237095D000B480F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAEB14552379D973008438D4 /* HouseDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HouseDetail.storyboard; sourceTree = "<group>"; };
+		BAEB14592379EEF5008438D4 /* HousePhoto.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HousePhoto.xib; sourceTree = "<group>"; };
+		BAEB145B2379F070008438D4 /* HouseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailViewController.swift; sourceTree = "<group>"; };
+		BAEB145D2379F157008438D4 /* HousePhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousePhotoItem.swift; sourceTree = "<group>"; };
+		BAEB145F2379F35E008438D4 /* CarouselPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +122,13 @@
 				BA670EDE23746054005E3FDA /* Profile.storyboard */,
 
 				BA5D40DB2375F93A0041AC6B /* Login.storyboard */,
+<<<<<<< Updated upstream
 
 				5E474EB42375D8640083D3A5 /* PropertyRegistration.storyboard */,
 
+=======
+				BAEB14552379D973008438D4 /* HouseDetail.storyboard */,
+>>>>>>> Stashed changes
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -124,6 +138,8 @@
 			children = (
 				BAB8DA06237201200039CBC5 /* IntroViewController.swift */,
 				BA5D40D92375EA050041AC6B /* AdViewController.swift */,
+				BAEB145B2379F070008438D4 /* HouseDetailViewController.swift */,
+				BAEB145F2379F35E008438D4 /* CarouselPageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -157,6 +173,8 @@
 				BA670EDD23745801005E3FDA /* Fonts */,
 				BAB8DA002371E88A0039CBC5 /* Storyboards */,
 				BAB8DA052372004E0039CBC5 /* Controllers */,
+				BAEB14592379EEF5008438D4 /* HousePhoto.xib */,
+				BAEB145D2379F157008438D4 /* HousePhotoItem.swift */,
 			);
 			path = SuCasa;
 			sourceTree = "<group>";
@@ -241,6 +259,8 @@
 				BA7794B623735DB700F8D024 /* Ad.storyboard in Resources */,
 				BAB9EFC1237095D000B480F1 /* Assets.xcassets in Resources */,
 				BA670EDF23746054005E3FDA /* Profile.storyboard in Resources */,
+				BAEB145A2379EEF5008438D4 /* HousePhoto.xib in Resources */,
+				BAEB14562379D973008438D4 /* HouseDetail.storyboard in Resources */,
 				BAB8D9FF2371DD400039CBC5 /* GoogleService-Info.plist in Resources */,
 				BAB8DA022371E8AE0039CBC5 /* Main.storyboard in Resources */,
 				5E474EB52375D8640083D3A5 /* PropertyRegistration.storyboard in Resources */,
@@ -299,9 +319,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAEB145E2379F157008438D4 /* HousePhotoItem.swift in Sources */,
+				BAEB145C2379F070008438D4 /* HouseDetailViewController.swift in Sources */,
 				BAB9EFB5237095CD00B480F1 /* AppDelegate.swift in Sources */,
 				BA5D40DA2375EA050041AC6B /* AdViewController.swift in Sources */,
 				BAB9EFBF237095CD00B480F1 /* SuCasa.xcdatamodeld in Sources */,
+				BAEB14602379F35E008438D4 /* CarouselPageViewController.swift in Sources */,
 				BAB8DA07237201200039CBC5 /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
