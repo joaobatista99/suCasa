@@ -136,6 +136,10 @@
                         <viewLayoutGuide key="safeArea" id="1LD-S1-gL0"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="98X-ZB-T5o"/>
+                    <connections>
+                        <outlet property="propertyType" destination="FiH-tB-wFi" id="Cge-mY-RAg"/>
+                        <outlet property="spaceType" destination="xpu-u7-dOE" id="cfd-s2-3cO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOq-ac-ouy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
