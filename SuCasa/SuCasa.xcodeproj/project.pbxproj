@@ -18,6 +18,10 @@
 		36DD943C2375D5C0000012BB /* ExploreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36DD943A2375D5C0000012BB /* ExploreTableViewCell.xib */; };
 		36DD943E2375D71E000012BB /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD943D2375D71E000012BB /* ExploreViewController.swift */; };
 		5E474EB52375D8640083D3A5 /* PropertyRegistration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E474EB42375D8640083D3A5 /* PropertyRegistration.storyboard */; };
+		5E55AA17237B34C300887772 /* SpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E55AA16237B34C300887772 /* SpaceViewController.swift */; };
+		5E55AA19237B34E500887772 /* GuestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E55AA18237B34E500887772 /* GuestsViewController.swift */; };
+		5E55AA1B237B34FD00887772 /* AddPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E55AA1A237B34FD00887772 /* AddPhotosViewController.swift */; };
+		5E55AA1D237B351800887772 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E55AA1C237B351800887772 /* TitleViewController.swift */; };
 		BA5D40DA2375EA050041AC6B /* AdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5D40D92375EA050041AC6B /* AdViewController.swift */; };
 		BA5D40DC2375F93A0041AC6B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5D40DB2375F93A0041AC6B /* Login.storyboard */; };
 		BA670ED3237457F9005E3FDA /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA670EC9237457F8005E3FDA /* OpenSans-BoldItalic.ttf */; };
@@ -53,6 +57,10 @@
 		36DD943A2375D5C0000012BB /* ExploreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreTableViewCell.xib; sourceTree = "<group>"; };
 		36DD943D2375D71E000012BB /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		5E474EB42375D8640083D3A5 /* PropertyRegistration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PropertyRegistration.storyboard; sourceTree = "<group>"; };
+		5E55AA16237B34C300887772 /* SpaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceViewController.swift; sourceTree = "<group>"; };
+		5E55AA18237B34E500887772 /* GuestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestsViewController.swift; sourceTree = "<group>"; };
+		5E55AA1A237B34FD00887772 /* AddPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotosViewController.swift; sourceTree = "<group>"; };
+		5E55AA1C237B351800887772 /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
 		8F6CA9F7B8D35C36B0A15AB3 /* Pods-SuCasa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuCasa.debug.xcconfig"; path = "Target Support Files/Pods-SuCasa/Pods-SuCasa.debug.xcconfig"; sourceTree = "<group>"; };
 		AB9A42759A6AEB44F15643F6 /* Pods_SuCasa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuCasa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5D40D92375EA050041AC6B /* AdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +173,10 @@
 				BAB8DA06237201200039CBC5 /* IntroViewController.swift */,
 				36DD943D2375D71E000012BB /* ExploreViewController.swift */,
 				BA5D40D92375EA050041AC6B /* AdViewController.swift */,
+				5E55AA16237B34C300887772 /* SpaceViewController.swift */,
+				5E55AA18237B34E500887772 /* GuestsViewController.swift */,
+				5E55AA1A237B34FD00887772 /* AddPhotosViewController.swift */,
+				5E55AA1C237B351800887772 /* TitleViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -353,10 +365,14 @@
 				3658D1FE2379EAC100A96E2F /* ResultsTableViewCell.swift in Sources */,
 				BA5D40DA2375EA050041AC6B /* AdViewController.swift in Sources */,
 				BAB9EFBF237095CD00B480F1 /* SuCasa.xcdatamodeld in Sources */,
+				5E55AA19237B34E500887772 /* GuestsViewController.swift in Sources */,
+				5E55AA17237B34C300887772 /* SpaceViewController.swift in Sources */,
 				36DD943E2375D71E000012BB /* ExploreViewController.swift in Sources */,
 				BAB8DA07237201200039CBC5 /* IntroViewController.swift in Sources */,
+				5E55AA1B237B34FD00887772 /* AddPhotosViewController.swift in Sources */,
 				362DB1D0237A23E400D36357 /* City.swift in Sources */,
 				36DD943B2375D5C0000012BB /* ExploreTableViewCell.swift in Sources */,
+				5E55AA1D237B351800887772 /* TitleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
