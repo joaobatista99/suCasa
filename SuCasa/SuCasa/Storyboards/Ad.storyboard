@@ -67,6 +67,7 @@
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
                                 <action selector="newAd:" destination="s7G-6i-Vpu" id="jNf-lu-79N"/>
+                                <segue destination="tSK-YU-17F" kind="presentation" identifier="createAd" modalPresentationStyle="fullScreen" id="D84-vZ-GCy"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -75,6 +76,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yXB-wr-x5t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1704.3478260869567" y="-389.0625"/>
+        </scene>
+        <!--PropertyRegistration-->
+        <scene sceneID="BKl-fC-TlG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PropertyRegistration" referencedIdentifier="PropertyRegistration" id="tSK-YU-17F" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ba-bp-UF6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2973" y="-862"/>
         </scene>
         <!--Anuncie-->
         <scene sceneID="SbZ-b9-Yb2">
