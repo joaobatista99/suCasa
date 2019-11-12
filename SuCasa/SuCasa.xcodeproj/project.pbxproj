@@ -8,7 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		091925C285447A2B54292A40 /* Pods_SuCasa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9A42759A6AEB44F15643F6 /* Pods_SuCasa.framework */; };
+		362DB1D0237A23E400D36357 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362DB1CF237A23E400D36357 /* City.swift */; };
+		3658D1FA2379D7E200A96E2F /* SuggestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3658D1F82379D7E200A96E2F /* SuggestionsTableViewCell.swift */; };
+		3658D1FB2379D7E200A96E2F /* SuggestionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3658D1F92379D7E200A96E2F /* SuggestionsTableViewCell.xib */; };
+		3658D1FE2379EAC100A96E2F /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3658D1FC2379EAC100A96E2F /* ResultsTableViewCell.swift */; };
+		3658D1FF2379EAC100A96E2F /* ResultsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3658D1FD2379EAC100A96E2F /* ResultsTableViewCell.xib */; };
+		3658D2042379F75100A96E2F /* brazilCities.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3658D2032379F75100A96E2F /* brazilCities.csv */; };
+		36DD943B2375D5C0000012BB /* ExploreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD94392375D5C0000012BB /* ExploreTableViewCell.swift */; };
+		36DD943C2375D5C0000012BB /* ExploreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36DD943A2375D5C0000012BB /* ExploreTableViewCell.xib */; };
+		36DD943E2375D71E000012BB /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD943D2375D71E000012BB /* ExploreViewController.swift */; };
 		5E474EB52375D8640083D3A5 /* PropertyRegistration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E474EB42375D8640083D3A5 /* PropertyRegistration.storyboard */; };
+		BA5D40DA2375EA050041AC6B /* AdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5D40D92375EA050041AC6B /* AdViewController.swift */; };
+		BA5D40DC2375F93A0041AC6B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5D40DB2375F93A0041AC6B /* Login.storyboard */; };
 		BA670ED3237457F9005E3FDA /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA670EC9237457F8005E3FDA /* OpenSans-BoldItalic.ttf */; };
 		BA670ED4237457F9005E3FDA /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA670ECA237457F8005E3FDA /* OpenSans-ExtraBold.ttf */; };
 		BA670ED5237457F9005E3FDA /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA670ECB237457F8005E3FDA /* OpenSans-ExtraBoldItalic.ttf */; };
@@ -20,7 +31,7 @@
 		BA670EDB237457F9005E3FDA /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA670ED1237457F9005E3FDA /* OpenSans-Light.ttf */; };
 		BA670EDC237457F9005E3FDA /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA670ED2237457F9005E3FDA /* OpenSans-SemiboldItalic.ttf */; };
 		BA670EDF23746054005E3FDA /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA670EDE23746054005E3FDA /* Profile.storyboard */; };
-		BA7794B623735DB700F8D024 /* Form.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA7794B523735DB700F8D024 /* Form.storyboard */; };
+		BA7794B623735DB700F8D024 /* Ad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA7794B523735DB700F8D024 /* Ad.storyboard */; };
 		BAB8D9FF2371DD400039CBC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAB8D9FE2371DD400039CBC5 /* GoogleService-Info.plist */; };
 		BAB8DA022371E8AE0039CBC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB8DA012371E8AE0039CBC5 /* Main.storyboard */; };
 		BAB8DA07237201200039CBC5 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB8DA06237201200039CBC5 /* IntroViewController.swift */; };
@@ -32,9 +43,20 @@
 
 /* Begin PBXFileReference section */
 		338DA7825B0047A78C499018 /* Pods-SuCasa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuCasa.release.xcconfig"; path = "Target Support Files/Pods-SuCasa/Pods-SuCasa.release.xcconfig"; sourceTree = "<group>"; };
+		362DB1CF237A23E400D36357 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		3658D1F82379D7E200A96E2F /* SuggestionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsTableViewCell.swift; sourceTree = "<group>"; };
+		3658D1F92379D7E200A96E2F /* SuggestionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionsTableViewCell.xib; sourceTree = "<group>"; };
+		3658D1FC2379EAC100A96E2F /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
+		3658D1FD2379EAC100A96E2F /* ResultsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsTableViewCell.xib; sourceTree = "<group>"; };
+		3658D2032379F75100A96E2F /* brazilCities.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = brazilCities.csv; path = SuCasa/brazilCities.csv; sourceTree = SOURCE_ROOT; };
+		36DD94392375D5C0000012BB /* ExploreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableViewCell.swift; sourceTree = "<group>"; };
+		36DD943A2375D5C0000012BB /* ExploreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreTableViewCell.xib; sourceTree = "<group>"; };
+		36DD943D2375D71E000012BB /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		5E474EB42375D8640083D3A5 /* PropertyRegistration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PropertyRegistration.storyboard; sourceTree = "<group>"; };
 		8F6CA9F7B8D35C36B0A15AB3 /* Pods-SuCasa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuCasa.debug.xcconfig"; path = "Target Support Files/Pods-SuCasa/Pods-SuCasa.debug.xcconfig"; sourceTree = "<group>"; };
 		AB9A42759A6AEB44F15643F6 /* Pods_SuCasa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuCasa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA5D40D92375EA050041AC6B /* AdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewController.swift; sourceTree = "<group>"; };
+		BA5D40DB2375F93A0041AC6B /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BA670EC9237457F8005E3FDA /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		BA670ECA237457F8005E3FDA /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
 		BA670ECB237457F8005E3FDA /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
@@ -46,7 +68,7 @@
 		BA670ED1237457F9005E3FDA /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		BA670ED2237457F9005E3FDA /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		BA670EDE23746054005E3FDA /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
-		BA7794B523735DB700F8D024 /* Form.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Form.storyboard; sourceTree = "<group>"; };
+		BA7794B523735DB700F8D024 /* Ad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ad.storyboard; sourceTree = "<group>"; };
 		BAB8D9FE2371DD400039CBC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BAB8DA012371E8AE0039CBC5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BAB8DA06237201200039CBC5 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +92,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		362DB1CE237A23D400D36357 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				362DB1CF237A23E400D36357 /* City.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		36DD94332375D44D000012BB /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				3658D1FD2379EAC100A96E2F /* ResultsTableViewCell.xib */,
+				36DD943A2375D5C0000012BB /* ExploreTableViewCell.xib */,
+				3658D1F92379D7E200A96E2F /* SuggestionsTableViewCell.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
+		36DD94382375D50F000012BB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				36DD94392375D5C0000012BB /* ExploreTableViewCell.swift */,
+				3658D1FC2379EAC100A96E2F /* ResultsTableViewCell.swift */,
+				3658D1F82379D7E200A96E2F /* SuggestionsTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		582C0BA3013E8764EE553295 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,8 +151,9 @@
 			children = (
 				BAB9EFC2237095D000B480F1 /* LaunchScreen.storyboard */,
 				BAB8DA012371E8AE0039CBC5 /* Main.storyboard */,
-				BA7794B523735DB700F8D024 /* Form.storyboard */,
+				BA7794B523735DB700F8D024 /* Ad.storyboard */,
 				BA670EDE23746054005E3FDA /* Profile.storyboard */,
+				BA5D40DB2375F93A0041AC6B /* Login.storyboard */,
 				5E474EB42375D8640083D3A5 /* PropertyRegistration.storyboard */,
 			);
 			path = Storyboards;
@@ -112,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				BAB8DA06237201200039CBC5 /* IntroViewController.swift */,
+				36DD943D2375D71E000012BB /* ExploreViewController.swift */,
+				BA5D40D92375EA050041AC6B /* AdViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -137,8 +190,12 @@
 		BAB9EFB3237095CD00B480F1 /* SuCasa */ = {
 			isa = PBXGroup;
 			children = (
+				362DB1CE237A23D400D36357 /* Models */,
+				36DD94332375D44D000012BB /* XIBs */,
+				36DD94382375D50F000012BB /* Cells */,
 				BAB9EFB4237095CD00B480F1 /* AppDelegate.swift */,
 				BAB9EFC5237095D000B480F1 /* Info.plist */,
+				3658D2032379F75100A96E2F /* brazilCities.csv */,
 				BAB9EFBD237095CD00B480F1 /* SuCasa.xcdatamodeld */,
 				BAB8D9FE2371DD400039CBC5 /* GoogleService-Info.plist */,
 				BAB9EFC0237095D000B480F1 /* Assets.xcassets */,
@@ -224,12 +281,17 @@
 				BA670ED3237457F9005E3FDA /* OpenSans-BoldItalic.ttf in Resources */,
 				BA670EDA237457F9005E3FDA /* OpenSans-Semibold.ttf in Resources */,
 				BAB9EFC4237095D000B480F1 /* LaunchScreen.storyboard in Resources */,
+				3658D2042379F75100A96E2F /* brazilCities.csv in Resources */,
 				BA670ED4237457F9005E3FDA /* OpenSans-ExtraBold.ttf in Resources */,
-				BA7794B623735DB700F8D024 /* Form.storyboard in Resources */,
+				BA5D40DC2375F93A0041AC6B /* Login.storyboard in Resources */,
+				BA7794B623735DB700F8D024 /* Ad.storyboard in Resources */,
 				BAB9EFC1237095D000B480F1 /* Assets.xcassets in Resources */,
 				BA670EDF23746054005E3FDA /* Profile.storyboard in Resources */,
 				BAB8D9FF2371DD400039CBC5 /* GoogleService-Info.plist in Resources */,
+				36DD943C2375D5C0000012BB /* ExploreTableViewCell.xib in Resources */,
+				3658D1FB2379D7E200A96E2F /* SuggestionsTableViewCell.xib in Resources */,
 				BAB8DA022371E8AE0039CBC5 /* Main.storyboard in Resources */,
+				3658D1FF2379EAC100A96E2F /* ResultsTableViewCell.xib in Resources */,
 				5E474EB52375D8640083D3A5 /* PropertyRegistration.storyboard in Resources */,
 				BA670ED9237457F9005E3FDA /* OpenSans-Italic.ttf in Resources */,
 				BA670ED5237457F9005E3FDA /* OpenSans-ExtraBoldItalic.ttf in Resources */,
@@ -287,8 +349,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAB9EFB5237095CD00B480F1 /* AppDelegate.swift in Sources */,
+				3658D1FA2379D7E200A96E2F /* SuggestionsTableViewCell.swift in Sources */,
+				3658D1FE2379EAC100A96E2F /* ResultsTableViewCell.swift in Sources */,
+				BA5D40DA2375EA050041AC6B /* AdViewController.swift in Sources */,
 				BAB9EFBF237095CD00B480F1 /* SuCasa.xcdatamodeld in Sources */,
+				36DD943E2375D71E000012BB /* ExploreViewController.swift in Sources */,
 				BAB8DA07237201200039CBC5 /* IntroViewController.swift in Sources */,
+				362DB1D0237A23E400D36357 /* City.swift in Sources */,
+				36DD943B2375D5C0000012BB /* ExploreTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +494,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8Z872V7A4S;
+				DEVELOPMENT_TEAM = NQW9RC6R9A;
 				INFOPLIST_FILE = SuCasa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -446,7 +514,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8Z872V7A4S;
+				DEVELOPMENT_TEAM = NQW9RC6R9A;
 				INFOPLIST_FILE = SuCasa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
