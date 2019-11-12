@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		091925C285447A2B54292A40 /* Pods_SuCasa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9A42759A6AEB44F15643F6 /* Pods_SuCasa.framework */; };
+		5E474EB52375D8640083D3A5 /* PropertyRegistration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E474EB42375D8640083D3A5 /* PropertyRegistration.storyboard */; };
 		BA670ED3237457F9005E3FDA /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA670EC9237457F8005E3FDA /* OpenSans-BoldItalic.ttf */; };
 		BA670ED4237457F9005E3FDA /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA670ECA237457F8005E3FDA /* OpenSans-ExtraBold.ttf */; };
 		BA670ED5237457F9005E3FDA /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA670ECB237457F8005E3FDA /* OpenSans-ExtraBoldItalic.ttf */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		338DA7825B0047A78C499018 /* Pods-SuCasa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuCasa.release.xcconfig"; path = "Target Support Files/Pods-SuCasa/Pods-SuCasa.release.xcconfig"; sourceTree = "<group>"; };
+		5E474EB42375D8640083D3A5 /* PropertyRegistration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PropertyRegistration.storyboard; sourceTree = "<group>"; };
 		8F6CA9F7B8D35C36B0A15AB3 /* Pods-SuCasa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuCasa.debug.xcconfig"; path = "Target Support Files/Pods-SuCasa/Pods-SuCasa.debug.xcconfig"; sourceTree = "<group>"; };
 		AB9A42759A6AEB44F15643F6 /* Pods_SuCasa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuCasa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA670EC9237457F8005E3FDA /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				BAB8DA012371E8AE0039CBC5 /* Main.storyboard */,
 				BA7794B523735DB700F8D024 /* Form.storyboard */,
 				BA670EDE23746054005E3FDA /* Profile.storyboard */,
+				5E474EB42375D8640083D3A5 /* PropertyRegistration.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				BA670EDF23746054005E3FDA /* Profile.storyboard in Resources */,
 				BAB8D9FF2371DD400039CBC5 /* GoogleService-Info.plist in Resources */,
 				BAB8DA022371E8AE0039CBC5 /* Main.storyboard in Resources */,
+				5E474EB52375D8640083D3A5 /* PropertyRegistration.storyboard in Resources */,
 				BA670ED9237457F9005E3FDA /* OpenSans-Italic.ttf in Resources */,
 				BA670ED5237457F9005E3FDA /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				BA670ED6237457F9005E3FDA /* OpenSans-LightItalic.ttf in Resources */,
@@ -422,7 +426,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NQW9RC6R9A;
+				DEVELOPMENT_TEAM = 8Z872V7A4S;
 				INFOPLIST_FILE = SuCasa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -442,7 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NQW9RC6R9A;
+				DEVELOPMENT_TEAM = 8Z872V7A4S;
 				INFOPLIST_FILE = SuCasa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
