@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UXd-qk-WEO">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
@@ -8,6 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
         <array key="OpenSans-Regular.ttf">
             <string>OpenSans</string>
         </array>
@@ -18,32 +21,32 @@
             <objects>
                 <viewController storyboardIdentifier="Intro" title="Intro" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UXd-qk-WEO" customClass="IntroViewController" customModule="SuCasa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VfS-qV-9sk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYP-XU-rHm">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5qL-DW-jfF">
-                                        <rect key="frame" x="0.0" y="0.0" width="1242" height="818"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="960" height="568"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhn-eN-Zye">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Somos a SuCasa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="rbZ-1M-1MY">
-                                                        <rect key="frame" x="24" y="71" width="122" height="22"/>
+                                                        <rect key="frame" x="24" y="46" width="122" height="22"/>
                                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
                                                         <color key="textColor" red="0.89411764709999997" green="0.25882352939999997" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Faça propostas de aluguel com um valor acessível." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="1fb-AL-TRP">
-                                                        <rect key="frame" x="24" y="101" width="248.5" height="98.5"/>
+                                                        <rect key="frame" x="24" y="76" width="192" height="131"/>
                                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="24"/>
                                                         <color key="textColor" red="0.89411764705882346" green="0.25882352941176467" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dSK-Zc-8R4">
-                                                        <rect key="frame" x="0.0" y="202" width="414" height="414"/>
+                                                        <rect key="frame" x="0.0" y="124" width="320" height="320"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="dSK-Zc-8R4" secondAttribute="height" multiplier="1:1" id="75n-46-x1U"/>
                                                         </constraints>
@@ -62,22 +65,22 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rB5-06-NuH">
-                                                <rect key="frame" x="414" y="0.0" width="414" height="818"/>
+                                                <rect key="frame" x="320" y="0.0" width="320" height="568"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Somos a SuCasa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="Z1u-nq-vwg">
-                                                        <rect key="frame" x="24" y="71" width="122" height="22"/>
+                                                        <rect key="frame" x="24" y="46" width="122" height="22"/>
                                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
                                                         <color key="textColor" red="0.89411764709999997" green="0.25882352939999997" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Compartilhe experiências e viva novas culturas." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="vzQ-tA-mgq">
-                                                        <rect key="frame" x="24" y="101" width="248.5" height="98.5"/>
+                                                        <rect key="frame" x="24" y="76" width="192" height="131"/>
                                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="24"/>
                                                         <color key="textColor" red="0.89411764709999997" green="0.25882352939999997" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5o7-fx-ix6">
-                                                        <rect key="frame" x="0.0" y="202" width="414" height="414"/>
+                                                        <rect key="frame" x="0.0" y="124" width="320" height="320"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="5o7-fx-ix6" secondAttribute="height" multiplier="1:1" id="lrl-4Q-BKl"/>
                                                         </constraints>
@@ -96,22 +99,22 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qup-su-Bba">
-                                                <rect key="frame" x="828" y="0.0" width="414" height="818"/>
+                                                <rect key="frame" x="640" y="0.0" width="320" height="568"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Somos a SuCasa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="LZD-GI-maS">
-                                                        <rect key="frame" x="24" y="71" width="122" height="22"/>
+                                                        <rect key="frame" x="24" y="46" width="122" height="22"/>
                                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
                                                         <color key="textColor" red="0.89411764709999997" green="0.25882352939999997" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Flexibilidade e segurança para ambas as partes." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="PhE-ud-mzf">
-                                                        <rect key="frame" x="24" y="101" width="248.5" height="98.5"/>
+                                                        <rect key="frame" x="24" y="76" width="192" height="98.5"/>
                                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="24"/>
                                                         <color key="textColor" red="0.89411764709999997" green="0.25882352939999997" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cRw-v6-sJt">
-                                                        <rect key="frame" x="0.0" y="202" width="414" height="414"/>
+                                                        <rect key="frame" x="0.0" y="124" width="320" height="320"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="cRw-v6-sJt" secondAttribute="height" multiplier="1:1" id="Wxc-Sz-fad"/>
                                                         </constraints>
@@ -151,16 +154,16 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="eXK-yh-fXO"/>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="QR2-HA-2sC">
-                                <rect key="frame" x="187.5" y="706.5" width="39" height="37"/>
+                                <rect key="frame" x="140.5" y="436" width="39" height="37"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8qb-UH-HJ6">
-                                <rect key="frame" x="41.5" y="768" width="331" height="49.5"/>
+                                <rect key="frame" x="32" y="477" width="256" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37X-KH-EC4">
-                                        <rect key="frame" x="0.0" y="0.0" width="331" height="49.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="40"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
                                         <state key="normal" title="ENTRAR">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -192,7 +195,7 @@
                             <constraint firstItem="QR2-HA-2sC" firstAttribute="centerX" secondItem="3cG-3h-bht" secondAttribute="centerX" id="Vsg-YF-utQ"/>
                             <constraint firstItem="QR2-HA-2sC" firstAttribute="centerY" secondItem="3cG-3h-bht" secondAttribute="centerY" multiplier="1.6" id="eDi-Xx-9GI"/>
                             <constraint firstItem="8qb-UH-HJ6" firstAttribute="centerY" secondItem="3cG-3h-bht" secondAttribute="centerY" multiplier="1.75" id="hsC-Ch-hWH"/>
-                            <constraint firstItem="8qb-UH-HJ6" firstAttribute="height" secondItem="VfS-qV-9sk" secondAttribute="height" multiplier="0.055" id="j4w-kX-dnF"/>
+                            <constraint firstItem="8qb-UH-HJ6" firstAttribute="height" secondItem="VfS-qV-9sk" secondAttribute="height" multiplier="0.07" id="j4w-kX-dnF"/>
                             <constraint firstItem="3cG-3h-bht" firstAttribute="trailing" secondItem="QYP-XU-rHm" secondAttribute="trailing" id="k7M-a5-ulK"/>
                             <constraint firstItem="8qb-UH-HJ6" firstAttribute="centerX" secondItem="3cG-3h-bht" secondAttribute="centerX" id="t8C-Xa-DM4"/>
                             <constraint firstItem="QYP-XU-rHm" firstAttribute="top" secondItem="3cG-3h-bht" secondAttribute="top" id="w7Y-gb-cIL"/>
@@ -202,7 +205,7 @@
                     <connections>
                         <outlet property="pageControl" destination="QR2-HA-2sC" id="TmO-6a-KmN"/>
                         <outlet property="scrollView" destination="QYP-XU-rHm" id="Mgl-jx-3DF"/>
-                        <segue destination="98V-x9-a6x" kind="presentation" identifier="startApp" modalPresentationStyle="fullScreen" id="P3e-FW-eOo"/>
+                        <segue destination="98V-x9-a6x" kind="presentation" identifier="startApp" animates="NO" modalPresentationStyle="fullScreen" id="ZdW-d0-2nT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2r4-8v-Mxn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -245,10 +248,10 @@
             </objects>
             <point key="canvasLocation" x="1309" y="1489"/>
         </scene>
-        <!--Form-->
+        <!--Ad-->
         <scene sceneID="euK-eO-Lcf">
             <objects>
-                <viewControllerPlaceholder storyboardName="Form" referencedIdentifier="Form" id="id2-KL-kZs" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="Ad" storyboardName="Ad" referencedIdentifier="Ad" id="id2-KL-kZs" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="KUC-q0-bC2"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="USW-YM-NKZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
