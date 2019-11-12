@@ -19,7 +19,8 @@ class ExploreViewController: UIViewController {
     let titleAd = ["Casa no centro, muito aconchegante", "Vila Souzas - Apartamento", "Campo Sítio 3 Irmãs",
                     "Casa dos Imigrantes", "Flat Completo"]
     let searchRecents = ["campinas", "são josé dos campos", "são paulo", "guarulhos", "mogi mirim"]
-    let cities: [[String]]?
+    var cities: [City] = []
+
     
     /// Table View Variables
     @IBOutlet weak var tableView: UITableView!
@@ -27,6 +28,8 @@ class ExploreViewController: UIViewController {
     
     /// Search Controller Variables
     let searchController = UISearchController(searchResultsController: nil)
+    var isFiltering = false
+    var filteredCities: [City] = []
     
     /// This enum shows the search bar's  state to display the differents XIBs related to it.
     enum SearchBarState {
@@ -59,18 +62,26 @@ class ExploreViewController: UIViewController {
         
         setTableView()
         setSearchController()
-        //readCSVtoGetCities()
+        readCSVtoGetCities()
+        
     }
     
-//    func readCSVtoGetCities() {
-//
-//        let  fileURL = Bundle.main.url(forResource: "brazilCities", withExtension: "csv")
-//
-//        do {
-//            let content = try String(contentsOf: fileURL!, encoding: String.Encoding.utf8)
-//            let parsedCSV: [[String]] = content.compo
-//        }
-//    }
+    func readCSVtoGetCities() {
+
+        let fileURL = Bundle.main.url(forResource: "brazilCities", withExtension: "csv")
+
+        do {
+            let content = try String(contentsOf: fileURL!, encoding: String.Encoding.utf8)
+            let parsedCSV: [[String]] = content.components(separatedBy: "\r\n").map{$0.components(separatedBy: ";")}
+            
+            for i in 1 ..< parsedCSV.count - 1 {
+                let city = City(id: parsedCSV[i][0], city: parsedCSV[i][1])
+                self.cities.append(city)
+            }
+        } catch {
+            print("error \(error)")
+        }
+    }
 }
 
 /// Search bar behavior
@@ -78,6 +89,9 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isFiltering {
+            return self.filteredCities.count
+        }
         return titleAd.count
     }
     
@@ -93,9 +107,14 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             cell.availabilityLabel.text = "Disponível para \(availabilityAd[indexPath.row]) pessoas"
             cell.distanceLabel.text = "APROX. A \(distanceAd[indexPath.row])km"
             return cell
+            
         case .suggestions:
             let cell = tableView.dequeueReusableCell(withIdentifier: "suggestionsCell", for: indexPath) as! SuggestionsTableViewCell
-            cell.recentSearchLabel.text = searchRecents[indexPath.row]
+            if isFiltering {
+                cell.recentSearchLabel.text = self.filteredCities[indexPath.row].name
+            } else {
+                cell.recentSearchLabel.text = searchRecents[indexPath.row]
+            }
             return cell
             
         case .results: break
@@ -158,7 +177,6 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ExploreViewController: UISearchBarDelegate {
     
-    
     /// This method sets the search controller
     func setSearchController() {
         self.searchController.searchBar.delegate = self
@@ -167,14 +185,31 @@ extension ExploreViewController: UISearchBarDelegate {
         self.navigationItem.searchController = self.searchController
         definesPresentationContext = false
         self.navigationItem.hidesSearchBarWhenScrolling = false
+        self.searchController.searchBar.searchTextField.textColor = .black
+        self.searchController.searchBar.barTintColor = .black
         self.currentState = SearchBarState.none
     }
     
     /// This method is called when the search bar's text changes
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
+        isFiltering = true
+        
+        //Filtering cities from searchText
+        filteredCities = cities.filter({( city : City) -> Bool in
+            
+            //Removing driatics to search more efficiently
+            let removedDiactrics = city.name.folding(options: .diacriticInsensitive, locale: .current)
+            return removedDiactrics.lowercased().contains(searchText.lowercased())
+        })
+        
+        /* if searchText is empty, set isFiltering
+        to false to show up recents searches */
+        if searchText.isEmpty {
+            isFiltering = false
+        }
+        tableView.reloadData()
     }
-    
     
     /// This method is called when the search bar is touched
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
@@ -189,6 +224,7 @@ extension ExploreViewController: UISearchBarDelegate {
     /// This method is called when the search bar's cancel button is touched
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         self.currentState = .none
+        isFiltering = false
         self.tableView.reloadData()
     }
 }

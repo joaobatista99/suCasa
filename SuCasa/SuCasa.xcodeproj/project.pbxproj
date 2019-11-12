@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		091925C285447A2B54292A40 /* Pods_SuCasa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9A42759A6AEB44F15643F6 /* Pods_SuCasa.framework */; };
+		362DB1D0237A23E400D36357 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362DB1CF237A23E400D36357 /* City.swift */; };
 		3658D1FA2379D7E200A96E2F /* SuggestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3658D1F82379D7E200A96E2F /* SuggestionsTableViewCell.swift */; };
 		3658D1FB2379D7E200A96E2F /* SuggestionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3658D1F92379D7E200A96E2F /* SuggestionsTableViewCell.xib */; };
 		3658D1FE2379EAC100A96E2F /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3658D1FC2379EAC100A96E2F /* ResultsTableViewCell.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		338DA7825B0047A78C499018 /* Pods-SuCasa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuCasa.release.xcconfig"; path = "Target Support Files/Pods-SuCasa/Pods-SuCasa.release.xcconfig"; sourceTree = "<group>"; };
+		362DB1CF237A23E400D36357 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		3658D1F82379D7E200A96E2F /* SuggestionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsTableViewCell.swift; sourceTree = "<group>"; };
 		3658D1F92379D7E200A96E2F /* SuggestionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionsTableViewCell.xib; sourceTree = "<group>"; };
 		3658D1FC2379EAC100A96E2F /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		362DB1CE237A23D400D36357 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				362DB1CF237A23E400D36357 /* City.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		36DD94332375D44D000012BB /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,8 +181,9 @@
 		BAB9EFB3237095CD00B480F1 /* SuCasa */ = {
 			isa = PBXGroup;
 			children = (
-				36DD94382375D50F000012BB /* Cells */,
+				362DB1CE237A23D400D36357 /* Models */,
 				36DD94332375D44D000012BB /* XIBs */,
+				36DD94382375D50F000012BB /* Cells */,
 				BAB9EFB4237095CD00B480F1 /* AppDelegate.swift */,
 				BAB9EFC5237095D000B480F1 /* Info.plist */,
 				3658D2032379F75100A96E2F /* brazilCities.csv */,
@@ -332,6 +343,7 @@
 				BAB9EFBF237095CD00B480F1 /* SuCasa.xcdatamodeld in Sources */,
 				36DD943E2375D71E000012BB /* ExploreViewController.swift in Sources */,
 				BAB8DA07237201200039CBC5 /* IntroViewController.swift in Sources */,
+				362DB1D0237A23E400D36357 /* City.swift in Sources */,
 				36DD943B2375D5C0000012BB /* ExploreTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
