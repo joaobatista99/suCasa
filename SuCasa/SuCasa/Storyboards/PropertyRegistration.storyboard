@@ -61,6 +61,9 @@
                                 <rect key="frame" x="15" y="286.5" width="372.5" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="spaceTypePressed:" destination="yR6-Tb-gLL" eventType="editingDidBegin" id="xMp-L2-JpG"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agora escolha um tipo de propriedade:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ejh-Jq-xHE">
                                 <rect key="frame" x="15" y="420" width="372.5" height="36"/>
@@ -72,6 +75,9 @@
                                 <rect key="frame" x="15" y="466" width="372.5" height="53.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="propertyTypePressed:" destination="yR6-Tb-gLL" eventType="editingDidBegin" id="Wy0-gA-rdu"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ma-Al-cBT">
                                 <rect key="frame" x="15" y="341.5" width="372.5" height="2"/>
