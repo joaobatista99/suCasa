@@ -10,21 +10,80 @@ import UIKit
 
 class TitleViewController: UIViewController {
 
+    @IBOutlet weak var titleTextField: UITextField!
+    
+    @IBOutlet weak var rulesTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //sets delegate
+        titleTextField.delegate = self
+        rulesTextField.delegate = self
+        
+        titleTextField.tag = 0
+        rulesTextField.tag = 1
+        
+        //gesture to dismiss keyboard
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(TitleViewController.endSelection(_:))))
+        
+        //keyboard notifications
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 
-        // Do any additional setup after loading the view.
+        setUpText()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //dismiss keyboard if users touches screen
+    @objc func endSelection(_ force: Bool) -> Bool {
+           return self.view.endEditing(force)
     }
-    */
+    
+    
+    //Scrolla when keyboard activates
+    @objc func keyboardWillShow(notification:NSNotification){
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height/2
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
+    
+    fileprivate func setUpText() {
+        
+        let attributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.black,
+            NSAttributedString.Key.font : UIFont(name: "OpenSans-Regular", size: 12) // Note the !
+        ]
+        
+        titleTextField.attributedPlaceholder = NSAttributedString(string: "Adicione seu título", attributes: attributes as [NSAttributedString.Key : Any])
+        rulesTextField.attributedPlaceholder = NSAttributedString(string: "Adicione suas regras (Opcional)", attributes: attributes as [NSAttributedString.Key : Any])
+        
+        titleTextField.textColor = .black
+        titleTextField.font = UIFont(name: "OpenSans-Regular", size: 12)
+        
+        rulesTextField.textColor = .black
+        rulesTextField.font = UIFont(name: "OpenSans-Regular", size: 12)
+    }
+}
 
+extension TitleViewController : UITextFieldDelegate {
+    
+    //return key sends to next textfield
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return false
+    }
 }

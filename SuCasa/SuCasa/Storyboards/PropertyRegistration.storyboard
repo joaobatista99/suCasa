@@ -412,6 +412,10 @@
                         <viewLayoutGuide key="safeArea" id="wUd-KJ-LjC"/>
                     </view>
                     <navigationItem key="navigationItem" id="OmV-kh-p0w"/>
+                    <connections>
+                        <outlet property="rulesTextField" destination="kWp-ma-xGL" id="h9i-ig-cVe"/>
+                        <outlet property="titleTextField" destination="2OF-4o-c46" id="vql-eZ-K9Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3He-2x-QKj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
