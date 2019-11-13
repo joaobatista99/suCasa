@@ -22,6 +22,7 @@ class TitleViewController: UIViewController {
         titleTextField.delegate = self
         rulesTextField.delegate = self
         
+        //text fields tags
         titleTextField.tag = 0
         rulesTextField.tag = 1
         
@@ -41,21 +42,23 @@ class TitleViewController: UIViewController {
     }
     
     
-    //Scrolla when keyboard activates
+    //Scroll when keyboard activates
     @objc func keyboardWillShow(notification:NSNotification){
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height/2
+                self.view.frame.origin.y -= keyboardSize.height/3
             }
         }
     }
     
+    //scrolls back when keyboard is dismissed
     @objc func keyboardWillHide(notification: NSNotification) {
         if self.view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0
         }
     }
     
+    //setup text style for textfields
     fileprivate func setUpText() {
         
         let attributes = [

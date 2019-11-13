@@ -37,7 +37,7 @@ class AddPhotosViewController: UIViewController {
             }, cancel: { (assets: [PHAsset]) -> Void in
               // User cancelled. And this where the assets currently selected.
             }, finish: { (assets: [PHAsset]) -> Void in
-              // User finished with these assets
+                
         }, completion: nil)
         
     }

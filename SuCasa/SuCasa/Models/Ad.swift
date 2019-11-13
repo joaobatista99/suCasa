@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Photos
 
 struct Ad {
 
@@ -22,6 +23,7 @@ struct Ad {
     var complement   : String
     var title        : String
     var rules        : String
+    var photos       : [PHAsset]
     
     //resets struct data after posting ad
     mutating func resetData() {
