@@ -393,6 +393,11 @@
                         <viewLayoutGuide key="safeArea" id="bp1-Kz-17w"/>
                     </view>
                     <navigationItem key="navigationItem" id="4Xe-nw-gXC"/>
+                    <connections>
+                        <outlet property="bedNumberTextField" destination="OxW-aV-zSh" id="jj7-7V-GIE"/>
+                        <outlet property="bedroomNumberTextField" destination="i1Q-gJ-NUa" id="KSK-Qr-dzP"/>
+                        <outlet property="totalGuestsTextField" destination="d9F-lM-bcY" id="4jZ-fC-wP9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bf1-hy-WIj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
