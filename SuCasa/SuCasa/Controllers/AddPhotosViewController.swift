@@ -7,24 +7,42 @@
 //
 
 import UIKit
+import BSImagePicker
+import Photos
 
 class AddPhotosViewController: UIViewController {
 
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
+    @IBAction func loadImage(_ sender: Any) {
+        
+        let imagePicker = BSImagePickerViewController()
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        imagePicker.backgroundColor    = .white
+        imagePicker.cancelButton.title = "Cancelar"
+        imagePicker.doneButton.title   = "Ok"
+                
+        bs_presentImagePickerController(imagePicker, animated: true,
+            select: { (asset: PHAsset) -> Void in
+              // User selected an asset.
+              // Do something with it, start upload perhaps?
+            }, deselect: { (asset: PHAsset) -> Void in
+              // User deselected an assets.
+              // Do something, cancel upload?
+            }, cancel: { (assets: [PHAsset]) -> Void in
+              // User cancelled. And this where the assets currently selected.
+            }, finish: { (assets: [PHAsset]) -> Void in
+                
+        }, completion: nil)
+        
     }
-    */
+}
 
+extension AddPhotosViewController: UIImagePickerControllerDelegate {
+    
 }

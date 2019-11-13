@@ -613,11 +613,17 @@
                                 <state key="normal" title="Adicionar Fotos">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+
+                                <connections>
+                                    <action selector="loadImage:" destination="NYI-Li-GoT" eventType="touchUpInside" id="6fD-Dh-j4T"/>
+                                </connections>
+
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjP-vQ-Wbf">
                                 <rect key="frame" x="270.66666666666669" y="764.66666666666663" width="103.33333333333331" height="40.333333333333371"/>
@@ -772,6 +778,10 @@
                         <viewLayoutGuide key="safeArea" id="wUd-KJ-LjC"/>
                     </view>
                     <navigationItem key="navigationItem" id="OmV-kh-p0w"/>
+                    <connections>
+                        <outlet property="rulesTextField" destination="kWp-ma-xGL" id="h9i-ig-cVe"/>
+                        <outlet property="titleTextField" destination="2OF-4o-c46" id="vql-eZ-K9Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3He-2x-QKj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

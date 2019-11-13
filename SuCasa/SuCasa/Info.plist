@@ -52,5 +52,7 @@
 		<string>OpenSans-Semibold.ttf</string>
 		<string>OpenSans-SemiboldItalic.ttf</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>O app precisa acessar suas fotos para continuar</string>
 </dict>
 </plist>
