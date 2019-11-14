@@ -9,37 +9,52 @@
 import Foundation
 import Photos
 
-struct Ad {
+class Property {
+    
+    enum SpaceType : String {
+        case apartment = "Apartamento"
+        case house = "Casa"
+        case none = ""
+    }
+    
+    enum PropertyType : String {
+        case apartment = "Apartamento"
+        case loft = "Loft"
+        case flat = "Flat"
+        case condominium = "Condominio"
+        case none = ""
+    }
 
-    var description  : String
-    var type         : String
+    var space        : SpaceType
+    var type         : PropertyType
     var guestsTotal  : Int
     var numberOfRooms: Int
     var numberOfBeds : Int
     var country      : String
-    var adress       : String
+    var address       : String
     var city         : String
     var postalCode   : Int
     var complement   : String
     var title        : String
     var rules        : String
-    var photos       : [PHAsset]
-    
-    //resets struct data after posting ad
-    mutating func resetData() {
-        self.description   = ""
-        self.type          = ""
-        self.guestsTotal   = 0
-        self.numberOfBeds  = 0
+    //var photos       : [String]
+
+    init(){
+        self.space = .none
+        self.type = .none
+        self.guestsTotal = 0
         self.numberOfRooms = 0
-        self.country       = ""
-        self.adress        = ""
-        self.city          = ""
-        self.postalCode    = 0
-        self.complement    = ""
-        self.title         = ""
-        self.rules         = ""
-    }    
+        self.numberOfBeds = 0
+        self.country = ""
+        self.address = ""
+        self.city = ""
+        self.postalCode = 0
+        self.complement = ""
+        self.title = ""
+        self.rules = ""
+        //self.photos = []
+    }
+    
 }
 
 
