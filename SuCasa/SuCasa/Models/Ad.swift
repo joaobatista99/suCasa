@@ -11,19 +11,6 @@ import Photos
 
 class Property {
     
-    enum SpaceType : String {
-        case apartment = "Apartamento"
-        case house = "Casa"
-        case none = ""
-    }
-    
-    enum PropertyType : String {
-        case apartment = "Apartamento"
-        case loft = "Loft"
-        case flat = "Flat"
-        case condominium = "Condominio"
-        case none = ""
-    }
 
     var space        : SpaceType
     var type         : PropertyType

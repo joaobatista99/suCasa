@@ -14,9 +14,9 @@ class SpaceViewController: UIViewController {
     @IBOutlet weak var spaceType: UITextField!
     @IBOutlet weak var propertyType: UITextField!
     
-    private let space = ["Apartamento", "Casa"]
-    private let apartmentSpaceOptions = ["Apartamento", "Condomínio", "Loft", "Flat"]
-    private let houseSpaceOption = ["Condomínio", "Opcão 2"]
+    private let space = [SpaceType.apartment,SpaceType.house]
+    private let apartmentSpaceOptions = [PropertyType.apartment, PropertyType.condominium, PropertyType.flat, PropertyType.loft]
+    private let houseSpaceOption = [PropertyType.condominium, PropertyType.street]
     
     private var spaceTypePickerView = UIPickerView()
     
@@ -125,7 +125,7 @@ extension SpaceViewController: UIPickerViewDataSource, UIPickerViewDelegate {
         
         //This if is to know which of text fields were pressed
         if spaceType.isEditing {
-            return space[row]
+            return space[row].rawValue
         }
         
         else if propertyType.isEditing {
@@ -133,10 +133,10 @@ extension SpaceViewController: UIPickerViewDataSource, UIPickerViewDelegate {
             /* This if is to know what option
             selected in the spaceType */
             if spaceType.text == "Apartamento" {
-                return apartmentSpaceOptions[row]
+                return apartmentSpaceOptions[row].rawValue
                 
             } else if spaceType.text == "Casa" {
-                return houseSpaceOption[row]
+                return houseSpaceOption[row].rawValue
             }
         }
         return ""
@@ -146,7 +146,7 @@ extension SpaceViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         if spaceType.isEditing {
-            spaceType.text = space[row]
+            spaceType.text = space[row].rawValue
             propertyType.isUserInteractionEnabled = true
             //if change the option
             clearTextField(textField: propertyType)
@@ -157,10 +157,10 @@ extension SpaceViewController: UIPickerViewDataSource, UIPickerViewDelegate {
             /* Based on what the user chose in the spaceType (first picker view)
              the propertyType options change */
             if  spaceType.text == "Apartamento" {
-                propertyType.text = apartmentSpaceOptions[row]
+                propertyType.text = apartmentSpaceOptions[row].rawValue
                 
             } else if spaceType.text == "Casa" {
-                propertyType.text = houseSpaceOption[row]
+                propertyType.text = houseSpaceOption[row].rawValue
             }
         }
     }
