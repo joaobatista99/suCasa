@@ -14,6 +14,7 @@ class SpaceViewController: UIViewController {
     @IBOutlet weak var spaceType: UITextField!
     @IBOutlet weak var propertyType: UITextField!
     @IBOutlet weak var nextButton: UIButton!
+
     
     private var spaceTypePickerView = UIPickerView()
     
@@ -47,8 +48,6 @@ class SpaceViewController: UIViewController {
             self.view.frame.origin.y = 0
         }
     }
-    
-    
     
     /// This IBaction will perform segue
     /// - Parameter sender: sender
@@ -180,7 +179,6 @@ extension SpaceViewController: UIPickerViewDataSource, UIPickerViewDelegate {
         
         switch (editingFieldName) {
             case "space":
-        
                 //disable property type's user interaction
                 // (it need to have a value to be set)
                 propertyType.isUserInteractionEnabled = true
@@ -188,7 +186,7 @@ extension SpaceViewController: UIPickerViewDataSource, UIPickerViewDelegate {
                 self.property.space = Property.SpaceType.allCases[row]
                 clearTextField(textField: propertyType)
                 nextButton.isHidden = true
-            
+
             //second text field set with "Apartamento"
             case "apartment":
                 propertyType.text = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[row].rawValue
