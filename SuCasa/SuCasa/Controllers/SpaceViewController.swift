@@ -14,8 +14,6 @@ class SpaceViewController: UIViewController {
     @IBOutlet weak var spaceType: UITextField!
     @IBOutlet weak var propertyType: UITextField!
     
-    var propertyCreated = Property()
-    
     private let space = [SpaceType.apartment,SpaceType.house]
     private let apartmentSpaceOptions = [PropertyType.apartment, PropertyType.condominium, PropertyType.flat, PropertyType.loft]
     private let houseSpaceOption = [PropertyType.condominium, PropertyType.street]
@@ -48,14 +46,10 @@ class SpaceViewController: UIViewController {
         }
     }
     
-    /// This method will be called when the done button at the picker view has been pressed
-    @objc func donePicker() {
-        
-        //End editing will hide the keyboard
-        self.view.endEditing(true)
-    }
     /*The following two IBAction func is used to know what
     text field is pressed to change the picker view */
+    
+    
     /// This IBAction is to assign the picker view on the spaceType text field
     /// - Parameter sender: Editing did begin
     @IBAction func spaceTypePressed(_ sender: UITextField) {
@@ -71,35 +65,11 @@ class SpaceViewController: UIViewController {
             spaceTypePickerView.reloadAllComponents()
     }
     
-    
-    /// this method populates the property object and perform a segue
-    /// - Parameter sender: who triggers the action
-    @IBAction func proceedToNextView(_ sender: Any) {
-        if (spaceType.text == "" || propertyType?.text == "") {
-            let alert = UIAlertController(title: "Campos Faltando", message: "Você deve preencher todos os campos para prosseguir.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            self.present(alert, animated: true)
-        }
-        else{
-            self.propertyCreated.space = SpaceType(rawValue: spaceType.text!)!
-            self.propertyCreated.type  = PropertyType(rawValue: propertyType.text!)!
-            performSegue(withIdentifier:  "numberOfGuests", sender: self)
-        }
+    /// This method will be called when the done button at the picker view has been pressed
+    @objc func donePicker() {
         
-    }
-    
-    
-    
-    
-    /// This method will send informations from a viewcontroller to another
-    /// - Parameters:
-    ///   - segue:  storyboard segue
-    ///   - sender: who performs the segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "numberOfGuests",
-            let guestsVC = segue.destination as? GuestsViewController {
-                guestsVC.propertyCreated = self.propertyCreated
-        }
+        //End editing will hide the keyboard
+        self.view.endEditing(true)
     }
 }
 
