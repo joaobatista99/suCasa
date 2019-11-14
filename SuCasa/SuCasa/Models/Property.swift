@@ -11,18 +11,27 @@ import Photos
 
 class Property {
     
-    enum SpaceType : String {
+    enum SpaceType : String, CaseIterable {
         case apartment = "Apartamento"
         case house = "Casa"
-        case none = ""
     }
     
-    enum PropertyType : String {
+    enum PropertyType : String, CaseIterable {
         case apartment = "Apartamento"
         case loft = "Loft"
         case flat = "Flat"
         case condominium = "Condominio"
-        case none = ""
+        case street = "Casa de rua"
+        
+        func spaceType() -> SpaceType {
+            switch (self) {
+                case .apartment: return .apartment
+                case .loft: return .apartment
+                case .flat: return .apartment
+                case .condominium: return .house
+            case .street: return .house
+            }
+        }
     }
 
     var space        : SpaceType
@@ -40,8 +49,8 @@ class Property {
     //var photos       : [String]
 
     init(){
-        self.space = .none
-        self.type = .none
+        self.space = .apartment
+        self.type = .apartment
         self.guestsTotal = 0
         self.numberOfRooms = 0
         self.numberOfBeds = 0
