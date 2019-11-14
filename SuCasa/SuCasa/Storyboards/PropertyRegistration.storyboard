@@ -104,7 +104,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="PAW-ok-E21" kind="show" id="jfG-8e-lyh"/>
+                                    <action selector="proceedToNextView:" destination="yR6-Tb-gLL" eventType="touchUpInside" id="vrl-QF-KpF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -149,6 +149,7 @@
                     <connections>
                         <outlet property="propertyType" destination="FiH-tB-wFi" id="Cge-mY-RAg"/>
                         <outlet property="spaceType" destination="xpu-u7-dOE" id="cfd-s2-3cO"/>
+                        <segue destination="PAW-ok-E21" kind="show" identifier="numberOfGuests" id="1BB-47-TMF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOq-ac-ouy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -335,7 +336,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="sMF-ys-ix3" kind="show" id="ewL-sy-W1L"/>
+                                    <segue destination="sMF-ys-ix3" kind="show" identifier="guests" id="ewL-sy-W1L"/>
                                 </connections>
                             </button>
                         </subviews>

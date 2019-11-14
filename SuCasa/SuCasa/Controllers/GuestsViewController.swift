@@ -14,7 +14,12 @@ class GuestsViewController: UIViewController {
     @IBOutlet weak var bedroomNumberTextField: UITextField!
     @IBOutlet weak var bedNumberTextField: UITextField!
     
+    var propertyCreated: Property!
+    
     override func viewDidLoad() {
+        
+        print(propertyCreated.space)
+        print(propertyCreated.type)
         super.viewDidLoad()
         
         setUpTextFields()
