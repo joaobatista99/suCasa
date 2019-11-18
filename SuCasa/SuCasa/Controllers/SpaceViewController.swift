@@ -219,14 +219,25 @@ extension SpaceViewController: UITextFieldDelegate {
     }
     
     fileprivate func setUpTextField() {
-        spaceType.textColor = .black
+        
+        
+        let attributes = [
+            NSAttributedString.Key.foregroundColor: Colors.placeholderColor,
+            NSAttributedString.Key.font : UIFont(name: "OpenSans-Regular", size: 12) // Note the !
+        ]
+        
+        spaceType.attributedPlaceholder = NSAttributedString(string: "Adicione seu título", attributes: attributes as [NSAttributedString.Key : Any])
+        propertyType.attributedPlaceholder = NSAttributedString(string: "Adicione suas regras (Opcional)", attributes: attributes as [NSAttributedString.Key : Any])
+        
+        
+        spaceType.textColor = Colors.textColor
         spaceType.font = UIFont(name: "OpenSans-Regular", size: 12)
         
         /* Set user interaction to false because it's
            necessary to choose an option in the first
            picker view then it will be available */
         propertyType.isUserInteractionEnabled = false
-        propertyType.textColor = .black
+        propertyType.textColor = Colors.textColor
         propertyType.font = UIFont(name: "OpenSans-Regular", size: 12)
     }
     

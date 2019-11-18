@@ -62,17 +62,17 @@ class TitleViewController: UIViewController {
     fileprivate func setUpText() {
         
         let attributes = [
-            NSAttributedString.Key.foregroundColor: UIColor.black,
+            NSAttributedString.Key.foregroundColor: Colors.placeholderColor,
             NSAttributedString.Key.font : UIFont(name: "OpenSans-Regular", size: 12) // Note the !
         ]
         
         titleTextField.attributedPlaceholder = NSAttributedString(string: "Adicione seu título", attributes: attributes as [NSAttributedString.Key : Any])
         rulesTextField.attributedPlaceholder = NSAttributedString(string: "Adicione suas regras (Opcional)", attributes: attributes as [NSAttributedString.Key : Any])
         
-        titleTextField.textColor = .black
+        titleTextField.textColor = Colors.textColor
         titleTextField.font = UIFont(name: "OpenSans-Regular", size: 12)
         
-        rulesTextField.textColor = .black
+        rulesTextField.textColor = Colors.textColor
         rulesTextField.font = UIFont(name: "OpenSans-Regular", size: 12)
     }
 }
