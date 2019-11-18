@@ -16,7 +16,7 @@ class SpaceViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
 
     
-    private var spaceTypePickerView = UIPickerView()
+    private var pickerView = UIPickerView()
     
     private var property: Property = Property()
     private var editingFieldName: String?
@@ -89,8 +89,8 @@ class SpaceViewController: UIViewController {
         }
         
         // assign space type pickerview to correct text field
-        sender.inputView = spaceTypePickerView
-        spaceTypePickerView.reloadAllComponents()
+        sender.inputView = pickerView
+        pickerView.reloadAllComponents()
     }
         
     /// This method will be called when the done button at the picker view has been pressed
@@ -117,8 +117,8 @@ extension SpaceViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     /// This method is for set up the picker view, create a toolbar and put a done button
     fileprivate func setUpPickerViews() {
         
-        spaceTypePickerView.delegate = self
-        spaceTypePickerView.dataSource = self
+        pickerView.delegate = self
+        pickerView.dataSource = self
         
         //creating a toolbar
         let toolBar = UIToolbar()
