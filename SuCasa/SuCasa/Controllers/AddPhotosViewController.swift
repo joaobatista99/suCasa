@@ -12,10 +12,14 @@ import Photos
 
 class AddPhotosViewController: UIViewController {
 
-   
+    var property: Property!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(property.address)
+        print(property.space)
+        print(property.guestsTotal)
     }
     
 
