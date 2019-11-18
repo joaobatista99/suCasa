@@ -14,6 +14,7 @@
 		3658D1FE2379EAC100A96E2F /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3658D1FC2379EAC100A96E2F /* ResultsTableViewCell.swift */; };
 		3658D1FF2379EAC100A96E2F /* ResultsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3658D1FD2379EAC100A96E2F /* ResultsTableViewCell.xib */; };
 		3658D2042379F75100A96E2F /* brazilCities.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3658D2032379F75100A96E2F /* brazilCities.csv */; };
+		36AC92F1237DD83400012AA9 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AC92F0237DD83400012AA9 /* StringExtension.swift */; };
 		36DD943B2375D5C0000012BB /* ExploreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD94392375D5C0000012BB /* ExploreTableViewCell.swift */; };
 		36DD943C2375D5C0000012BB /* ExploreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36DD943A2375D5C0000012BB /* ExploreTableViewCell.xib */; };
 		36DD943E2375D71E000012BB /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD943D2375D71E000012BB /* ExploreViewController.swift */; };
@@ -22,6 +23,7 @@
 		5E55AA19237B34E500887772 /* GuestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E55AA18237B34E500887772 /* GuestsViewController.swift */; };
 		5E55AA1B237B34FD00887772 /* AddPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E55AA1A237B34FD00887772 /* AddPhotosViewController.swift */; };
 		5E55AA1D237B351800887772 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E55AA1C237B351800887772 /* TitleViewController.swift */; };
+		BA075ACF2383066D001CAE86 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA075ACE2383066D001CAE86 /* LocationViewController.swift */; };
 		BA5D40DA2375EA050041AC6B /* AdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5D40D92375EA050041AC6B /* AdViewController.swift */; };
 		BA5D40DC2375F93A0041AC6B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5D40DB2375F93A0041AC6B /* Login.storyboard */; };
 		BA670ED3237457F9005E3FDA /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA670EC9237457F8005E3FDA /* OpenSans-BoldItalic.ttf */; };
@@ -43,7 +45,8 @@
 		BAB9EFBF237095CD00B480F1 /* SuCasa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAB9EFBD237095CD00B480F1 /* SuCasa.xcdatamodeld */; };
 		BAB9EFC1237095D000B480F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB9EFC0237095D000B480F1 /* Assets.xcassets */; };
 		BAB9EFC4237095D000B480F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB9EFC2237095D000B480F1 /* LaunchScreen.storyboard */; };
-		BAEB1462237B30AD008438D4 /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEB1461237B30AD008438D4 /* Ad.swift */; };
+		BAEB1462237B30AD008438D4 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEB1461237B30AD008438D4 /* Property.swift */; };
+		BAFE3515237C727F00966F86 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFE3514237C727F00966F86 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,7 @@
 		3658D1FC2379EAC100A96E2F /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
 		3658D1FD2379EAC100A96E2F /* ResultsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsTableViewCell.xib; sourceTree = "<group>"; };
 		3658D2032379F75100A96E2F /* brazilCities.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = brazilCities.csv; path = SuCasa/brazilCities.csv; sourceTree = SOURCE_ROOT; };
+		36AC92F0237DD83400012AA9 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		36DD94392375D5C0000012BB /* ExploreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableViewCell.swift; sourceTree = "<group>"; };
 		36DD943A2375D5C0000012BB /* ExploreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreTableViewCell.xib; sourceTree = "<group>"; };
 		36DD943D2375D71E000012BB /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +68,7 @@
 		5E55AA1C237B351800887772 /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
 		8F6CA9F7B8D35C36B0A15AB3 /* Pods-SuCasa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuCasa.debug.xcconfig"; path = "Target Support Files/Pods-SuCasa/Pods-SuCasa.debug.xcconfig"; sourceTree = "<group>"; };
 		AB9A42759A6AEB44F15643F6 /* Pods_SuCasa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuCasa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA075ACE2383066D001CAE86 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		BA5D40D92375EA050041AC6B /* AdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewController.swift; sourceTree = "<group>"; };
 		BA5D40DB2375F93A0041AC6B /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BA670EC9237457F8005E3FDA /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -87,7 +92,8 @@
 		BAB9EFC0237095D000B480F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAB9EFC3237095D000B480F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAB9EFC5237095D000B480F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BAEB1461237B30AD008438D4 /* Ad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ad.swift; sourceTree = "<group>"; };
+		BAEB1461237B30AD008438D4 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		BAFE3514237C727F00966F86 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				362DB1CF237A23E400D36357 /* City.swift */,
-				BAEB1461237B30AD008438D4 /* Ad.swift */,
+				BAFE3514237C727F00966F86 /* Colors.swift */,
+				BAEB1461237B30AD008438D4 /* Property.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -180,6 +187,7 @@
 				5E55AA18237B34E500887772 /* GuestsViewController.swift */,
 				5E55AA1A237B34FD00887772 /* AddPhotosViewController.swift */,
 				5E55AA1C237B351800887772 /* TitleViewController.swift */,
+				BA075ACE2383066D001CAE86 /* LocationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -209,6 +217,7 @@
 				36DD94332375D44D000012BB /* XIBs */,
 				36DD94382375D50F000012BB /* Cells */,
 				BAB9EFB4237095CD00B480F1 /* AppDelegate.swift */,
+				36AC92F0237DD83400012AA9 /* StringExtension.swift */,
 				BAB9EFC5237095D000B480F1 /* Info.plist */,
 				3658D2032379F75100A96E2F /* brazilCities.csv */,
 				BAB9EFBD237095CD00B480F1 /* SuCasa.xcdatamodeld */,
@@ -364,7 +373,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAB9EFB5237095CD00B480F1 /* AppDelegate.swift in Sources */,
+				BAFE3515237C727F00966F86 /* Colors.swift in Sources */,
 				3658D1FA2379D7E200A96E2F /* SuggestionsTableViewCell.swift in Sources */,
+				36AC92F1237DD83400012AA9 /* StringExtension.swift in Sources */,
+				BA075ACF2383066D001CAE86 /* LocationViewController.swift in Sources */,
 				3658D1FE2379EAC100A96E2F /* ResultsTableViewCell.swift in Sources */,
 				BA5D40DA2375EA050041AC6B /* AdViewController.swift in Sources */,
 				BAB9EFBF237095CD00B480F1 /* SuCasa.xcdatamodeld in Sources */,
@@ -374,7 +386,7 @@
 				BAB8DA07237201200039CBC5 /* IntroViewController.swift in Sources */,
 				5E55AA1B237B34FD00887772 /* AddPhotosViewController.swift in Sources */,
 				362DB1D0237A23E400D36357 /* City.swift in Sources */,
-				BAEB1462237B30AD008438D4 /* Ad.swift in Sources */,
+				BAEB1462237B30AD008438D4 /* Property.swift in Sources */,
 				36DD943B2375D5C0000012BB /* ExploreTableViewCell.swift in Sources */,
 				5E55AA1D237B351800887772 /* TitleViewController.swift in Sources */,
 			);
@@ -514,7 +526,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NQW9RC6R9A;
+				DEVELOPMENT_TEAM = 9KU377264X;
 				INFOPLIST_FILE = SuCasa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -534,7 +546,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NQW9RC6R9A;
+				DEVELOPMENT_TEAM = 9KU377264X;
 				INFOPLIST_FILE = SuCasa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (

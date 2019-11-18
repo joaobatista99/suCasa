@@ -3,7 +3,7 @@
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -64,7 +64,7 @@
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="continue"/>
                                 <connections>
-                                    <action selector="spaceTypePressed:" destination="yR6-Tb-gLL" eventType="editingDidBegin" id="xMp-L2-JpG"/>
+                                    <action selector="assignPickerViewToTextField:" destination="yR6-Tb-gLL" eventType="editingDidBegin" id="0ts-JM-SMZ"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agora escolha um tipo de propriedade:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ejh-Jq-xHE">
@@ -80,7 +80,7 @@
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="continue"/>
                                 <connections>
-                                    <action selector="propertyTypePressed:" destination="yR6-Tb-gLL" eventType="editingDidBegin" id="Wy0-gA-rdu"/>
+                                    <action selector="assignPickerViewToTextField:" destination="yR6-Tb-gLL" eventType="editingDidBegin" id="nUZ-hZ-8xc"/>
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ma-Al-cBT">
@@ -104,7 +104,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="PAW-ok-E21" kind="show" id="jfG-8e-lyh"/>
+                                    <action selector="proceedToNextView:" destination="yR6-Tb-gLL" eventType="touchUpInside" id="ASS-dq-oxY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -147,8 +147,10 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="98X-ZB-T5o"/>
                     <connections>
+                        <outlet property="nextButton" destination="VxP-A5-IyD" id="Jdd-o6-2dc"/>
                         <outlet property="propertyType" destination="FiH-tB-wFi" id="Cge-mY-RAg"/>
                         <outlet property="spaceType" destination="xpu-u7-dOE" id="cfd-s2-3cO"/>
+                        <segue destination="PAW-ok-E21" kind="show" identifier="goToGuests" id="14O-NL-YpU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOq-ac-ouy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -335,7 +337,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="sMF-ys-ix3" kind="show" id="ewL-sy-W1L"/>
+                                    <action selector="proceedToNextView:" destination="PAW-ok-E21" eventType="touchUpInside" id="Mpg-nN-kqf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -393,15 +395,22 @@
                         <viewLayoutGuide key="safeArea" id="bp1-Kz-17w"/>
                     </view>
                     <navigationItem key="navigationItem" id="4Xe-nw-gXC"/>
+                    <connections>
+                        <outlet property="bedNumberTextField" destination="OxW-aV-zSh" id="jj7-7V-GIE"/>
+                        <outlet property="bedroomNumberTextField" destination="i1Q-gJ-NUa" id="KSK-Qr-dzP"/>
+                        <outlet property="nextButton" destination="hPl-p2-L6R" id="r0Q-Cs-ENv"/>
+                        <outlet property="totalGuestsTextField" destination="d9F-lM-bcY" id="4jZ-fC-wP9"/>
+                        <segue destination="sMF-ys-ix3" kind="show" identifier="goToLocation" id="Szm-Pj-Ixy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bf1-hy-WIj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="995.65217391304361" y="101.78571428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Location View Controller-->
         <scene sceneID="oyE-91-OOS">
             <objects>
-                <viewController id="sMF-ys-ix3" sceneMemberID="viewController">
+                <viewController id="sMF-ys-ix3" customClass="LocationViewController" customModule="SuCasa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vQj-PI-8wH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -586,7 +595,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="NYI-Li-GoT" kind="show" id="Z4j-vf-6cP"/>
+                                    <segue destination="NYI-Li-GoT" kind="show" identifier="" id="Z4j-vf-6cP"/>
                                 </connections>
                             </button>
                         </subviews>
