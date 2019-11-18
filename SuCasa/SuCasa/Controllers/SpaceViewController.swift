@@ -13,12 +13,13 @@ class SpaceViewController: UIViewController {
     // Outlet variables
     @IBOutlet weak var spaceType: UITextField!
     @IBOutlet weak var propertyType: UITextField!
-    
-    private let space = ["Apartamento", "Casa"]
-    private let apartmentSpaceOptions = ["Apartamento", "Condomínio", "Loft", "Flat"]
-    private let houseSpaceOption = ["Condomínio", "Opcão 2"]
+    @IBOutlet weak var nextButton: UIButton!
+
     
     private var spaceTypePickerView = UIPickerView()
+    
+    private var property: Property = Property()
+    private var editingFieldName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,8 @@ class SpaceViewController: UIViewController {
         //keyboard notifications
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        nextButton.isHidden = true
     }
     
     //Scroll when keyboard activates
@@ -46,30 +49,66 @@ class SpaceViewController: UIViewController {
         }
     }
     
+    /// This IBaction will perform segue
+    /// - Parameter sender: sender
+    @IBAction func proceedToNextView(_ sender: Any) {
+        
+        //check if any text is nil or empty
+        if  self.spaceType.text?.isNilOrEmpty() ?? false
+        && propertyType.text?.isNilOrEmpty() ?? false {
+            
+            //notificateWithAlert()
+        }
+            
+        //if both text field is filled, perform segue
+        else {
+            self.performSegue(withIdentifier: "goToGuests", sender: self)
+        }
+    }
+    
+    private func notificateWithAlert() {
+        let alert = UIAlertController(title: "Campos Faltando", message: "Você deve preencher todos os campos para prosseguir.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
     /*The following two IBAction func is used to know what
     text field is pressed to change the picker view */
     
     
-    /// This IBAction is to assign the picker view on the spaceType text field
+    /// This IBAction is to assign the picker view on the editing text field
     /// - Parameter sender: Editing did begin
-    @IBAction func spaceTypePressed(_ sender: UITextField) {
-        spaceType.inputView = spaceTypePickerView
+    @IBAction func assignPickerViewToTextField(_ sender: UITextField) {
+        // define what type of component is being edited
+        if (sender == spaceType) {
+            editingFieldName = "space"
+        }
+        else {
+            // choosing what options will be set on the second picker view
+            editingFieldName = spaceType.text == "Apartamento" ? "apartment" :  "house"
+        }
+        
+        // assign space type pickerview to correct text field
+        sender.inputView = spaceTypePickerView
         spaceTypePickerView.reloadAllComponents()
     }
-    
-    
-    /// This IBAction is to assign the picker view on the propertyType text field
-    /// - Parameter sender: Editing did begin
-    @IBAction func propertyTypePressed(_ sender: UITextField) {
-            propertyType.inputView = spaceTypePickerView
-            spaceTypePickerView.reloadAllComponents()
-    }
-    
+        
     /// This method will be called when the done button at the picker view has been pressed
     @objc func donePicker() {
         
         //End editing will hide the keyboard
         self.view.endEditing(true)
+    }
+    
+    /// This method is to send the object Property to the next View Controller
+    /// - Parameters:
+    ///   - segue: goToGuests
+    ///   - sender: sender
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToGuests",
+            let guestsVC = segue.destination as? GuestsViewController {
+            guestsVC.property = self.property
+        }
     }
 }
 
@@ -106,62 +145,63 @@ extension SpaceViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
-        if spaceType.isEditing {
-            return space.count
+        // first text field pressed
+        if (editingFieldName == "space") {
+            return Property.SpaceType.allCases.count
         }
-        else if propertyType.isEditing{
             
-            if spaceType.text == "Apartamento" {
-                return apartmentSpaceOptions.count
-                
-            } else if spaceType.text == "Casa" {
-                return houseSpaceOption.count
-            }
+        //second text field pressed
+        else {
+            // this ternary is to know what option was set on the first picker view
+            let spaceType: Property.SpaceType = editingFieldName  == "house" ? .house : .apartment
+            
+            //return the spaceType count based on what was set in the first picker view (house or apartment)
+            return Property.PropertyType.allCases.filter({$0.spaceType() == spaceType}).count
         }
-        return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
-        //This if is to know which of text fields were pressed
-        if spaceType.isEditing {
-            return space[row]
+        if (editingFieldName == "space") {
+            return Property.SpaceType.allCases[row].rawValue
         }
-        
-        else if propertyType.isEditing {
+        else {
+            // this ternary is to know what option was set on the first picker view
+            let spaceType: Property.SpaceType = editingFieldName  == "house" ? .house : .apartment
             
-            /* This if is to know what option
-            selected in the spaceType */
-            if spaceType.text == "Apartamento" {
-                return apartmentSpaceOptions[row]
-                
-            } else if spaceType.text == "Casa" {
-                return houseSpaceOption[row]
-            }
+            //return the spaceType raw value based on what was set in the first picker view (house or apartment)
+            return Property.PropertyType.allCases.filter({$0.spaceType() == spaceType})[row].rawValue
         }
-        return ""
     }
     
     /// This method get the information on the picker view and put it on the spaceType text field
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        if spaceType.isEditing {
-            spaceType.text = space[row]
-            propertyType.isUserInteractionEnabled = true
-            //if change the option
-            clearTextField(textField: propertyType)
-        }
-        
-        else if propertyType.isEditing {
+        switch (editingFieldName) {
+            case "space":
+                //disable property type's user interaction
+                // (it need to have a value to be set)
+                propertyType.isUserInteractionEnabled = true
+                spaceType.text = Property.SpaceType.allCases[row].rawValue
+                self.property.space = Property.SpaceType.allCases[row]
+                clearTextField(textField: propertyType)
+                nextButton.isHidden = true
+
+            //second text field set with "Apartamento"
+            case "apartment":
+                propertyType.text = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[row].rawValue
+                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[row]
+                nextButton.isHidden = false
             
-            /* Based on what the user chose in the spaceType (first picker view)
-             the propertyType options change */
-            if  spaceType.text == "Apartamento" {
-                propertyType.text = apartmentSpaceOptions[row]
-                
-            } else if spaceType.text == "Casa" {
-                propertyType.text = houseSpaceOption[row]
-            }
+            //second text field set with "Casa"
+            case "house":
+                propertyType.text = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[row].rawValue
+                nextButton.isHidden = false
+                // assign the property type based on what was chosen
+                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[row]
+            
+            default:
+                break
         }
     }
 }
@@ -171,7 +211,7 @@ extension SpaceViewController: UITextFieldDelegate {
     
     /// This method is to clear the text field
     /// - Parameter textField: The text field that is going to be cleaned
-    func clearTextField(textField: UITextField) {
+    fileprivate func clearTextField(textField: UITextField) {
         
         if !textField.text!.isEmpty {
             textField.text = ""
