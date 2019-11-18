@@ -43,7 +43,6 @@
 		BAB9EFBF237095CD00B480F1 /* SuCasa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAB9EFBD237095CD00B480F1 /* SuCasa.xcdatamodeld */; };
 		BAB9EFC1237095D000B480F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB9EFC0237095D000B480F1 /* Assets.xcassets */; };
 		BAB9EFC4237095D000B480F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB9EFC2237095D000B480F1 /* LaunchScreen.storyboard */; };
-		BAEB1462237B30AD008438D4 /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEB1461237B30AD008438D4 /* Ad.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,7 +86,6 @@
 		BAB9EFC0237095D000B480F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAB9EFC3237095D000B480F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAB9EFC5237095D000B480F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BAEB1461237B30AD008438D4 /* Ad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ad.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				362DB1CF237A23E400D36357 /* City.swift */,
-				BAEB1461237B30AD008438D4 /* Ad.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -374,7 +371,6 @@
 				BAB8DA07237201200039CBC5 /* IntroViewController.swift in Sources */,
 				5E55AA1B237B34FD00887772 /* AddPhotosViewController.swift in Sources */,
 				362DB1D0237A23E400D36357 /* City.swift in Sources */,
-				BAEB1462237B30AD008438D4 /* Ad.swift in Sources */,
 				36DD943B2375D5C0000012BB /* ExploreTableViewCell.swift in Sources */,
 				5E55AA1D237B351800887772 /* TitleViewController.swift in Sources */,
 			);
