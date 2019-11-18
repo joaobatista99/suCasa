@@ -13,12 +13,17 @@ class GuestsViewController: UIViewController {
     @IBOutlet weak var totalGuestsTextField: UITextField!
     @IBOutlet weak var bedroomNumberTextField: UITextField!
     @IBOutlet weak var bedNumberTextField: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
+    
+    var property: Property!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUpTextFields()
+        nextButton.isHidden = true
         
+        //Tap gesture to hide keyboard
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         view.addGestureRecognizer(tap)
         
@@ -40,6 +45,11 @@ class GuestsViewController: UIViewController {
         if self.view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0
         }
+        
+        // if all text field is filled, 'next button' appear
+        if isTextFieldsFilled() {
+            nextButton.isHidden = false
+        }
     }
     
     /// This method will be called when the done button at the picker view has been pressed
@@ -48,6 +58,27 @@ class GuestsViewController: UIViewController {
         //End editing will hide the keyboard
         self.view.endEditing(true)
     }
+    
+    @IBAction func proceedToNextView(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "goToLocation", sender: self)
+        
+        var number = Int(totalGuestsTextField.text!)
+        property.guestsTotal = number!
+        
+        number = Int(bedroomNumberTextField.text!)
+        property.numberOfRooms = number!
+        
+        number = Int(bedNumberTextField.text!)
+        property.numberOfBeds = number!
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToLocation",
+            let locationVC = segue.destination as? LocationViewController {
+            locationVC.property = self.property
+        }
+    }
+    
 }
 
 
@@ -85,4 +116,23 @@ extension GuestsViewController: UITextFieldDelegate {
         bedNumberTextField.inputAccessoryView = toolBar
     }
     
+    func isTextFieldsFilled() -> Bool{
+        
+        if totalGuestsTextField.text!.isEmpty {
+            return false
+        }
+        else if bedroomNumberTextField.text!.isEmpty {
+            return false
+        }
+        else if  bedNumberTextField.text!.isEmpty {
+            return false
+        }
+        
+        //If all text field is filled, return true
+        return true
+    }
+    
+//    func isTextFieldFilled(textField: UITextField) {
+//        return textField.text?.isEmpty ? false : true
+//    }
 }
