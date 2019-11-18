@@ -14,6 +14,8 @@ class TitleViewController: UIViewController {
     
     @IBOutlet weak var rulesTextField: UITextField!
     
+    var property: Property!
+    var images: [UIImage]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,8 +68,8 @@ class TitleViewController: UIViewController {
             NSAttributedString.Key.font : UIFont(name: "OpenSans-Regular", size: 17) // Note the !
         ]
         
-        titleTextField.attributedPlaceholder = NSAttributedString(string: "Selecione uma opção", attributes: attributes as [NSAttributedString.Key : Any])
-        rulesTextField.attributedPlaceholder = NSAttributedString(string: "Selecione uma opção", attributes: attributes as [NSAttributedString.Key : Any])
+        titleTextField.attributedPlaceholder = NSAttributedString(string: "Adicione seu título", attributes: attributes as [NSAttributedString.Key : Any])
+        rulesTextField.attributedPlaceholder = NSAttributedString(string: "Adicione suas regras (Opcional)", attributes: attributes as [NSAttributedString.Key : Any])
         
         titleTextField.textColor = Colors.textColor
         titleTextField.font = UIFont(name: "OpenSans-Regular", size: 17)

@@ -695,9 +695,16 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="1Cl-bj-BOE" kind="show" id="MrL-ot-Fjz"/>
+                                    <action selector="proceedToNextView:" destination="NYI-Li-GoT" eventType="touchUpInside" id="HDH-Li-nPG"/>
+                                    <segue destination="1Cl-bj-BOE" kind="show" identifier="goToTitle" id="MrL-ot-Fjz"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fotos Adicionadas!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0f-hj-HUu">
+                                <rect key="frame" x="132.66666666666666" y="417" width="148.99999999999997" height="24"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                                <color key="textColor" red="0.38761192560000002" green="0.40315389629999998" blue="0.44882738589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -711,15 +718,21 @@
                             <constraint firstItem="zn5-ug-JVz" firstAttribute="trailing" secondItem="qjP-vQ-Wbf" secondAttribute="trailing" constant="40" id="Tlf-2R-JZB"/>
                             <constraint firstItem="qjP-vQ-Wbf" firstAttribute="width" secondItem="mYQ-2l-PrZ" secondAttribute="width" multiplier="0.25" id="WW7-5G-PI0"/>
                             <constraint firstItem="84r-ja-z2W" firstAttribute="leading" secondItem="7Yf-tV-XAG" secondAttribute="leading" id="gQR-Ki-d6f"/>
+                            <constraint firstItem="m0f-hj-HUu" firstAttribute="top" secondItem="y7d-eY-IXf" secondAttribute="bottom" constant="39.333333333333314" id="n8F-2V-kJ2"/>
                             <constraint firstItem="qjP-vQ-Wbf" firstAttribute="height" secondItem="mYQ-2l-PrZ" secondAttribute="height" multiplier="0.045" id="nou-EC-ANg"/>
                             <constraint firstItem="y7d-eY-IXf" firstAttribute="top" secondItem="84r-ja-z2W" secondAttribute="bottom" constant="40" id="tK1-rV-A6j"/>
                             <constraint firstItem="y7d-eY-IXf" firstAttribute="height" secondItem="mYQ-2l-PrZ" secondAttribute="height" multiplier="0.06" id="u2u-WS-uaI"/>
                             <constraint firstItem="7Yf-tV-XAG" firstAttribute="width" secondItem="mYQ-2l-PrZ" secondAttribute="width" multiplier="0.9" id="uSh-AS-mLM"/>
+                            <constraint firstItem="m0f-hj-HUu" firstAttribute="centerX" secondItem="zn5-ug-JVz" secondAttribute="centerX" id="yIx-nh-Tm6"/>
                             <constraint firstItem="7Yf-tV-XAG" firstAttribute="top" secondItem="zn5-ug-JVz" secondAttribute="top" constant="10" id="zGG-D1-7OH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zn5-ug-JVz"/>
                     </view>
                     <navigationItem key="navigationItem" id="HYJ-Zk-vpL"/>
+                    <connections>
+                        <outlet property="nextButton" destination="qjP-vQ-Wbf" id="xng-WS-SIn"/>
+                        <outlet property="photosAdded" destination="m0f-hj-HUu" id="wtN-4A-oCb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P4D-Uf-j3R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

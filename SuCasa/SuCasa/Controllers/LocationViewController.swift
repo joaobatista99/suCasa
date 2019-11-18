@@ -52,7 +52,7 @@ class LocationViewController: UIViewController {
         
         let attributes = [
             NSAttributedString.Key.foregroundColor: Colors.placeholderColor,
-            NSAttributedString.Key.font : UIFont(name: "OpenSans-Regular", size: 12) // Note the !
+            NSAttributedString.Key.font : UIFont(name: "OpenSans-Regular", size: 17) // Note the !
         ]
         
         countryTextField.attributedPlaceholder = NSAttributedString(string: "ex: Brasil", attributes: attributes as [NSAttributedString.Key : Any])
@@ -62,16 +62,16 @@ class LocationViewController: UIViewController {
         
         
         countryTextField.textColor = Colors.textColor
-        countryTextField.font = UIFont(name: "OpenSans-Regular", size: 12)
+        countryTextField.font = UIFont(name: "OpenSans-Regular", size: 17)
         
         adressTextField.textColor = Colors.textColor
-        adressTextField.font = UIFont(name: "OpenSans-Regular", size: 12)
+        adressTextField.font = UIFont(name: "OpenSans-Regular", size: 17)
         
         cityTextField.textColor = Colors.textColor
-        cityTextField.font = UIFont(name: "OpenSans-Regular", size: 12)
+        cityTextField.font = UIFont(name: "OpenSans-Regular", size: 17)
         
         postalCodeTextField.textColor = Colors.textColor
-        postalCodeTextField.font = UIFont(name: "OpenSans-Regular", size: 12)
+        postalCodeTextField.font = UIFont(name: "OpenSans-Regular", size: 17)
         
         
         self.cityTextField.tag = 0
