@@ -17,6 +17,7 @@ class SpaceViewController: UIViewController {
 
     
     private var pickerView = UIPickerView()
+
     
     private var property: Property = Property()
     private var editingFieldName: String?
@@ -162,8 +163,10 @@ extension SpaceViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
+
         if (editingFieldName == "space") {
             return Property.SpaceType.allCases[row].rawValue
+
         }
         else {
             // this ternary is to know what option was set on the first picker view
@@ -171,12 +174,14 @@ extension SpaceViewController: UIPickerViewDataSource, UIPickerViewDelegate {
             
             //return the spaceType raw value based on what was set in the first picker view (house or apartment)
             return Property.PropertyType.allCases.filter({$0.spaceType() == spaceType})[row].rawValue
+
         }
     }
     
     /// This method get the information on the picker view and put it on the spaceType text field
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
+
         switch (editingFieldName) {
             case "space":
                 //disable property type's user interaction
@@ -202,6 +207,7 @@ extension SpaceViewController: UIPickerViewDataSource, UIPickerViewDelegate {
             
             default:
                 break
+
         }
     }
 }
