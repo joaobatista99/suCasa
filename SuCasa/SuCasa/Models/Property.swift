@@ -46,7 +46,6 @@ class Property {
     var complement   : String
     var title        : String
     var rules        : String
-    //var photos       : [String]
 
     init(){
         self.space = .apartment
@@ -61,7 +60,6 @@ class Property {
         self.complement = ""
         self.title = ""
         self.rules = ""
-        //self.photos = []
     }
     
 }

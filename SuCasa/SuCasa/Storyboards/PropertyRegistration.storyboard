@@ -3,7 +3,7 @@
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -439,16 +439,19 @@
                                         <integer key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getLocation:" destination="sMF-ys-ix3" eventType="touchUpInside" id="66W-8P-nF0"/>
+                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGz-bl-ZIK">
-                                <rect key="frame" x="0.0" y="344" width="414" height="403.33333333333326"/>
+                                <rect key="frame" x="0.0" y="349" width="414" height="403.33333333333326"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jt9-CK-Dqo">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="605"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tun-Bw-N4I">
                                                 <rect key="frame" x="20.666666666666657" y="8.6666666666666856" width="372.66666666666674" height="1"/>
-                                                <color key="backgroundColor" red="0.85861277579999995" green="0.86274194719999997" blue="0.86676949260000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.87048107389999996" green="0.87056988479999997" blue="0.87456589939999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="País/Região" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwh-BE-IOw">
                                                 <rect key="frame" x="20.666666666666657" y="21.666666666666686" width="372.66666666666674" height="21"/>
@@ -461,7 +464,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="continue"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="continue" textContentType="country-name"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dCW-XL-RBw">
                                                 <rect key="frame" x="20.666666666666657" y="85" width="372.66666666666674" height="1.3333333333333286"/>
@@ -478,7 +481,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="continue"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="continue" textContentType="street-address"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="niI-QC-XYr">
                                                 <rect key="frame" x="20.666666666666657" y="169" width="372.66666666666674" height="1"/>
@@ -495,7 +498,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="continue"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="continue" textContentType="address-level2"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bZ-lJ-2qF">
                                                 <rect key="frame" x="20.666666666666657" y="253.33333333333337" width="372.66666666666674" height="1.3333333333333428"/>
@@ -511,14 +514,14 @@
                                                 <rect key="frame" x="20.666666666666657" y="300.33333333333337" width="372.66666666666674" height="36.333333333333314"/>
                                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="continue"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="continue" textContentType="postal-code"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nhe-aS-OOo">
                                                 <rect key="frame" x="20.666666666666657" y="337.66666666666663" width="372.66666666666674" height="1"/>
                                                 <color key="backgroundColor" red="0.91362601519999997" green="0.91378277539999997" blue="0.91361618040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="dCW-XL-RBw" firstAttribute="height" secondItem="Jt9-CK-Dqo" secondAttribute="height" multiplier="0.002" id="0Fz-kD-ph4"/>
                                             <constraint firstItem="dwh-BE-IOw" firstAttribute="width" secondItem="Jt9-CK-Dqo" secondAttribute="width" multiplier="0.900161" id="1Rc-7u-WKa"/>
@@ -571,6 +574,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Jt9-CK-Dqo" secondAttribute="bottom" id="0iT-yp-63o"/>
                                     <constraint firstItem="Jt9-CK-Dqo" firstAttribute="width" secondItem="VGz-bl-ZIK" secondAttribute="width" id="0nm-2v-Ae7"/>
@@ -595,7 +599,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="NYI-Li-GoT" kind="show" identifier="" id="Z4j-vf-6cP"/>
+                                    <action selector="proceedToNextView:" destination="sMF-ys-ix3" eventType="touchUpInside" id="s9K-Tb-ynp"/>
+                                    <segue destination="NYI-Li-GoT" kind="show" identifier="addPhotos" id="Z4j-vf-6cP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -613,7 +618,7 @@
                             <constraint firstItem="aQL-zN-L5M" firstAttribute="centerY" secondItem="9wF-ON-6F8" secondAttribute="centerY" multiplier="1.65" id="Z6b-aR-Ifz"/>
                             <constraint firstItem="VGz-bl-ZIK" firstAttribute="height" secondItem="vQj-PI-8wH" secondAttribute="height" multiplier="0.45" id="f0h-3d-wJP"/>
                             <constraint firstItem="VGz-bl-ZIK" firstAttribute="width" secondItem="vQj-PI-8wH" secondAttribute="width" id="fb5-DI-4XV"/>
-                            <constraint firstItem="VGz-bl-ZIK" firstAttribute="top" secondItem="8JI-Pg-TXM" secondAttribute="bottom" constant="10" id="gej-6e-Zxt"/>
+                            <constraint firstItem="VGz-bl-ZIK" firstAttribute="top" secondItem="8JI-Pg-TXM" secondAttribute="bottom" constant="15" id="gej-6e-Zxt"/>
                             <constraint firstItem="QQm-ew-UD2" firstAttribute="leading" secondItem="14C-KB-qrg" secondAttribute="leading" id="lcb-2L-AI5"/>
                             <constraint firstItem="QQm-ew-UD2" firstAttribute="width" secondItem="vQj-PI-8wH" secondAttribute="width" multiplier="0.9" id="mhe-Y6-3uU"/>
                             <constraint firstItem="8JI-Pg-TXM" firstAttribute="centerX" secondItem="QQm-ew-UD2" secondAttribute="centerX" id="nt9-jn-dmS"/>
@@ -626,6 +631,15 @@
                         <viewLayoutGuide key="safeArea" id="9wF-ON-6F8"/>
                     </view>
                     <navigationItem key="navigationItem" id="8EC-WG-32t"/>
+                    <connections>
+                        <outlet property="adressTextField" destination="KaQ-l2-RYj" id="YSN-l0-FMG"/>
+                        <outlet property="cityTextField" destination="gpc-Qs-dnY" id="Wpn-aj-hbd"/>
+                        <outlet property="countryTextField" destination="y2w-gQ-lbF" id="lDT-pa-YgY"/>
+                        <outlet property="nextButton" destination="aQL-zN-L5M" id="Svr-BD-vCS"/>
+                        <outlet property="postalCodeTextField" destination="DdU-ik-n7R" id="WEf-iL-hCp"/>
+                        <outlet property="scrollContent" destination="Jt9-CK-Dqo" id="ceW-9K-qbI"/>
+                        <outlet property="scrollView" destination="VGz-bl-ZIK" id="KZE-EK-lDb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YfT-kP-OLJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -681,9 +695,16 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="1Cl-bj-BOE" kind="show" id="MrL-ot-Fjz"/>
+                                    <action selector="proceedToNextView:" destination="NYI-Li-GoT" eventType="touchUpInside" id="HDH-Li-nPG"/>
+                                    <segue destination="1Cl-bj-BOE" kind="show" identifier="goToTitle" id="MrL-ot-Fjz"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fotos Adicionadas!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0f-hj-HUu">
+                                <rect key="frame" x="132.66666666666666" y="417" width="148.99999999999997" height="24"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                                <color key="textColor" red="0.38761192560000002" green="0.40315389629999998" blue="0.44882738589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -697,15 +718,21 @@
                             <constraint firstItem="zn5-ug-JVz" firstAttribute="trailing" secondItem="qjP-vQ-Wbf" secondAttribute="trailing" constant="40" id="Tlf-2R-JZB"/>
                             <constraint firstItem="qjP-vQ-Wbf" firstAttribute="width" secondItem="mYQ-2l-PrZ" secondAttribute="width" multiplier="0.25" id="WW7-5G-PI0"/>
                             <constraint firstItem="84r-ja-z2W" firstAttribute="leading" secondItem="7Yf-tV-XAG" secondAttribute="leading" id="gQR-Ki-d6f"/>
+                            <constraint firstItem="m0f-hj-HUu" firstAttribute="top" secondItem="y7d-eY-IXf" secondAttribute="bottom" constant="39.333333333333314" id="n8F-2V-kJ2"/>
                             <constraint firstItem="qjP-vQ-Wbf" firstAttribute="height" secondItem="mYQ-2l-PrZ" secondAttribute="height" multiplier="0.045" id="nou-EC-ANg"/>
                             <constraint firstItem="y7d-eY-IXf" firstAttribute="top" secondItem="84r-ja-z2W" secondAttribute="bottom" constant="40" id="tK1-rV-A6j"/>
                             <constraint firstItem="y7d-eY-IXf" firstAttribute="height" secondItem="mYQ-2l-PrZ" secondAttribute="height" multiplier="0.06" id="u2u-WS-uaI"/>
                             <constraint firstItem="7Yf-tV-XAG" firstAttribute="width" secondItem="mYQ-2l-PrZ" secondAttribute="width" multiplier="0.9" id="uSh-AS-mLM"/>
+                            <constraint firstItem="m0f-hj-HUu" firstAttribute="centerX" secondItem="zn5-ug-JVz" secondAttribute="centerX" id="yIx-nh-Tm6"/>
                             <constraint firstItem="7Yf-tV-XAG" firstAttribute="top" secondItem="zn5-ug-JVz" secondAttribute="top" constant="10" id="zGG-D1-7OH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zn5-ug-JVz"/>
                     </view>
                     <navigationItem key="navigationItem" id="HYJ-Zk-vpL"/>
+                    <connections>
+                        <outlet property="nextButton" destination="qjP-vQ-Wbf" id="xng-WS-SIn"/>
+                        <outlet property="photosAdded" destination="m0f-hj-HUu" id="wtN-4A-oCb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P4D-Uf-j3R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

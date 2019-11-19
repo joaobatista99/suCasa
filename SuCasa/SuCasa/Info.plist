@@ -54,5 +54,9 @@
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>O app precisa acessar suas fotos para continuar</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>O app precisa de permissão para acessar sua localização</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>O app precisa de permissão para acessar sua localização</string>
 </dict>
 </plist>
