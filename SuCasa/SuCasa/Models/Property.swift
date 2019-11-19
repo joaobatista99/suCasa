@@ -34,19 +34,20 @@ class Property {
         }
     }
 
-    var space        : SpaceType
-    var type         : PropertyType
-    var guestsTotal  : Int
-    var numberOfRooms: Int
-    var numberOfBeds : Int
-    var country      : String
-    var address       : String
-    var city         : String
-    var postalCode   : Int
-    var complement   : String
-    var title        : String
-    var rules        : String
-    //var photos       : [String]
+    var space                 : SpaceType
+    var type                  : PropertyType
+    var guestsTotal           : Int
+    var numberOfRooms         : Int
+    var numberOfBeds          : Int
+    var country               : String
+    var address               : String
+    var city                  : String
+    var postalCode            : Int
+    var complement            : String
+    var title                 : String
+    var rules                 : String
+    var price                 : Float
+    var monthsAvailable       : Int
 
     init(){
         self.space = .apartment
@@ -61,7 +62,9 @@ class Property {
         self.complement = ""
         self.title = ""
         self.rules = ""
-        //self.photos = []
+        self.price = 0.0
+        self.monthsAvailable = 0
+        
     }
     
 }

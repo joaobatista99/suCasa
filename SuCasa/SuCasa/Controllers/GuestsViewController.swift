@@ -95,6 +95,26 @@ extension GuestsViewController: UITextFieldDelegate {
         bedroomNumberTextField.keyboardType = .numberPad
         bedNumberTextField.keyboardType = .numberPad
         
+        
+        let attributes = [
+            NSAttributedString.Key.foregroundColor: Colors.placeholderColor,
+            NSAttributedString.Key.font : UIFont(name: "OpenSans-Regular", size: 17)
+        ]
+        
+        
+        totalGuestsTextField.attributedPlaceholder = NSAttributedString(string: "Selecione", attributes: attributes as [NSAttributedString.Key : Any])
+        bedroomNumberTextField.attributedPlaceholder = NSAttributedString(string: "Selecione", attributes: attributes as [NSAttributedString.Key : Any])
+        bedNumberTextField.attributedPlaceholder = NSAttributedString(string: "Selecione", attributes: attributes as [NSAttributedString.Key : Any])
+       
+        totalGuestsTextField.textColor = Colors.textColor
+        totalGuestsTextField.font = UIFont(name: "OpenSans-Regular", size: 17)
+        
+        bedroomNumberTextField.textColor = Colors.textColor
+        bedroomNumberTextField.font = UIFont(name: "OpenSans-Regular", size: 17)
+        
+        bedNumberTextField.textColor = Colors.textColor
+        bedNumberTextField.font = UIFont(name: "OpenSans-Regular", size: 17)
+        
         //creating a toolbar
         let toolBar = UIToolbar()
         toolBar.barStyle = .default
