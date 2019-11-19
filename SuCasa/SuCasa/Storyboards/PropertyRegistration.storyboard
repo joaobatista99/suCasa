@@ -923,7 +923,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="d9O-GD-ffu" kind="show" id="Fi3-0j-8rj"/>
+                                    <action selector="proceedToNext:" destination="k6Z-ya-Bp1" eventType="touchUpInside" id="yi5-3G-WRl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -969,6 +969,7 @@
                         <outlet property="monsthsQuantity" destination="nQ7-2p-Ixq" id="ZAu-Sg-E5I"/>
                         <outlet property="monthly" destination="dFC-DT-yez" id="FFW-i5-ZUF"/>
                         <outlet property="nextButton" destination="jSH-to-Q74" id="ZaP-G4-Sop"/>
+                        <segue destination="d9O-GD-ffu" kind="show" identifier="doneId" id="i88-KB-nYP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6u-Xz-Z41" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

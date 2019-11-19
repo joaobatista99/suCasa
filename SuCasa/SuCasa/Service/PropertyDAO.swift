@@ -32,7 +32,8 @@ class PropertyDAO {
             "title": property.title,
             "rules": property.rules,
             "price": property.price,
-            "monthsAvailable": property.monthsAvailable
+            "monthsAvailable": property.monthsAvailable,
+            "urls": property.urls
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")
@@ -42,9 +43,7 @@ class PropertyDAO {
         }
     }
     
-    static func savePhotos(photos: UIImage, attachment: String) {
-        
-        var urls: [String] = []
+    static func savePhotos(photos: UIImage, attachment: String, property: Property){
         
         let storageRef = Storage.storage().reference()
         
@@ -61,12 +60,10 @@ class PropertyDAO {
                     return
                 }
                 
-                urls.append(downloadURL.absoluteString)
+                property.urls.append(downloadURL.absoluteString)
             }
         }
         print("success")
     }
-    
-    
     
 }

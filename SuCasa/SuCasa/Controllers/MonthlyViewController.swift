@@ -37,14 +37,30 @@ class MonthlyViewController: UIViewController {
         
         nextButton.isHidden = true
         
-        print(property.type)
-        print(property.address)
-        print(property.guestsTotal)
-        print(property.title)
-        print(images)
+//        print(property.type)
+//        print(property.address)
+//        print(property.guestsTotal)
+//        print(property.title)
+//        print(images)
         
     }
     
+    @IBAction func proceedToNext(_ sender: UIButton) {
+        
+        
+        property.price = Float(monthly.text!)!
+        property.monthsAvailable = Int(monsthsQuantity.text!)!
+        
+        var imgTitle: String = ""
+        
+        for i in 0 ..< images.count {
+            imgTitle = property.title + String(i) + ".png"
+            PropertyDAO.savePhotos(photos: images[i], attachment: imgTitle, property: self.property)
+        }
+        
+        PropertyDAO.addNewProperty(property: property)
+        
+    }
     //dismiss keyboard if users touches screen
     @objc func endSelection(_ force: Bool) -> Bool {
            return self.view.endEditing(force)

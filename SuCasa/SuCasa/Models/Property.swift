@@ -48,6 +48,7 @@ class Property {
     var rules                 : String
     var price                 : Float
     var monthsAvailable       : Int
+    var urls                  : [String]
 
     init(){
         self.space = .apartment
@@ -64,7 +65,7 @@ class Property {
         self.rules = ""
         self.price = 0.0
         self.monthsAvailable = 0
-        
+        self.urls = []
     }
     
 }
