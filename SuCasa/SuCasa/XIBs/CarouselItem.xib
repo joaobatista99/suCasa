@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CarouselItem" customModule="SuCasa" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="haO-mt-aHn" id="Yci-At-uHT"/>
+                <outlet property="imageView" destination="DFi-5P-IVA" id="wN7-69-GLd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="haO-mt-aHn">
+            <rect key="frame" x="0.0" y="0.0" width="517" height="649"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Djq-M9-Wcs">
+                    <rect key="frame" x="0.0" y="44" width="517" height="571"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DFi-5P-IVA">
+                            <rect key="frame" x="0.0" y="0.0" width="517" height="571"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="DFi-5P-IVA" firstAttribute="leading" secondItem="Djq-M9-Wcs" secondAttribute="leading" id="8T1-dE-p38"/>
+                        <constraint firstItem="DFi-5P-IVA" firstAttribute="top" secondItem="Djq-M9-Wcs" secondAttribute="top" id="UCc-1D-11M"/>
+                        <constraint firstAttribute="bottom" secondItem="DFi-5P-IVA" secondAttribute="bottom" id="VxH-U5-zs0"/>
+                        <constraint firstAttribute="trailing" secondItem="DFi-5P-IVA" secondAttribute="trailing" id="hAk-jJ-xt0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Djq-M9-Wcs" firstAttribute="leading" secondItem="qE3-Gc-1eO" secondAttribute="leading" id="0UT-0V-NB0"/>
+                <constraint firstItem="qE3-Gc-1eO" firstAttribute="trailing" secondItem="Djq-M9-Wcs" secondAttribute="trailing" id="lpS-lZ-hWr"/>
+                <constraint firstItem="qE3-Gc-1eO" firstAttribute="bottom" secondItem="Djq-M9-Wcs" secondAttribute="bottom" id="mMB-p8-mZk"/>
+                <constraint firstItem="Djq-M9-Wcs" firstAttribute="top" secondItem="qE3-Gc-1eO" secondAttribute="top" id="rsv-7d-iXw"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="qE3-Gc-1eO"/>
+            <point key="canvasLocation" x="-32.608695652173914" y="-459.70982142857139"/>
+        </view>
+    </objects>
+</document>
