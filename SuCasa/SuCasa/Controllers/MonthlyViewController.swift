@@ -37,12 +37,18 @@ class MonthlyViewController: UIViewController {
         
         nextButton.isHidden = true
         
-        print(property.type)
-        print(property.address)
-        print(property.guestsTotal)
-        print(property.title)
-        print(images)
+    }
+    
+    @IBAction func proceedToNext(_ sender: UIButton) {
         
+        assignTextFieldsToProperty()
+        PropertyDAO.createNewProperty(property: property, photos: self.images)
+        self.performSegue(withIdentifier: "doneId", sender: self)
+    }
+    
+    private func assignTextFieldsToProperty() {
+        property.price = Float(monthly.text!)!
+        property.monthsAvailable = Int(monsthsQuantity.text!)!
     }
     
     //dismiss keyboard if users touches screen

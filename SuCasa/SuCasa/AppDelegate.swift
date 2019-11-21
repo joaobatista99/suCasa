@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //configures firebase
         FirebaseApp.configure()
-        let db = Firestore.firestore()
+        _ = Firestore.firestore()
         
         //determines where the app will launch
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
