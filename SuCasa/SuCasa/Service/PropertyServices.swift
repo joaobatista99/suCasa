@@ -90,4 +90,20 @@ class PropertyServices {
         }
     }
     
+    static func load(url: URL, completionHandler: @escaping (_ image: UIImage, _ error: Error?) -> Void ){
+        
+        var img: UIImage!
+        
+        DispatchQueue.global().async {
+            if let data = try? Data(contentsOf: url) {
+                if  let image = UIImage(data: data)  {
+                    
+                    img = image
+                    print("downloaded")
+                    completionHandler(img, nil)
+                }
+            }
+         }
+    }
+    
 }

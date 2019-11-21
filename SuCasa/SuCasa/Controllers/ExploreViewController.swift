@@ -61,21 +61,15 @@ class ExploreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        retrieveProperties()
-        setTableView()
-        setSearchController()
-        cities = CityServices.readCSVtoGetCities()
-    }
-    
-    
-    /// This method is for retriving properties from database
-    private func retrieveProperties() {
-        
-        PropertyServices.retrieveProperty(completionHandler: { (auxProperties , error) in
+            //after retrieving data from database it will set the view
+            PropertyServices.retrieveProperty(completionHandler: { (auxProperties , error) in
             
+            //checking if the retrieve was successfull
             if auxProperties.count > 0 {
                 self.properties = auxProperties
-                print(self.properties.count)
+                self.setTableView()
+                self.setSearchController()
+                self.cities = CityServices.readCSVtoGetCities()
             }
         })
     }
@@ -90,7 +84,11 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
         if isFiltering {
             return self.filteredCities.count
         }
-        return titleAd.count
+        return self.properties.count
+    }
+    
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -99,11 +97,22 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
         switch currentState {
         case .none:
             let cell = tableView.dequeueReusableCell(withIdentifier: "exploreCell", for: indexPath) as! ExploreTableViewCell
-            cell.adImage.image = UIImage(named: imagesAd[indexPath.row])
-            cell.adPriceLabel.text = "R$ \(priceAd[indexPath.row])/mês"
-            cell.adTitleLabel.text = titleAd[indexPath.row]
-            cell.availabilityLabel.text = "Disponível para \(availabilityAd[indexPath.row]) pessoas"
-            cell.distanceLabel.text = "APROX. A \(distanceAd[indexPath.row])km"
+            //cell.adImage.image = UIImage(named: imagesAd[indexPath.row])
+            
+            //Converting string url to URL
+            let urlFromImage = URL (string: self.properties[indexPath.row].urls[0])
+            
+            PropertyServices.load(url: urlFromImage!) { (img, error) in
+                DispatchQueue.main.async {
+                    cell.adImage.image = img
+                    cell.adPriceLabel.text = "R$ \(self.properties[indexPath.row].price)/mês"
+                    cell.adTitleLabel.text = self.properties[indexPath.row].title
+                    cell.availabilityLabel.text = "Disponível para \(self.properties[indexPath.row].monthsAvailable) pessoas"
+                    cell.distanceLabel.text = "APROX. A 1 km"
+                    print("dentro da funcao")
+                }
+            }
+            print("fora da funcao")
             return cell
             
         case .suggestions:
