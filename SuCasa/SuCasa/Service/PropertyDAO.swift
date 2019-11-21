@@ -26,6 +26,7 @@ class PropertyDAO {
                 "type": property.type,
                 "guestsTotal": property.guestsTotal,
                 "numberOfBeds":  property.numberOfBeds,
+                "numberOfRooms": property.numberOfRooms,
                 "country": property.country,
                 "address": property.address,
                 "city": property.city,

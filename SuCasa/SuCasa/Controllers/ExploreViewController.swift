@@ -21,6 +21,7 @@ class ExploreViewController: UIViewController {
     let searchRecents = ["campinas", "são josé dos campos", "são paulo", "guarulhos", "mogi mirim"]
     var cities: [City] = []
 
+    var properties: [Property] = []
     
     /// Table View Variables
     @IBOutlet weak var tableView: UITableView!
@@ -59,29 +60,26 @@ class ExploreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
+        retrieveProperties()
         setTableView()
         setSearchController()
-        readCSVtoGetCities()
-        
+        cities = CityServices.readCSVtoGetCities()
     }
     
-    func readCSVtoGetCities() {
-
-        let fileURL = Bundle.main.url(forResource: "brazilCities", withExtension: "csv")
-
-        do {
-            let content = try String(contentsOf: fileURL!, encoding: String.Encoding.utf8)
-            let parsedCSV: [[String]] = content.components(separatedBy: "\n").map{$0.components(separatedBy: ";")}
-                        
-            for i in 1 ..< parsedCSV.count - 1 {
-                let city = City(id: parsedCSV[i][0], city: parsedCSV[i][1])
-                self.cities.append(city)
+    
+    /// This method is for retriving properties from database
+    private func retrieveProperties() {
+        
+        PropertyServices.retrieveProperty(completionHandler: { (auxProperties , error) in
+            
+            if auxProperties.count > 0 {
+                self.properties = auxProperties
+                print(self.properties.count)
             }
-        } catch {
-            print("error \(error)")
-        }
+        })
     }
+    
 }
 
 /// Search bar behavior

@@ -46,4 +46,48 @@ class PropertyServices {
         }
     }
     
+    
+    static func retrieveProperty(completionHandler: @escaping(_ properties: [Property], _ error: Error?) -> Void) {
+        
+        var prop: [Property] = []
+        
+        let propertyRef = Firestore.firestore().collection("properties")
+        
+        propertyRef.getDocuments { (snapshot, error) in
+            guard let snapshot = snapshot else {
+                print(error!)
+                completionHandler([], error)
+                return
+            }
+            
+            
+            for document in snapshot.documents {
+                //set property
+                let space = document.get("space") as!                           String
+                let type = document.get("type") as!                             String
+                let guestsTotal = document.get("guestsTotal") as!               Int
+                let numberOfRooms = document.get("numberOfRooms") as!           Int
+                let numberOfBeds = document.get("numberOfBeds") as!             Int
+                let country = document.get("country") as!                       String
+                let address = document.get("address") as!                       String
+                let city = document.get("city") as!                             String
+                let postalCode = document.get("postalCode") as!                 Int
+                let complement = document.get("complement") as!                 String
+                let title = document.get("title") as!                           String
+                let rules = document.get("rules") as!                           String
+                let price = document.get("price") as!                           Float
+                let monthsAvailable = document.get("monthsAvailable") as!       Int
+                let urls = document.get("urls") as!                             [String]
+                
+                let property = Property(space: space, type: type, guestsTotal: guestsTotal, numberOfRooms: numberOfRooms, numberOfBeds: numberOfBeds, country: country, address: address, city: city, postalCode: postalCode, complement: complement, title: title, rules: rules, price: price, monthsAvailable: monthsAvailable, urls: urls)
+                
+                print(space, guestsTotal, numberOfRooms, country, address, city, title, price, monthsAvailable)
+                prop.append(property)
+                
+                }
+                completionHandler(prop, nil)
+            
+        }
+    }
+    
 }
