@@ -34,8 +34,8 @@ class Property {
         }
     }
 
-    var space                 : SpaceType
-    var type                  : PropertyType
+    var space                 : String
+    var type                  : String
     var guestsTotal           : Int
     var numberOfRooms         : Int
     var numberOfBeds          : Int
@@ -51,8 +51,8 @@ class Property {
     var urls                  : [String]
 
     init(){
-        self.space = .apartment
-        self.type = .apartment
+        self.space = ""
+        self.type = ""
         self.guestsTotal = 0
         self.numberOfRooms = 0
         self.numberOfBeds = 0

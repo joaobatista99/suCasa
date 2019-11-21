@@ -14,56 +14,38 @@ class PropertyDAO {
     
     
 
-    static func addNewProperty(property: Property) {
+    static func createNewProperty(property: Property, photos: [UIImage]) {
         
-        let db = Firestore.firestore()
-        
-        var ref: DocumentReference? = nil
-        ref = db.collection("properties").addDocument(data: [
-            "space": property.space,
-            "type": property.type,
-            "guestsTotal": property.guestsTotal,
-            "numberOfBeds":  property.numberOfBeds,
-            "country": property.country,
-            "address": property.address,
-            "city": property.city,
-            "postalCode": property.postalCode,
-            "complement": property.complement,
-            "title": property.title,
-            "rules": property.rules,
-            "price": property.price,
-            "monthsAvailable": property.monthsAvailable,
-            "urls": property.urls
-        ]) { err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                print("Document added with ID: \(ref!.documentID)")
-            }
-        }
-    }
-    
-    static func savePhotos(photos: UIImage, attachment: String, property: Property){
-        
-        let storageRef = Storage.storage().reference()
-        
-        let imageRef = storageRef.child("photos/\(attachment)")
-        
-        _ = imageRef.putData(photos.pngData()!, metadata: nil) { (metadata, error) in
-            if error != nil {
-                print(error!)
-            }
+        PropertyServices.savePhotos(photos: photos, property: property) {
             
-            imageRef.downloadURL { (url, error) in
-                guard let downloadURL = url else  {
-                    print(error!)
-                    return
+            let db = Firestore.firestore()
+        
+            var ref: DocumentReference? = nil
+            ref = db.collection("properties").addDocument(data: [
+                "space": property.space,
+                "type": property.type,
+                "guestsTotal": property.guestsTotal,
+                "numberOfBeds":  property.numberOfBeds,
+                "country": property.country,
+                "address": property.address,
+                "city": property.city,
+                "postalCode": property.postalCode,
+                "complement": property.complement,
+                "title": property.title,
+                "rules": property.rules,
+                "price": property.price,
+                "monthsAvailable": property.monthsAvailable,
+                "urls": property.urls
+            ]) { err in
+                if let err = err {
+                    print("Error adding document: \(err)")
+                } else {
+                    print("Document added with ID: \(ref!.documentID)")
                 }
-                
-                property.urls.append(downloadURL.absoluteString)
             }
         }
-        print("success")
+        
+        print("Olha os  URLS AI: \(property.urls)")
     }
     
 }

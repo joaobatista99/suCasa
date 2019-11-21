@@ -969,7 +969,7 @@
                         <outlet property="monsthsQuantity" destination="nQ7-2p-Ixq" id="ZAu-Sg-E5I"/>
                         <outlet property="monthly" destination="dFC-DT-yez" id="FFW-i5-ZUF"/>
                         <outlet property="nextButton" destination="jSH-to-Q74" id="ZaP-G4-Sop"/>
-                        <segue destination="d9O-GD-ffu" kind="show" identifier="doneId" id="i88-KB-nYP"/>
+                        <segue destination="d9O-GD-ffu" kind="show" identifier="doneId" id="K1G-Oi-HQH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6u-Xz-Z41" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

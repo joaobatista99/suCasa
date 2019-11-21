@@ -78,7 +78,7 @@ class SpaceViewController: UIViewController {
             if spaceType.isFirstResponder {
                 spaceType.text = Property.SpaceType.allCases[pickerView.selectedRow(inComponent: 0)].rawValue
                 
-                self.property.space = Property.SpaceType.allCases[pickerView.selectedRow(inComponent: 0)]
+                self.property.space = Property.SpaceType.allCases[pickerView.selectedRow(inComponent: 0)].rawValue
                 
                 propertyType.isUserInteractionEnabled = true
             }
@@ -87,7 +87,7 @@ class SpaceViewController: UIViewController {
                 
                 propertyType.text = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[pickerView.selectedRow(inComponent: 0)].rawValue
                 
-                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[pickerView.selectedRow(inComponent: 0)]
+                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[pickerView.selectedRow(inComponent: 0)].rawValue
                 
                 nextButton.isHidden = false
             }
@@ -98,7 +98,7 @@ class SpaceViewController: UIViewController {
                 
                 nextButton.isHidden = false
                 // assign the property type based on what was chosen
-                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[pickerView.selectedRow(inComponent: 0)]
+                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[pickerView.selectedRow(inComponent: 0)].rawValue
             }
         default:
             break
@@ -230,14 +230,14 @@ extension SpaceViewController: UIPickerViewDataSource, UIPickerViewDelegate {
                 // (it need to have a value to be set)
                 propertyType.isUserInteractionEnabled = true
                 spaceType.text = Property.SpaceType.allCases[row].rawValue
-                self.property.space = Property.SpaceType.allCases[row]
+                self.property.space = Property.SpaceType.allCases[row].rawValue
                 clearTextField(textField: propertyType)
                 nextButton.isHidden = true
 
             //second text field set with "Apartamento"
             case "apartment":
                 propertyType.text = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[row].rawValue
-                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[row]
+                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[row].rawValue
                 nextButton.isHidden = false
             
             //second text field set with "Casa"
@@ -245,7 +245,7 @@ extension SpaceViewController: UIPickerViewDataSource, UIPickerViewDelegate {
                 propertyType.text = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[row].rawValue
                 nextButton.isHidden = false
                 // assign the property type based on what was chosen
-                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[row]
+                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[row].rawValue
             
             default:
                 break
