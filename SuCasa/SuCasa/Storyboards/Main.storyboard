@@ -258,10 +258,10 @@
             </objects>
             <point key="canvasLocation" x="2888.4057971014495" y="470.75892857142856"/>
         </scene>
-        <!--OngController-->
+        <!--Profile-->
         <scene sceneID="eS9-o5-xAc">
             <objects>
-                <viewControllerPlaceholder storyboardName="OngsCollection" referencedIdentifier="OngController" id="zfC-YB-S3b" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="Profile" id="zfC-YB-S3b" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Ew1-Jx-Fbg"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nez-cB-YbB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
