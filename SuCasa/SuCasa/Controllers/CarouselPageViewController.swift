@@ -42,6 +42,7 @@ class CarouselPageViewController: UIPageViewController {
         super.viewDidLoad()
 
         dataSource = self
+        delegate = self
         
         //populate items that will be showed
         populateItems()
@@ -115,8 +116,10 @@ extension CarouselPageViewController: UIPageViewControllerDataSource {
         return items[nextIndex]
     }
     
-    
-    func pageViewController(pageViewController: UIPageViewController,
+}
+
+extension CarouselPageViewController: UIPageViewControllerDelegate {
+    func pageViewController(_ pageViewController: UIPageViewController,
                             didFinishAnimating finished: Bool,
                             previousViewControllers: [UIViewController],
                             transitionCompleted completed: Bool) {
@@ -125,7 +128,5 @@ extension CarouselPageViewController: UIPageViewControllerDataSource {
                 carouselDelegate?.carouselPageViewController(carouselPageViewController: self, didUpdatePageIndex: index)
         }
     }
-    
-    
 }
 
