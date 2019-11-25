@@ -14,6 +14,7 @@
 		3658D1FE2379EAC100A96E2F /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3658D1FC2379EAC100A96E2F /* ResultsTableViewCell.swift */; };
 		3658D1FF2379EAC100A96E2F /* ResultsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3658D1FD2379EAC100A96E2F /* ResultsTableViewCell.xib */; };
 		3658D2042379F75100A96E2F /* brazilCities.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3658D2032379F75100A96E2F /* brazilCities.csv */; };
+		365C0D46238C2DEC00FBF6AA /* OngsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365C0D45238C2DEC00FBF6AA /* OngsCollectionViewCell.swift */; };
 		3663EE8823845092001798E1 /* PropertyDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663EE8723845092001798E1 /* PropertyDAO.swift */; };
 		3663EE8C2384585D001798E1 /* FirebaseFirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3663EE8B2384585D001798E1 /* FirebaseFirestore.framework */; };
 		368DA2272386C3EA0035BE02 /* PropertyServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368DA2262386C3EA0035BE02 /* PropertyServices.swift */; };
@@ -62,6 +63,7 @@
 		3658D1FC2379EAC100A96E2F /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
 		3658D1FD2379EAC100A96E2F /* ResultsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsTableViewCell.xib; sourceTree = "<group>"; };
 		3658D2032379F75100A96E2F /* brazilCities.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = brazilCities.csv; path = SuCasa/brazilCities.csv; sourceTree = SOURCE_ROOT; };
+		365C0D45238C2DEC00FBF6AA /* OngsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngsCollectionViewCell.swift; sourceTree = "<group>"; };
 		3663EE8723845092001798E1 /* PropertyDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDAO.swift; sourceTree = "<group>"; };
 		3663EE8B2384585D001798E1 /* FirebaseFirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseFirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		368DA2262386C3EA0035BE02 /* PropertyServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyServices.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				36DD94392375D5C0000012BB /* ExploreTableViewCell.swift */,
 				3658D1FC2379EAC100A96E2F /* ResultsTableViewCell.swift */,
 				3658D1F82379D7E200A96E2F /* SuggestionsTableViewCell.swift */,
+				365C0D45238C2DEC00FBF6AA /* OngsCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				5E033A2023843AAC001AC697 /* MonthlyViewController.swift in Sources */,
 				368DA2272386C3EA0035BE02 /* PropertyServices.swift in Sources */,
 				5E55AA1B237B34FD00887772 /* AddPhotosViewController.swift in Sources */,
+				365C0D46238C2DEC00FBF6AA /* OngsCollectionViewCell.swift in Sources */,
 				362DB1D0237A23E400D36357 /* City.swift in Sources */,
 				BAEB1462237B30AD008438D4 /* Property.swift in Sources */,
 				36DD943B2375D5C0000012BB /* ExploreTableViewCell.swift in Sources */,

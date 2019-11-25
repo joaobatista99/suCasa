@@ -27,6 +27,10 @@ class ExploreViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     
+    /// Collection View Variables
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var headerView: UIView!
+    
     /// Search Controller Variables
     let searchController = UISearchController(searchResultsController: nil)
     var isFiltering = false
@@ -60,18 +64,21 @@ class ExploreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-            //after retrieving data from database it will set the view
-            PropertyServices.retrieveProperty(completionHandler: { (auxProperties , error) in
+
+        self.setSearchController()
+        
+        self.cities = CityServices.readCSVtoGetCities()
+        //after retrieving data from database it will set the view
+        PropertyServices.retrieveProperty(completionHandler: { (auxProperties , error) in
+        
+        //checking if the retrieve was successfull
+        if auxProperties.count > 0 {
+            self.properties = auxProperties
+            self.setTableView()
             
-            //checking if the retrieve was successfull
-            if auxProperties.count > 0 {
-                self.properties = auxProperties
-                self.setTableView()
-                self.setSearchController()
-                self.cities = CityServices.readCSVtoGetCities()
-            }
-        })
+            self.setCollectionView()
+        }
+    })
     }
     
 }
@@ -79,16 +86,11 @@ class ExploreViewController: UIViewController {
 /// Search bar behavior
 extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering {
             return self.filteredCities.count
         }
         return self.properties.count
-    }
-    
-    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -102,17 +104,18 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             //Converting string url to URL
             let urlFromImage = URL (string: self.properties[indexPath.row].urls[0])
             
+            let property = self.properties[indexPath.row]
+            
+            cell.adPriceLabel.text = "R$ \(property.price)/mês"
+            cell.adTitleLabel.text = property.title
+            cell.availabilityLabel.text = "Disponível para \(property.monthsAvailable) pessoas"
+            cell.distanceLabel.text = "APROX. A 1 km"
+            
             PropertyServices.load(url: urlFromImage!) { (img, error) in
                 DispatchQueue.main.async {
                     cell.adImage.image = img
-                    cell.adPriceLabel.text = "R$ \(self.properties[indexPath.row].price)/mês"
-                    cell.adTitleLabel.text = self.properties[indexPath.row].title
-                    cell.availabilityLabel.text = "Disponível para \(self.properties[indexPath.row].monthsAvailable) pessoas"
-                    cell.distanceLabel.text = "APROX. A 1 km"
-                    print("dentro da funcao")
                 }
             }
-            print("fora da funcao")
             return cell
             
         case .suggestions:
@@ -223,6 +226,8 @@ extension ExploreViewController: UISearchBarDelegate {
         
         //Change the current state to suggestions when touching the search bar
         self.currentState = SearchBarState.suggestions
+        self.headerView.isHidden = true
+        self.headerView.frame.size.height = 0
         self.tableView.reloadData()
         return true
     }
@@ -231,7 +236,29 @@ extension ExploreViewController: UISearchBarDelegate {
     /// This method is called when the search bar's cancel button is touched
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         self.currentState = .none
+        self.headerView.isHidden = false
+        self.headerView.frame.size.height = 154
         isFiltering = false
         self.tableView.reloadData()
     }
+}
+
+extension ExploreViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 9
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ongsCell", for: indexPath)
+        
+        return cell
+    }
+    
+    
+    func setCollectionView() {
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+    }
+    
 }

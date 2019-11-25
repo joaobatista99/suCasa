@@ -46,7 +46,7 @@ class PropertyDAO {
             }
         }
         
-        print("Olha os  URLS AI: \(property.urls)")
+        print("URL GERADO: \(property.urls)")
     }
     
 }

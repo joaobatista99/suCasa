@@ -62,6 +62,12 @@ class PropertyServices {
             
             
             for document in snapshot.documents {
+                
+                if document.data() == nil {
+                    print("error")
+                    return
+                }
+                
                 //set property
                 let space = document.get("space") as!                           String
                 let type = document.get("type") as!                             String
