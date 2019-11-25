@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import SDWebImage
 
 class ExploreViewController: UIViewController {
     
@@ -25,6 +26,8 @@ class ExploreViewController: UIViewController {
     
     /// Table View Variables
     @IBOutlet weak var tableView: UITableView!
+    
+    var placeHolderImage = UIImage(named: "waiting")
     
     
     /// Collection View Variables
@@ -110,12 +113,25 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             cell.adTitleLabel.text = property.title
             cell.availabilityLabel.text = "Disponível para \(property.monthsAvailable) pessoas"
             cell.distanceLabel.text = "APROX. A 1 km"
+//
+//            PropertyServices.load(url: urlFromImage!) { (img, error) in
+//                DispatchQueue.main.async {
+//                    cell.adImage.image = img
+//                }
+//            }
             
-            PropertyServices.load(url: urlFromImage!) { (img, error) in
-                DispatchQueue.main.async {
-                    cell.adImage.image = img
-                }
+            cell.adImage.sd_setImage(with: urlFromImage,
+                                     placeholderImage: placeHolderImage,
+                                     options: SDWebImageOptions.lowPriority,
+                                     context: nil,
+                                     progress: nil) { (downloadedImage, error, cacheType, downloadURL) in
+                                        if let error = error {
+                                            print("Error downloading the image: \(error.localizedDescription)")
+                                        } else {
+                                            print("Successfully downloaded image: \(String(describing: downloadURL?.absoluteString))")
+                                        }
             }
+             
             return cell
             
         case .suggestions:
@@ -254,7 +270,6 @@ extension ExploreViewController: UICollectionViewDataSource, UICollectionViewDel
         
         return cell
     }
-    
     
     func setCollectionView() {
         self.collectionView.delegate = self
