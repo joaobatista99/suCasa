@@ -22,7 +22,6 @@
 		5E033A222386DA34001AC697 /* OngsCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E033A212386DA34001AC697 /* OngsCollection.storyboard */; };
 		5E033A2823870D48001AC697 /* OngsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E033A2723870D48001AC697 /* OngsCollectionViewController.swift */; };
 		5E033A2A238712A4001AC697 /* OngCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E033A29238712A4001AC697 /* OngCell.swift */; };
-		5E033A2C2388615C001AC697 /* OngProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E033A2B2388615C001AC697 /* OngProfile.storyboard */; };
 		5E474EB52375D8640083D3A5 /* PropertyRegistration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E474EB42375D8640083D3A5 /* PropertyRegistration.storyboard */; };
 		5E55AA17237B34C300887772 /* SpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E55AA16237B34C300887772 /* SpaceViewController.swift */; };
 		5E55AA19237B34E500887772 /* GuestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E55AA18237B34E500887772 /* GuestsViewController.swift */; };
@@ -70,7 +69,6 @@
 		5E033A212386DA34001AC697 /* OngsCollection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OngsCollection.storyboard; sourceTree = "<group>"; };
 		5E033A2723870D48001AC697 /* OngsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngsCollectionViewController.swift; sourceTree = "<group>"; };
 		5E033A29238712A4001AC697 /* OngCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngCell.swift; sourceTree = "<group>"; };
-		5E033A2B2388615C001AC697 /* OngProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OngProfile.storyboard; sourceTree = "<group>"; };
 		5E474EB42375D8640083D3A5 /* PropertyRegistration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PropertyRegistration.storyboard; sourceTree = "<group>"; };
 		5E55AA16237B34C300887772 /* SpaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceViewController.swift; sourceTree = "<group>"; };
 		5E55AA18237B34E500887772 /* GuestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestsViewController.swift; sourceTree = "<group>"; };
@@ -184,7 +182,6 @@
 				BA5D40DB2375F93A0041AC6B /* Login.storyboard */,
 				5E474EB42375D8640083D3A5 /* PropertyRegistration.storyboard */,
 				5E033A212386DA34001AC697 /* OngsCollection.storyboard */,
-				5E033A2B2388615C001AC697 /* OngProfile.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -330,7 +327,6 @@
 				BAB8D9FF2371DD400039CBC5 /* GoogleService-Info.plist in Resources */,
 				36DD943C2375D5C0000012BB /* ExploreTableViewCell.xib in Resources */,
 				3658D1FB2379D7E200A96E2F /* SuggestionsTableViewCell.xib in Resources */,
-				5E033A2C2388615C001AC697 /* OngProfile.storyboard in Resources */,
 				BAB8DA022371E8AE0039CBC5 /* Main.storyboard in Resources */,
 				3658D1FF2379EAC100A96E2F /* ResultsTableViewCell.xib in Resources */,
 				5E474EB52375D8640083D3A5 /* PropertyRegistration.storyboard in Resources */,
