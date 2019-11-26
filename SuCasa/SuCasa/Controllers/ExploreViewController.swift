@@ -8,7 +8,6 @@
 
 import UIKit
 import MapKit
-import SDWebImage
 
 class ExploreViewController: UIViewController {
     
@@ -16,18 +15,10 @@ class ExploreViewController: UIViewController {
     let searchRecents = ["campinas", "são josé dos campos", "são paulo", "guarulhos", "mogi mirim"]
     var cities: [City] = []
 
-    var properties: [Property] = []
-    var ongs: [Ong] =  []
     
     /// Table View Variables
     @IBOutlet weak var tableView: UITableView!
     
-    var placeHolderImage = UIImage(named: "waiting")
-    
-    
-    /// Collection View Variables
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var headerView: UIView!
     
     /// Search Controller Variables
     let searchController = UISearchController(searchResultsController: nil)
@@ -62,8 +53,6 @@ class ExploreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.setSearchController()
         
         self.cities = CityServices.readCSVtoGetCities()
         //after retrieving data from database it will set the view
@@ -85,19 +74,21 @@ class ExploreViewController: UIViewController {
                 self.setCollectionView()
                 print("ong carregada")
             }
+        } catch {
+            print("error \(error)")
         }
     }
-    
 }
 
 /// Search bar behavior
 extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering {
             return self.filteredCities.count
         }
-        return self.properties.count
+        return titleAd.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -246,8 +237,6 @@ extension ExploreViewController: UISearchBarDelegate {
         
         //Change the current state to suggestions when touching the search bar
         self.currentState = SearchBarState.suggestions
-        self.headerView.isHidden = true
-        self.headerView.frame.size.height = 0
         self.tableView.reloadData()
         return true
     }
@@ -256,8 +245,6 @@ extension ExploreViewController: UISearchBarDelegate {
     /// This method is called when the search bar's cancel button is touched
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         self.currentState = .none
-        self.headerView.isHidden = false
-        self.headerView.frame.size.height = 213
         isFiltering = false
         self.tableView.reloadData()
     }
