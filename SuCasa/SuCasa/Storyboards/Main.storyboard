@@ -3,8 +3,9 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -326,6 +327,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="1rm-Bx-qgu"/>
                     <connections>
+                        <outlet property="collectionView" destination="FwT-Fn-Zbd" id="BCV-1r-Pwz"/>
+                        <outlet property="headerView" destination="eXT-6h-B8v" id="3oz-De-unr"/>
                         <outlet property="tableView" destination="5Ax-bw-Cal" id="Yub-Ru-fGC"/>
                     </connections>
                 </viewController>
