@@ -25,7 +25,11 @@ class AddPhotosViewController: UIViewController {
         nextButton.isHidden = true
         photosAdded.isHidden = true
     }
-        
+    
+    @IBAction func proceedToNextView(_ sender: Any) {
+        print(images)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToTitle",
             let locationVC = segue.destination as? TitleViewController {
@@ -34,7 +38,6 @@ class AddPhotosViewController: UIViewController {
         }
     }
     
-    //function to upload images from device
     @IBAction func loadImage(_ sender: Any) {
         
         let imagePicker = BSImagePickerViewController()
@@ -59,7 +62,6 @@ class AddPhotosViewController: UIViewController {
         
     }
     
-    //function to convert PHAsset into UIImage
     func getAsset(assets: [PHAsset]) -> [UIImage] {
         var arrayOfImages = [UIImage]()
         for asset in assets {

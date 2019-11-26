@@ -125,7 +125,6 @@ class LocationViewController: UIViewController {
         self.view.endEditing(true)
     }
 
-    //grt users location
     @IBAction func getLocation(_ sender: Any) {
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
@@ -170,6 +169,7 @@ class LocationViewController: UIViewController {
         }
     }
     
+    
     //Func to convert lat and long to adress
     func convertLatLongToAddress(latitude:Double,longitude:Double) {
     
@@ -208,7 +208,6 @@ class LocationViewController: UIViewController {
     
     }
     
-    //function to check if textfields are populated
     func isTextFieldsFilled() -> Bool{
         
         if adressTextField.text!.isEmpty {
