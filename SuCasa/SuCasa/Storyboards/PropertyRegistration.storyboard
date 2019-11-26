@@ -3,7 +3,7 @@
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -722,7 +722,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="proceedToNextView:" destination="NYI-Li-GoT" eventType="touchUpInside" id="HDH-Li-nPG"/>
                                     <segue destination="1Cl-bj-BOE" kind="show" identifier="goToTitle" id="MrL-ot-Fjz"/>
                                 </connections>
                             </button>
@@ -876,6 +875,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="OmV-kh-p0w"/>
                     <connections>
+                        <outlet property="nextButton" destination="db6-bB-vKm" id="ted-yb-qca"/>
                         <outlet property="rulesTextField" destination="kWp-ma-xGL" id="h9i-ig-cVe"/>
                         <outlet property="titleTextField" destination="2OF-4o-c46" id="vql-eZ-K9Q"/>
                     </connections>
@@ -949,11 +949,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="d9O-GD-ffu" kind="show" id="Fi3-0j-8rj"/>
+                                    <action selector="proceedToNext:" destination="k6Z-ya-Bp1" eventType="touchUpInside" id="6XM-Qf-XLd"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="R7u-AL-4CV" firstAttribute="width" secondItem="X4P-bg-cj0" secondAttribute="width" multiplier="0.9" id="0kk-7k-eB3"/>
                             <constraint firstItem="R7u-AL-4CV" firstAttribute="leading" secondItem="dFC-DT-yez" secondAttribute="leading" id="1n4-ja-G1B"/>
@@ -994,6 +994,8 @@
                     <connections>
                         <outlet property="monsthsQuantity" destination="nQ7-2p-Ixq" id="ZAu-Sg-E5I"/>
                         <outlet property="monthly" destination="dFC-DT-yez" id="FFW-i5-ZUF"/>
+                        <outlet property="nextButton" destination="jSH-to-Q74" id="3G8-J4-5QF"/>
+                        <segue destination="d9O-GD-ffu" kind="show" identifier="doneId" id="If0-cY-XdG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6u-Xz-Z41" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

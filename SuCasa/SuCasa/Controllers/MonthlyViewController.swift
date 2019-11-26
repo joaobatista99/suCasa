@@ -42,7 +42,7 @@ class MonthlyViewController: UIViewController {
     @IBAction func proceedToNext(_ sender: UIButton) {
         
         assignTextFieldsToProperty()
-        PropertyDAO.createNewProperty(property: property, photos: self.images)
+        //PropertyDAO.createNewProperty(property: property, photos: self.images)
         self.performSegue(withIdentifier: "doneId", sender: self)
     }
     

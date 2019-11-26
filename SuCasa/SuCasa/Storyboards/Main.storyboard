@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -269,12 +269,12 @@
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstItem="lsG-fy-2MT" firstAttribute="top" secondItem="nNj-Fy-3Q5" secondAttribute="top" id="2cn-ko-9Ny"/>
+                                                            <constraint firstItem="lsG-fy-2MT" firstAttribute="leading" secondItem="nNj-Fy-3Q5" secondAttribute="leading" id="4JJ-PC-may"/>
                                                             <constraint firstAttribute="bottom" secondItem="2Zc-0F-YG1" secondAttribute="bottom" id="9EK-IY-IVm"/>
-                                                            <constraint firstAttribute="trailing" secondItem="lsG-fy-2MT" secondAttribute="trailing" id="Dgm-Ta-sxi"/>
                                                             <constraint firstAttribute="bottom" secondItem="lsG-fy-2MT" secondAttribute="bottom" constant="28" id="UYM-h7-atw"/>
                                                             <constraint firstItem="2Zc-0F-YG1" firstAttribute="top" secondItem="lsG-fy-2MT" secondAttribute="bottom" constant="2" id="Vze-J8-xWD"/>
                                                             <constraint firstItem="2Zc-0F-YG1" firstAttribute="width" secondItem="nNj-Fy-3Q5" secondAttribute="width" id="WsC-Cu-qUl"/>
-                                                            <constraint firstItem="lsG-fy-2MT" firstAttribute="leading" secondItem="nNj-Fy-3Q5" secondAttribute="leading" id="n7H-te-Hyu"/>
+                                                            <constraint firstAttribute="trailing" secondItem="lsG-fy-2MT" secondAttribute="trailing" id="l95-xU-B3o"/>
                                                             <constraint firstItem="2Zc-0F-YG1" firstAttribute="centerX" secondItem="nNj-Fy-3Q5" secondAttribute="centerX" id="o6T-9u-E0d"/>
                                                         </constraints>
                                                     </collectionViewCellContentView>
