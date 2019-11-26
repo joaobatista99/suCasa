@@ -10,4 +10,7 @@ import UIKit
 
 class OngsCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var ongImage: UIImageView!
+    @IBOutlet weak var ongTitle: UILabel!
+    
 }
