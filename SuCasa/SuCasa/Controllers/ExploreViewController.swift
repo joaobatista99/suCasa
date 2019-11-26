@@ -13,16 +13,11 @@ import SDWebImage
 class ExploreViewController: UIViewController {
     
     //Mocked informations
-    let imagesAd = ["casa1", "casa2", "casa3", "casa4", "casa5"]
-    let distanceAd = [10, 34.5, 55, 53, 90]
-    let priceAd = [200, 185, 150, 190, 320]
-    let availabilityAd = [02, 01, 01, 04, 03]
-    let titleAd = ["Casa no centro, muito aconchegante", "Vila Souzas - Apartamento", "Campo Sítio 3 Irmãs",
-                    "Casa dos Imigrantes", "Flat Completo"]
     let searchRecents = ["campinas", "são josé dos campos", "são paulo", "guarulhos", "mogi mirim"]
     var cities: [City] = []
 
     var properties: [Property] = []
+    var ongs: [Ong] =  []
     
     /// Table View Variables
     @IBOutlet weak var tableView: UITableView!
@@ -82,6 +77,15 @@ class ExploreViewController: UIViewController {
             self.setCollectionView()
         }
     })
+        
+        OngServices.retrieveOng { (ongs, error) in
+            
+            if ongs.count > 0 {
+                self.ongs = ongs
+                self.setCollectionView()
+                print("ong carregada")
+            }
+        }
     }
     
 }
@@ -253,7 +257,7 @@ extension ExploreViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         self.currentState = .none
         self.headerView.isHidden = false
-        self.headerView.frame.size.height = 154
+        self.headerView.frame.size.height = 213
         isFiltering = false
         self.tableView.reloadData()
     }
@@ -261,14 +265,44 @@ extension ExploreViewController: UISearchBarDelegate {
 
 extension ExploreViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
+        return self.ongs.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ongsCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ongsCell", for: indexPath) as! OngsCollectionViewCell
+        
+        let ong = self.ongs[indexPath.row]
+        
+        let imageURL =  URL(string: ong.url[0])
+        
+        cell.ongImage.sd_setImage(with: imageURL,
+                                  placeholderImage: placeHolderImage,
+                                  options: SDWebImageOptions.lowPriority,
+                                  context: nil,
+                                  progress: nil) { (downloadedImage, error, cacheType, downloadURL) in
+                                    if let error = error {
+                                        print("Error downloading the ong image: \(error.localizedDescription)")
+                                    } else {
+                                        print("Successfully downloaded ong image: \(String(describing: downloadURL?.absoluteString))")
+                                    }
+        }
+        
+        cell.ongName.text = ong.name
         
         return cell
+    }
+    
+//    //setting space between cells
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//
+//        return 12
+//    }
+    
+    //setting line space between cells
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+            
+        return 32
     }
     
     func setCollectionView() {
