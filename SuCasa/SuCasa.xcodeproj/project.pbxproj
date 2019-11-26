@@ -131,6 +131,7 @@
 		362DB1CE237A23D400D36357 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BA1B7D962386DCFA00D06E3A /* CarouselItem.swift */,
 				362DB1CF237A23E400D36357 /* City.swift */,
 				BAFE3514237C727F00966F86 /* Colors.swift */,
 				BAEB1461237B30AD008438D4 /* Property.swift */,
@@ -154,6 +155,7 @@
 			children = (
 				36DD94392375D5C0000012BB /* ExploreTableViewCell.swift */,
 				3658D1FC2379EAC100A96E2F /* ResultsTableViewCell.swift */,
+				5E033A29238712A4001AC697 /* OngCell.swift */,
 				3658D1F82379D7E200A96E2F /* SuggestionsTableViewCell.swift */,
 			);
 			path = Cells;
@@ -216,8 +218,6 @@
 				BA1B7D942386DCA000D06E3A /* PropertyDetailViewController.swift */,
 				BA1B7D982386DF2B00D06E3A /* CarouselPageViewController.swift */,
 				5E033A2723870D48001AC697 /* OngsCollectionViewController.swift */,
-				5E033A29238712A4001AC697 /* OngCell.swift */,
-
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -256,7 +256,6 @@
 				BA670EDD23745801005E3FDA /* Fonts */,
 				BAB8DA002371E88A0039CBC5 /* Storyboards */,
 				BAB8DA052372004E0039CBC5 /* Controllers */,
-				BA1B7D962386DCFA00D06E3A /* CarouselItem.swift */,
 			);
 			path = SuCasa;
 			sourceTree = "<group>";

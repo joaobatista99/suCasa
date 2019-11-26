@@ -26,7 +26,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7t5-Hx-jNg">
-                                <rect key="frame" x="20.5" y="285.5" width="373" height="576.5"/>
+                                <rect key="frame" x="20.5" y="263" width="373" height="599"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0ib-2s-z9m">
                                     <size key="itemSize" width="170" height="140"/>
@@ -72,7 +72,7 @@
                                 </cells>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1NZ-Ae-s5R">
-                                <rect key="frame" x="0.0" y="1" width="414" height="179"/>
+                                <rect key="frame" x="0.0" y="-21.5" width="414" height="179"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conheça nossas ONGs parceiras" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tkb-kc-zFz">
                                         <rect key="frame" x="20" y="75" width="372.5" height="93"/>
@@ -89,7 +89,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entre em contato com uma ONG e faça o agendamento para conhecer uma locação e o locador." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcD-4A-Du8">
-                                <rect key="frame" x="20" y="200" width="372.5" height="61.5"/>
+                                <rect key="frame" x="20" y="177.5" width="372.5" height="61.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                 <color key="textColor" red="0.55313229559999999" green="0.56043583149999998" blue="0.59216201310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -98,7 +98,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7t5-Hx-jNg" firstAttribute="top" secondItem="qcD-4A-Du8" secondAttribute="bottom" constant="24" id="7DP-wl-8Ha"/>
-                            <constraint firstItem="1NZ-Ae-s5R" firstAttribute="centerY" secondItem="mwG-kE-d3B" secondAttribute="centerY" multiplier="0.2" id="DC9-Pc-FMp"/>
+                            <constraint firstItem="1NZ-Ae-s5R" firstAttribute="centerY" secondItem="mwG-kE-d3B" secondAttribute="centerY" multiplier="0.15" id="DC9-Pc-FMp"/>
                             <constraint firstItem="1NZ-Ae-s5R" firstAttribute="width" secondItem="knr-BD-XNU" secondAttribute="width" id="EmN-kH-Tfj"/>
                             <constraint firstItem="7t5-Hx-jNg" firstAttribute="width" secondItem="knr-BD-XNU" secondAttribute="width" multiplier="0.9" id="J08-Zy-ZDm"/>
                             <constraint firstItem="7t5-Hx-jNg" firstAttribute="centerX" secondItem="mwG-kE-d3B" secondAttribute="centerX" id="KbH-q4-hnV"/>
