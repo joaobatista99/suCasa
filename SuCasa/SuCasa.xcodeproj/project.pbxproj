@@ -26,6 +26,10 @@
 		36DD943C2375D5C0000012BB /* ExploreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36DD943A2375D5C0000012BB /* ExploreTableViewCell.xib */; };
 		36DD943E2375D71E000012BB /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD943D2375D71E000012BB /* ExploreViewController.swift */; };
 		5E033A2023843AAC001AC697 /* MonthlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E033A1F23843AAC001AC697 /* MonthlyViewController.swift */; };
+		5E033A222386DA34001AC697 /* OngsCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E033A212386DA34001AC697 /* OngsCollection.storyboard */; };
+		5E033A2823870D48001AC697 /* OngsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E033A2723870D48001AC697 /* OngsCollectionViewController.swift */; };
+		5E033A2A238712A4001AC697 /* OngCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E033A29238712A4001AC697 /* OngCell.swift */; };
+		5E033A2C2388615C001AC697 /* OngProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E033A2B2388615C001AC697 /* OngProfile.storyboard */; };
 		5E474EB52375D8640083D3A5 /* PropertyRegistration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E474EB42375D8640083D3A5 /* PropertyRegistration.storyboard */; };
 		5E55AA17237B34C300887772 /* SpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E55AA16237B34C300887772 /* SpaceViewController.swift */; };
 		5E55AA19237B34E500887772 /* GuestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E55AA18237B34E500887772 /* GuestsViewController.swift */; };
@@ -77,6 +81,10 @@
 		36DD943A2375D5C0000012BB /* ExploreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreTableViewCell.xib; sourceTree = "<group>"; };
 		36DD943D2375D71E000012BB /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		5E033A1F23843AAC001AC697 /* MonthlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyViewController.swift; sourceTree = "<group>"; };
+		5E033A212386DA34001AC697 /* OngsCollection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OngsCollection.storyboard; sourceTree = "<group>"; };
+		5E033A2723870D48001AC697 /* OngsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngsCollectionViewController.swift; sourceTree = "<group>"; };
+		5E033A29238712A4001AC697 /* OngCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngCell.swift; sourceTree = "<group>"; };
+		5E033A2B2388615C001AC697 /* OngProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OngProfile.storyboard; sourceTree = "<group>"; };
 		5E474EB42375D8640083D3A5 /* PropertyRegistration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PropertyRegistration.storyboard; sourceTree = "<group>"; };
 		5E55AA16237B34C300887772 /* SpaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceViewController.swift; sourceTree = "<group>"; };
 		5E55AA18237B34E500887772 /* GuestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestsViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +218,8 @@
 				BA670EDE23746054005E3FDA /* Profile.storyboard */,
 				BA5D40DB2375F93A0041AC6B /* Login.storyboard */,
 				5E474EB42375D8640083D3A5 /* PropertyRegistration.storyboard */,
+				5E033A212386DA34001AC697 /* OngsCollection.storyboard */,
+				5E033A2B2388615C001AC697 /* OngProfile.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -226,6 +236,8 @@
 				5E55AA1C237B351800887772 /* TitleViewController.swift */,
 				BA075ACE2383066D001CAE86 /* LocationViewController.swift */,
 				5E033A1F23843AAC001AC697 /* MonthlyViewController.swift */,
+				5E033A2723870D48001AC697 /* OngsCollectionViewController.swift */,
+				5E033A29238712A4001AC697 /* OngCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -345,6 +357,7 @@
 				BA670EDB237457F9005E3FDA /* OpenSans-Light.ttf in Resources */,
 				BA670ED3237457F9005E3FDA /* OpenSans-BoldItalic.ttf in Resources */,
 				BA670EDA237457F9005E3FDA /* OpenSans-Semibold.ttf in Resources */,
+				5E033A222386DA34001AC697 /* OngsCollection.storyboard in Resources */,
 				BAB9EFC4237095D000B480F1 /* LaunchScreen.storyboard in Resources */,
 				3658D2042379F75100A96E2F /* brazilCities.csv in Resources */,
 				BA670ED4237457F9005E3FDA /* OpenSans-ExtraBold.ttf in Resources */,
@@ -355,6 +368,7 @@
 				BAB8D9FF2371DD400039CBC5 /* GoogleService-Info.plist in Resources */,
 				36DD943C2375D5C0000012BB /* ExploreTableViewCell.xib in Resources */,
 				3658D1FB2379D7E200A96E2F /* SuggestionsTableViewCell.xib in Resources */,
+				5E033A2C2388615C001AC697 /* OngProfile.storyboard in Resources */,
 				BAB8DA022371E8AE0039CBC5 /* Main.storyboard in Resources */,
 				3658D1FF2379EAC100A96E2F /* ResultsTableViewCell.xib in Resources */,
 				5E474EB52375D8640083D3A5 /* PropertyRegistration.storyboard in Resources */,
@@ -417,6 +431,7 @@
 				BAFE3515237C727F00966F86 /* Colors.swift in Sources */,
 				3658D1FA2379D7E200A96E2F /* SuggestionsTableViewCell.swift in Sources */,
 				36AC92F1237DD83400012AA9 /* StringExtension.swift in Sources */,
+				5E033A2A238712A4001AC697 /* OngCell.swift in Sources */,
 				BA075ACF2383066D001CAE86 /* LocationViewController.swift in Sources */,
 				3658D1FE2379EAC100A96E2F /* ResultsTableViewCell.swift in Sources */,
 				3663EE8823845092001798E1 /* PropertyDAO.swift in Sources */,
@@ -431,6 +446,7 @@
 				BAB8DA07237201200039CBC5 /* IntroViewController.swift in Sources */,
 				5E033A2023843AAC001AC697 /* MonthlyViewController.swift in Sources */,
 				368DA2272386C3EA0035BE02 /* PropertyServices.swift in Sources */,
+				5E033A2823870D48001AC697 /* OngsCollectionViewController.swift in Sources */,
 				5E55AA1B237B34FD00887772 /* AddPhotosViewController.swift in Sources */,
 				365C0D46238C2DEC00FBF6AA /* OngsCollectionViewCell.swift in Sources */,
 				362DB1D0237A23E400D36357 /* City.swift in Sources */,
