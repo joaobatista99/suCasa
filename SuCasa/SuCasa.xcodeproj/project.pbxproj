@@ -14,6 +14,13 @@
 		3658D1FE2379EAC100A96E2F /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3658D1FC2379EAC100A96E2F /* ResultsTableViewCell.swift */; };
 		3658D1FF2379EAC100A96E2F /* ResultsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3658D1FD2379EAC100A96E2F /* ResultsTableViewCell.xib */; };
 		3658D2042379F75100A96E2F /* brazilCities.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3658D2032379F75100A96E2F /* brazilCities.csv */; };
+		365C0D46238C2DEC00FBF6AA /* OngsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365C0D45238C2DEC00FBF6AA /* OngsCollectionViewCell.swift */; };
+		3663EE8823845092001798E1 /* PropertyDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663EE8723845092001798E1 /* PropertyDAO.swift */; };
+		3663EE8C2384585D001798E1 /* FirebaseFirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3663EE8B2384585D001798E1 /* FirebaseFirestore.framework */; };
+		368DA2272386C3EA0035BE02 /* PropertyServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368DA2262386C3EA0035BE02 /* PropertyServices.swift */; };
+		368DA2292386FAA60035BE02 /* CityServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368DA2282386FAA60035BE02 /* CityServices.swift */; };
+		36AB0410238D83EC00653F30 /* Ong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AB040F238D83EC00653F30 /* Ong.swift */; };
+		36AB0414238D854C00653F30 /* OngServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AB0413238D854C00653F30 /* OngServices.swift */; };
 		36AC92F1237DD83400012AA9 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AC92F0237DD83400012AA9 /* StringExtension.swift */; };
 		36DD943B2375D5C0000012BB /* ExploreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD94392375D5C0000012BB /* ExploreTableViewCell.swift */; };
 		36DD943C2375D5C0000012BB /* ExploreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36DD943A2375D5C0000012BB /* ExploreTableViewCell.xib */; };
@@ -62,6 +69,13 @@
 		3658D1FC2379EAC100A96E2F /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
 		3658D1FD2379EAC100A96E2F /* ResultsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsTableViewCell.xib; sourceTree = "<group>"; };
 		3658D2032379F75100A96E2F /* brazilCities.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = brazilCities.csv; path = SuCasa/brazilCities.csv; sourceTree = SOURCE_ROOT; };
+		365C0D45238C2DEC00FBF6AA /* OngsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngsCollectionViewCell.swift; sourceTree = "<group>"; };
+		3663EE8723845092001798E1 /* PropertyDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDAO.swift; sourceTree = "<group>"; };
+		3663EE8B2384585D001798E1 /* FirebaseFirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseFirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		368DA2262386C3EA0035BE02 /* PropertyServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyServices.swift; sourceTree = "<group>"; };
+		368DA2282386FAA60035BE02 /* CityServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityServices.swift; sourceTree = "<group>"; };
+		36AB040F238D83EC00653F30 /* Ong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ong.swift; sourceTree = "<group>"; };
+		36AB0413238D854C00653F30 /* OngServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngServices.swift; sourceTree = "<group>"; };
 		36AC92F0237DD83400012AA9 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		36DD94392375D5C0000012BB /* ExploreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableViewCell.swift; sourceTree = "<group>"; };
 		36DD943A2375D5C0000012BB /* ExploreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreTableViewCell.xib; sourceTree = "<group>"; };
@@ -111,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3663EE8C2384585D001798E1 /* FirebaseFirestore.framework in Frameworks */,
 				091925C285447A2B54292A40 /* Pods_SuCasa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,8 +139,27 @@
 				362DB1CF237A23E400D36357 /* City.swift */,
 				BAFE3514237C727F00966F86 /* Colors.swift */,
 				BAEB1461237B30AD008438D4 /* Property.swift */,
+				36AB040F238D83EC00653F30 /* Ong.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3663EE8623845051001798E1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				368DA2262386C3EA0035BE02 /* PropertyServices.swift */,
+				368DA2282386FAA60035BE02 /* CityServices.swift */,
+				36AB0413238D854C00653F30 /* OngServices.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		36AB0415238D92BC00653F30 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				3663EE8723845092001798E1 /* PropertyDAO.swift */,
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 		36DD94332375D44D000012BB /* XIBs */ = {
@@ -144,6 +178,7 @@
 				36DD94392375D5C0000012BB /* ExploreTableViewCell.swift */,
 				3658D1FC2379EAC100A96E2F /* ResultsTableViewCell.swift */,
 				3658D1F82379D7E200A96E2F /* SuggestionsTableViewCell.swift */,
+				365C0D45238C2DEC00FBF6AA /* OngsCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -228,6 +263,8 @@
 		BAB9EFB3237095CD00B480F1 /* SuCasa */ = {
 			isa = PBXGroup;
 			children = (
+				36AB0415238D92BC00653F30 /* Persistence */,
+				3663EE8623845051001798E1 /* Service */,
 				362DB1CE237A23D400D36357 /* Models */,
 				36DD94332375D44D000012BB /* XIBs */,
 				36DD94382375D50F000012BB /* Cells */,
@@ -248,6 +285,7 @@
 		C42B3FCD48A1E699D8125887 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3663EE8B2384585D001798E1 /* FirebaseFirestore.framework */,
 				AB9A42759A6AEB44F15643F6 /* Pods_SuCasa.framework */,
 			);
 			name = Frameworks;
@@ -396,15 +434,21 @@
 				5E033A2A238712A4001AC697 /* OngCell.swift in Sources */,
 				BA075ACF2383066D001CAE86 /* LocationViewController.swift in Sources */,
 				3658D1FE2379EAC100A96E2F /* ResultsTableViewCell.swift in Sources */,
+				3663EE8823845092001798E1 /* PropertyDAO.swift in Sources */,
 				BA5D40DA2375EA050041AC6B /* AdViewController.swift in Sources */,
 				BAB9EFBF237095CD00B480F1 /* SuCasa.xcdatamodeld in Sources */,
 				5E55AA19237B34E500887772 /* GuestsViewController.swift in Sources */,
+				36AB0410238D83EC00653F30 /* Ong.swift in Sources */,
 				5E55AA17237B34C300887772 /* SpaceViewController.swift in Sources */,
+				36AB0414238D854C00653F30 /* OngServices.swift in Sources */,
 				36DD943E2375D71E000012BB /* ExploreViewController.swift in Sources */,
+				368DA2292386FAA60035BE02 /* CityServices.swift in Sources */,
 				BAB8DA07237201200039CBC5 /* IntroViewController.swift in Sources */,
 				5E033A2023843AAC001AC697 /* MonthlyViewController.swift in Sources */,
+				368DA2272386C3EA0035BE02 /* PropertyServices.swift in Sources */,
 				5E033A2823870D48001AC697 /* OngsCollectionViewController.swift in Sources */,
 				5E55AA1B237B34FD00887772 /* AddPhotosViewController.swift in Sources */,
+				365C0D46238C2DEC00FBF6AA /* OngsCollectionViewCell.swift in Sources */,
 				362DB1D0237A23E400D36357 /* City.swift in Sources */,
 				BAEB1462237B30AD008438D4 /* Property.swift in Sources */,
 				36DD943B2375D5C0000012BB /* ExploreTableViewCell.swift in Sources */,
@@ -546,7 +590,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8Z872V7A4S;
+				DEVELOPMENT_TEAM = 9KU377264X;
 				INFOPLIST_FILE = SuCasa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -566,7 +610,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8Z872V7A4S;
+				DEVELOPMENT_TEAM = 9KU377264X;
 				INFOPLIST_FILE = SuCasa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
