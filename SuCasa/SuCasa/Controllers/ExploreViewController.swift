@@ -23,7 +23,6 @@ class ExploreViewController: UIViewController {
     var cities: [City] = []
 
     var properties: [Property] = []
-    var ongs: [Ong] =  []
     
     /// Table View Variables
     @IBOutlet weak var tableView: UITableView!
@@ -72,9 +71,6 @@ class ExploreViewController: UIViewController {
         self.setSearchController()
         
         self.cities = CityServices.readCSVtoGetCities()
-        
-
-        
         //after retrieving data from database it will set the view
         PropertyServices.retrieveProperty(completionHandler: { (auxProperties , error) in
         
@@ -83,18 +79,9 @@ class ExploreViewController: UIViewController {
             self.properties = auxProperties
             self.setTableView()
             
-            print("ong setada")
+            self.setCollectionView()
         }
     })
-
-        OngServices.retrieveOng { (ongs, error) in
-            
-            if ongs.count > 0 {
-                self.ongs = ongs
-                self.setCollectionView()
-                print("ong carregada")
-            }
-        }
     }
     
 }
@@ -117,7 +104,7 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "exploreCell", for: indexPath) as! ExploreTableViewCell
             //cell.adImage.image = UIImage(named: imagesAd[indexPath.row])
             
-            //Converting the first string url to URL
+            //Converting string url to URL
             let urlFromImage = URL (string: self.properties[indexPath.row].urls[0])
             
             let property = self.properties[indexPath.row]
@@ -126,6 +113,12 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             cell.adTitleLabel.text = property.title
             cell.availabilityLabel.text = "Disponível para \(property.monthsAvailable) pessoas"
             cell.distanceLabel.text = "APROX. A 1 km"
+//
+//            PropertyServices.load(url: urlFromImage!) { (img, error) in
+//                DispatchQueue.main.async {
+//                    cell.adImage.image = img
+//                }
+//            }
             
             cell.adImage.sd_setImage(with: urlFromImage,
                                      placeholderImage: placeHolderImage,
@@ -175,7 +168,7 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch currentState {
         case .none:
-            return "As melhores\n estadias para você"
+            return "As melhores estadias para você"
         case .suggestions:
             return "Buscas recentes"
         default:
@@ -183,6 +176,7 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return ""
     }
+    
     
     /// This method sets the table view
     func setTableView(){
@@ -259,7 +253,7 @@ extension ExploreViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         self.currentState = .none
         self.headerView.isHidden = false
-        self.headerView.frame.size.height = 213
+        self.headerView.frame.size.height = 154
         isFiltering = false
         self.tableView.reloadData()
     }
@@ -267,30 +261,12 @@ extension ExploreViewController: UISearchBarDelegate {
 
 extension ExploreViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.ongs.count
+        return 9
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ongsCell", for: indexPath) as! OngsCollectionViewCell
-        
-        let ong = self.ongs[indexPath.row]
-        
-        let imageURL =  URL(string: ong.url[0])
-        
-        cell.ongImage.sd_setImage(with: imageURL,
-                                  placeholderImage: placeHolderImage,
-                                  options: SDWebImageOptions.lowPriority,
-                                  context: nil,
-                                  progress: nil) { (downloadedImage, error, cacheType, downloadURL) in
-                                    if let error = error {
-                                        print("Error downloading the ong image: \(error.localizedDescription)")
-                                    } else {
-                                        print("Successfully downloaded ong image: \(String(describing: downloadURL?.absoluteString))")
-                                    }
-        }
-        
-        cell.ongTitle.text = ong.name
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ongsCell", for: indexPath)
         
         return cell
     }

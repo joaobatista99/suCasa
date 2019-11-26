@@ -223,80 +223,56 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="5Ax-bw-Cal">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="eXT-6h-B8v">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="213"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="154"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FwT-Fn-Zbd">
-                                            <rect key="frame" x="17" y="63" width="389" height="142"/>
+                                            <rect key="frame" x="8" y="28" width="398" height="118"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nmu-GQ-H3a">
-                                                <size key="itemSize" width="120" height="120"/>
+                                                <size key="itemSize" width="118" height="118"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ongsCell" id="ElP-8s-YoY" customClass="OngsCollectionViewCell" customModule="SuCasa" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="11" width="120" height="120"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="118" height="118"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nNj-Fy-3Q5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="118" height="118"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T3L-Jp-c4R">
-                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="98"/>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9g-64-inL">
+                                                                <rect key="frame" x="7" y="7" width="104" height="104"/>
+                                                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="120" id="l4V-l5-9Wh"/>
-                                                                    <constraint firstAttribute="height" constant="98" id="oHU-gk-0pX"/>
+                                                                    <constraint firstAttribute="height" constant="104" id="6bJ-pP-YmW"/>
+                                                                    <constraint firstAttribute="width" constant="104" id="FIU-fM-uWu"/>
                                                                 </constraints>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                        <integer key="value" value="4"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ong" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Pe-iW-9MC">
-                                                                <rect key="frame" x="0.0" y="97" width="120" height="21"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
-                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
+                                                            </view>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="bottom" secondItem="T3L-Jp-c4R" secondAttribute="bottom" constant="22" id="FmG-Nc-eO9"/>
-                                                            <constraint firstItem="T3L-Jp-c4R" firstAttribute="top" secondItem="nNj-Fy-3Q5" secondAttribute="top" id="GG8-pZ-FqU"/>
-                                                            <constraint firstItem="T3L-Jp-c4R" firstAttribute="leading" secondItem="nNj-Fy-3Q5" secondAttribute="leading" id="Hgi-Wa-u71"/>
-                                                            <constraint firstAttribute="trailing" secondItem="T3L-Jp-c4R" secondAttribute="trailing" id="I2C-sj-L6h"/>
+                                                            <constraint firstItem="X9g-64-inL" firstAttribute="top" secondItem="nNj-Fy-3Q5" secondAttribute="top" constant="2" id="Npy-cw-loV"/>
+                                                            <constraint firstAttribute="bottom" secondItem="X9g-64-inL" secondAttribute="bottom" constant="2" id="STM-sY-WtO"/>
+                                                            <constraint firstAttribute="trailing" secondItem="X9g-64-inL" secondAttribute="trailing" constant="2" id="cPV-2e-14L"/>
+                                                            <constraint firstItem="X9g-64-inL" firstAttribute="leading" secondItem="nNj-Fy-3Q5" secondAttribute="leading" constant="2" id="oIU-S0-X7v"/>
                                                         </constraints>
                                                     </collectionViewCellContentView>
-                                                    <size key="customSize" width="120" height="120"/>
-                                                    <connections>
-                                                        <outlet property="ongImage" destination="T3L-Jp-c4R" id="zF7-oq-Dkf"/>
-                                                        <outlet property="ongTitle" destination="4Pe-iW-9MC" id="TuD-61-wH0"/>
-                                                    </connections>
+                                                    <size key="customSize" width="118" height="118"/>
                                                 </collectionViewCell>
                                             </cells>
                                         </collectionView>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gg-lG-Ga5">
-                                            <rect key="frame" x="347" y="20" width="59" height="30"/>
+                                            <rect key="frame" x="347" y="8" width="59" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Ver tudo"/>
+                                            <state key="normal" title="Ver mais"/>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ONG's parceiras" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1p-pQ-sGd">
-                                            <rect key="frame" x="17" y="8" width="256" height="54"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="32"/>
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
