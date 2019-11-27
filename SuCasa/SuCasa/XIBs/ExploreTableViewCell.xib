@@ -29,36 +29,37 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G9v-Wv-aiF">
-                        <rect key="frame" x="15.5" y="11" width="383" height="184.5"/>
+                        <rect key="frame" x="15.5" y="11" width="383" height="177"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="G9v-Wv-aiF" secondAttribute="height" multiplier="365:176" id="TqO-XO-4UY"/>
+                            <constraint firstAttribute="width" secondItem="G9v-Wv-aiF" secondAttribute="height" multiplier="383:177" id="mHm-8X-zHN"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="10"/>
+                                <integer key="value" value="4"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$250.0/mês" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="It2-LI-Nr1">
-                        <rect key="frame" x="15.5" y="244" width="83" height="12"/>
+                        <rect key="frame" x="15.5" y="238" width="83" height="18"/>
                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="13"/>
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Titulo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4RV-3U-AUP">
-                        <rect key="frame" x="15.5" y="224" width="331" height="16"/>
+                        <rect key="frame" x="15.5" y="210.5" width="331" height="23.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="APROX. A " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMF-Y9-m1i">
-                        <rect key="frame" x="15.5" y="203.5" width="248.5" height="16.5"/>
+                        <rect key="frame" x="15.5" y="192" width="248.5" height="16.5"/>
                         <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="12"/>
                         <color key="textColor" red="0.62594902519999995" green="0.21854671840000001" blue="0.29411584140000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Disponibilidade" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBk-3J-1kE">
-                        <rect key="frame" x="122.5" y="241" width="173" height="18"/>
+                        <rect key="frame" x="122.5" y="235" width="173" height="24"/>
                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="13"/>
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -70,7 +71,6 @@
                     <constraint firstItem="G9v-Wv-aiF" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.925121" id="4Jg-uX-gDg"/>
                     <constraint firstItem="It2-LI-Nr1" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.2" id="Ahk-nP-yiB"/>
                     <constraint firstItem="TMF-Y9-m1i" firstAttribute="leading" secondItem="G9v-Wv-aiF" secondAttribute="leading" id="CDl-B2-4N2"/>
-                    <constraint firstItem="G9v-Wv-aiF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15.5" id="Fw2-fL-dtb"/>
                     <constraint firstItem="It2-LI-Nr1" firstAttribute="leading" secondItem="4RV-3U-AUP" secondAttribute="leading" id="Gbc-bn-Qo7"/>
                     <constraint firstItem="4RV-3U-AUP" firstAttribute="leading" secondItem="TMF-Y9-m1i" secondAttribute="leading" id="HcX-kw-efZ"/>
                     <constraint firstAttribute="bottomMargin" secondItem="PBk-3J-1kE" secondAttribute="bottom" constant="18" id="LsP-od-gsM"/>
@@ -79,10 +79,11 @@
                     <constraint firstAttribute="bottom" secondItem="It2-LI-Nr1" secondAttribute="bottom" constant="32" id="Qg3-8g-UtP"/>
                     <constraint firstItem="G9v-Wv-aiF" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="SSK-m4-cOS"/>
                     <constraint firstItem="G9v-Wv-aiF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="VcI-NF-Ooe"/>
-                    <constraint firstItem="TMF-Y9-m1i" firstAttribute="top" secondItem="G9v-Wv-aiF" secondAttribute="bottom" constant="8" id="rU8-qg-J3o"/>
+                    <constraint firstItem="G9v-Wv-aiF" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.614583" id="jl9-1P-ta1"/>
+                    <constraint firstItem="TMF-Y9-m1i" firstAttribute="top" secondItem="G9v-Wv-aiF" secondAttribute="bottom" constant="4" id="rU8-qg-J3o"/>
                     <constraint firstItem="4RV-3U-AUP" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.8" id="vA2-EH-aN1"/>
                     <constraint firstItem="It2-LI-Nr1" firstAttribute="top" secondItem="4RV-3U-AUP" secondAttribute="bottom" constant="4" id="yII-aN-iEb"/>
-                    <constraint firstItem="4RV-3U-AUP" firstAttribute="top" secondItem="TMF-Y9-m1i" secondAttribute="bottom" constant="4" id="zB3-ie-xCw"/>
+                    <constraint firstItem="4RV-3U-AUP" firstAttribute="top" secondItem="TMF-Y9-m1i" secondAttribute="bottom" constant="2" id="zB3-ie-xCw"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

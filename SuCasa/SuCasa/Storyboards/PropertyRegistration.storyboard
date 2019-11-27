@@ -443,7 +443,7 @@
                                     <action selector="getLocation:" destination="sMF-ys-ix3" eventType="touchUpInside" id="66W-8P-nF0"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGz-bl-ZIK">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGz-bl-ZIK">
                                 <rect key="frame" x="0.0" y="349" width="414" height="403.33333333333326"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jt9-CK-Dqo">
@@ -722,7 +722,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="proceedToNextView:" destination="NYI-Li-GoT" eventType="touchUpInside" id="HDH-Li-nPG"/>
                                     <segue destination="1Cl-bj-BOE" kind="show" identifier="goToTitle" id="MrL-ot-Fjz"/>
                                 </connections>
                             </button>
@@ -832,7 +831,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="k6Z-ya-Bp1" kind="show" id="e8L-2d-ndI"/>
+                                    <action selector="proceedToNextView:" destination="1Cl-bj-BOE" eventType="touchUpInside" id="ndM-bQ-YeY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -876,8 +875,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="OmV-kh-p0w"/>
                     <connections>
+                        <outlet property="nextButton" destination="db6-bB-vKm" id="ted-yb-qca"/>
                         <outlet property="rulesTextField" destination="kWp-ma-xGL" id="h9i-ig-cVe"/>
                         <outlet property="titleTextField" destination="2OF-4o-c46" id="vql-eZ-K9Q"/>
+                        <segue destination="k6Z-ya-Bp1" kind="show" identifier="goToMonthlyValues" id="j2T-J5-B9s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3He-2x-QKj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -949,11 +950,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="d9O-GD-ffu" kind="show" id="Fi3-0j-8rj"/>
+                                    <action selector="proceedToNext:" destination="k6Z-ya-Bp1" eventType="touchUpInside" id="6XM-Qf-XLd"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="R7u-AL-4CV" firstAttribute="width" secondItem="X4P-bg-cj0" secondAttribute="width" multiplier="0.9" id="0kk-7k-eB3"/>
                             <constraint firstItem="R7u-AL-4CV" firstAttribute="leading" secondItem="dFC-DT-yez" secondAttribute="leading" id="1n4-ja-G1B"/>
@@ -992,8 +993,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="F1J-lK-EDS"/>
                     <connections>
-                        <outlet property="monsthsQuantity" destination="nQ7-2p-Ixq" id="ZAu-Sg-E5I"/>
                         <outlet property="monthly" destination="dFC-DT-yez" id="FFW-i5-ZUF"/>
+                        <outlet property="monthsQuantity" destination="nQ7-2p-Ixq" id="ZAu-Sg-E5I"/>
+                        <outlet property="nextButton" destination="jSH-to-Q74" id="3G8-J4-5QF"/>
+                        <segue destination="d9O-GD-ffu" kind="show" identifier="doneId" id="If0-cY-XdG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6u-Xz-Z41" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

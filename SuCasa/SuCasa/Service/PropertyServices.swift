@@ -87,7 +87,6 @@ class PropertyServices {
                 
                 let property = Property(space: space, type: type, guestsTotal: guestsTotal, numberOfRooms: numberOfRooms, numberOfBeds: numberOfBeds, country: country, address: address, city: city, postalCode: postalCode, complement: complement, title: title, rules: rules, price: price, monthsAvailable: monthsAvailable, urls: urls)
                 
-                print(space, guestsTotal, numberOfRooms, country, address, city, title, price, monthsAvailable)
                 prop.append(property)
                 
                 }
@@ -105,7 +104,6 @@ class PropertyServices {
                 if  let image = UIImage(data: data)  {
                     
                     img = image
-                    print("downloaded")
                     completionHandler(img, nil)
                 }
             }
