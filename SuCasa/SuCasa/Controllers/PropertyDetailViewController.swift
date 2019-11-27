@@ -15,7 +15,7 @@ class PropertyDetailViewController: UIViewController {
         
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let carouselPageViewController = segue.destination as? CarouselPageViewController {
-            carouselPageViewController.carouselDelegate = self as? CarouselPageViewControllerDelegate
+            carouselPageViewController.carouselDelegate = self 
         }
     }
     
