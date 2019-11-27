@@ -1,11 +1,3 @@
-//
-//  ExploreViewController.swift
-//  SuCasa
-//
-//  Created by Arthur Rodrigues on 08/11/19.
-//  Copyright © 2019 João Victor Batista. All rights reserved.
-//
-
 import UIKit
 import MapKit
 import SDWebImage

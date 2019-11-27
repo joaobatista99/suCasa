@@ -53,28 +53,25 @@ class AddPhotosViewController: UIViewController {
             }, cancel: { (assets: [PHAsset]) -> Void in
               // User cancelled. And this where the assets currently selected.
             }, finish: { (assets: [PHAsset]) -> Void in
-                self.images = self.getAssetThumbnail(assets: assets)
+                self.images = self.getAsset(assets: assets)
         }, completion: nil)
         
         
     }
     
     //function to convert PHAsset into UIImage
-    func getAssetThumbnail(assets: [PHAsset]) -> [UIImage] {
-        
+    func getAsset(assets: [PHAsset]) -> [UIImage] {
         var arrayOfImages = [UIImage]()
-        let manager = PHImageManager.default()
-        let option = PHImageRequestOptions()
-        var thumbnail = UIImage()
-        option.isSynchronous = true
-        
-        for asset in assets{
+        for asset in assets {
+            let manager = PHImageManager.default()
+            let option = PHImageRequestOptions()
+            var image = UIImage()
+            option.isSynchronous = true
             manager.requestImage(for: asset, targetSize: CGSize(width: asset.pixelWidth, height: asset.pixelHeight), contentMode: .aspectFit, options: option, resultHandler: {(result, info)->Void in
-                thumbnail = result!
-                arrayOfImages.append(thumbnail)
+                image = result!
+                arrayOfImages.append(image)
             })
         }
-    
 
         self.nextButton.isHidden = false
         self.photosAdded.isHidden = false

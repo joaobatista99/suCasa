@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -351,8 +351,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="1rm-Bx-qgu"/>
                     <connections>
-                        <outlet property="collectionView" destination="FwT-Fn-Zbd" id="BCV-1r-Pwz"/>
-                        <outlet property="headerView" destination="eXT-6h-B8v" id="3oz-De-unr"/>
                         <outlet property="tableView" destination="5Ax-bw-Cal" id="Yub-Ru-fGC"/>
                         <segue destination="YDf-BQ-biC" kind="show" identifier="showOngDetail" id="0ID-8T-83k"/>
                         <segue destination="xky-Tx-GWT" kind="show" identifier="showAllOngs" id="Mrk-rT-utY"/>
@@ -360,7 +358,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8AB-Xn-eJP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1308.6956521739132" y="1500.6696428571429"/>
+            <point key="canvasLocation" x="1307" y="1569"/>
         </scene>
         <!--Ad-->
         <scene sceneID="euK-eO-Lcf">

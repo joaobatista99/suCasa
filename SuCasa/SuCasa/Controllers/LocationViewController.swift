@@ -197,6 +197,7 @@ class LocationViewController: UIViewController {
             }
             
             if let postalCode = placeMark.postalCode{
+                print(postalCode)
                 self.postalCodeTextField.text = postalCode
             }
             
