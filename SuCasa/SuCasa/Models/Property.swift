@@ -68,6 +68,27 @@ class Property {
         self.urls = []
     }
     
+    init(space: String, type: String, guestsTotal: Int, numberOfRooms: Int, numberOfBeds: Int,
+        country: String, address: String, city: String, postalCode: Int, complement: String,
+        title: String, rules: String, price: Float, monthsAvailable: Int, urls: [String])  {
+        
+        self.space = space
+        self.type = type
+        self.guestsTotal = guestsTotal
+        self.numberOfRooms = numberOfRooms
+        self.numberOfBeds = numberOfBeds
+        self.country = country
+        self.address = address
+        self.city = city
+        self.postalCode = postalCode
+        self.complement = complement
+        self.title = title
+        self.rules = rules
+        self.price = price
+        self.monthsAvailable = monthsAvailable
+        self.urls = urls
+    }
+    
 }
 
 

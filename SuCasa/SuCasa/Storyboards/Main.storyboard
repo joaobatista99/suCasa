@@ -351,6 +351,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="1rm-Bx-qgu"/>
                     <connections>
+                        <outlet property="collectionView" destination="FwT-Fn-Zbd" id="xAa-2b-5q1"/>
+                        <outlet property="headerView" destination="eXT-6h-B8v" id="Hk9-SM-XRD"/>
                         <outlet property="tableView" destination="5Ax-bw-Cal" id="Yub-Ru-fGC"/>
                         <segue destination="YDf-BQ-biC" kind="show" identifier="showOngDetail" id="0ID-8T-83k"/>
                         <segue destination="xky-Tx-GWT" kind="show" identifier="showAllOngs" id="Mrk-rT-utY"/>
