@@ -71,14 +71,15 @@ class ExploreViewController: UIViewController {
         //after retrieving data from database it will set the view
         PropertyServices.retrieveProperty(completionHandler: { (auxProperties , error) in
         
-        //checking if the retrieve was successfull
-        if auxProperties.count > 0 {
-            self.properties = auxProperties
-            self.setTableView()
+            //checking if the retrieve was successfull
+            if auxProperties.count > 0 {
+                self.properties = auxProperties
+                self.setTableView()
             
-            self.setCollectionView()
-        }
-    })
+                self.setCollectionView()
+            }
+        })
+        
         //Retriving Ongs from database
         OngServices.retrieveOng { (ongs, error) in
             
