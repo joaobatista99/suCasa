@@ -14,7 +14,6 @@
 		3658D1FE2379EAC100A96E2F /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3658D1FC2379EAC100A96E2F /* ResultsTableViewCell.swift */; };
 		3658D1FF2379EAC100A96E2F /* ResultsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3658D1FD2379EAC100A96E2F /* ResultsTableViewCell.xib */; };
 		3658D2042379F75100A96E2F /* brazilCities.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3658D2032379F75100A96E2F /* brazilCities.csv */; };
-		3663EE8823845092001798E1 /* PropertyDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663EE8723845092001798E1 /* PropertyDAO.swift */; };
 		3663EE8C2384585D001798E1 /* FirebaseFirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3663EE8B2384585D001798E1 /* FirebaseFirestore.framework */; };
 		366757A3238EDA450085ED4F /* OngDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366757A2238EDA450085ED4F /* OngDetailViewController.swift */; };
 		368DA2272386C3EA0035BE02 /* PropertyServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368DA2262386C3EA0035BE02 /* PropertyServices.swift */; };
@@ -48,6 +47,15 @@
 		BA670EDF23746054005E3FDA /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA670EDE23746054005E3FDA /* Profile.storyboard */; };
 		BA7794B623735DB700F8D024 /* Ad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA7794B523735DB700F8D024 /* Ad.storyboard */; };
 		BA9FC263238ED94100D2D3A5 /* PropertyDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9FC262238ED94100D2D3A5 /* PropertyDetail.storyboard */; };
+		BAACB3C6238EF16900C231F0 /* OngsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAACB3C4238EF16900C231F0 /* OngsCollectionViewCell.swift */; };
+		BAACB3C7238EF16900C231F0 /* OngCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAACB3C5238EF16900C231F0 /* OngCell.swift */; };
+		BAACB3CB238EF1C300C231F0 /* OngsCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAACB3C8238EF1C300C231F0 /* OngsCollection.storyboard */; };
+		BAACB3CD238EF1C300C231F0 /* OngProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAACB3CA238EF1C300C231F0 /* OngProfile.storyboard */; };
+		BAACB3CF238EF1D000C231F0 /* OngsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAACB3CE238EF1D000C231F0 /* OngsCollectionViewController.swift */; };
+		BAACB3D2238EF1DE00C231F0 /* CityServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAACB3D0238EF1DE00C231F0 /* CityServices.swift */; };
+		BAACB3D3238EF1DE00C231F0 /* OngServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAACB3D1238EF1DE00C231F0 /* OngServices.swift */; };
+		BAACB3D5238EF1E700C231F0 /* Ong.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAACB3D4238EF1E700C231F0 /* Ong.swift */; };
+		BAACB3D9238EF2CF00C231F0 /* PropertyDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAACB3D8238EF2CF00C231F0 /* PropertyDAO.swift */; };
 		BAB8D9FF2371DD400039CBC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAB8D9FE2371DD400039CBC5 /* GoogleService-Info.plist */; };
 		BAB8DA022371E8AE0039CBC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB8DA012371E8AE0039CBC5 /* Main.storyboard */; };
 		BAB8DA07237201200039CBC5 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB8DA06237201200039CBC5 /* IntroViewController.swift */; };
@@ -67,7 +75,6 @@
 		3658D1FC2379EAC100A96E2F /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
 		3658D1FD2379EAC100A96E2F /* ResultsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsTableViewCell.xib; sourceTree = "<group>"; };
 		3658D2032379F75100A96E2F /* brazilCities.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = brazilCities.csv; path = SuCasa/brazilCities.csv; sourceTree = SOURCE_ROOT; };
-		3663EE8723845092001798E1 /* PropertyDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDAO.swift; sourceTree = "<group>"; };
 		3663EE8B2384585D001798E1 /* FirebaseFirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseFirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		366757A2238EDA450085ED4F /* OngDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngDetailViewController.swift; sourceTree = "<group>"; };
 		368DA2262386C3EA0035BE02 /* PropertyServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyServices.swift; sourceTree = "<group>"; };
@@ -103,6 +110,15 @@
 		BA670EDE23746054005E3FDA /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		BA7794B523735DB700F8D024 /* Ad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ad.storyboard; sourceTree = "<group>"; };
 		BA9FC262238ED94100D2D3A5 /* PropertyDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PropertyDetail.storyboard; sourceTree = "<group>"; };
+		BAACB3C4238EF16900C231F0 /* OngsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OngsCollectionViewCell.swift; sourceTree = "<group>"; };
+		BAACB3C5238EF16900C231F0 /* OngCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OngCell.swift; sourceTree = "<group>"; };
+		BAACB3C8238EF1C300C231F0 /* OngsCollection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OngsCollection.storyboard; sourceTree = "<group>"; };
+		BAACB3CA238EF1C300C231F0 /* OngProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OngProfile.storyboard; sourceTree = "<group>"; };
+		BAACB3CE238EF1D000C231F0 /* OngsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OngsCollectionViewController.swift; sourceTree = "<group>"; };
+		BAACB3D0238EF1DE00C231F0 /* CityServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityServices.swift; sourceTree = "<group>"; };
+		BAACB3D1238EF1DE00C231F0 /* OngServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OngServices.swift; sourceTree = "<group>"; };
+		BAACB3D4238EF1E700C231F0 /* Ong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ong.swift; sourceTree = "<group>"; };
+		BAACB3D8238EF2CF00C231F0 /* PropertyDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyDAO.swift; sourceTree = "<group>"; };
 		BAB8D9FE2371DD400039CBC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BAB8DA012371E8AE0039CBC5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BAB8DA06237201200039CBC5 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +148,7 @@
 		362DB1CE237A23D400D36357 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BAACB3D4238EF1E700C231F0 /* Ong.swift */,
 				362DB1CF237A23E400D36357 /* City.swift */,
 				BAFE3514237C727F00966F86 /* Colors.swift */,
 				BAEB1461237B30AD008438D4 /* Property.swift */,
@@ -142,7 +159,8 @@
 		3663EE8623845051001798E1 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				3663EE8723845092001798E1 /* PropertyDAO.swift */,
+				BAACB3D0238EF1DE00C231F0 /* CityServices.swift */,
+				BAACB3D1238EF1DE00C231F0 /* OngServices.swift */,
 				368DA2262386C3EA0035BE02 /* PropertyServices.swift */,
 			);
 			path = Service;
@@ -162,11 +180,11 @@
 		36DD94382375D50F000012BB /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				BAACB3C5238EF16900C231F0 /* OngCell.swift */,
+				BAACB3C4238EF16900C231F0 /* OngsCollectionViewCell.swift */,
 				36DD94392375D5C0000012BB /* ExploreTableViewCell.swift */,
 				3658D1FC2379EAC100A96E2F /* ResultsTableViewCell.swift */,
 				3658D1F82379D7E200A96E2F /* SuggestionsTableViewCell.swift */,
-				5E033A29238712A4001AC697 /* OngCell.swift */,
-				365C0D45238C2DEC00FBF6AA /* OngsCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -197,9 +215,19 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		BAACB3D7238EF2CF00C231F0 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				BAACB3D8238EF2CF00C231F0 /* PropertyDAO.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
 		BAB8DA002371E88A0039CBC5 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				BAACB3CA238EF1C300C231F0 /* OngProfile.storyboard */,
+				BAACB3C8238EF1C300C231F0 /* OngsCollection.storyboard */,
 				BAB9EFC2237095D000B480F1 /* LaunchScreen.storyboard */,
 				BAB8DA012371E8AE0039CBC5 /* Main.storyboard */,
 				BA7794B523735DB700F8D024 /* Ad.storyboard */,
@@ -214,6 +242,7 @@
 		BAB8DA052372004E0039CBC5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BAACB3CE238EF1D000C231F0 /* OngsCollectionViewController.swift */,
 				BAB8DA06237201200039CBC5 /* IntroViewController.swift */,
 				36DD943D2375D71E000012BB /* ExploreViewController.swift */,
 				BA5D40D92375EA050041AC6B /* AdViewController.swift */,
@@ -223,7 +252,6 @@
 				5E55AA1C237B351800887772 /* TitleViewController.swift */,
 				BA075ACE2383066D001CAE86 /* LocationViewController.swift */,
 				5E033A1F23843AAC001AC697 /* MonthlyViewController.swift */,
-				5E033A2723870D48001AC697 /* OngsCollectionViewController.swift */,
 				366757A2238EDA450085ED4F /* OngDetailViewController.swift */,
 				BA1B7D942386DCA000D06E3A /* PropertyDetailViewController.swift */,
 				BA1B7D982386DF2B00D06E3A /* CarouselPageViewController.swift */,
@@ -252,6 +280,7 @@
 		BAB9EFB3237095CD00B480F1 /* SuCasa */ = {
 			isa = PBXGroup;
 			children = (
+				BAACB3D7238EF2CF00C231F0 /* Persistence */,
 				3663EE8623845051001798E1 /* Service */,
 				362DB1CE237A23D400D36357 /* Models */,
 				36DD94332375D44D000012BB /* XIBs */,
@@ -352,9 +381,11 @@
 				BA5D40DC2375F93A0041AC6B /* Login.storyboard in Resources */,
 				BA7794B623735DB700F8D024 /* Ad.storyboard in Resources */,
 				BAB9EFC1237095D000B480F1 /* Assets.xcassets in Resources */,
+				BAACB3CB238EF1C300C231F0 /* OngsCollection.storyboard in Resources */,
 				BA670EDF23746054005E3FDA /* Profile.storyboard in Resources */,
 				BAB8D9FF2371DD400039CBC5 /* GoogleService-Info.plist in Resources */,
 				36DD943C2375D5C0000012BB /* ExploreTableViewCell.xib in Resources */,
+				BAACB3CD238EF1C300C231F0 /* OngProfile.storyboard in Resources */,
 				3658D1FB2379D7E200A96E2F /* SuggestionsTableViewCell.xib in Resources */,
 				BA9FC263238ED94100D2D3A5 /* PropertyDetail.storyboard in Resources */,
 				BAB8DA022371E8AE0039CBC5 /* Main.storyboard in Resources */,
@@ -418,18 +449,20 @@
 			files = (
 				BAB9EFB5237095CD00B480F1 /* AppDelegate.swift in Sources */,
 				BAFE3515237C727F00966F86 /* Colors.swift in Sources */,
+				BAACB3D9238EF2CF00C231F0 /* PropertyDAO.swift in Sources */,
 				3658D1FA2379D7E200A96E2F /* SuggestionsTableViewCell.swift in Sources */,
 				BA1B7D992386DF2B00D06E3A /* CarouselPageViewController.swift in Sources */,
 				36AC92F1237DD83400012AA9 /* StringExtension.swift in Sources */,
 				BA075ACF2383066D001CAE86 /* LocationViewController.swift in Sources */,
 				3658D1FE2379EAC100A96E2F /* ResultsTableViewCell.swift in Sources */,
-				3663EE8823845092001798E1 /* PropertyDAO.swift in Sources */,
+				BAACB3D5238EF1E700C231F0 /* Ong.swift in Sources */,
 				BA5D40DA2375EA050041AC6B /* AdViewController.swift in Sources */,
 				BAB9EFBF237095CD00B480F1 /* SuCasa.xcdatamodeld in Sources */,
 				5E55AA19237B34E500887772 /* GuestsViewController.swift in Sources */,
 				5E55AA17237B34C300887772 /* SpaceViewController.swift in Sources */,
 				36DD943E2375D71E000012BB /* ExploreViewController.swift in Sources */,
-				368DA2292386FAA60035BE02 /* CityServices.swift in Sources */,
+				BAACB3C6238EF16900C231F0 /* OngsCollectionViewCell.swift in Sources */,
+				BAACB3C7238EF16900C231F0 /* OngCell.swift in Sources */,
 				366757A3238EDA450085ED4F /* OngDetailViewController.swift in Sources */,
 				BA1B7D972386DCFA00D06E3A /* CarouselItem.swift in Sources */,
 				BAB8DA07237201200039CBC5 /* IntroViewController.swift in Sources */,
@@ -437,9 +470,12 @@
 				368DA2272386C3EA0035BE02 /* PropertyServices.swift in Sources */,
 				5E55AA1B237B34FD00887772 /* AddPhotosViewController.swift in Sources */,
 				362DB1D0237A23E400D36357 /* City.swift in Sources */,
+				BAACB3CF238EF1D000C231F0 /* OngsCollectionViewController.swift in Sources */,
 				BAEB1462237B30AD008438D4 /* Property.swift in Sources */,
 				36DD943B2375D5C0000012BB /* ExploreTableViewCell.swift in Sources */,
+				BAACB3D3238EF1DE00C231F0 /* OngServices.swift in Sources */,
 				BA1B7D952386DCA000D06E3A /* PropertyDetailViewController.swift in Sources */,
+				BAACB3D2238EF1DE00C231F0 /* CityServices.swift in Sources */,
 				5E55AA1D237B351800887772 /* TitleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
