@@ -257,6 +257,7 @@ extension ExploreViewController: UISearchBarDelegate {
 }
 
 extension ExploreViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.ongs.count
     }
@@ -281,11 +282,7 @@ extension ExploreViewController: UICollectionViewDataSource, UICollectionViewDel
                                         print("Successfully downloaded ong image: \(String(describing: downloadURL?.absoluteString))")
                                     }
         }
-         
-         
-        
         cell.ongName.text = ong.name
-        
         
         return cell
     }

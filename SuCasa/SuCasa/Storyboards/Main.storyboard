@@ -212,6 +212,16 @@
             </objects>
             <point key="canvasLocation" x="1980" y="-809"/>
         </scene>
+        <!--ongDetail-->
+        <scene sceneID="BWs-gX-akP">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ongDetail" storyboardName="ongDetail" referencedIdentifier="ongDetail" id="YDf-BQ-biC" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0EU-mJ-bx4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="neZ-NF-ENQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1309" y="1928"/>
+        </scene>
         <!--Explore View Controller-->
         <scene sceneID="hYn-58-H52">
             <objects>
@@ -331,6 +341,7 @@
                         <outlet property="collectionView" destination="FwT-Fn-Zbd" id="BCV-1r-Pwz"/>
                         <outlet property="headerView" destination="eXT-6h-B8v" id="3oz-De-unr"/>
                         <outlet property="tableView" destination="5Ax-bw-Cal" id="Yub-Ru-fGC"/>
+                        <segue destination="YDf-BQ-biC" kind="show" identifier="showOngDetail" id="0ID-8T-83k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8AB-Xn-eJP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
