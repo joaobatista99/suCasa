@@ -11,10 +11,8 @@ import Firebase
 import FirebaseFirestore
 
 class PropertyDAO {
-    
-    
 
-    static func createNewProperty(property: Property, photos: [UIImage]) {
+    static func createNewProperty(property: Property, photos: [UIImage], completion: @escaping () -> ()) {
         
         PropertyServices.savePhotos(photos: photos, property: property) {
             
@@ -40,8 +38,10 @@ class PropertyDAO {
             ]) { err in
                 if let err = err {
                     print("Error adding document: \(err)")
+                    completion()
                 } else {
                     print("Document added with ID: \(ref!.documentID)")
+                    completion()
                 }
             }
         }
