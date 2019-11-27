@@ -17,6 +17,7 @@
 		365C0D46238C2DEC00FBF6AA /* OngsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365C0D45238C2DEC00FBF6AA /* OngsCollectionViewCell.swift */; };
 		3663EE8823845092001798E1 /* PropertyDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663EE8723845092001798E1 /* PropertyDAO.swift */; };
 		3663EE8C2384585D001798E1 /* FirebaseFirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3663EE8B2384585D001798E1 /* FirebaseFirestore.framework */; };
+		366757A3238EDA450085ED4F /* OngDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366757A2238EDA450085ED4F /* OngDetailViewController.swift */; };
 		368DA2272386C3EA0035BE02 /* PropertyServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368DA2262386C3EA0035BE02 /* PropertyServices.swift */; };
 		368DA2292386FAA60035BE02 /* CityServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368DA2282386FAA60035BE02 /* CityServices.swift */; };
 		36AB0418238DA88200653F30 /* OngServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AB0417238DA88200653F30 /* OngServices.swift */; };
@@ -72,6 +73,7 @@
 		365C0D45238C2DEC00FBF6AA /* OngsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngsCollectionViewCell.swift; sourceTree = "<group>"; };
 		3663EE8723845092001798E1 /* PropertyDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDAO.swift; sourceTree = "<group>"; };
 		3663EE8B2384585D001798E1 /* FirebaseFirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseFirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		366757A2238EDA450085ED4F /* OngDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngDetailViewController.swift; sourceTree = "<group>"; };
 		368DA2262386C3EA0035BE02 /* PropertyServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyServices.swift; sourceTree = "<group>"; };
 		368DA2282386FAA60035BE02 /* CityServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityServices.swift; sourceTree = "<group>"; };
 		36AB0417238DA88200653F30 /* OngServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngServices.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				36DD94392375D5C0000012BB /* ExploreTableViewCell.swift */,
 				3658D1FC2379EAC100A96E2F /* ResultsTableViewCell.swift */,
 				3658D1F82379D7E200A96E2F /* SuggestionsTableViewCell.swift */,
+				5E033A29238712A4001AC697 /* OngCell.swift */,
 				365C0D45238C2DEC00FBF6AA /* OngsCollectionViewCell.swift */,
 			);
 			path = Cells;
@@ -237,7 +240,7 @@
 				BA075ACE2383066D001CAE86 /* LocationViewController.swift */,
 				5E033A1F23843AAC001AC697 /* MonthlyViewController.swift */,
 				5E033A2723870D48001AC697 /* OngsCollectionViewController.swift */,
-				5E033A29238712A4001AC697 /* OngCell.swift */,
+				366757A2238EDA450085ED4F /* OngDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				5E55AA17237B34C300887772 /* SpaceViewController.swift in Sources */,
 				36DD943E2375D71E000012BB /* ExploreViewController.swift in Sources */,
 				368DA2292386FAA60035BE02 /* CityServices.swift in Sources */,
+				366757A3238EDA450085ED4F /* OngDetailViewController.swift in Sources */,
 				BAB8DA07237201200039CBC5 /* IntroViewController.swift in Sources */,
 				5E033A2023843AAC001AC697 /* MonthlyViewController.swift in Sources */,
 				368DA2272386C3EA0035BE02 /* PropertyServices.swift in Sources */,
