@@ -34,22 +34,25 @@ class Property {
         }
     }
 
-    var space        : SpaceType
-    var type         : PropertyType
-    var guestsTotal  : Int
-    var numberOfRooms: Int
-    var numberOfBeds : Int
-    var country      : String
-    var address       : String
-    var city         : String
-    var postalCode   : Int
-    var complement   : String
-    var title        : String
-    var rules        : String
+    var space                 : String
+    var type                  : String
+    var guestsTotal           : Int
+    var numberOfRooms         : Int
+    var numberOfBeds          : Int
+    var country               : String
+    var address               : String
+    var city                  : String
+    var postalCode            : Int
+    var complement            : String
+    var title                 : String
+    var rules                 : String
+    var price                 : Float
+    var monthsAvailable       : Int
+    var urls                  : [String]
 
     init(){
-        self.space = .apartment
-        self.type = .apartment
+        self.space = ""
+        self.type = ""
         self.guestsTotal = 0
         self.numberOfRooms = 0
         self.numberOfBeds = 0
@@ -60,6 +63,9 @@ class Property {
         self.complement = ""
         self.title = ""
         self.rules = ""
+        self.price = 0.0
+        self.monthsAvailable = 0
+        self.urls = []
     }
     
 }
