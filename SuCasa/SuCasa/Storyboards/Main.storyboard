@@ -212,6 +212,26 @@
             </objects>
             <point key="canvasLocation" x="1980" y="-809"/>
         </scene>
+        <!--ongProfile-->
+        <scene sceneID="BWs-gX-akP">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ongDetail" storyboardName="OngProfile" referencedIdentifier="ongProfile" id="YDf-BQ-biC" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0EU-mJ-bx4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="neZ-NF-ENQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="1919"/>
+        </scene>
+        <!--allOngsVC-->
+        <scene sceneID="yb6-bC-y3V">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="allOngsVC" storyboardName="OngsCollection" referencedIdentifier="allOngsVC" id="xky-Tx-GWT" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="wCO-bW-6uZ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DCs-z0-D5N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1541" y="1919"/>
+        </scene>
         <!--Explore View Controller-->
         <scene sceneID="hYn-58-H52">
             <objects>
@@ -297,6 +317,9 @@
                                             <rect key="frame" x="335" y="80" width="64" height="34"/>
                                             <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
                                             <state key="normal" title="Ver tudo"/>
+                                            <connections>
+                                                <action selector="seeAllOngsButton:" destination="Sgr-Pj-lgc" eventType="touchUpInside" id="bXb-rK-4Re"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Localização atual" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUH-FL-Ccx">
                                             <rect key="frame" x="62.5" y="14" width="165.5" height="17"/>
@@ -354,14 +377,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="1rm-Bx-qgu"/>
                     <connections>
-                        <outlet property="collectionView" destination="FwT-Fn-Zbd" id="BCV-1r-Pwz"/>
-                        <outlet property="headerView" destination="eXT-6h-B8v" id="3oz-De-unr"/>
+                        <outlet property="collectionView" destination="FwT-Fn-Zbd" id="xAa-2b-5q1"/>
+                        <outlet property="headerView" destination="eXT-6h-B8v" id="Hk9-SM-XRD"/>
                         <outlet property="tableView" destination="5Ax-bw-Cal" id="Yub-Ru-fGC"/>
+                        <segue destination="YDf-BQ-biC" kind="show" identifier="showOngDetail" id="0ID-8T-83k"/>
+                        <segue destination="xky-Tx-GWT" kind="show" identifier="showAllOngs" id="Mrk-rT-utY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8AB-Xn-eJP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1308.6956521739132" y="1500.6696428571429"/>
+            <point key="canvasLocation" x="1307" y="1569"/>
         </scene>
         <!--Ad-->
         <scene sceneID="euK-eO-Lcf">

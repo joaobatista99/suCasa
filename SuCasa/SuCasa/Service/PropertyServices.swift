@@ -46,7 +46,6 @@ class PropertyServices {
         }
     }
     
-    
     static func retrieveProperty(completionHandler: @escaping(_ properties: [Property], _ error: Error?) -> Void) {
         
         var prop: [Property] = []

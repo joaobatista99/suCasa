@@ -1,11 +1,3 @@
-//
-//  ExploreViewController.swift
-//  SuCasa
-//
-//  Created by Arthur Rodrigues on 08/11/19.
-//  Copyright © 2019 João Victor Batista. All rights reserved.
-//
-
 import UIKit
 import MapKit
 import SDWebImage
@@ -17,7 +9,9 @@ class ExploreViewController: UIViewController {
     var cities: [City] = []
 
     var properties: [Property] = []
+    var selectedProperty: Property!
     var ongs: [Ong] =  []
+    var selectedOng: Ong!
     
     /// Table View Variables
     @IBOutlet weak var tableView: UITableView!
@@ -69,15 +63,16 @@ class ExploreViewController: UIViewController {
         //after retrieving data from database it will set the view
         PropertyServices.retrieveProperty(completionHandler: { (auxProperties , error) in
         
-        //checking if the retrieve was successfull
-        if auxProperties.count > 0 {
-            self.properties = auxProperties
-            self.setTableView()
+            //checking if the retrieve was successfull
+            if auxProperties.count > 0 {
+                self.properties = auxProperties
+                self.setTableView()
             
-            self.setCollectionView()
-        }
-    })
+                self.setCollectionView()
+            }
+        })
         
+        //Retriving Ongs from database
         OngServices.retrieveOng { (ongs, error) in
             
             if ongs.count > 0 {
@@ -88,11 +83,33 @@ class ExploreViewController: UIViewController {
         }
     }
     
+    @IBAction func seeAllOngsButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "showAllOngs", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier  == "showOngDetail" {
+            let detailOngVc = segue.destination as? OngDetailViewController
+            detailOngVc?.ong = self.selectedOng
+        }
+
+        else if segue.identifier == "showAllOngs"{
+            let allOngsVC = segue.destination as? OngsCollectionViewController
+            allOngsVC?.ongs = self.ongs
+        }
+        
+    }
+    
 }
 
 /// Search bar behavior
 extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedProperty = self.properties[indexPath.row]
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering {
             return self.filteredCities.count
@@ -128,7 +145,7 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
                                             print("Successfully downloaded image: \(String(describing: downloadURL?.absoluteString))")
                                         }
             }
-             
+            
             return cell
             
         case .suggestions:
@@ -174,7 +191,6 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
         return ""
     }
     
-    
     /// This method sets the table view
     func setTableView(){
         
@@ -185,7 +201,6 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
         
         registerXibs()
     }
-    
     
     /// This method register the xibs that is used to display on the screen
     func registerXibs() {
@@ -271,6 +286,7 @@ extension ExploreViewController: UICollectionViewDataSource, UICollectionViewDel
         
         let imageURL =  URL(string: ong.url[0])
         
+        //sd_setImage will get image from database
         cell.ongImage.sd_setImage(with: imageURL,
                                   placeholderImage: placeHolderImage,
                                   options: SDWebImageOptions.lowPriority,
@@ -286,6 +302,13 @@ extension ExploreViewController: UICollectionViewDataSource, UICollectionViewDel
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        self.selectedOng = self.ongs[indexPath.row]
+        self.performSegue(withIdentifier: "showOngDetail", sender: self)
+    }
+    
     
     func setCollectionView() {
         self.collectionView.delegate = self

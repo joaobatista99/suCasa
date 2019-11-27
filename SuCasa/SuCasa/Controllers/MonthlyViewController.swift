@@ -12,7 +12,7 @@ import UIKit
 class MonthlyViewController: UIViewController {
 
     @IBOutlet weak var monthly: UITextField!
-    @IBOutlet weak var monthsQuantity: UITextField!
+    @IBOutlet weak var monsthsQuantity: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     
     var property: Property!
@@ -24,8 +24,8 @@ class MonthlyViewController: UIViewController {
         monthly.delegate         = self
         monthly.tag              = 0
         
-        monthsQuantity.tag      = 1
-        monthsQuantity.delegate = self
+        monsthsQuantity.tag      = 1
+        monsthsQuantity.delegate = self
         
         //gesture to dismiss keyboard
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(TitleViewController.endSelection(_:))))
@@ -52,9 +52,8 @@ class MonthlyViewController: UIViewController {
     }
     
     private func assignTextFieldsToProperty() {
-        
-        property.monthsAvailable = Int(monthsQuantity.text ?? "0" ) ?? 0
-        property.price = Float(monthly.text ?? "0") ??  0.0
+        property.price = Float(monthly.text!)!
+        property.monthsAvailable = Int(monsthsQuantity.text!)!
     }
     
     //dismiss keyboard if users touches screen
@@ -99,11 +98,11 @@ class MonthlyViewController: UIViewController {
         ]
         
         monthly.attributedPlaceholder = NSAttributedString(string: "Adicione o valor em R$", attributes: attributes as [NSAttributedString.Key : Any])
-        monthsQuantity.attributedPlaceholder = NSAttributedString(string: "Adicione a quantidade de meses", attributes: attributes as [NSAttributedString.Key : Any])
+        monsthsQuantity.attributedPlaceholder = NSAttributedString(string: "Adicione a quantidade de meses", attributes: attributes as [NSAttributedString.Key : Any])
         
-        monthsQuantity.textColor = Colors.textColor
-        monthsQuantity.font = UIFont(name: "OpenSans-Regular", size: 17)
-        monthsQuantity.keyboardType = .numberPad
+        monsthsQuantity.textColor = Colors.textColor
+        monsthsQuantity.font = UIFont(name: "OpenSans-Regular", size: 17)
+        monsthsQuantity.keyboardType = .numberPad
         
         monthly.textColor = Colors.textColor
         monthly.font = UIFont(name: "OpenSans-Regular", size: 17)
@@ -124,14 +123,14 @@ class MonthlyViewController: UIViewController {
         //putting the flexible space and the done button into the toolbar
         toolBar.setItems([flexibleSpace, doneButton], animated: false)
         
-        monthsQuantity.inputAccessoryView = toolBar
+        monsthsQuantity.inputAccessoryView = toolBar
         monthly.inputAccessoryView         = toolBar
         
     }
     
     func isTextFieldsFilled() -> Bool{
            
-           if monthsQuantity.text!.isEmpty {
+           if monsthsQuantity.text!.isEmpty {
                return false
            }
            else if monthly.text!.isEmpty {

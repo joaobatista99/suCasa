@@ -29,10 +29,4 @@ class ExploreTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    override func prepareForReuse() {
-        adTitleLabel.text = ""
-        adPriceLabel.text = ""
-        availabilityLabel.text = ""
-    }
-    
 }
