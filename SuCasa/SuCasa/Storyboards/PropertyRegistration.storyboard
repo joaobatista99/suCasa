@@ -3,7 +3,7 @@
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -443,7 +443,7 @@
                                     <action selector="getLocation:" destination="sMF-ys-ix3" eventType="touchUpInside" id="66W-8P-nF0"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGz-bl-ZIK">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGz-bl-ZIK">
                                 <rect key="frame" x="0.0" y="349" width="414" height="403.33333333333326"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jt9-CK-Dqo">
@@ -831,7 +831,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="k6Z-ya-Bp1" kind="show" id="e8L-2d-ndI"/>
+                                    <action selector="proceedToNextView:" destination="1Cl-bj-BOE" eventType="touchUpInside" id="ndM-bQ-YeY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -878,6 +878,7 @@
                         <outlet property="nextButton" destination="db6-bB-vKm" id="ted-yb-qca"/>
                         <outlet property="rulesTextField" destination="kWp-ma-xGL" id="h9i-ig-cVe"/>
                         <outlet property="titleTextField" destination="2OF-4o-c46" id="vql-eZ-K9Q"/>
+                        <segue destination="k6Z-ya-Bp1" kind="show" identifier="goToMonthlyValues" id="j2T-J5-B9s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3He-2x-QKj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -992,8 +993,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="F1J-lK-EDS"/>
                     <connections>
-                        <outlet property="monsthsQuantity" destination="nQ7-2p-Ixq" id="ZAu-Sg-E5I"/>
                         <outlet property="monthly" destination="dFC-DT-yez" id="FFW-i5-ZUF"/>
+                        <outlet property="monthsQuantity" destination="nQ7-2p-Ixq" id="ZAu-Sg-E5I"/>
                         <outlet property="nextButton" destination="jSH-to-Q74" id="3G8-J4-5QF"/>
                         <segue destination="d9O-GD-ffu" kind="show" identifier="doneId" id="If0-cY-XdG"/>
                     </connections>

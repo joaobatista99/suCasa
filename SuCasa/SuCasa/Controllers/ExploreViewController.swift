@@ -106,7 +106,6 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
         switch currentState {
         case .none:
             let cell = tableView.dequeueReusableCell(withIdentifier: "exploreCell", for: indexPath) as! ExploreTableViewCell
-            //cell.adImage.image = UIImage(named: imagesAd[indexPath.row])
             
             //Converting string url to URL
             let urlFromImage = URL (string: self.properties[indexPath.row].urls[0])
@@ -117,12 +116,6 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             cell.adTitleLabel.text = property.title
             cell.availabilityLabel.text = "Disponível para \(property.monthsAvailable) pessoas"
             cell.distanceLabel.text = "APROX. A 1 km"
-//
-//            PropertyServices.load(url: urlFromImage!) { (img, error) in
-//                DispatchQueue.main.async {
-//                    cell.adImage.image = img
-//                }
-//            }
             
             cell.adImage.sd_setImage(with: urlFromImage,
                                      placeholderImage: placeHolderImage,
@@ -274,6 +267,7 @@ extension ExploreViewController: UICollectionViewDataSource, UICollectionViewDel
         
         let ong = self.ongs[indexPath.row]
         
+        
         let imageURL =  URL(string: ong.url[0])
         
         cell.ongImage.sd_setImage(with: imageURL,
@@ -287,22 +281,13 @@ extension ExploreViewController: UICollectionViewDataSource, UICollectionViewDel
                                         print("Successfully downloaded ong image: \(String(describing: downloadURL?.absoluteString))")
                                     }
         }
+         
+         
         
         cell.ongName.text = ong.name
         
+        
         return cell
-    }
-    
-//    //setting space between cells
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//
-//        return 12
-//    }
-    
-    //setting line space between cells
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-            
-        return 32
     }
     
     func setCollectionView() {
