@@ -67,6 +67,44 @@ class SpaceViewController: UIViewController {
         }
     }
     
+    
+    /// This method is to fill the text field if it is first responder
+    private func updateFirstResponderLabel() {
+        
+        //completing text field like didSelectRow does but checking if it is first responder
+        switch(editingFieldName) {
+            
+        case "space":
+            if spaceType.isFirstResponder {
+                spaceType.text = Property.SpaceType.allCases[pickerView.selectedRow(inComponent: 0)].rawValue
+                
+                self.property.space = Property.SpaceType.allCases[pickerView.selectedRow(inComponent: 0)].rawValue
+                
+                propertyType.isUserInteractionEnabled = true
+            }
+        case "apartment":
+            if propertyType.isFirstResponder {
+                
+                propertyType.text = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[pickerView.selectedRow(inComponent: 0)].rawValue
+                
+                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[pickerView.selectedRow(inComponent: 0)].rawValue
+                
+                nextButton.isHidden = false
+            }
+        case "house":
+            if propertyType.isFirstResponder {
+                
+                propertyType.text = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[pickerView.selectedRow(inComponent: 0)].rawValue
+                
+                nextButton.isHidden = false
+                // assign the property type based on what was chosen
+                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[pickerView.selectedRow(inComponent: 0)].rawValue
+            }
+        default:
+            break
+        }
+    }
+    
     private func notificateWithAlert() {
         let alert = UIAlertController(title: "Campos Faltando", message: "Você deve preencher todos os campos para prosseguir.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
@@ -76,7 +114,7 @@ class SpaceViewController: UIViewController {
     /*The following two IBAction func is used to know what
     text field is pressed to change the picker view */
     
-    
+
     /// This IBAction is to assign the picker view on the editing text field
     /// - Parameter sender: Editing did begin
     @IBAction func assignPickerViewToTextField(_ sender: UITextField) {
@@ -92,6 +130,10 @@ class SpaceViewController: UIViewController {
         // assign space type pickerview to correct text field
         sender.inputView = pickerView
         pickerView.reloadAllComponents()
+        
+        if sender.isFirstResponder {
+            updateFirstResponderLabel()
+        }
     }
         
     /// This method will be called when the done button at the picker view has been pressed
@@ -188,14 +230,14 @@ extension SpaceViewController: UIPickerViewDataSource, UIPickerViewDelegate {
                 // (it need to have a value to be set)
                 propertyType.isUserInteractionEnabled = true
                 spaceType.text = Property.SpaceType.allCases[row].rawValue
-                self.property.space = Property.SpaceType.allCases[row]
+                self.property.space = Property.SpaceType.allCases[row].rawValue
                 clearTextField(textField: propertyType)
                 nextButton.isHidden = true
 
             //second text field set with "Apartamento"
             case "apartment":
                 propertyType.text = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[row].rawValue
-                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[row]
+                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[row].rawValue
                 nextButton.isHidden = false
             
             //second text field set with "Casa"
@@ -203,7 +245,7 @@ extension SpaceViewController: UIPickerViewDataSource, UIPickerViewDelegate {
                 propertyType.text = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[row].rawValue
                 nextButton.isHidden = false
                 // assign the property type based on what was chosen
-                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[row]
+                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[row].rawValue
             
             default:
                 break
