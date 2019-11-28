@@ -92,20 +92,15 @@ class MonthlyViewController: UIViewController {
     //setup text style for textfields
     fileprivate func setUpText() {
         
-        let attributes = [
-            NSAttributedString.Key.foregroundColor: Colors.placeholderColor,
-            NSAttributedString.Key.font : UIFont(name: "OpenSans-Regular", size: 17) // Note the !
-        ]
+        let attributes = [NSAttributedString.Key.foregroundColor: Colors.placeholderColor]
         
         monthly.attributedPlaceholder = NSAttributedString(string: "Adicione o valor em R$", attributes: attributes as [NSAttributedString.Key : Any])
         monsthsQuantity.attributedPlaceholder = NSAttributedString(string: "Adicione a quantidade de meses", attributes: attributes as [NSAttributedString.Key : Any])
         
         monsthsQuantity.textColor = Colors.textColor
-        monsthsQuantity.font = UIFont(name: "OpenSans-Regular", size: 17)
         monsthsQuantity.keyboardType = .numberPad
         
         monthly.textColor = Colors.textColor
-        monthly.font = UIFont(name: "OpenSans-Regular", size: 17)
         monthly.keyboardType = .decimalPad
         
         //creating a toolbar

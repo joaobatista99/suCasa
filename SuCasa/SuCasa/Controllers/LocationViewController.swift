@@ -18,6 +18,7 @@ class LocationViewController: UIViewController {
     @IBOutlet weak var adressTextField: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var postalCodeTextField: UITextField!
+    @IBOutlet weak var complementTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollContent: UIView!
     @IBOutlet weak var nextButton: UIButton!
@@ -50,34 +51,30 @@ class LocationViewController: UIViewController {
     //setup text style for textfields
     fileprivate func setUpText() {
         
-        let attributes = [
-            NSAttributedString.Key.foregroundColor: Colors.placeholderColor,
-            NSAttributedString.Key.font : UIFont(name: "OpenSans-Regular", size: 17) // Note the !
-        ]
+        let attributes = [NSAttributedString.Key.foregroundColor: Colors.placeholderColor]
         
         countryTextField.attributedPlaceholder = NSAttributedString(string: "ex: Brasil", attributes: attributes as [NSAttributedString.Key : Any])
         adressTextField.attributedPlaceholder = NSAttributedString(string: "ex.: Rua das Hortências, 123", attributes: attributes as [NSAttributedString.Key : Any])
         cityTextField.attributedPlaceholder = NSAttributedString(string: "ex: Campinas", attributes: attributes as [NSAttributedString.Key : Any])
         postalCodeTextField.attributedPlaceholder = NSAttributedString(string: "Digite seu CEP", attributes: attributes as [NSAttributedString.Key : Any])
-        
+        complementTextField.attributedPlaceholder = NSAttributedString(string: "Complemento (Opcional)", attributes: attributes as [NSAttributedString.Key : Any])
         
         countryTextField.textColor = Colors.textColor
-        countryTextField.font = UIFont(name: "OpenSans-Regular", size: 17)
         
         adressTextField.textColor = Colors.textColor
-        adressTextField.font = UIFont(name: "OpenSans-Regular", size: 17)
         
         cityTextField.textColor = Colors.textColor
-        cityTextField.font = UIFont(name: "OpenSans-Regular", size: 17)
         
         postalCodeTextField.textColor = Colors.textColor
-        postalCodeTextField.font = UIFont(name: "OpenSans-Regular", size: 17)
+        
+        complementTextField.textColor = Colors.textColor
         
         
-        self.cityTextField.tag = 0
-        self.adressTextField.tag = 1
-        self.cityTextField.tag      = 2
+        self.cityTextField.tag       = 0
+        self.adressTextField.tag     = 1
+        self.cityTextField.tag       = 2
         self.postalCodeTextField.tag = 3
+        self.complementTextField.tag = 4
         
         self.postalCodeTextField.keyboardType = .numberPad
         
@@ -161,6 +158,8 @@ class LocationViewController: UIViewController {
         property.city       = cityTextField.text!
         
         property.postalCode = Int(postalCodeTextField.text!)!
+        
+        property.complement = complementTextField.text!
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
