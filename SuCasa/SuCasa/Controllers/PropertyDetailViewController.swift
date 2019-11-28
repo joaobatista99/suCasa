@@ -12,16 +12,18 @@ class PropertyDetailViewController: UIViewController {
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var pageControl: UIPageControl!
+    
+    var property: Property!
         
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let carouselPageViewController = segue.destination as? CarouselPageViewController {
+            carouselPageViewController.property = self.property
             carouselPageViewController.carouselDelegate = self 
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
 }

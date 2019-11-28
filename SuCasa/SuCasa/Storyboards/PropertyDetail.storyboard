@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +19,7 @@
         <!--Property Detail View Controller-->
         <scene sceneID="W9U-Ds-gSH">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="EGF-jy-DcE" customClass="PropertyDetailViewController" customModule="SuCasa" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="propertyDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EGF-jy-DcE" customClass="PropertyDetailViewController" customModule="SuCasa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="efV-0t-wPZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,7 +58,7 @@
                                 </state>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="18D-TM-PyN">
-                                <rect key="frame" x="24" y="559" width="366" height="238"/>
+                                <rect key="frame" x="24" y="558.5" width="366" height="238"/>
                                 <connections>
                                     <segue destination="m8I-NS-pcr" kind="embed" id="vLa-Iy-Yr8"/>
                                 </connections>

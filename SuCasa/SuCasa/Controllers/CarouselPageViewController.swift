@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 protocol CarouselPageViewControllerDelegate: class {
 
@@ -35,6 +36,11 @@ class CarouselPageViewController: UIPageViewController {
     //items that will be presented by carousel
     fileprivate var items: [UIViewController] = []
     
+    //variables that are used to populate the carrousel
+    var property: Property!
+    var placeHolderImage = UIImage(named: "waiting")
+    var imageUrl: [URL] = []
+    var photo: [UIImage] = []
     //delegate for passing information for customized pagecontrol
     weak var carouselDelegate : CarouselPageViewControllerDelegate?
     
@@ -44,23 +50,47 @@ class CarouselPageViewController: UIPageViewController {
         dataSource = self
         
         //populate items that will be showed
-        populateItems()
         
-        if let firstViewController = items.first {
-            setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
+        for i in 0 ..< property.urls.count {
+            
+            self.imageUrl.append(URL(string: property.urls[i])!)
+            
+            populateItems(imageUrl: imageUrl[i]) { (photo) in
+                
+                let newController = self.createCarouselItemControler(image: photo.image!)
+                self.items.append(newController)
+                
+                if self.items.count == self.property.urls.count {
+                
+                    if let firstViewController = self.items.first {
+                        self.setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
+                    }
+                }
+            }
         }
-        
-        carouselDelegate?.carouselPageViewController(carouselPageViewController: self, didUpdatePageCount: items.count)
+        self.carouselDelegate?.carouselPageViewController(carouselPageViewController: self, didUpdatePageCount: self.property.urls.count)
+
     }
     
-    fileprivate func populateItems() {
+    fileprivate func populateItems(imageUrl: URL, completionHandler: @escaping(_ photos: UIImageView) -> Void) {
         
-        let photoAssets:[UIImage] = [UIImage(named: "casa1")!, UIImage(named: "casa3")!, UIImage(named: "casa2")!]
+        let image = UIImageView()
+            
+            image.sd_setImage(with: imageUrl,
+                              placeholderImage: placeHolderImage,
+                              options: SDWebImageOptions.lowPriority,
+                              context: nil,
+                              progress: nil) { (downloadedImage, error, cacheType, downloadURL) in
+                                if let error = error {
+                                    print("Error downloading the image: \(error.localizedDescription)")
+                                } else {
+                                    //print("Successfully downloaded image detail: \(imageUrl)")
+                                    completionHandler(image)
+                                }
+            }
         
-        for i in 0 ..< photoAssets.count {
-            let newController = createCarouselItemControler(image: photoAssets[i])
-            items.append(newController)
-        }
+
+        
     }
     
     fileprivate func createCarouselItemControler(image: UIImage) -> UIViewController {

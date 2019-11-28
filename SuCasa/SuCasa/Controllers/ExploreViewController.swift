@@ -154,6 +154,10 @@ class ExploreViewController: UIViewController {
             let allOngsVC = segue.destination as? OngsCollectionViewController
             allOngsVC?.ongs = self.ongs
         }
+        else if segue.identifier == "showPropertyDetail" {
+            let propertyDetail = segue.destination as? PropertyDetailViewController
+            propertyDetail?.property = self.selectedProperty
+        }
         
     }
     
@@ -164,13 +168,22 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedProperty = self.properties[indexPath.row]
+        self.performSegue(withIdentifier: "showPropertyDetail", sender: self)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering {
             return self.filteredCities.count
         }
-        return self.properties.count
+        
+        switch currentState {
+        case .none:
+            return self.properties.count
+        case .suggestions:
+            return self.searchRecents.count
+        case .results:
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -196,9 +209,9 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
                                      context: nil,
                                      progress: nil) { (downloadedImage, error, cacheType, downloadURL) in
                                         if let error = error {
-                                            print("Error downloading the image: \(error.localizedDescription)")
+                                            //print("Error downloading the image: \(error.localizedDescription)")
                                         } else {
-                                            print("Successfully downloaded image: \(String(describing: downloadURL?.absoluteString))")
+                                            //print("Successfully downloaded image: \(String(describing: downloadURL?.absoluteString))")
                                         }
             }
             
@@ -349,9 +362,9 @@ extension ExploreViewController: UICollectionViewDataSource, UICollectionViewDel
                                   context: nil,
                                   progress: nil) { (downloadedImage, error, cacheType, downloadURL) in
                                     if let error = error {
-                                        print("Error downloading the ong image: \(error.localizedDescription)")
+                                        //print("Error downloading the ong image: \(error.localizedDescription)")
                                     } else {
-                                        print("Successfully downloaded ong image: \(String(describing: downloadURL?.absoluteString))")
+                                        //print("Successfully downloaded ong image: \(String(describing: downloadURL?.absoluteString))")
                                     }
         }
         cell.ongName.text = ong.name
