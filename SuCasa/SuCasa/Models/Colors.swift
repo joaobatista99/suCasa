@@ -20,7 +20,7 @@ class Colors {
     
     static var textColor : UIColor {
         get{
-            return UIColor(red: 100.0/255.0, green: 103.0/255.0, blue: 114.0/255.0, alpha: 1.0)
+            return UIColor(red: 100.0/255.0, green: 103.0/255.0, blue: 112.0/255.0, alpha: 1.0)
         }
     }
 }

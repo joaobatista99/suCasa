@@ -24,6 +24,11 @@ class CompleteRegistrationViewController: UIViewController {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
+    
+    
+    @IBAction func dismissForms(_ sender: Any) {
+        navigationController?.dismiss(animated: true)
+    }
 }
 
 

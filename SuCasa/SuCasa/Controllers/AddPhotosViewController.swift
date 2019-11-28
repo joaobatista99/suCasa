@@ -67,11 +67,19 @@ class AddPhotosViewController: UIViewController {
         let option = PHImageRequestOptions()
         var thumbnail = UIImage()
         option.isSynchronous = true
+        option.isNetworkAccessAllowed = true
         
         for asset in assets{
             manager.requestImage(for: asset, targetSize: CGSize(width: asset.pixelWidth, height: asset.pixelHeight), contentMode: .aspectFit, options: option, resultHandler: {(result, info)->Void in
-                thumbnail = result!
-                arrayOfImages.append(thumbnail)
+
+                if let information = info  as? [String: Any],
+                   let error = information[PHImageErrorKey] {
+                    print("Error: \(error)")
+                } else {
+                    thumbnail = result!
+                    arrayOfImages.append(thumbnail)
+                }
+                
             })
         }
     

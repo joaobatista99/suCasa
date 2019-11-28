@@ -44,9 +44,15 @@ class SpaceViewController: UIViewController {
         }
     }
     
+    //scrolls back when keyboard is dismissed
     @objc func keyboardWillHide(notification: NSNotification) {
         if self.view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0
+        }
+        
+        // if all text field is filled, 'next button' appear
+        if isTextFieldsFilled() {
+            nextButton.isHidden = false
         }
     }
     
@@ -89,14 +95,12 @@ class SpaceViewController: UIViewController {
                 
                 self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[pickerView.selectedRow(inComponent: 0)].rawValue
                 
-                nextButton.isHidden = false
             }
         case "house":
             if propertyType.isFirstResponder {
                 
                 propertyType.text = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[pickerView.selectedRow(inComponent: 0)].rawValue
                 
-                nextButton.isHidden = false
                 // assign the property type based on what was chosen
                 self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[pickerView.selectedRow(inComponent: 0)].rawValue
             }
@@ -152,6 +156,18 @@ class SpaceViewController: UIViewController {
             let guestsVC = segue.destination as? GuestsViewController {
             guestsVC.property = self.property
         }
+    }
+    
+    func isTextFieldsFilled() -> Bool{
+        
+        if spaceType.text!.isEmpty {
+            return false
+        }
+        else if propertyType.text!.isEmpty {
+            return false
+        }
+        //If all text field is filled, return true
+        return true
     }
 }
 
