@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class MonthlyViewController: UIViewController {
 
     @IBOutlet weak var monthly: UITextField!
@@ -41,9 +42,13 @@ class MonthlyViewController: UIViewController {
     
     @IBAction func proceedToNext(_ sender: UIButton) {
         
+        self.showSpinner(onView: view)
         assignTextFieldsToProperty()
-        PropertyDAO.createNewProperty(property: property, photos: self.images)
-        self.performSegue(withIdentifier: "doneId", sender: self)
+        PropertyDAO.createNewProperty(property: self.property, photos: self.images) {
+            self.removeSpinner()
+            self.performSegue(withIdentifier: "doneId", sender: self)
+        }
+        
     }
     
     private func assignTextFieldsToProperty() {
