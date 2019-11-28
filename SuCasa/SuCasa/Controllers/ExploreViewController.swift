@@ -15,6 +15,9 @@ class ExploreViewController: UIViewController {
     
     /// Table View Variables
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var cityLabel: UILabel!
+    //location manager
+    let locationManager = CLLocationManager()
     
     var placeHolderImage = UIImage(named: "waiting")
     
@@ -57,6 +60,8 @@ class ExploreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.getCityLocation()
+        
         self.setSearchController()
         
         self.cities = CityServices.readCSVtoGetCities()
@@ -82,6 +87,57 @@ class ExploreViewController: UIViewController {
             }
         }
     }
+    
+    func getCityLocation() {
+        
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            locationManager.startUpdatingLocation()
+            if let location = locationManager.location?.coordinate{
+                convertLatLongToAddress(latitude: location.latitude, longitude: location.longitude)
+            }
+        }
+            
+        else if CLLocationManager.authorizationStatus() == .notDetermined {
+            locationManager.requestWhenInUseAuthorization()
+        }
+        
+        else if CLLocationManager.authorizationStatus() == .denied {
+            let alertLoc = UIAlertController(title: "Permita acesso à sua localização" , message: "Você deve permitir acesso à sua localização ou colocar seus dados manualmente" , preferredStyle: .alert)
+            
+            let settingsAction = UIAlertAction(title: "Abrir Ajustes", style: .default) { (_) -> Void in
+                UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+            }
+            
+            alertLoc.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: nil))
+            alertLoc.addAction(settingsAction)
+            self.present(alertLoc, animated: true)
+        }
+        
+    }
+    
+    //converting latitude and longitude to address
+    func convertLatLongToAddress(latitude:Double,longitude:Double) {
+       
+           let geoCoder = CLGeocoder()
+           let location = CLLocation(latitude: latitude, longitude: longitude)
+           
+           
+           geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
+               
+               // Place details
+               var placeMark: CLPlacemark!
+               placeMark = placemarks?[0]
+               
+               //city label for current location indicator
+               if let city = placeMark.locality {
+                   self.cityLabel.text = city
+               }
+               
+               
+           })
+       
+       }
+    
     
     @IBAction func seeAllOngsButton(_ sender: Any) {
         self.performSegue(withIdentifier: "showAllOngs", sender: self)
