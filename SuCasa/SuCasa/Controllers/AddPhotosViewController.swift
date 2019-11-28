@@ -22,6 +22,8 @@ class AddPhotosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.tintColor = Colors.buttonColor
+
         nextButton.isHidden = true
         photosAdded.isHidden = true
     }

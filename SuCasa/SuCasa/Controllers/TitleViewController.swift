@@ -40,6 +40,9 @@ class TitleViewController: UIViewController {
         setUpText()
         
         nextButton.isHidden = true
+        
+        self.navigationController?.navigationBar.tintColor = Colors.buttonColor
+
 
     }
     

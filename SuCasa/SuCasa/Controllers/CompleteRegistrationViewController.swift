@@ -10,8 +10,12 @@ import UIKit
 
 class CompleteRegistrationViewController: UIViewController {
 
+    @IBOutlet weak var dismissButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dismissButton.imageView?.contentMode = .scaleAspectFit
     }
     
     

@@ -46,6 +46,9 @@ class LocationViewController: UIViewController {
         
         nextButton.isHidden = true
         
+        self.navigationController?.navigationBar.tintColor = Colors.buttonColor
+
+        
     }
     
     //setup text style for textfields

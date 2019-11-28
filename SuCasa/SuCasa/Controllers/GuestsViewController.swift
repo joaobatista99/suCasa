@@ -23,6 +23,8 @@ class GuestsViewController: UIViewController {
         setUpTextFields()
         nextButton.isHidden = true
         
+        self.navigationController?.navigationBar.tintColor = Colors.buttonColor
+        
         //Tap gesture to hide keyboard
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         view.addGestureRecognizer(tap)

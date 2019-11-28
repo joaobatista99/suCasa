@@ -33,6 +33,10 @@ class SpaceViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         nextButton.isHidden = true
+        
+        //Tap gesture to hide keyboard
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        view.addGestureRecognizer(tap)
     }
     
     //Scroll when keyboard activates
@@ -72,7 +76,6 @@ class SpaceViewController: UIViewController {
             self.performSegue(withIdentifier: "goToGuests", sender: self)
         }
     }
-    
     
     /// This method is to fill the text field if it is first responder
     private func updateFirstResponderLabel() {
@@ -118,7 +121,6 @@ class SpaceViewController: UIViewController {
     /*The following two IBAction func is used to know what
     text field is pressed to change the picker view */
     
-
     /// This IBAction is to assign the picker view on the editing text field
     /// - Parameter sender: Editing did begin
     @IBAction func assignPickerViewToTextField(_ sender: UITextField) {
@@ -169,6 +171,11 @@ class SpaceViewController: UIViewController {
         //If all text field is filled, return true
         return true
     }
+    
+    @IBAction func dismissForms(_ sender: Any) {
+        navigationController?.dismiss(animated: true)
+    }
+    
 }
 
 extension SpaceViewController: UIPickerViewDataSource, UIPickerViewDelegate {

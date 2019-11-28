@@ -38,6 +38,9 @@ class MonthlyViewController: UIViewController {
         
         nextButton.isHidden = true
         
+        self.navigationController?.navigationBar.tintColor = Colors.buttonColor
+
+        
     }
     
     @IBAction func proceedToNext(_ sender: UIButton) {
