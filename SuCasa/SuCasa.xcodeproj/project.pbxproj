@@ -23,6 +23,7 @@
 		36DD943E2375D71E000012BB /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD943D2375D71E000012BB /* ExploreViewController.swift */; };
 		5E033A2023843AAC001AC697 /* MonthlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E033A1F23843AAC001AC697 /* MonthlyViewController.swift */; };
 		5E474EB52375D8640083D3A5 /* PropertyRegistration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E474EB42375D8640083D3A5 /* PropertyRegistration.storyboard */; };
+		5E5458E123901FEB00D4E13D /* LocationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5458E023901FEB00D4E13D /* LocationServices.swift */; };
 		5E55AA17237B34C300887772 /* SpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E55AA16237B34C300887772 /* SpaceViewController.swift */; };
 		5E55AA19237B34E500887772 /* GuestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E55AA18237B34E500887772 /* GuestsViewController.swift */; };
 		5E55AA1B237B34FD00887772 /* AddPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E55AA1A237B34FD00887772 /* AddPhotosViewController.swift */; };
@@ -86,6 +87,7 @@
 		36DD943D2375D71E000012BB /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		5E033A1F23843AAC001AC697 /* MonthlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyViewController.swift; sourceTree = "<group>"; };
 		5E474EB42375D8640083D3A5 /* PropertyRegistration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PropertyRegistration.storyboard; sourceTree = "<group>"; };
+		5E5458E023901FEB00D4E13D /* LocationServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServices.swift; sourceTree = "<group>"; };
 		5E55AA16237B34C300887772 /* SpaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceViewController.swift; sourceTree = "<group>"; };
 		5E55AA18237B34E500887772 /* GuestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestsViewController.swift; sourceTree = "<group>"; };
 		5E55AA1A237B34FD00887772 /* AddPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotosViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				BAACB3D0238EF1DE00C231F0 /* CityServices.swift */,
 				BAACB3D1238EF1DE00C231F0 /* OngServices.swift */,
 				368DA2262386C3EA0035BE02 /* PropertyServices.swift */,
+				5E5458E023901FEB00D4E13D /* LocationServices.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -256,8 +259,6 @@
 				5E55AA1C237B351800887772 /* TitleViewController.swift */,
 				BA075ACE2383066D001CAE86 /* LocationViewController.swift */,
 				5E033A1F23843AAC001AC697 /* MonthlyViewController.swift */,
-				5E033A2723870D48001AC697 /* OngsCollectionViewController.swift */,
-				5E033A29238712A4001AC697 /* OngCell.swift */,
 				5E75BB60238EE754007A0EE6 /* CompleteRegistrationViewController.swift */,
 				366757A2238EDA450085ED4F /* OngDetailViewController.swift */,
 				BA1B7D942386DCA000D06E3A /* PropertyDetailViewController.swift */,
@@ -461,7 +462,6 @@
 				3658D1FA2379D7E200A96E2F /* SuggestionsTableViewCell.swift in Sources */,
 				BA1B7D992386DF2B00D06E3A /* CarouselPageViewController.swift in Sources */,
 				36AC92F1237DD83400012AA9 /* StringExtension.swift in Sources */,
-				5E033A2A238712A4001AC697 /* OngCell.swift in Sources */,
 				5E75BB65238EEB39007A0EE6 /* LoadingAnimationExtension.swift in Sources */,
 				BA075ACF2383066D001CAE86 /* LocationViewController.swift in Sources */,
 				3658D1FE2379EAC100A96E2F /* ResultsTableViewCell.swift in Sources */,
@@ -469,7 +469,6 @@
 				BA5D40DA2375EA050041AC6B /* AdViewController.swift in Sources */,
 				BAB9EFBF237095CD00B480F1 /* SuCasa.xcdatamodeld in Sources */,
 				5E55AA19237B34E500887772 /* GuestsViewController.swift in Sources */,
-				36AB041A238DA89900653F30 /* Ong.swift in Sources */,
 				5E75BB61238EE754007A0EE6 /* CompleteRegistrationViewController.swift in Sources */,
 				5E55AA17237B34C300887772 /* SpaceViewController.swift in Sources */,
 				36DD943E2375D71E000012BB /* ExploreViewController.swift in Sources */,
@@ -479,6 +478,7 @@
 				BA1B7D972386DCFA00D06E3A /* CarouselItem.swift in Sources */,
 				BAB8DA07237201200039CBC5 /* IntroViewController.swift in Sources */,
 				5E033A2023843AAC001AC697 /* MonthlyViewController.swift in Sources */,
+				5E5458E123901FEB00D4E13D /* LocationServices.swift in Sources */,
 				368DA2272386C3EA0035BE02 /* PropertyServices.swift in Sources */,
 				5E55AA1B237B34FD00887772 /* AddPhotosViewController.swift in Sources */,
 				362DB1D0237A23E400D36357 /* City.swift in Sources */,
@@ -626,7 +626,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NQW9RC6R9A;
+				DEVELOPMENT_TEAM = 8Z872V7A4S;
 				INFOPLIST_FILE = SuCasa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -646,7 +646,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NQW9RC6R9A;
+				DEVELOPMENT_TEAM = 8Z872V7A4S;
 				INFOPLIST_FILE = SuCasa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
