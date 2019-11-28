@@ -128,29 +128,41 @@ class LocationViewController: UIViewController {
     //grt users location
     @IBAction func getLocation(_ sender: Any) {
         
-        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-            locationManager.startUpdatingLocation()
-            if let location = locationManager.location?.coordinate{
-                convertLatLongToAddress(latitude: location.latitude, longitude: location.longitude)
-            }
-        }
-            
-        else if CLLocationManager.authorizationStatus() == .notDetermined {
-            locationManager.requestWhenInUseAuthorization()
-        }
-        
-        else if CLLocationManager.authorizationStatus() == .denied {
-            let alertLoc = UIAlertController(title: "Permita acesso à sua localização" , message: "Você deve permitir acesso à sua localização ou colocar seus dados manualmente" , preferredStyle: .alert)
-            
-            let settingsAction = UIAlertAction(title: "Abrir Ajustes", style: .default) { (_) -> Void in
-                UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
-            }
-            
-            alertLoc.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: nil))
-            alertLoc.addAction(settingsAction)
-            self.present(alertLoc, animated: true)
-        }
-        
+       LocationUtil.shared.buildLocationAlert { (alert, placeMark) in
+           
+           if let errorAlert = alert {
+               self.present(errorAlert, animated: true)
+           } else {
+               
+               if let place = placeMark {
+                   
+                   //city label for current location indicator
+                    // Street address
+                              if let street = place.thoroughfare, let number = place.subThoroughfare {
+                                  self.adressTextField.text = street + ", " + number
+                              }
+                              
+                              if let country = place.country{
+                                  self.countryTextField.text = country
+                              }
+                              
+                              if let city = place.locality {
+                                  self.cityTextField.text = city
+                              }
+                              
+                              if let postalCode = place.postalCode{
+                                  print(postalCode)
+                                  self.postalCodeTextField.text = postalCode
+                              }
+                              
+                              if self.isTextFieldsFilled() {
+                                  self.nextButton.isHidden = false
+                              }
+               }
+               
+           }
+           
+       }
     }
     
     @IBAction func proceedToNextView(_ sender: Any) {
@@ -172,43 +184,7 @@ class LocationViewController: UIViewController {
         }
     }
     
-    //Func to convert lat and long to adress
-    func convertLatLongToAddress(latitude:Double,longitude:Double) {
     
-        let geoCoder = CLGeocoder()
-        let location = CLLocation(latitude: latitude, longitude: longitude)
-        
-        
-        geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
-            
-            // Place details
-            var placeMark: CLPlacemark!
-            placeMark = placemarks?[0]
-            
-            // Street address
-            if let street = placeMark.thoroughfare, let number = placeMark.subThoroughfare {
-                self.adressTextField.text = street + ", " + number
-            }
-            
-            if let country = placeMark.country{
-                self.countryTextField.text = country
-            }
-            
-            if let city = placeMark.locality {
-                self.cityTextField.text = city
-            }
-            
-            if let postalCode = placeMark.postalCode{
-                print(postalCode)
-                self.postalCodeTextField.text = postalCode
-            }
-            
-            if self.isTextFieldsFilled() {
-                self.nextButton.isHidden = false
-            }
-        })
-    
-    }
     
     //function to check if textfields are populated
     func isTextFieldsFilled() -> Bool{
