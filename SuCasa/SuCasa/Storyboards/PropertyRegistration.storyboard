@@ -428,16 +428,19 @@
                                 <color key="textColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JI-Pg-TXM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JI-Pg-TXM" customClass="RoundedBorderButton" customModule="SuCasa" customModuleProvider="target">
                                 <rect key="frame" x="20.666666666666657" y="285.33333333333331" width="372.66666666666674" height="53.666666666666686"/>
-                                <color key="backgroundColor" red="0.34842607380000001" green="0.1212797984" blue="0.16470670700000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <state key="normal" title="Usar minha localização atual">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.3886715174" green="0.093591324990000002" blue="0.15325403209999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
                                         <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -699,10 +702,10 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7d-eY-IXf">
                                 <rect key="frame" x="20.666666666666657" y="323.33333333333331" width="372.66666666666674" height="53.666666666666686"/>
-                                <color key="backgroundColor" red="0.38467586040000001" green="0.097716085610000003" blue="0.15748378630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <state key="normal" title="Adicionar Fotos">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.3886715174" green="0.093591324990000002" blue="0.15325403209999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1021,9 +1024,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aviso de tudo pronto e texto parabenizando e explicando os processos." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyx-zG-Oje">
-                                <rect key="frame" x="20.666666666666657" y="421.33333333333331" width="372.66666666666674" height="107.66666666666669"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parabéns, seu anúncio foi criado com sucesso!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyx-zG-Oje">
+                                <rect key="frame" x="41.333333333333343" y="324.66666666666669" width="331.33333333333326" height="111"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1040,8 +1043,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.62640708680000001" green="0.2191473246" blue="0.29411816600000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="eyx-zG-Oje" firstAttribute="centerY" secondItem="1OT-mM-ehn" secondAttribute="centerY" id="BLf-P8-ysA"/>
-                            <constraint firstItem="eyx-zG-Oje" firstAttribute="width" secondItem="4Ml-GL-pbW" secondAttribute="width" multiplier="0.9" id="Z7a-1w-CoK"/>
+                            <constraint firstItem="eyx-zG-Oje" firstAttribute="centerY" secondItem="1OT-mM-ehn" secondAttribute="centerY" multiplier="0.8" id="BLf-P8-ysA"/>
+                            <constraint firstItem="eyx-zG-Oje" firstAttribute="width" secondItem="4Ml-GL-pbW" secondAttribute="width" multiplier="0.8" id="Z7a-1w-CoK"/>
                             <constraint firstItem="TaS-US-KkY" firstAttribute="leading" secondItem="1OT-mM-ehn" secondAttribute="leading" constant="20" id="eLa-Tg-JAw"/>
                             <constraint firstItem="TaS-US-KkY" firstAttribute="height" secondItem="4Ml-GL-pbW" secondAttribute="height" multiplier="0.05" id="mD4-aI-Lgp"/>
                             <constraint firstItem="TaS-US-KkY" firstAttribute="top" secondItem="1OT-mM-ehn" secondAttribute="top" constant="14" id="uqj-HQ-bbB"/>
