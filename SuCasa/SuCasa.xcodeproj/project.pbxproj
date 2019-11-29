@@ -23,6 +23,7 @@
 		36DD943E2375D71E000012BB /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD943D2375D71E000012BB /* ExploreViewController.swift */; };
 		5E033A2023843AAC001AC697 /* MonthlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E033A1F23843AAC001AC697 /* MonthlyViewController.swift */; };
 		5E474EB52375D8640083D3A5 /* PropertyRegistration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E474EB42375D8640083D3A5 /* PropertyRegistration.storyboard */; };
+		5E5458E123901FEB00D4E13D /* LocationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5458E023901FEB00D4E13D /* LocationServices.swift */; };
 		5E55AA17237B34C300887772 /* SpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E55AA16237B34C300887772 /* SpaceViewController.swift */; };
 		5E55AA19237B34E500887772 /* GuestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E55AA18237B34E500887772 /* GuestsViewController.swift */; };
 		5E55AA1B237B34FD00887772 /* AddPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E55AA1A237B34FD00887772 /* AddPhotosViewController.swift */; };
@@ -34,6 +35,7 @@
 		BA1B7D952386DCA000D06E3A /* PropertyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1B7D942386DCA000D06E3A /* PropertyDetailViewController.swift */; };
 		BA1B7D972386DCFA00D06E3A /* CarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1B7D962386DCFA00D06E3A /* CarouselItem.swift */; };
 		BA1B7D992386DF2B00D06E3A /* CarouselPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1B7D982386DF2B00D06E3A /* CarouselPageViewController.swift */; };
+		BA36C53F23904FED00EC1517 /* RoundedBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA36C53E23904FED00EC1517 /* RoundedBorderButton.swift */; };
 		BA5D40DA2375EA050041AC6B /* AdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5D40D92375EA050041AC6B /* AdViewController.swift */; };
 		BA5D40DC2375F93A0041AC6B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5D40DB2375F93A0041AC6B /* Login.storyboard */; };
 		BA670ED3237457F9005E3FDA /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA670EC9237457F8005E3FDA /* OpenSans-BoldItalic.ttf */; };
@@ -86,6 +88,7 @@
 		36DD943D2375D71E000012BB /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		5E033A1F23843AAC001AC697 /* MonthlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyViewController.swift; sourceTree = "<group>"; };
 		5E474EB42375D8640083D3A5 /* PropertyRegistration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PropertyRegistration.storyboard; sourceTree = "<group>"; };
+		5E5458E023901FEB00D4E13D /* LocationServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServices.swift; sourceTree = "<group>"; };
 		5E55AA16237B34C300887772 /* SpaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceViewController.swift; sourceTree = "<group>"; };
 		5E55AA18237B34E500887772 /* GuestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestsViewController.swift; sourceTree = "<group>"; };
 		5E55AA1A237B34FD00887772 /* AddPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotosViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +102,7 @@
 		BA1B7D942386DCA000D06E3A /* PropertyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailViewController.swift; sourceTree = "<group>"; };
 		BA1B7D962386DCFA00D06E3A /* CarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItem.swift; sourceTree = "<group>"; };
 		BA1B7D982386DF2B00D06E3A /* CarouselPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselPageViewController.swift; sourceTree = "<group>"; };
+		BA36C53E23904FED00EC1517 /* RoundedBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBorderButton.swift; sourceTree = "<group>"; };
 		BA5D40D92375EA050041AC6B /* AdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewController.swift; sourceTree = "<group>"; };
 		BA5D40DB2375F93A0041AC6B /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BA670EC9237457F8005E3FDA /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 				BAACB3D0238EF1DE00C231F0 /* CityServices.swift */,
 				BAACB3D1238EF1DE00C231F0 /* OngServices.swift */,
 				368DA2262386C3EA0035BE02 /* PropertyServices.swift */,
+				5E5458E023901FEB00D4E13D /* LocationServices.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 				BAB8DA002371E88A0039CBC5 /* Storyboards */,
 				BAB8DA052372004E0039CBC5 /* Controllers */,
 				BA1B7D962386DCFA00D06E3A /* CarouselItem.swift */,
+				BA36C53E23904FED00EC1517 /* RoundedBorderButton.swift */,
 			);
 			path = SuCasa;
 			sourceTree = "<group>";
@@ -471,10 +477,12 @@
 				36DD943E2375D71E000012BB /* ExploreViewController.swift in Sources */,
 				BAACB3C6238EF16900C231F0 /* OngsCollectionViewCell.swift in Sources */,
 				BAACB3C7238EF16900C231F0 /* OngCell.swift in Sources */,
+				BA36C53F23904FED00EC1517 /* RoundedBorderButton.swift in Sources */,
 				366757A3238EDA450085ED4F /* OngDetailViewController.swift in Sources */,
 				BA1B7D972386DCFA00D06E3A /* CarouselItem.swift in Sources */,
 				BAB8DA07237201200039CBC5 /* IntroViewController.swift in Sources */,
 				5E033A2023843AAC001AC697 /* MonthlyViewController.swift in Sources */,
+				5E5458E123901FEB00D4E13D /* LocationServices.swift in Sources */,
 				368DA2272386C3EA0035BE02 /* PropertyServices.swift in Sources */,
 				5E55AA1B237B34FD00887772 /* AddPhotosViewController.swift in Sources */,
 				362DB1D0237A23E400D36357 /* City.swift in Sources */,

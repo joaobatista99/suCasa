@@ -7,7 +7,7 @@ class ExploreViewController: UIViewController {
     //Mocked informations
     let searchRecents = ["campinas", "são josé dos campos", "são paulo", "guarulhos", "mogi mirim"]
     var cities: [City] = []
-
+    
     var properties: [Property] = []
     var selectedProperty: Property!
     var ongs: [Ong] =  []
@@ -39,13 +39,13 @@ class ExploreViewController: UIViewController {
     }
     
     fileprivate var _currentState = SearchBarState.none
-
+    
     var currentState: SearchBarState {
         set {
             //Necessary conditions to control what will be displayed on the screen
             
             /*The state can't go from results to none.
-              This is the reason to do this check */
+             This is the reason to do this check */
             if _currentState == .none && newValue == .results {
                 print("error changing the state")
             } else {
@@ -59,20 +59,42 @@ class ExploreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.getCityLocation()
+        
+      
+        //getting city location for current location indicator
+        LocationUtil.shared.buildLocationAlert { (alert, placeMark) in
+            
+            if let errorAlert = alert {
+                self.present(errorAlert, animated: true)
+            } else {
+                
+                if let place = placeMark {
+                    
+                    //city label for current location indicator
+                    if let city = place.locality {
+                        self.cityLabel.text = city
+                    }
+                }
+                
+            }
+            
+        }
+        
+        
+      
+        
         
         self.setSearchController()
         
         self.cities = CityServices.readCSVtoGetCities()
         //after retrieving data from database it will set the view
         PropertyServices.retrieveProperty(completionHandler: { (auxProperties , error) in
-        
+            
             //checking if the retrieve was successfull
             if auxProperties.count > 0 {
                 self.properties = auxProperties
                 self.setTableView()
-            
+                
                 self.setCollectionView()
             }
         })
@@ -88,55 +110,55 @@ class ExploreViewController: UIViewController {
         }
     }
     
-    func getCityLocation() {
-        
-        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-            locationManager.startUpdatingLocation()
-            if let location = locationManager.location?.coordinate{
-                convertLatLongToAddress(latitude: location.latitude, longitude: location.longitude)
-            }
-        }
-            
-        else if CLLocationManager.authorizationStatus() == .notDetermined {
-            locationManager.requestWhenInUseAuthorization()
-        }
-        
-        else if CLLocationManager.authorizationStatus() == .denied {
-            let alertLoc = UIAlertController(title: "Permita acesso à sua localização" , message: "Você deve permitir acesso à sua localização ou colocar seus dados manualmente" , preferredStyle: .alert)
-            
-            let settingsAction = UIAlertAction(title: "Abrir Ajustes", style: .default) { (_) -> Void in
-                UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
-            }
-            
-            alertLoc.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: nil))
-            alertLoc.addAction(settingsAction)
-            self.present(alertLoc, animated: true)
-        }
-        
-    }
-    
-    //converting latitude and longitude to address
-    func convertLatLongToAddress(latitude:Double,longitude:Double) {
-       
-           let geoCoder = CLGeocoder()
-           let location = CLLocation(latitude: latitude, longitude: longitude)
-           
-           
-           geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
-               
-               // Place details
-               var placeMark: CLPlacemark!
-               placeMark = placemarks?[0]
-               
-               //city label for current location indicator
-               if let city = placeMark.locality {
-                   self.cityLabel.text = city
-               }
-               
-               
-           })
-       
-       }
+    //    func getCityLocation() {
+    //
+    //        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+    //            locationManager.startUpdatingLocation()
+    //            if let location = locationManager.location?.coordinate{
+    //                convertLatLongToAddress(latitude: location.latitude, longitude: location.longitude)
+    //            }
+    //        }
+    //
+    //        else if CLLocationManager.authorizationStatus() == .notDetermined {
+    //            locationManager.requestWhenInUseAuthorization()
+    //        }
+    //
+    //        else if CLLocationManager.authorizationStatus() == .denied {
+    //            let alertLoc = UIAlertController(title: "Permita acesso à sua localização" , message: "Você deve permitir acesso à sua localização ou colocar seus dados manualmente" , preferredStyle: .alert)
+    //
+    //            let settingsAction = UIAlertAction(title: "Abrir Ajustes", style: .default) { (_) -> Void in
+    //                UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+    //            }
+    //
+    //            alertLoc.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: nil))
+    //            alertLoc.addAction(settingsAction)
+    //            self.present(alertLoc, animated: true)
+    //        }
+    //
+    //    }
+    //
+    //    //converting latitude and longitude to address
+    //    func convertLatLongToAddress(latitude:Double,longitude:Double) {
+    //
+    //           let geoCoder = CLGeocoder()
+    //           let location = CLLocation(latitude: latitude, longitude: longitude)
+    //
+    //
+    //           geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
+    //
+    //               // Place details
+    //               var placeMark: CLPlacemark!
+    //               placeMark = placemarks?[0]
+    //
+    //               //city label for current location indicator
+    //               if let city = placeMark.locality {
+    //                   self.cityLabel.text = city
+    //               }
+    //
+    //
+    //           })
+    //
+    //       }
     
     
     @IBAction func seeAllOngsButton(_ sender: Any) {
@@ -149,7 +171,7 @@ class ExploreViewController: UIViewController {
             let detailOngVc = segue.destination as? OngDetailViewController
             detailOngVc?.ong = self.selectedOng
         }
-
+            
         else if segue.identifier == "showAllOngs"{
             let allOngsVC = segue.destination as? OngsCollectionViewController
             allOngsVC?.ongs = self.ongs
@@ -170,7 +192,7 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
         self.selectedProperty = self.properties[indexPath.row]
         self.performSegue(withIdentifier: "showPropertyDetail", sender: self)
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering {
             return self.filteredCities.count
@@ -188,7 +210,7 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-//      This switch is to define which xib will be displaying
+        //      This switch is to define which xib will be displaying
         switch currentState {
         case .none:
             let cell = tableView.dequeueReusableCell(withIdentifier: "exploreCell", for: indexPath) as! ExploreTableViewCell
@@ -311,7 +333,7 @@ extension ExploreViewController: UISearchBarDelegate {
         })
         
         /* if searchText is empty, set isFiltering
-        to false to show up recents searches */
+         to false to show up recents searches */
         if searchText.isEmpty {
             isFiltering = false
         }

@@ -33,6 +33,10 @@ class SpaceViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         nextButton.isHidden = true
+        
+        //Tap gesture to hide keyboard
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        view.addGestureRecognizer(tap)
     }
     
     //Scroll when keyboard activates
@@ -44,9 +48,15 @@ class SpaceViewController: UIViewController {
         }
     }
     
+    //scrolls back when keyboard is dismissed
     @objc func keyboardWillHide(notification: NSNotification) {
         if self.view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0
+        }
+        
+        // if all text field is filled, 'next button' appear
+        if isTextFieldsFilled() {
+            nextButton.isHidden = false
         }
     }
     
@@ -66,7 +76,6 @@ class SpaceViewController: UIViewController {
             self.performSegue(withIdentifier: "goToGuests", sender: self)
         }
     }
-    
     
     /// This method is to fill the text field if it is first responder
     private func updateFirstResponderLabel() {
@@ -89,14 +98,12 @@ class SpaceViewController: UIViewController {
                 
                 self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[pickerView.selectedRow(inComponent: 0)].rawValue
                 
-                nextButton.isHidden = false
             }
         case "house":
             if propertyType.isFirstResponder {
                 
                 propertyType.text = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[pickerView.selectedRow(inComponent: 0)].rawValue
                 
-                nextButton.isHidden = false
                 // assign the property type based on what was chosen
                 self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[pickerView.selectedRow(inComponent: 0)].rawValue
             }
@@ -114,7 +121,6 @@ class SpaceViewController: UIViewController {
     /*The following two IBAction func is used to know what
     text field is pressed to change the picker view */
     
-
     /// This IBAction is to assign the picker view on the editing text field
     /// - Parameter sender: Editing did begin
     @IBAction func assignPickerViewToTextField(_ sender: UITextField) {
@@ -153,6 +159,23 @@ class SpaceViewController: UIViewController {
             guestsVC.property = self.property
         }
     }
+    
+    func isTextFieldsFilled() -> Bool{
+        
+        if spaceType.text!.isEmpty {
+            return false
+        }
+        else if propertyType.text!.isEmpty {
+            return false
+        }
+        //If all text field is filled, return true
+        return true
+    }
+    
+    @IBAction func dismissForms(_ sender: Any) {
+        navigationController?.dismiss(animated: true)
+    }
+    
 }
 
 extension SpaceViewController: UIPickerViewDataSource, UIPickerViewDelegate {
@@ -268,25 +291,19 @@ extension SpaceViewController: UITextFieldDelegate {
     
     fileprivate func setUpTextField() {
         
+        let attributes = [NSAttributedString.Key.foregroundColor: Colors.placeholderColor]
         
-        let attributes = [
-            NSAttributedString.Key.foregroundColor: Colors.placeholderColor,
-            NSAttributedString.Key.font : UIFont(name: "OpenSans-Regular", size: 12) // Note the !
-        ]
-        
-        spaceType.attributedPlaceholder = NSAttributedString(string: "Adicione seu título", attributes: attributes as [NSAttributedString.Key : Any])
-        propertyType.attributedPlaceholder = NSAttributedString(string: "Adicione suas regras (Opcional)", attributes: attributes as [NSAttributedString.Key : Any])
+        spaceType.attributedPlaceholder = NSAttributedString(string: "Selecione", attributes: attributes as [NSAttributedString.Key : Any])
+        propertyType.attributedPlaceholder = NSAttributedString(string: "Selecione o tipo de propriedade", attributes: attributes as [NSAttributedString.Key : Any])
         
         
         spaceType.textColor = Colors.textColor
-        spaceType.font = UIFont(name: "OpenSans-Regular", size: 12)
         
         /* Set user interaction to false because it's
            necessary to choose an option in the first
            picker view then it will be available */
         propertyType.isUserInteractionEnabled = false
         propertyType.textColor = Colors.textColor
-        propertyType.font = UIFont(name: "OpenSans-Regular", size: 12)
     }
     
 }

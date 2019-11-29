@@ -18,6 +18,7 @@ class LocationViewController: UIViewController {
     @IBOutlet weak var adressTextField: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var postalCodeTextField: UITextField!
+    @IBOutlet weak var complementTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollContent: UIView!
     @IBOutlet weak var nextButton: UIButton!
@@ -45,39 +46,38 @@ class LocationViewController: UIViewController {
         
         nextButton.isHidden = true
         
+        self.navigationController?.navigationBar.tintColor = Colors.buttonColor
+
+        
     }
     
     //setup text style for textfields
     fileprivate func setUpText() {
         
-        let attributes = [
-            NSAttributedString.Key.foregroundColor: Colors.placeholderColor,
-            NSAttributedString.Key.font : UIFont(name: "OpenSans-Regular", size: 17) // Note the !
-        ]
+        let attributes = [NSAttributedString.Key.foregroundColor: Colors.placeholderColor]
         
         countryTextField.attributedPlaceholder = NSAttributedString(string: "ex: Brasil", attributes: attributes as [NSAttributedString.Key : Any])
         adressTextField.attributedPlaceholder = NSAttributedString(string: "ex.: Rua das Hortências, 123", attributes: attributes as [NSAttributedString.Key : Any])
         cityTextField.attributedPlaceholder = NSAttributedString(string: "ex: Campinas", attributes: attributes as [NSAttributedString.Key : Any])
         postalCodeTextField.attributedPlaceholder = NSAttributedString(string: "Digite seu CEP", attributes: attributes as [NSAttributedString.Key : Any])
-        
+        complementTextField.attributedPlaceholder = NSAttributedString(string: "Complemento (Opcional)", attributes: attributes as [NSAttributedString.Key : Any])
         
         countryTextField.textColor = Colors.textColor
-        countryTextField.font = UIFont(name: "OpenSans-Regular", size: 17)
         
         adressTextField.textColor = Colors.textColor
-        adressTextField.font = UIFont(name: "OpenSans-Regular", size: 17)
         
         cityTextField.textColor = Colors.textColor
-        cityTextField.font = UIFont(name: "OpenSans-Regular", size: 17)
         
         postalCodeTextField.textColor = Colors.textColor
-        postalCodeTextField.font = UIFont(name: "OpenSans-Regular", size: 17)
+        
+        complementTextField.textColor = Colors.textColor
         
         
-        self.cityTextField.tag = 0
-        self.adressTextField.tag = 1
-        self.cityTextField.tag      = 2
+        self.cityTextField.tag       = 0
+        self.adressTextField.tag     = 1
+        self.cityTextField.tag       = 2
         self.postalCodeTextField.tag = 3
+        self.complementTextField.tag = 4
         
         self.postalCodeTextField.keyboardType = .numberPad
         
@@ -128,29 +128,41 @@ class LocationViewController: UIViewController {
     //grt users location
     @IBAction func getLocation(_ sender: Any) {
         
-        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-            locationManager.startUpdatingLocation()
-            if let location = locationManager.location?.coordinate{
-                convertLatLongToAddress(latitude: location.latitude, longitude: location.longitude)
-            }
-        }
-            
-        else if CLLocationManager.authorizationStatus() == .notDetermined {
-            locationManager.requestWhenInUseAuthorization()
-        }
-        
-        else if CLLocationManager.authorizationStatus() == .denied {
-            let alertLoc = UIAlertController(title: "Permita acesso à sua localização" , message: "Você deve permitir acesso à sua localização ou colocar seus dados manualmente" , preferredStyle: .alert)
-            
-            let settingsAction = UIAlertAction(title: "Abrir Ajustes", style: .default) { (_) -> Void in
-                UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
-            }
-            
-            alertLoc.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: nil))
-            alertLoc.addAction(settingsAction)
-            self.present(alertLoc, animated: true)
-        }
-        
+       LocationUtil.shared.buildLocationAlert { (alert, placeMark) in
+           
+           if let errorAlert = alert {
+               self.present(errorAlert, animated: true)
+           } else {
+               
+               if let place = placeMark {
+                   
+                   //city label for current location indicator
+                    // Street address
+                              if let street = place.thoroughfare, let number = place.subThoroughfare {
+                                  self.adressTextField.text = street + ", " + number
+                              }
+                              
+                              if let country = place.country{
+                                  self.countryTextField.text = country
+                              }
+                              
+                              if let city = place.locality {
+                                  self.cityTextField.text = city
+                              }
+                              
+                              if let postalCode = place.postalCode{
+                                  print(postalCode)
+                                  self.postalCodeTextField.text = postalCode
+                              }
+                              
+                              if self.isTextFieldsFilled() {
+                                  self.nextButton.isHidden = false
+                              }
+               }
+               
+           }
+           
+       }
     }
     
     @IBAction func proceedToNextView(_ sender: Any) {
@@ -161,6 +173,8 @@ class LocationViewController: UIViewController {
         property.city       = cityTextField.text!
         
         property.postalCode = Int(postalCodeTextField.text!)!
+        
+        property.complement = complementTextField.text!
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -170,43 +184,7 @@ class LocationViewController: UIViewController {
         }
     }
     
-    //Func to convert lat and long to adress
-    func convertLatLongToAddress(latitude:Double,longitude:Double) {
     
-        let geoCoder = CLGeocoder()
-        let location = CLLocation(latitude: latitude, longitude: longitude)
-        
-        
-        geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
-            
-            // Place details
-            var placeMark: CLPlacemark!
-            placeMark = placemarks?[0]
-            
-            // Street address
-            if let street = placeMark.thoroughfare, let number = placeMark.subThoroughfare {
-                self.adressTextField.text = street + ", " + number
-            }
-            
-            if let country = placeMark.country{
-                self.countryTextField.text = country
-            }
-            
-            if let city = placeMark.locality {
-                self.cityTextField.text = city
-            }
-            
-            if let postalCode = placeMark.postalCode{
-                print(postalCode)
-                self.postalCodeTextField.text = postalCode
-            }
-            
-            if self.isTextFieldsFilled() {
-                self.nextButton.isHidden = false
-            }
-        })
-    
-    }
     
     //function to check if textfields are populated
     func isTextFieldsFilled() -> Bool{
