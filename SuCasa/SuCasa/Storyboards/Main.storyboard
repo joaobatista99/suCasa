@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -222,6 +222,16 @@
             </objects>
             <point key="canvasLocation" x="1076" y="1919"/>
         </scene>
+        <!--propertyDetail-->
+        <scene sceneID="pRJ-lu-T5A">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="propertyDetail" storyboardName="PropertyDetail" referencedIdentifier="propertyDetail" id="Dfc-zA-sHe" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="KJA-Iv-t5p"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="waJ-uW-d0f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1307" y="1967"/>
+        </scene>
         <!--allOngsVC-->
         <scene sceneID="yb6-bC-y3V">
             <objects>
@@ -322,17 +332,17 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Localização atual" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUH-FL-Ccx">
-                                            <rect key="frame" x="62.5" y="14" width="165.5" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <rect key="frame" x="62.5" y="14" width="165.5" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="0.39241147040000002" green="0.40347844360000001" blue="0.443143338" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Udl-4G-0Lp">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waiting" translatesAutoresizingMaskIntoConstraints="NO" id="Udl-4G-0Lp">
                                             <rect key="frame" x="20" y="14" width="37.5" height="37.5"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cidade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yd7-RX-l0L">
-                                            <rect key="frame" x="62.5" y="34.5" width="165.5" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yd7-RX-l0L">
+                                            <rect key="frame" x="62.5" y="51.5" width="165.5" height="0.0"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -377,11 +387,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="1rm-Bx-qgu"/>
                     <connections>
+                        <outlet property="cityLabel" destination="yd7-RX-l0L" id="gd6-YM-CWn"/>
                         <outlet property="collectionView" destination="FwT-Fn-Zbd" id="xAa-2b-5q1"/>
                         <outlet property="headerView" destination="eXT-6h-B8v" id="Hk9-SM-XRD"/>
                         <outlet property="tableView" destination="5Ax-bw-Cal" id="Yub-Ru-fGC"/>
                         <segue destination="YDf-BQ-biC" kind="show" identifier="showOngDetail" id="0ID-8T-83k"/>
                         <segue destination="xky-Tx-GWT" kind="show" identifier="showAllOngs" id="Mrk-rT-utY"/>
+                        <segue destination="Dfc-zA-sHe" kind="show" identifier="showPropertyDetail" id="Ya1-sX-WON"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8AB-Xn-eJP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -452,4 +464,7 @@
             <point key="canvasLocation" x="1308.6956521739132" y="784.82142857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="waiting" width="262" height="193"/>
+    </resources>
 </document>
