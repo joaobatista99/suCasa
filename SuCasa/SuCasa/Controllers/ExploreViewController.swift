@@ -6,14 +6,7 @@ class ExploreViewController: UIViewController {
     
     //Mocked informations
     let searchRecents = ["campinas", "são josé dos campos", "são paulo", "guarulhos", "mogi mirim"]
-    var cities: [City] = []
-    var selectedCity: String!
-    var properties: [Property] = []
-    var selectedProperty: Property!
-    var filteredProperties: [Property] = []
-    var ongs: [Ong] =  []
-    var selectedOng: Ong!
-    
+
     /// Table View Variables
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cityLabel: UILabel!
@@ -30,7 +23,17 @@ class ExploreViewController: UIViewController {
     /// Search Controller Variables
     let searchController = UISearchController(searchResultsController: nil)
     var isFiltering = false
+    
+    var cities: [City] = []
     var filteredCities: [City] = []
+    var selectedCity: String!
+    
+    var properties: [Property] = []
+    var filteredProperties: [Property] = []
+    var selectedProperty: Property!
+    
+    var ongs: [Ong] =  []
+    var selectedOng: Ong!
     
     /// This enum shows the search bar's  state to display the differents XIBs related to it.
     enum SearchBarState {
@@ -184,6 +187,19 @@ class ExploreViewController: UIViewController {
         
     }
     
+    private func updateResultsProperties() {
+        
+        let city = self.selectedCity.filter { !"\r".contains($0) }
+        //Getting all properties that is located on the city that was selected
+        
+        for prop in properties {
+            
+            if prop.city == city {
+                filteredProperties.append(prop)
+            }
+        }
+    }
+    
 }
 
 /// Search bar behavior
@@ -195,10 +211,17 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
         case .none:
             self.selectedProperty = self.properties[indexPath.row]
             self.performSegue(withIdentifier: "showPropertyDetail", sender: self)
+            
         case .suggestions:
-            break
+            self.selectedCity = self.filteredCities[indexPath.row].name ?? "default"
+            updateResultsProperties()
+            currentState = .results
+            isFiltering = false
+            self.tableView.reloadData()
+            
         case .results:
-            break
+            self.selectedProperty = self.filteredProperties[indexPath.row]
+            self.performSegue(withIdentifier: "showPropertyDetail", sender: self)
         }
     }
     
@@ -213,7 +236,7 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
         case .suggestions:
             return self.searchRecents.count
         case .results:
-            return 1
+            return filteredProperties.count
         }
     }
     
@@ -257,10 +280,32 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             }
             return cell
             
-        case .results: break
+        case .results:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "exploreCell") as! ExploreTableViewCell
             
+            let property = self.filteredProperties[indexPath.row]
+            
+            //Converting string url to URL
+            let urlFromImage = URL (string: property.urls[0])
+            
+            cell.adPriceLabel.text = "R$ \(property.price)/mês"
+            cell.adTitleLabel.text = property.title
+            cell.availabilityLabel.text = "Disponível para \(property.monthsAvailable) pessoas"
+            cell.distanceLabel.text = "APROX. A 1 km"
+            
+            cell.adImage.sd_setImage(with: urlFromImage,
+                                     placeholderImage: placeHolderImage,
+                                     options: SDWebImageOptions.lowPriority,
+                                     context: nil,
+                                     progress: nil) { (downloadedImage, error, cacheType, downloadURL) in
+                                        if let error = error {
+                                            //print("Error downloading the image: \(error.localizedDescription)")
+                                        } else {
+                                            //print("Successfully downloaded image: \(String(describing: downloadURL?.absoluteString))")
+                                        }
+            }
+            return cell
         }
-        return UITableViewCell()
     }
     
     /// This method returns and estimated row value to the table view cell
@@ -271,10 +316,9 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             return 288
         case .suggestions:
             return 44
-        default:
-            print("error to set height to the row")
+        case .results:
+            return 288
         }
-        return 288
     }
     
     /// This method is to set a title for the header
@@ -285,10 +329,9 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             return "As melhores estadias para você"
         case .suggestions:
             return "Buscas recentes"
-        default:
-            print("error to set a title for header")
+        case .results:
+            return ("\(self.filteredProperties.count) encontradas")
         }
-        return ""
     }
     
     /// This method sets the table view
@@ -331,8 +374,9 @@ extension ExploreViewController: UISearchBarDelegate {
     /// This method is called when the search bar's text changes
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
+        currentState = .suggestions
         isFiltering = true
-        
+        self.filteredProperties = []
         //Filtering cities from searchText
         filteredCities = cities.filter({( city : City) -> Bool in
             
@@ -350,14 +394,17 @@ extension ExploreViewController: UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print()
+        print("clico")
     }
+    
+    
     
     /// This method is called when the search bar is touched
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
         
         //Change the current state to suggestions when touching the search bar
         self.currentState = SearchBarState.suggestions
+        self.filteredProperties = []
         self.headerView.isHidden = true
         self.headerView.frame.size.height = 0
         self.tableView.reloadData()
@@ -367,12 +414,14 @@ extension ExploreViewController: UISearchBarDelegate {
     
     /// This method is called when the search bar's cancel button is touched
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.filteredProperties = []
         self.currentState = .none
         self.headerView.isHidden = false
         self.headerView.frame.size.height = 288
         isFiltering = false
         self.tableView.reloadData()
     }
+
 }
 
 extension ExploreViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
