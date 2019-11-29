@@ -10,11 +10,14 @@ class ExploreViewController: UIViewController {
     /// Table View Variables
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cityLabel: UILabel!
+    
     //location manager
     let locationManager = CLLocationManager()
     
-    var placeHolderImage = UIImage(named: "waiting")
+    //refresh control
+    var refreshControl = UIRefreshControl()
     
+    var placeHolderImage = UIImage(named: "waiting")
     
     /// Collection View Variables
     @IBOutlet weak var collectionView: UICollectionView!
@@ -84,86 +87,19 @@ class ExploreViewController: UIViewController {
             
         }
         
-        
-      
-        
-        
         self.setSearchController()
         
         self.cities = CityServices.readCSVtoGetCities()
-        //after retrieving data from database it will set the view
-        PropertyServices.retrieveProperty(completionHandler: { (auxProperties , error) in
-            
-            //checking if the retrieve was successfull
-            if auxProperties.count > 0 {
-                self.properties = auxProperties
-                self.setTableView()
-                
-                self.setCollectionView()
-            }
-        })
         
-        //Retriving Ongs from database
-        OngServices.retrieveOng { (ongs, error) in
-            
-            if ongs.count > 0 {
-                self.ongs = ongs
-                self.setCollectionView()
-                print("ong carregada")
-            }
-        }
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+        tableView.addSubview(refreshControl)
+        
     }
     
-    //    func getCityLocation() {
-    //
-    //        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-    //            locationManager.startUpdatingLocation()
-    //            if let location = locationManager.location?.coordinate{
-    //                convertLatLongToAddress(latitude: location.latitude, longitude: location.longitude)
-    //            }
-    //        }
-    //
-    //        else if CLLocationManager.authorizationStatus() == .notDetermined {
-    //            locationManager.requestWhenInUseAuthorization()
-    //        }
-    //
-    //        else if CLLocationManager.authorizationStatus() == .denied {
-    //            let alertLoc = UIAlertController(title: "Permita acesso à sua localização" , message: "Você deve permitir acesso à sua localização ou colocar seus dados manualmente" , preferredStyle: .alert)
-    //
-    //            let settingsAction = UIAlertAction(title: "Abrir Ajustes", style: .default) { (_) -> Void in
-    //                UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
-    //            }
-    //
-    //            alertLoc.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: nil))
-    //            alertLoc.addAction(settingsAction)
-    //            self.present(alertLoc, animated: true)
-    //        }
-    //
-    //    }
-    //
-    //    //converting latitude and longitude to address
-    //    func convertLatLongToAddress(latitude:Double,longitude:Double) {
-    //
-    //           let geoCoder = CLGeocoder()
-    //           let location = CLLocation(latitude: latitude, longitude: longitude)
-    //
-    //
-    //           geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
-    //
-    //               // Place details
-    //               var placeMark: CLPlacemark!
-    //               placeMark = placemarks?[0]
-    //
-    //               //city label for current location indicator
-    //               if let city = placeMark.locality {
-    //                   self.cityLabel.text = city
-    //               }
-    //
-    //
-    //           })
-    //
-    //       }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        refresh()
+    }
     
     @IBAction func seeAllOngsButton(_ sender: Any) {
         self.performSegue(withIdentifier: "showAllOngs", sender: self)
@@ -187,7 +123,32 @@ class ExploreViewController: UIViewController {
         
     }
     
-    private func updateResultsProperties() {
+   @objc func refresh() {
+        
+        //after retrieving data from database it will set the view
+        PropertyServices.retrieveProperty(completionHandler: { (auxProperties , error) in
+            
+            //checking if the retrieve was successfull
+            if auxProperties.count > 0 {
+                self.properties = auxProperties
+                self.setTableView()
+                self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
+            }
+        })
+        
+        //Retriving Ongs from database
+        OngServices.retrieveOng { (ongs, error) in
+            
+            if ongs.count > 0 {
+                self.ongs = ongs
+                self.setCollectionView()
+                print("ong carregada")
+            }
+         }
+   }
+  
+  private func updateResultsProperties() {
         
         let city = self.selectedCity.filter { !"\r".contains($0) }
         //Getting all properties that is located on the city that was selected
@@ -196,10 +157,10 @@ class ExploreViewController: UIViewController {
             
             if prop.city == city {
                 filteredProperties.append(prop)
+
             }
         }
-    }
-    
+  }  
 }
 
 /// Search bar behavior
@@ -341,8 +302,9 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight = 100.0
-        
         registerXibs()
+        
+        
     }
     
     /// This method register the xibs that is used to display on the screen
