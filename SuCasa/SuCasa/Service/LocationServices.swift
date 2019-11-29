@@ -21,7 +21,7 @@ class LocationUtil {
     }
     
 let locationManager = CLLocationManager()
-
+var currentLocation = CLLocationCoordinate2D()
     
     //gets users current location, if location isnt allowed shows an alert
     
@@ -33,7 +33,7 @@ let locationManager = CLLocationManager()
         locationManager.startUpdatingLocation()
         if let location = locationManager.location?.coordinate{
             convertLatLongToAddress(latitude: location.latitude, longitude: location.longitude)  { (place) in
-                
+                self.currentLocation = location
                 if let place = place {
                     completionHandler(nil, place)
                 }
@@ -83,5 +83,42 @@ let locationManager = CLLocationManager()
      })
 
  }
+    //returns distance between 2 locations in meters
+    func distanceBetweenCoordinates(placeLoc:CLLocation) -> CLLocationDistance{
+        
+        let getLat: CLLocationDegrees = currentLocation.latitude
+        let getLong: CLLocationDegrees = currentLocation.longitude
+        let currentLoc : CLLocation = CLLocation(latitude: getLat, longitude: getLong)
+        return currentLoc.distance(from: placeLoc)
+        
+    }
+    func getLocationFromString(forPlaceCalled name: String,
+                     completion: @escaping(CLLocation?) -> Void) {
+        
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(name) { placemarks, error in
+            
+            guard error == nil else {
+                print("*** Error in \(#function): \(error!.localizedDescription)")
+                completion(nil)
+                return
+            }
+            
+            guard let placemark = placemarks?[0] else {
+                print("*** Error in \(#function): placemark is nil")
+                completion(nil)
+                return
+            }
+            
+            guard let location = placemark.location else {
+                print("*** Error in \(#function): placemark is nil")
+                completion(nil)
+                return
+            }
+
+            completion(location)
+        }
+    }
+
     
 }
