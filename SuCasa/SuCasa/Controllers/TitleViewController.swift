@@ -40,6 +40,9 @@ class TitleViewController: UIViewController {
         setUpText()
         
         nextButton.isHidden = true
+        
+        self.navigationController?.navigationBar.tintColor = Colors.buttonColor
+
 
     }
     
@@ -85,19 +88,14 @@ class TitleViewController: UIViewController {
     //setup text style for textfields
     fileprivate func setUpText() {
         
-        let attributes = [
-            NSAttributedString.Key.foregroundColor: Colors.placeholderColor,
-            NSAttributedString.Key.font : UIFont(name: "OpenSans-Regular", size: 17) // Note the !
-        ]
+        let attributes = [NSAttributedString.Key.foregroundColor: Colors.placeholderColor]
         
         titleTextField.attributedPlaceholder = NSAttributedString(string: "Adicione seu título", attributes: attributes as [NSAttributedString.Key : Any])
         rulesTextField.attributedPlaceholder = NSAttributedString(string: "Adicione suas regras (Opcional)", attributes: attributes as [NSAttributedString.Key : Any])
         
         titleTextField.textColor = Colors.textColor
-        titleTextField.font = UIFont(name: "OpenSans-Regular", size: 17)
         
         rulesTextField.textColor = Colors.textColor
-        rulesTextField.font = UIFont(name: "OpenSans-Regular", size: 17)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -23,6 +23,8 @@ class GuestsViewController: UIViewController {
         setUpTextFields()
         nextButton.isHidden = true
         
+        self.navigationController?.navigationBar.tintColor = Colors.buttonColor
+        
         //Tap gesture to hide keyboard
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         view.addGestureRecognizer(tap)
@@ -96,10 +98,7 @@ extension GuestsViewController: UITextFieldDelegate {
         bedNumberTextField.keyboardType = .numberPad
         
         
-        let attributes = [
-            NSAttributedString.Key.foregroundColor: Colors.placeholderColor,
-            NSAttributedString.Key.font : UIFont(name: "OpenSans-Regular", size: 17)
-        ]
+        let attributes = [NSAttributedString.Key.foregroundColor: Colors.placeholderColor]
         
         
         totalGuestsTextField.attributedPlaceholder = NSAttributedString(string: "Selecione", attributes: attributes as [NSAttributedString.Key : Any])
@@ -107,13 +106,10 @@ extension GuestsViewController: UITextFieldDelegate {
         bedNumberTextField.attributedPlaceholder = NSAttributedString(string: "Selecione", attributes: attributes as [NSAttributedString.Key : Any])
        
         totalGuestsTextField.textColor = Colors.textColor
-        totalGuestsTextField.font = UIFont(name: "OpenSans-Regular", size: 17)
         
         bedroomNumberTextField.textColor = Colors.textColor
-        bedroomNumberTextField.font = UIFont(name: "OpenSans-Regular", size: 17)
         
         bedNumberTextField.textColor = Colors.textColor
-        bedNumberTextField.font = UIFont(name: "OpenSans-Regular", size: 17)
         
         //creating a toolbar
         let toolBar = UIToolbar()

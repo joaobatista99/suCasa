@@ -35,6 +35,7 @@
 		BA1B7D952386DCA000D06E3A /* PropertyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1B7D942386DCA000D06E3A /* PropertyDetailViewController.swift */; };
 		BA1B7D972386DCFA00D06E3A /* CarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1B7D962386DCFA00D06E3A /* CarouselItem.swift */; };
 		BA1B7D992386DF2B00D06E3A /* CarouselPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1B7D982386DF2B00D06E3A /* CarouselPageViewController.swift */; };
+		BA36C53F23904FED00EC1517 /* RoundedBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA36C53E23904FED00EC1517 /* RoundedBorderButton.swift */; };
 		BA5D40DA2375EA050041AC6B /* AdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5D40D92375EA050041AC6B /* AdViewController.swift */; };
 		BA5D40DC2375F93A0041AC6B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5D40DB2375F93A0041AC6B /* Login.storyboard */; };
 		BA670ED3237457F9005E3FDA /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA670EC9237457F8005E3FDA /* OpenSans-BoldItalic.ttf */; };
@@ -101,6 +102,7 @@
 		BA1B7D942386DCA000D06E3A /* PropertyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailViewController.swift; sourceTree = "<group>"; };
 		BA1B7D962386DCFA00D06E3A /* CarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItem.swift; sourceTree = "<group>"; };
 		BA1B7D982386DF2B00D06E3A /* CarouselPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselPageViewController.swift; sourceTree = "<group>"; };
+		BA36C53E23904FED00EC1517 /* RoundedBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBorderButton.swift; sourceTree = "<group>"; };
 		BA5D40D92375EA050041AC6B /* AdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewController.swift; sourceTree = "<group>"; };
 		BA5D40DB2375F93A0041AC6B /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BA670EC9237457F8005E3FDA /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				BAB8DA002371E88A0039CBC5 /* Storyboards */,
 				BAB8DA052372004E0039CBC5 /* Controllers */,
 				BA1B7D962386DCFA00D06E3A /* CarouselItem.swift */,
+				BA36C53E23904FED00EC1517 /* RoundedBorderButton.swift */,
 			);
 			path = SuCasa;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				36DD943E2375D71E000012BB /* ExploreViewController.swift in Sources */,
 				BAACB3C6238EF16900C231F0 /* OngsCollectionViewCell.swift in Sources */,
 				BAACB3C7238EF16900C231F0 /* OngCell.swift in Sources */,
+				BA36C53F23904FED00EC1517 /* RoundedBorderButton.swift in Sources */,
 				366757A3238EDA450085ED4F /* OngDetailViewController.swift in Sources */,
 				BA1B7D972386DCFA00D06E3A /* CarouselItem.swift in Sources */,
 				BAB8DA07237201200039CBC5 /* IntroViewController.swift in Sources */,
