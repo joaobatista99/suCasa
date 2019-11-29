@@ -331,6 +331,11 @@ extension ExploreViewController: UISearchBarDelegate {
         self.searchController.searchBar.searchTextField.textColor = .black
         self.searchController.searchBar.barTintColor = .black
         self.currentState = SearchBarState.none
+        
+        let textFieldSearchBar = searchController.searchBar.value(forKey: "searchField") as? UITextField
+        let magnifyingGlass = textFieldSearchBar?.leftView as? UIImageView
+        magnifyingGlass?.tintColor = Colors.buttonColor
+        
     }
     
     /// This method is called when the search bar's text changes
