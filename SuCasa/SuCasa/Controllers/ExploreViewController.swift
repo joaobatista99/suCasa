@@ -7,9 +7,10 @@ class ExploreViewController: UIViewController {
     //Mocked informations
     let searchRecents = ["campinas", "são josé dos campos", "são paulo", "guarulhos", "mogi mirim"]
     var cities: [City] = []
-    
+    var selectedCity: String!
     var properties: [Property] = []
     var selectedProperty: Property!
+    var filteredProperties: [Property] = []
     var ongs: [Ong] =  []
     var selectedOng: Ong!
     
@@ -189,8 +190,16 @@ class ExploreViewController: UIViewController {
 extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selectedProperty = self.properties[indexPath.row]
-        self.performSegue(withIdentifier: "showPropertyDetail", sender: self)
+        
+        switch currentState {
+        case .none:
+            self.selectedProperty = self.properties[indexPath.row]
+            self.performSegue(withIdentifier: "showPropertyDetail", sender: self)
+        case .suggestions:
+            break
+        case .results:
+            break
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -259,13 +268,13 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch currentState {
         case .none:
-            return 270
+            return 288
         case .suggestions:
             return 44
         default:
             print("error to set height to the row")
         }
-        return 270
+        return 288
     }
     
     /// This method is to set a title for the header
@@ -340,6 +349,10 @@ extension ExploreViewController: UISearchBarDelegate {
         tableView.reloadData()
     }
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print()
+    }
+    
     /// This method is called when the search bar is touched
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
         
@@ -356,7 +369,7 @@ extension ExploreViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         self.currentState = .none
         self.headerView.isHidden = false
-        self.headerView.frame.size.height = 213
+        self.headerView.frame.size.height = 288
         isFiltering = false
         self.tableView.reloadData()
     }

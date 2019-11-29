@@ -48,6 +48,7 @@ class CarouselPageViewController: UIPageViewController {
         super.viewDidLoad()
 
         dataSource = self
+        delegate = self
         
         //populate items that will be showed
         
@@ -64,11 +65,12 @@ class CarouselPageViewController: UIPageViewController {
                 
                     if let firstViewController = self.items.first {
                         self.setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
+                        self.carouselDelegate?.carouselPageViewController(carouselPageViewController: self, didUpdatePageCount: self.property.urls.count)
                     }
                 }
             }
         }
-        self.carouselDelegate?.carouselPageViewController(carouselPageViewController: self, didUpdatePageCount: self.property.urls.count)
+        
 
     }
     
@@ -144,9 +146,16 @@ extension CarouselPageViewController: UIPageViewControllerDataSource {
         
         return items[nextIndex]
     }
+
     
+}
+
+
+
+
+extension CarouselPageViewController: UIPageViewControllerDelegate {
     
-    func pageViewController(pageViewController: UIPageViewController,
+    func pageViewController(_ pageViewController: UIPageViewController,
                             didFinishAnimating finished: Bool,
                             previousViewControllers: [UIViewController],
                             transitionCompleted completed: Bool) {
@@ -155,7 +164,8 @@ extension CarouselPageViewController: UIPageViewControllerDataSource {
                 carouselDelegate?.carouselPageViewController(carouselPageViewController: self, didUpdatePageIndex: index)
         }
     }
-    
-    
 }
+
+
+
 
