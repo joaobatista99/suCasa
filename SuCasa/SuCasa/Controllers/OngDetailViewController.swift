@@ -24,7 +24,19 @@ class OngDetailViewController: UIViewController {
         super.viewDidLoad()
         
         setInformations()
+        self.navigationController?.navigationBar.tintColor = Colors.buttonColor
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = true
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        tabBarController?.tabBar.isHidden = false
+    }
+    
     
     private func setInformations() {
         
@@ -47,4 +59,5 @@ class OngDetailViewController: UIViewController {
         }
     }
 
+    
 }

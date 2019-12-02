@@ -13,6 +13,9 @@ import CoreLocation
 
 class PropertyDetailViewController: UIViewController {
 
+    @IBOutlet weak var roomsLabel: UILabel!
+    @IBOutlet weak var vacancyLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var distanceLabel: UILabel!
@@ -21,12 +24,6 @@ class PropertyDetailViewController: UIViewController {
     var propertyLocation: CLLocation!
     var distance: CLLocationDistance!
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let carouselPageViewController = segue.destination as? CarouselPageViewController {
-            carouselPageViewController.property = self.property
-            carouselPageViewController.carouselDelegate = self 
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,9 +41,48 @@ class PropertyDetailViewController: UIViewController {
             self.distanceLabel.text = str + b + " km"
         }
         
+        self.priceLabel.text = String(property.price)
+        if(property.numberOfBeds == 1){
+            self.vacancyLabel.text = String(property.numberOfBeds) + " Lugar"
+        }
+        if(property.numberOfBeds > 1){
+            self.vacancyLabel.text = String(property.numberOfBeds) + " Lugares"
+        }
+        if(property.numberOfRooms == 1){
+            self.roomsLabel.text = String(property.numberOfRooms) + " Quarto"
+        }
+        if(property.numberOfBeds > 1){
+            self.roomsLabel.text = String(property.numberOfRooms) + " Quartos"
+        }
         
+        self.navigationController?.navigationBar.tintColor = Colors.buttonColor
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+           super.viewWillAppear(animated)
+           tabBarController?.tabBar.isHidden = true
+       }
+
+       override func viewWillDisappear(_ animated: Bool) {
+           super.viewWillDisappear(animated)
+           tabBarController?.tabBar.isHidden = false
+       }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "embedDetailCarousel",
+            let carouselPageViewController = segue.destination as? CarouselPageViewController {
+            carouselPageViewController.property = self.property
+            carouselPageViewController.carouselDelegate = self
+        }
+        
+        if segue.identifier == "embedDetailTableView",
+            let tableViewController = segue.destination as? PropertyDetailTableViewController{
+            tableViewController.property = self.property
+        }
+        
+    }
+    
     
 }
 
