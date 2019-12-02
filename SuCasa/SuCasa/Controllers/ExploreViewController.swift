@@ -64,28 +64,10 @@ class ExploreViewController: UIViewController {
         }
     }
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-      
-        //getting city location for current location indicator
-        LocationUtil.shared.buildLocationAlert { (alert, placeMark) in
-            
-            if let errorAlert = alert {
-                self.present(errorAlert, animated: true)
-            } else {
-                
-                if let place = placeMark {
-                    
-                    //city label for current location indicator
-                    if let city = place.locality {
-                        self.cityLabel.text = city
-                    }
-                }
-                
-            }
-            
-        }
         
         self.setSearchController()
         
@@ -99,6 +81,30 @@ class ExploreViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         refresh()
+    }
+    
+    
+    /// This  method  is to get your location
+    fileprivate func getCityLocation() {
+        
+        LocationUtil.shared.buildLocationAlert { (alert, placeMark) in
+            
+            if let errorAlert = alert {
+                self.present(errorAlert, animated: true)
+            } else {
+                
+                if let place = placeMark {
+                    
+                    //city label for current location indicator
+                    if let city = place.locality {
+                        self.cityLabel.text = city
+                        print("cidade carregada")
+                    }
+                }
+                
+            }
+            
+        }
     }
     
     @IBAction func seeAllOngsButton(_ sender: Any) {
@@ -125,6 +131,8 @@ class ExploreViewController: UIViewController {
     
    @objc func refresh() {
         
+        getCityLocation()
+    
         //after retrieving data from database it will set the view
         PropertyServices.retrieveProperty(completionHandler: { (auxProperties , error) in
             
@@ -143,7 +151,6 @@ class ExploreViewController: UIViewController {
             if ongs.count > 0 {
                 self.ongs = ongs
                 self.setCollectionView()
-                print("ong carregada")
             }
          }
    }
