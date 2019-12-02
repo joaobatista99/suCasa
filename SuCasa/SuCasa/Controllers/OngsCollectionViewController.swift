@@ -30,16 +30,15 @@ class OngsCollectionViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
            super.viewWillAppear(animated)
            tabBarController?.tabBar.isHidden = true
-       }
-
-       override func viewWillDisappear(_ animated: Bool) {
-           super.viewWillDisappear(animated)
-           tabBarController?.tabBar.isHidden = false
-       }
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+           super.viewWillDisappear(animated)
+           tabBarController?.tabBar.isHidden = false
+    }
+    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier  == "showOngDetail" {
             let detailOngVc = segue.destination as? OngDetailViewController
             detailOngVc?.ong = self.selectedOng

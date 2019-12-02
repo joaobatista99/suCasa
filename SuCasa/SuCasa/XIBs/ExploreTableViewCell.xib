@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,57 +28,44 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="266"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G9v-Wv-aiF">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G9v-Wv-aiF">
                         <rect key="frame" x="15.5" y="8" width="383" height="162"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                 <integer key="value" value="10"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="It2-LI-Nr1">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="R$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="It2-LI-Nr1">
                         <rect key="frame" x="15.5" y="214" width="331" height="19.5"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disponibilidade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBk-3J-1kE">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Disponibilidade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBk-3J-1kE">
                         <rect key="frame" x="15.5" y="235.5" width="331" height="19.5"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4RV-3U-AUP">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titulo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4RV-3U-AUP">
                         <rect key="frame" x="15.5" y="190" width="331" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
                         <color key="textColor" red="0.20789933199999999" green="0.21168920399999999" blue="0.21568718549999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APROX. A " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMF-Y9-m1i">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="APROX. A " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMF-Y9-m1i">
                         <rect key="frame" x="15.5" y="174" width="331" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="10"/>
                         <color key="textColor" red="0.62594902519999995" green="0.21854671840000001" blue="0.29411584140000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <constraints>
-                    <constraint firstItem="4RV-3U-AUP" firstAttribute="top" secondItem="TMF-Y9-m1i" secondAttribute="bottom" constant="2" id="4Vr-kQ-lfX"/>
-                    <constraint firstItem="G9v-Wv-aiF" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.925121" id="C3T-ad-Z08"/>
-                    <constraint firstItem="PBk-3J-1kE" firstAttribute="top" secondItem="It2-LI-Nr1" secondAttribute="bottom" constant="2" id="Clb-lm-lSb"/>
-                    <constraint firstItem="PBk-3J-1kE" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.8" id="GAO-uS-nvv"/>
-                    <constraint firstItem="TMF-Y9-m1i" firstAttribute="leading" secondItem="4RV-3U-AUP" secondAttribute="leading" id="HBy-ek-sOF"/>
-                    <constraint firstItem="G9v-Wv-aiF" firstAttribute="bottom" secondItem="TMF-Y9-m1i" secondAttribute="top" constant="-4" id="NRe-to-zGr"/>
-                    <constraint firstItem="TMF-Y9-m1i" firstAttribute="width" secondItem="4RV-3U-AUP" secondAttribute="width" id="SMN-Zd-4ri"/>
-                    <constraint firstItem="TMF-Y9-m1i" firstAttribute="leading" secondItem="G9v-Wv-aiF" secondAttribute="leading" id="UcG-jN-wnz"/>
-                    <constraint firstItem="TMF-Y9-m1i" firstAttribute="leading" secondItem="It2-LI-Nr1" secondAttribute="leading" id="UjW-y5-RuE"/>
-                    <constraint firstItem="G9v-Wv-aiF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="YhP-GC-hSs"/>
-                    <constraint firstItem="TMF-Y9-m1i" firstAttribute="leading" secondItem="PBk-3J-1kE" secondAttribute="leading" id="cRU-0Q-5wc"/>
-                    <constraint firstItem="It2-LI-Nr1" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.8" id="fFe-7Z-tlo"/>
-                    <constraint firstItem="PBk-3J-1kE" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="fiD-N7-j9E"/>
-                    <constraint firstItem="It2-LI-Nr1" firstAttribute="top" secondItem="4RV-3U-AUP" secondAttribute="bottom" constant="2" id="h0i-11-BiQ"/>
-                    <constraint firstItem="G9v-Wv-aiF" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="nnB-4X-LD1"/>
-                    <constraint firstItem="4RV-3U-AUP" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.8" id="yfg-3b-s2g"/>
-                </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
