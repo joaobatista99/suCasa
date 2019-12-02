@@ -5,11 +5,13 @@ import SDWebImage
 class ExploreViewController: UIViewController {
     
     //Mocked informations
-    let searchRecents = ["campinas", "são josé dos campos", "são paulo", "guarulhos", "mogi mirim"]
+    let searchRecents = ["campinas", "são josé dos campos", "são paulo", "guarulhos", "valinhos"]
 
     /// Table View Variables
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var headerTitle: UILabel!
+    @IBOutlet weak var headerSubTitle: UILabel!
     
     //location manager
     let locationManager = CLLocationManager()
@@ -45,6 +47,10 @@ class ExploreViewController: UIViewController {
         case none         //This state is when the search bar has not been clicked
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+          return .default
+    }
+    
     fileprivate var _currentState = SearchBarState.none
     
     var currentState: SearchBarState {
@@ -73,7 +79,6 @@ class ExploreViewController: UIViewController {
         
         self.cities = CityServices.readCSVtoGetCities()
         
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
         tableView.addSubview(refreshControl)
         
@@ -155,19 +160,22 @@ class ExploreViewController: UIViewController {
          }
    }
   
-  private func updateResultsProperties() {
-        
-        let city = self.selectedCity.filter { !"\r".contains($0) }
-        //Getting all properties that is located on the city that was selected
-        
-        for prop in properties {
+    private func updateResultsProperties() {
             
-            if prop.city == city {
-                filteredProperties.append(prop)
-
+            let city = self.selectedCity.filter { !"\r".contains($0) }
+            //Getting all properties that is located on the city that was selected
+            
+            // for each property, filter using case insensitive
+            for prop in properties {
+                
+                let isFilter: ComparisonResult = city.compare(prop.city, options: .caseInsensitive, range: nil, locale: nil)
+                
+                if isFilter  == .orderedSame {
+                    filteredProperties.append(prop)
+                }
             }
-        }
-  }  
+      }
+
 }
 
 /// Search bar behavior
@@ -181,8 +189,14 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             self.performSegue(withIdentifier: "showPropertyDetail", sender: self)
             
         case .suggestions:
-            self.selectedCity = self.filteredCities[indexPath.row].name ?? "default"
-            updateResultsProperties()
+            if isFiltering {
+                self.selectedCity = self.filteredCities[indexPath.row].name ?? "default"
+                updateResultsProperties()
+
+            } else {
+                self.selectedCity = searchRecents[indexPath.row]
+                updateResultsProperties()
+            }
             currentState = .results
             isFiltering = false
             self.tableView.reloadData()
@@ -291,12 +305,12 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
     
     /// This method is to set a title for the header
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
+
         switch currentState {
         case .none:
-            return "As melhores estadias para você"
+            return ""
         case .suggestions:
-            return "Buscas recentes"
+            return "Cidades"
         case .results:
             return ("\(self.filteredProperties.count) encontradas")
         }
@@ -307,11 +321,10 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.keyboardDismissMode = .onDrag
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight = 100.0
         registerXibs()
-        
-        
     }
     
     /// This method register the xibs that is used to display on the screen
@@ -367,12 +380,6 @@ extension ExploreViewController: UISearchBarDelegate {
         tableView.reloadData()
     }
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("clico")
-    }
-    
-    
-    
     /// This method is called when the search bar is touched
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
         
@@ -391,7 +398,7 @@ extension ExploreViewController: UISearchBarDelegate {
         self.filteredProperties = []
         self.currentState = .none
         self.headerView.isHidden = false
-        self.headerView.frame.size.height = 288
+        self.headerView.frame.size.height = 382
         isFiltering = false
         self.tableView.reloadData()
     }
