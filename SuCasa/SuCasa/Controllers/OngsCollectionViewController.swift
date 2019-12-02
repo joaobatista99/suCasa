@@ -15,6 +15,7 @@ class OngsCollectionViewController: UIViewController {
     @IBOutlet weak var OngsCollectionView: UICollectionView!
     
     var ongs: [Ong] = []
+    var selectedOng: Ong!
     var placeHolderImage = UIImage(named: "waiting")
     
     override func viewDidLoad() {
@@ -25,6 +26,7 @@ class OngsCollectionViewController: UIViewController {
          self.navigationController?.navigationBar.tintColor = Colors.buttonColor
     }
     
+
     override func viewWillAppear(_ animated: Bool) {
            super.viewWillAppear(animated)
            tabBarController?.tabBar.isHidden = true
@@ -34,6 +36,16 @@ class OngsCollectionViewController: UIViewController {
            super.viewWillDisappear(animated)
            tabBarController?.tabBar.isHidden = false
        }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier  == "showOngDetail" {
+            let detailOngVc = segue.destination as? OngDetailViewController
+            detailOngVc?.ong = self.selectedOng
+        }    
+    }
+
     
 }
 
@@ -46,6 +58,13 @@ extension OngsCollectionViewController :  UICollectionViewDataSource, UICollecti
             return self.ongs.count
           
         }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        self.selectedOng = ongs[indexPath.row]
+        
+        self.performSegue(withIdentifier: "showOngDetail", sender: self)
+    }
         
       
       //setting up collection view cell

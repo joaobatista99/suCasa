@@ -3,7 +3,7 @@
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -109,11 +109,22 @@
                     <navigationItem key="navigationItem" id="k98-bb-rSf"/>
                     <connections>
                         <outlet property="OngsCollectionView" destination="7t5-Hx-jNg" id="M87-g2-bSU"/>
+                        <segue destination="hkg-dn-S51" kind="show" identifier="showOngDetail" id="hi4-Dg-TyR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JGm-IG-wyZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2334.7826086956525" y="184.82142857142856"/>
+        </scene>
+        <!--ongProfile-->
+        <scene sceneID="2Nm-tL-hOZ">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ongProfile" storyboardName="OngProfile" referencedIdentifier="ongProfile" id="hkg-dn-S51" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fjL-MJ-N0k"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="afG-ek-If1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2333" y="585"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="X1H-Yn-Dsc">

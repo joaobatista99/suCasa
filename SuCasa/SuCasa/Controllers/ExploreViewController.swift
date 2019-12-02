@@ -5,23 +5,21 @@ import SDWebImage
 class ExploreViewController: UIViewController {
     
     //Mocked informations
-    let searchRecents = ["campinas", "são josé dos campos", "são paulo", "guarulhos", "mogi mirim"]
-    var cities: [City] = []
-    var selectedCity: String!
-    var properties: [Property] = []
-    var selectedProperty: Property!
-    var filteredProperties: [Property] = []
-    var ongs: [Ong] =  []
-    var selectedOng: Ong!
-    
+    let searchRecents = ["campinas", "são josé dos campos", "são paulo", "guarulhos", "valinhos"]
+
     /// Table View Variables
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var headerTitle: UILabel!
+    @IBOutlet weak var headerSubTitle: UILabel!
+    
     //location manager
     let locationManager = CLLocationManager()
     
-    var placeHolderImage = UIImage(named: "waiting")
+    //refresh control
+    var refreshControl = UIRefreshControl()
     
+    var placeHolderImage = UIImage(named: "waiting")
     
     /// Collection View Variables
     @IBOutlet weak var collectionView: UICollectionView!
@@ -30,13 +28,27 @@ class ExploreViewController: UIViewController {
     /// Search Controller Variables
     let searchController = UISearchController(searchResultsController: nil)
     var isFiltering = false
+    
+    var cities: [City] = []
     var filteredCities: [City] = []
+    var selectedCity: String!
+    
+    var properties: [Property] = []
+    var filteredProperties: [Property] = []
+    var selectedProperty: Property!
+    
+    var ongs: [Ong] =  []
+    var selectedOng: Ong!
     
     /// This enum shows the search bar's  state to display the differents XIBs related to it.
     enum SearchBarState {
         case results      //This state is when the button search is clicked
         case suggestions  //This state is when typing in the search bar
         case none         //This state is when the search bar has not been clicked
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+          return .default
     }
     
     fileprivate var _currentState = SearchBarState.none
@@ -58,11 +70,28 @@ class ExploreViewController: UIViewController {
         }
     }
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      
-        //getting city location for current location indicator
+        self.setSearchController()
+        
+        self.cities = CityServices.readCSVtoGetCities()
+        
+        refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+        tableView.addSubview(refreshControl)
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        refresh()
+    }
+    
+    
+    /// This  method  is to get your location
+    fileprivate func getCityLocation() {
+        
         LocationUtil.shared.buildLocationAlert { (alert, placeMark) in
             
             if let errorAlert = alert {
@@ -74,93 +103,14 @@ class ExploreViewController: UIViewController {
                     //city label for current location indicator
                     if let city = place.locality {
                         self.cityLabel.text = city
+                        print("cidade carregada")
                     }
                 }
                 
             }
             
         }
-        
-        
-      
-        
-        
-        self.setSearchController()
-        
-        self.cities = CityServices.readCSVtoGetCities()
-        //after retrieving data from database it will set the view
-        PropertyServices.retrieveProperty(completionHandler: { (auxProperties , error) in
-            
-            //checking if the retrieve was successfull
-            if auxProperties.count > 0 {
-                self.properties = auxProperties
-                self.setTableView()
-                
-                self.setCollectionView()
-            }
-        })
-        
-        //Retriving Ongs from database
-        OngServices.retrieveOng { (ongs, error) in
-            
-            if ongs.count > 0 {
-                self.ongs = ongs
-                self.setCollectionView()
-                print("ong carregada")
-            }
-        }
     }
-    
-    //    func getCityLocation() {
-    //
-    //        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-    //            locationManager.startUpdatingLocation()
-    //            if let location = locationManager.location?.coordinate{
-    //                convertLatLongToAddress(latitude: location.latitude, longitude: location.longitude)
-    //            }
-    //        }
-    //
-    //        else if CLLocationManager.authorizationStatus() == .notDetermined {
-    //            locationManager.requestWhenInUseAuthorization()
-    //        }
-    //
-    //        else if CLLocationManager.authorizationStatus() == .denied {
-    //            let alertLoc = UIAlertController(title: "Permita acesso à sua localização" , message: "Você deve permitir acesso à sua localização ou colocar seus dados manualmente" , preferredStyle: .alert)
-    //
-    //            let settingsAction = UIAlertAction(title: "Abrir Ajustes", style: .default) { (_) -> Void in
-    //                UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
-    //            }
-    //
-    //            alertLoc.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: nil))
-    //            alertLoc.addAction(settingsAction)
-    //            self.present(alertLoc, animated: true)
-    //        }
-    //
-    //    }
-    //
-    //    //converting latitude and longitude to address
-    //    func convertLatLongToAddress(latitude:Double,longitude:Double) {
-    //
-    //           let geoCoder = CLGeocoder()
-    //           let location = CLLocation(latitude: latitude, longitude: longitude)
-    //
-    //
-    //           geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
-    //
-    //               // Place details
-    //               var placeMark: CLPlacemark!
-    //               placeMark = placemarks?[0]
-    //
-    //               //city label for current location indicator
-    //               if let city = placeMark.locality {
-    //                   self.cityLabel.text = city
-    //               }
-    //
-    //
-    //           })
-    //
-    //       }
-    
     
     @IBAction func seeAllOngsButton(_ sender: Any) {
         self.performSegue(withIdentifier: "showAllOngs", sender: self)
@@ -184,6 +134,48 @@ class ExploreViewController: UIViewController {
         
     }
     
+   @objc func refresh() {
+        
+        getCityLocation()
+    
+        //after retrieving data from database it will set the view
+        PropertyServices.retrieveProperty(completionHandler: { (auxProperties , error) in
+            
+            //checking if the retrieve was successfull
+            if auxProperties.count > 0 {
+                self.properties = auxProperties
+                self.setTableView()
+                self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
+            }
+        })
+        
+        //Retriving Ongs from database
+        OngServices.retrieveOng { (ongs, error) in
+            
+            if ongs.count > 0 {
+                self.ongs = ongs
+                self.setCollectionView()
+            }
+         }
+   }
+  
+    private func updateResultsProperties() {
+            
+            let city = self.selectedCity.filter { !"\r".contains($0) }
+            //Getting all properties that is located on the city that was selected
+            
+            // for each property, filter using case insensitive
+            for prop in properties {
+                
+                let isFilter: ComparisonResult = city.compare(prop.city, options: .caseInsensitive, range: nil, locale: nil)
+                
+                if isFilter  == .orderedSame {
+                    filteredProperties.append(prop)
+                }
+            }
+      }
+
 }
 
 /// Search bar behavior
@@ -195,10 +187,23 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
         case .none:
             self.selectedProperty = self.properties[indexPath.row]
             self.performSegue(withIdentifier: "showPropertyDetail", sender: self)
+            
         case .suggestions:
-            break
+            if isFiltering {
+                self.selectedCity = self.filteredCities[indexPath.row].name ?? "default"
+                updateResultsProperties()
+
+            } else {
+                self.selectedCity = searchRecents[indexPath.row]
+                updateResultsProperties()
+            }
+            currentState = .results
+            isFiltering = false
+            self.tableView.reloadData()
+            
         case .results:
-            break
+            self.selectedProperty = self.filteredProperties[indexPath.row]
+            self.performSegue(withIdentifier: "showPropertyDetail", sender: self)
         }
     }
     
@@ -213,7 +218,7 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
         case .suggestions:
             return self.searchRecents.count
         case .results:
-            return 1
+            return filteredProperties.count
         }
     }
     
@@ -257,10 +262,32 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             }
             return cell
             
-        case .results: break
+        case .results:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "exploreCell") as! ExploreTableViewCell
             
+            let property = self.filteredProperties[indexPath.row]
+            
+            //Converting string url to URL
+            let urlFromImage = URL (string: property.urls[0])
+            
+            cell.adPriceLabel.text = "R$ \(property.price)/mês"
+            cell.adTitleLabel.text = property.title
+            cell.availabilityLabel.text = "Disponível para \(property.monthsAvailable) pessoas"
+            cell.distanceLabel.text = "APROX. A 1 km"
+            
+            cell.adImage.sd_setImage(with: urlFromImage,
+                                     placeholderImage: placeHolderImage,
+                                     options: SDWebImageOptions.lowPriority,
+                                     context: nil,
+                                     progress: nil) { (downloadedImage, error, cacheType, downloadURL) in
+                                        if let error = error {
+                                            //print("Error downloading the image: \(error.localizedDescription)")
+                                        } else {
+                                            //print("Successfully downloaded image: \(String(describing: downloadURL?.absoluteString))")
+                                        }
+            }
+            return cell
         }
-        return UITableViewCell()
     }
     
     /// This method returns and estimated row value to the table view cell
@@ -271,24 +298,22 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             return 288
         case .suggestions:
             return 44
-        default:
-            print("error to set height to the row")
+        case .results:
+            return 288
         }
-        return 288
     }
     
     /// This method is to set a title for the header
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
+
         switch currentState {
         case .none:
-            return "As melhores estadias para você"
+            return ""
         case .suggestions:
-            return "Buscas recentes"
-        default:
-            print("error to set a title for header")
+            return "Cidades"
+        case .results:
+            return ("\(self.filteredProperties.count) encontradas")
         }
-        return ""
     }
     
     /// This method sets the table view
@@ -296,9 +321,9 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.keyboardDismissMode = .onDrag
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight = 100.0
-        
         registerXibs()
     }
     
@@ -326,13 +351,19 @@ extension ExploreViewController: UISearchBarDelegate {
         self.searchController.searchBar.searchTextField.textColor = .black
         self.searchController.searchBar.barTintColor = .black
         self.currentState = SearchBarState.none
+        
+        let textFieldSearchBar = searchController.searchBar.value(forKey: "searchField") as? UITextField
+        let magnifyingGlass = textFieldSearchBar?.leftView as? UIImageView
+        magnifyingGlass?.tintColor = Colors.buttonColor
+        
     }
     
     /// This method is called when the search bar's text changes
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
+        currentState = .suggestions
         isFiltering = true
-        
+        self.filteredProperties = []
         //Filtering cities from searchText
         filteredCities = cities.filter({( city : City) -> Bool in
             
@@ -349,15 +380,12 @@ extension ExploreViewController: UISearchBarDelegate {
         tableView.reloadData()
     }
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print()
-    }
-    
     /// This method is called when the search bar is touched
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
         
         //Change the current state to suggestions when touching the search bar
         self.currentState = SearchBarState.suggestions
+        self.filteredProperties = []
         self.headerView.isHidden = true
         self.headerView.frame.size.height = 0
         self.tableView.reloadData()
@@ -367,12 +395,14 @@ extension ExploreViewController: UISearchBarDelegate {
     
     /// This method is called when the search bar's cancel button is touched
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.filteredProperties = []
         self.currentState = .none
         self.headerView.isHidden = false
-        self.headerView.frame.size.height = 288
+        self.headerView.frame.size.height = 382
         isFiltering = false
         self.tableView.reloadData()
     }
+
 }
 
 extension ExploreViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
