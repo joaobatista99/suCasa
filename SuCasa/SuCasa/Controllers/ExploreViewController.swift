@@ -345,16 +345,15 @@ extension ExploreViewController: UISearchBarDelegate {
         self.searchController.searchBar.delegate = self
         self.searchController.obscuresBackgroundDuringPresentation = false
         self.searchController.searchBar.placeholder = "Experimente 'Apartamento'"
+        self.searchController.searchBar.searchTextField.textColor = .black
         self.navigationItem.searchController = self.searchController
         definesPresentationContext = false
         self.navigationItem.hidesSearchBarWhenScrolling = false
-        self.searchController.searchBar.searchTextField.textColor = .black
-        self.searchController.searchBar.barTintColor = .black
         self.currentState = SearchBarState.none
         
         let textFieldSearchBar = searchController.searchBar.value(forKey: "searchField") as? UITextField
         let magnifyingGlass = textFieldSearchBar?.leftView as? UIImageView
-        magnifyingGlass?.tintColor = Colors.buttonColor
+        magnifyingGlass?.tintColor = .gray
         
     }
     

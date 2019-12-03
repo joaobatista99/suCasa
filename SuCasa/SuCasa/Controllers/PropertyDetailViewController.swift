@@ -41,7 +41,7 @@ class PropertyDetailViewController: UIViewController {
             self.distanceLabel.text = str + b + " km"
         }
         
-        self.priceLabel.text = String(property.price)
+        self.priceLabel.text = "R$" + String(property.price)
         if(property.numberOfBeds == 1){
             self.vacancyLabel.text = String(property.numberOfBeds) + " Lugar"
         }
