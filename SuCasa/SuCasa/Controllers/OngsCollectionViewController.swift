@@ -23,19 +23,32 @@ class OngsCollectionViewController: UIViewController {
 
         OngsCollectionView.delegate = self
         OngsCollectionView.dataSource = self
-        
+         self.navigationController?.navigationBar.tintColor = Colors.buttonColor
     }
     
+
+    override func viewWillAppear(_ animated: Bool) {
+           super.viewWillAppear(animated)
+           tabBarController?.tabBar.isHidden = true
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+           super.viewWillDisappear(animated)
+           tabBarController?.tabBar.isHidden = false
+    }
+    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier  == "showOngDetail" {
             let detailOngVc = segue.destination as? OngDetailViewController
             detailOngVc?.ong = self.selectedOng
-        }
-        
+        }    
     }
+
     
 }
+
+
 
 extension OngsCollectionViewController :  UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     

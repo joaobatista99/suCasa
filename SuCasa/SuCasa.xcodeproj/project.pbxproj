@@ -30,6 +30,7 @@
 		5E55AA1D237B351800887772 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E55AA1C237B351800887772 /* TitleViewController.swift */; };
 		5E75BB61238EE754007A0EE6 /* CompleteRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75BB60238EE754007A0EE6 /* CompleteRegistrationViewController.swift */; };
 		5E75BB65238EEB39007A0EE6 /* LoadingAnimationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75BB64238EEB39007A0EE6 /* LoadingAnimationExtension.swift */; };
+		5E9D49952391A696002A7BDF /* PropertyDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9D49942391A696002A7BDF /* PropertyDetailTableViewController.swift */; };
 		BA075ACF2383066D001CAE86 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA075ACE2383066D001CAE86 /* LocationViewController.swift */; };
 		BA1B7D932386DB3C00D06E3A /* CarouselItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA1B7D922386DB3C00D06E3A /* CarouselItem.xib */; };
 		BA1B7D952386DCA000D06E3A /* PropertyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1B7D942386DCA000D06E3A /* PropertyDetailViewController.swift */; };
@@ -95,6 +96,7 @@
 		5E55AA1C237B351800887772 /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
 		5E75BB60238EE754007A0EE6 /* CompleteRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteRegistrationViewController.swift; sourceTree = "<group>"; };
 		5E75BB64238EEB39007A0EE6 /* LoadingAnimationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimationExtension.swift; sourceTree = "<group>"; };
+		5E9D49942391A696002A7BDF /* PropertyDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailTableViewController.swift; sourceTree = "<group>"; };
 		8F6CA9F7B8D35C36B0A15AB3 /* Pods-SuCasa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuCasa.debug.xcconfig"; path = "Target Support Files/Pods-SuCasa/Pods-SuCasa.debug.xcconfig"; sourceTree = "<group>"; };
 		AB9A42759A6AEB44F15643F6 /* Pods_SuCasa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuCasa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA075ACE2383066D001CAE86 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				366757A2238EDA450085ED4F /* OngDetailViewController.swift */,
 				BA1B7D942386DCA000D06E3A /* PropertyDetailViewController.swift */,
 				BA1B7D982386DF2B00D06E3A /* CarouselPageViewController.swift */,
+				5E9D49942391A696002A7BDF /* PropertyDetailTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				BA1B7D972386DCFA00D06E3A /* CarouselItem.swift in Sources */,
 				BAB8DA07237201200039CBC5 /* IntroViewController.swift in Sources */,
 				5E033A2023843AAC001AC697 /* MonthlyViewController.swift in Sources */,
+				5E9D49952391A696002A7BDF /* PropertyDetailTableViewController.swift in Sources */,
 				5E5458E123901FEB00D4E13D /* LocationServices.swift in Sources */,
 				368DA2272386C3EA0035BE02 /* PropertyServices.swift in Sources */,
 				5E55AA1B237B34FD00887772 /* AddPhotosViewController.swift in Sources */,
@@ -630,7 +634,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9KU377264X;
+				DEVELOPMENT_TEAM = NQW9RC6R9A;
 				INFOPLIST_FILE = SuCasa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -650,7 +654,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9KU377264X;
+				DEVELOPMENT_TEAM = NQW9RC6R9A;
 				INFOPLIST_FILE = SuCasa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
