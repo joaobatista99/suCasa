@@ -337,7 +337,7 @@
                                             <color key="textColor" red="0.39241147040000002" green="0.40347844360000001" blue="0.443143338" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waiting" translatesAutoresizingMaskIntoConstraints="NO" id="Udl-4G-0Lp">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PIN_Location" translatesAutoresizingMaskIntoConstraints="NO" id="Udl-4G-0Lp">
                                             <rect key="frame" x="20" y="14" width="37.5" height="36"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yd7-RX-l0L">
@@ -485,6 +485,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="waiting" width="262" height="193"/>
+        <image name="PIN_Location" width="450" height="450"/>
     </resources>
 </document>
