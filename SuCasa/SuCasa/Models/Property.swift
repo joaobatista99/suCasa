@@ -49,7 +49,7 @@ class Property {
     var price                 : Float
     var monthsAvailable       : Int
     var urls                  : [String]
-    var coordinates           : CLLocation
+    //var coordinates           : CLLocation
 
     init(){
         self.space = ""
@@ -67,12 +67,12 @@ class Property {
         self.price = 0.0
         self.monthsAvailable = 0
         self.urls = []
-        self.coordinates = CLLocation()
+        //self.coordinates = CLLocation()
     }
     
     init(space: String, type: String, guestsTotal: Int, numberOfRooms: Int, numberOfBeds: Int,
         country: String, address: String, city: String, postalCode: Int, complement: String,
-        title: String, rules: String, price: Float, monthsAvailable: Int, urls: [String], coordinates: CLLocation)  {
+        title: String, rules: String, price: Float, monthsAvailable: Int, urls: [String])  {
         
         self.space = space
         self.type = type
@@ -89,7 +89,7 @@ class Property {
         self.price = price
         self.monthsAvailable = monthsAvailable
         self.urls = urls
-        self.coordinates = coordinates
+        //self.coordinates = coordinates
     }
     
 }

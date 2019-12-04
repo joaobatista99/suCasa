@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Anúncios-->
+        <!--Alugueis-->
         <scene sceneID="c3d-7j-mje">
             <objects>
                 <viewController id="s7G-6i-Vpu" customClass="AdViewController" customModule="SuCasa" customModuleProvider="target" sceneMemberID="viewController">
@@ -61,7 +61,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PAs-DT-4sZ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Anúncios" largeTitleDisplayMode="always" id="b9I-MN-Oi4">
+                    <navigationItem key="navigationItem" title="Alugueis" largeTitleDisplayMode="always" id="b9I-MN-Oi4">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="z6z-rN-pA6">
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
@@ -74,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yXB-wr-x5t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1704.3478260869567" y="-389.0625"/>
+            <point key="canvasLocation" x="2614.4927536231885" y="-389.0625"/>
         </scene>
         <!--PropertyRegistration-->
         <scene sceneID="BKl-fC-TlG">
@@ -86,12 +86,13 @@
             </objects>
             <point key="canvasLocation" x="2973" y="-862"/>
         </scene>
-        <!--Anuncie-->
+        <!--Alugueis-->
         <scene sceneID="SbZ-b9-Yb2">
             <objects>
                 <navigationController storyboardIdentifier="Ad" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gE9-WU-LaB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Anuncie" id="DMX-At-6fk"/>
+                    <tabBarItem key="tabBarItem" title="Alugueis" image="House_off" id="3MN-Z5-ycj"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="BlN-Wt-6ES">
                         <rect key="frame" x="0.0" y="44" width="414" height="104"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -111,11 +112,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IJ2-tB-hEj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="794.20289855072474" y="-389.0625"/>
+            <point key="canvasLocation" x="1704.3478260869567" y="-389.0625"/>
         </scene>
     </scenes>
     <resources>
         <image name="Alugueis" width="359" height="342"/>
+        <image name="House_off" width="25" height="25"/>
         <namedColor name="Color">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

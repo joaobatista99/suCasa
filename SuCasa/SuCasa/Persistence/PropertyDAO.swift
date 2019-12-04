@@ -35,7 +35,7 @@ class PropertyDAO {
                 "price": property.price,
                 "monthsAvailable": property.monthsAvailable,
                 "urls": property.urls,
-                "coordinates": property.coordinates
+                //"coordinates": property.coordinates
             ]) { err in
                 if let err = err {
                     print("Error adding document: \(err)")

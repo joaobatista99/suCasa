@@ -84,14 +84,14 @@ class PropertyServices {
                 let price = document.get("price") as!                           Float
                 let monthsAvailable = document.get("monthsAvailable") as!       Int
                 let urls = document.get("urls") as!                             [String]
-                let coordinates = document.get("coordinates") as!               GeoPoint
+                //let coordinates = document.get("coordinates") as!               GeoPoint
                 
-                let lat = coordinates.latitude
-                let long = coordinates.longitude
+//                let lat = coordinates.latitude
+//                let long = coordinates.longitude
+//                
+//                let point = CLLocation(latitude: lat, longitude: long)
                 
-                let point = CLLocation(latitude: lat, longitude: long)
-                
-                let property = Property(space: space, type: type, guestsTotal: guestsTotal, numberOfRooms: numberOfRooms, numberOfBeds: numberOfBeds, country: country, address: address, city: city, postalCode: postalCode, complement: complement, title: title, rules: rules, price: price, monthsAvailable: monthsAvailable, urls: urls, coordinates: point)
+                let property = Property(space: space, type: type, guestsTotal: guestsTotal, numberOfRooms: numberOfRooms, numberOfBeds: numberOfBeds, country: country, address: address, city: city, postalCode: postalCode, complement: complement, title: title, rules: rules, price: price, monthsAvailable: monthsAvailable, urls: urls)
                 
                 prop.append(property)
                 
