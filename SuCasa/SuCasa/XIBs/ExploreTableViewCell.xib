@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -41,13 +41,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="It2-LI-Nr1">
-                        <rect key="frame" x="16" y="223" width="83" height="16"/>
+                        <rect key="frame" x="16" y="223" width="103.5" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disponibilidade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBk-3J-1kE">
-                        <rect key="frame" x="119" y="223" width="93" height="16"/>
+                        <rect key="frame" x="139.5" y="223" width="93" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -58,7 +58,7 @@
                     <constraint firstItem="4RV-3U-AUP" firstAttribute="leading" secondItem="It2-LI-Nr1" secondAttribute="leading" id="71Q-Z2-d0Q"/>
                     <constraint firstAttribute="trailing" secondItem="G9v-Wv-aiF" secondAttribute="trailing" constant="15" id="7Ao-Vh-XUd"/>
                     <constraint firstItem="G9v-Wv-aiF" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.67451" id="9ck-lF-2d9"/>
-                    <constraint firstItem="It2-LI-Nr1" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.2" id="CRd-c1-kWb"/>
+                    <constraint firstItem="It2-LI-Nr1" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.25" id="CRd-c1-kWb"/>
                     <constraint firstItem="4RV-3U-AUP" firstAttribute="top" secondItem="TMF-Y9-m1i" secondAttribute="bottom" id="F4X-ap-iWX"/>
                     <constraint firstItem="G9v-Wv-aiF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Hem-va-kwi"/>
                     <constraint firstItem="G9v-Wv-aiF" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.925121" id="Mla-5P-gPg"/>

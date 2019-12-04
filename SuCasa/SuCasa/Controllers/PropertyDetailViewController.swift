@@ -27,7 +27,7 @@ class PropertyDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        LocationUtil.shared.getLocationFromString(forPlaceCalled: property.address) { (location) in
+        LocationUtil.getLocationFromString(forPlaceCalled: property.address) { (location) in
             let getLoc = location!.coordinate
             let getLat: CLLocationDegrees = getLoc.latitude
             let getLong: CLLocationDegrees = getLoc.longitude
@@ -41,7 +41,7 @@ class PropertyDetailViewController: UIViewController {
             self.distanceLabel.text = str + b + " km"
         }
         
-        self.priceLabel.text = "R$" + String(property.price)
+        self.priceLabel.text = "R$" + String(format: "%.2f", self.property.price)
         if(property.numberOfBeds == 1){
             self.vacancyLabel.text = String(property.numberOfBeds) + " Lugar"
         }

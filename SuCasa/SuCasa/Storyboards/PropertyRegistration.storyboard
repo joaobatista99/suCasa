@@ -3,7 +3,7 @@
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -152,7 +152,18 @@
                         <viewLayoutGuide key="safeArea" id="1LD-S1-gL0"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="98X-ZB-T5o">
+                        <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title=" " id="1vp-sc-zI7"/>
+                        <view key="titleView" contentMode="scaleToFill" id="c8E-QN-5aU">
+                            <rect key="frame" x="177" y="19" width="60" height="6"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                         <barButtonItem key="rightBarButtonItem" systemItem="stop" id="huh-eV-q8L">
                             <color key="tintColor" red="0.38467586040000001" green="0.097716085610000003" blue="0.15748378630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -169,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOq-ac-ouy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="278" y="103"/>
+            <point key="canvasLocation" x="276.81159420289856" y="102.45535714285714"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="h4L-mP-LZg">
@@ -411,7 +422,18 @@
                         <viewLayoutGuide key="safeArea" id="bp1-Kz-17w"/>
                     </view>
                     <navigationItem key="navigationItem" id="4Xe-nw-gXC">
+                        <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title=" " id="3lc-uX-RO0"/>
+                        <view key="titleView" contentMode="scaleToFill" id="Iq5-Ou-43I">
+                            <rect key="frame" x="177" y="19" width="60" height="6"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                     </navigationItem>
                     <connections>
                         <outlet property="bedNumberTextField" destination="OxW-aV-zSh" id="jj7-7V-GIE"/>
@@ -681,7 +703,18 @@
                         <viewLayoutGuide key="safeArea" id="9wF-ON-6F8"/>
                     </view>
                     <navigationItem key="navigationItem" id="8EC-WG-32t">
+                        <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title=" " id="EwE-K7-KBH"/>
+                        <view key="titleView" contentMode="scaleToFill" id="xfs-zX-O7U">
+                            <rect key="frame" x="177" y="19" width="60" height="6"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                     </navigationItem>
                     <connections>
                         <outlet property="adressTextField" destination="KaQ-l2-RYj" id="YSN-l0-FMG"/>
@@ -786,7 +819,18 @@
                         <viewLayoutGuide key="safeArea" id="zn5-ug-JVz"/>
                     </view>
                     <navigationItem key="navigationItem" id="HYJ-Zk-vpL">
+                        <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title=" " id="IwY-7i-LjE"/>
+                        <view key="titleView" contentMode="scaleToFill" id="VgR-X2-DSb">
+                            <rect key="frame" x="177" y="19" width="60" height="6"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                     </navigationItem>
                     <connections>
                         <outlet property="nextButton" destination="qjP-vQ-Wbf" id="xng-WS-SIn"/>
@@ -909,7 +953,18 @@
                         <viewLayoutGuide key="safeArea" id="wUd-KJ-LjC"/>
                     </view>
                     <navigationItem key="navigationItem" id="OmV-kh-p0w">
+                        <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title=" " id="euP-EB-tFV"/>
+                        <view key="titleView" contentMode="scaleToFill" id="q1p-uV-7si">
+                            <rect key="frame" x="177" y="19" width="60" height="6"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                     </navigationItem>
                     <connections>
                         <outlet property="nextButton" destination="db6-bB-vKm" id="fhD-tw-Msi"/>
@@ -1031,7 +1086,18 @@
                         <viewLayoutGuide key="safeArea" id="krl-xw-DGx"/>
                     </view>
                     <navigationItem key="navigationItem" id="F1J-lK-EDS">
+                        <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title=" " id="R5l-ud-MDi"/>
+                        <view key="titleView" contentMode="scaleToFill" id="3id-pH-Yf9">
+                            <rect key="frame" x="177" y="19" width="60" height="6"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                     </navigationItem>
                     <connections>
                         <outlet property="monsthsQuantity" destination="nQ7-2p-Ixq" id="ZAu-Sg-E5I"/>
@@ -1085,7 +1151,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1OT-mM-ehn"/>
                     </view>
-                    <navigationItem key="navigationItem" id="8qc-ve-rLR"/>
+                    <navigationItem key="navigationItem" id="8qc-ve-rLR">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="K4j-Oh-Mft">
+                            <rect key="frame" x="177" y="19" width="60" height="6"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </navigationItem>
                     <connections>
                         <outlet property="dismissButton" destination="TaS-US-KkY" id="MWg-oh-DW2"/>
                     </connections>

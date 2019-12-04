@@ -34,7 +34,8 @@ class PropertyDAO {
                 "rules": property.rules,
                 "price": property.price,
                 "monthsAvailable": property.monthsAvailable,
-                "urls": property.urls
+                "urls": property.urls,
+                //"coordinates": property.coordinates
             ]) { err in
                 if let err = err {
                     print("Error adding document: \(err)")
@@ -45,8 +46,6 @@ class PropertyDAO {
                 }
             }
         }
-        
-        print("URL GERADO: \(property.urls)")
     }
     
 }

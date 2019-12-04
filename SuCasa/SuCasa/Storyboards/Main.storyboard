@@ -337,7 +337,7 @@
                                             <color key="textColor" red="0.39241147040000002" green="0.40347844360000001" blue="0.443143338" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waiting" translatesAutoresizingMaskIntoConstraints="NO" id="Udl-4G-0Lp">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PIN_Location" translatesAutoresizingMaskIntoConstraints="NO" id="Udl-4G-0Lp">
                                             <rect key="frame" x="20" y="14" width="37.5" height="36"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yd7-RX-l0L">
@@ -451,6 +451,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.96477109189999999" green="0.97252160310000002" blue="0.97255045179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.80982679130000002" green="0.28504809739999998" blue="0.37646716829999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="O53-D9-b9l" kind="relationship" relationship="viewControllers" id="m2s-S0-thZ"/>
@@ -466,7 +467,7 @@
         <scene sceneID="9hD-88-HdC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O53-D9-b9l" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Explore" id="NDd-gS-Wxl"/>
+                    <tabBarItem key="tabBarItem" title="Explore" image="Explorer_off" id="NDd-gS-Wxl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GFD-S2-YVr">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -485,6 +486,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="waiting" width="262" height="193"/>
+        <image name="Explorer_off" width="50" height="50"/>
+        <image name="PIN_Location" width="450" height="450"/>
     </resources>
 </document>
