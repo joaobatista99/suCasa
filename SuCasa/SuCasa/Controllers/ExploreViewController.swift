@@ -118,7 +118,7 @@ class ExploreViewController: UIViewController {
         var distanceString: String = ""
         print(property.address)
         
-        LocationUtil.shared.getLocationFromString(forPlaceCalled: property.address) { (location) in
+        LocationUtil.getLocationFromString(forPlaceCalled: property.address) { (location) in
             
             let loc = location!.coordinate
             let lat = loc.latitude

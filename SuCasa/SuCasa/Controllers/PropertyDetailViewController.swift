@@ -27,7 +27,7 @@ class PropertyDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        LocationUtil.shared.getLocationFromString(forPlaceCalled: property.address) { (location) in
+        LocationUtil.getLocationFromString(forPlaceCalled: property.address) { (location) in
             let getLoc = location!.coordinate
             let getLat: CLLocationDegrees = getLoc.latitude
             let getLong: CLLocationDegrees = getLoc.longitude

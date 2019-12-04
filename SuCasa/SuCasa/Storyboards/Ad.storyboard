@@ -3,7 +3,7 @@
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,31 +23,30 @@
                                 <color key="separatorColor" name="Color"/>
                                 <color key="sectionIndexBackgroundColor" name="Color"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="9mW-AO-aL8">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="137"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="482"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="751" text="Você ainda não tem imóveis para aluguel cadastrados." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Skl-81-kYi">
-                                            <rect key="frame" x="20" y="9.9999999999999964" width="372.66666666666669" height="58.666666666666657"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Skl-81-kYi">
+                                            <rect key="frame" x="20" y="10" width="373" height="76.666666666666671"/>
+                                            <string key="text">Você ainda não tem imóveis para aluguel cadastrados. Depois de realizar o cadastro, você pode acompanhar por aqui seus imóveis e informações.</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Depois de realizar o cadastro, você pode acompanhar por aqui seus imóveis e informações." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1X7-z2-u5H">
-                                            <rect key="frame" x="20" y="66.666666666666671" width="372.66666666666669" height="38.333333333333329"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Alugueis" translatesAutoresizingMaskIntoConstraints="NO" id="gmh-HW-bZH">
+                                            <rect key="frame" x="20" y="118.66666666666666" width="359" height="358.33333333333337"/>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" name="Color"/>
                                     <constraints>
-                                        <constraint firstItem="1X7-z2-u5H" firstAttribute="leading" secondItem="Skl-81-kYi" secondAttribute="leading" id="6FZ-X8-GFE"/>
-                                        <constraint firstItem="Skl-81-kYi" firstAttribute="width" secondItem="9mW-AO-aL8" secondAttribute="width" multiplier="0.9" id="DbD-f7-2dn"/>
-                                        <constraint firstItem="Skl-81-kYi" firstAttribute="bottom" secondItem="9mW-AO-aL8" secondAttribute="centerY" id="FxK-hb-SRV"/>
-                                        <constraint firstItem="1X7-z2-u5H" firstAttribute="width" secondItem="9mW-AO-aL8" secondAttribute="width" multiplier="0.9" id="JX0-qm-UFf"/>
-                                        <constraint firstItem="1X7-z2-u5H" firstAttribute="top" secondItem="Skl-81-kYi" secondAttribute="bottom" constant="-2" id="S46-eZ-vqH"/>
-                                        <constraint firstItem="Skl-81-kYi" firstAttribute="leading" secondItem="9mW-AO-aL8" secondAttribute="leading" constant="20" id="W0S-2S-zmi"/>
-                                        <constraint firstItem="Skl-81-kYi" firstAttribute="top" secondItem="9mW-AO-aL8" secondAttribute="top" constant="10" id="eF1-Im-aNG"/>
+                                        <constraint firstItem="gmh-HW-bZH" firstAttribute="top" secondItem="Skl-81-kYi" secondAttribute="bottom" constant="31.999999999999986" id="E4D-k5-Tuf"/>
+                                        <constraint firstAttribute="bottom" secondItem="gmh-HW-bZH" secondAttribute="bottom" constant="5" id="TQ0-ob-QfR"/>
+                                        <constraint firstItem="Skl-81-kYi" firstAttribute="width" secondItem="9mW-AO-aL8" secondAttribute="width" multiplier="0.900966" id="Xky-ga-eWV"/>
+                                        <constraint firstItem="gmh-HW-bZH" firstAttribute="height" secondItem="9mW-AO-aL8" secondAttribute="height" multiplier="0.743478" id="acR-YU-cCZ"/>
+                                        <constraint firstItem="Skl-81-kYi" firstAttribute="leading" secondItem="9mW-AO-aL8" secondAttribute="leading" constant="20" id="eYe-Cj-XNr"/>
+                                        <constraint firstItem="Skl-81-kYi" firstAttribute="top" secondItem="9mW-AO-aL8" secondAttribute="top" constant="10" id="mfT-T9-w2v"/>
+                                        <constraint firstItem="gmh-HW-bZH" firstAttribute="width" secondItem="9mW-AO-aL8" secondAttribute="width" multiplier="0.86715" id="p1L-UZ-fOV"/>
+                                        <constraint firstItem="gmh-HW-bZH" firstAttribute="leading" secondItem="Skl-81-kYi" secondAttribute="leading" id="tC5-2d-B37"/>
                                     </constraints>
                                 </view>
                             </tableView>
@@ -94,7 +93,7 @@
                     <tabBarItem key="tabBarItem" title="Anuncie" id="DMX-At-6fk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="BlN-Wt-6ES">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
@@ -116,6 +115,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Alugueis" width="359" height="342"/>
         <namedColor name="Color">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
