@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -43,13 +43,13 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="It2-LI-Nr1">
                         <rect key="frame" x="16" y="223" width="103.5" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disponibilidade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBk-3J-1kE">
-                        <rect key="frame" x="139.5" y="223" width="93" height="16"/>
+                        <rect key="frame" x="143.5" y="223" width="93" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -64,10 +64,10 @@
                     <constraint firstItem="G9v-Wv-aiF" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.925121" id="Mla-5P-gPg"/>
                     <constraint firstItem="TMF-Y9-m1i" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.92" id="PIO-td-Rke"/>
                     <constraint firstItem="TMF-Y9-m1i" firstAttribute="leading" secondItem="4RV-3U-AUP" secondAttribute="leading" id="Rd0-i3-xwT"/>
+                    <constraint firstItem="PBk-3J-1kE" firstAttribute="leading" secondItem="It2-LI-Nr1" secondAttribute="trailing" constant="24" id="dag-26-tIa"/>
                     <constraint firstItem="G9v-Wv-aiF" firstAttribute="leading" secondItem="TMF-Y9-m1i" secondAttribute="leading" id="gTp-SB-jMF"/>
                     <constraint firstItem="4RV-3U-AUP" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.92" id="jjE-om-9Md"/>
                     <constraint firstItem="4RV-3U-AUP" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.0803922" id="ncb-i9-L4g"/>
-                    <constraint firstItem="PBk-3J-1kE" firstAttribute="leading" secondItem="It2-LI-Nr1" secondAttribute="trailing" constant="20" id="oIz-jz-1eP"/>
                     <constraint firstItem="PBk-3J-1kE" firstAttribute="centerY" secondItem="It2-LI-Nr1" secondAttribute="centerY" id="x9P-82-OPe"/>
                     <constraint firstItem="G9v-Wv-aiF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="z88-gM-4qd"/>
                     <constraint firstItem="TMF-Y9-m1i" firstAttribute="top" secondItem="G9v-Wv-aiF" secondAttribute="bottom" constant="4" id="zqz-3X-c1v"/>

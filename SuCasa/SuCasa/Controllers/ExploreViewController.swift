@@ -118,22 +118,16 @@ class ExploreViewController: UIViewController {
         var distanceString: String = ""
         print(property.address)
         
-        LocationUtil.getLocationFromString(forPlaceCalled: property.address) { (location) in
-            
-            let loc = location!.coordinate
-            let lat = loc.latitude
-            let long = loc.longitude
-            
-            self.propertyLocation = CLLocation(latitude: lat, longitude: long)
-            self.distance = LocationUtil.shared.distanceBetweenCoordinates(placeLoc: self.propertyLocation)
-            
-            self.distance = self.distance / 1000
-            
-            distanceString = "APROX. " + String(format: "%.1f", self.distance) + "Km"
-            print(distanceString)
-            completion(distanceString)
-        }
+        self.propertyLocation = CLLocation(latitude: property.coordinates.latitude, longitude: property.coordinates.longitude)
         
+        self.distance = LocationUtil.shared.distanceBetweenCoordinates(placeLoc: self.propertyLocation)
+        
+        self.distance = self.distance / 1000
+        
+        distanceString = "APROX. " + String(format: "%.1f", self.distance) + "Km"
+        print(distanceString)
+        completion(distanceString)
+       
     }
     
     @IBAction func seeAllOngsButton(_ sender: Any) {
@@ -154,6 +148,7 @@ class ExploreViewController: UIViewController {
         else if segue.identifier == "showPropertyDetail" {
             let propertyDetail = segue.destination as? PropertyDetailViewController
             propertyDetail?.property = self.selectedProperty
+            propertyDetail?.ongs     = self.ongs
         }
         
     }
@@ -371,8 +366,7 @@ extension ExploreViewController: UISearchBarDelegate {
     func setSearchController() {
         self.searchController.searchBar.delegate = self
         self.searchController.obscuresBackgroundDuringPresentation = false
-        self.searchController.searchBar.placeholder = "Experimente 'Apartamento'"
-        self.searchController.searchBar.searchTextField.textColor = .black
+        self.searchController.searchBar.placeholder = "Experimente 'Campinas'"
         self.navigationItem.searchController = self.searchController
         definesPresentationContext = false
         self.navigationItem.hidesSearchBarWhenScrolling = false
@@ -380,6 +374,7 @@ extension ExploreViewController: UISearchBarDelegate {
         
         let textFieldSearchBar = searchController.searchBar.value(forKey: "searchField") as? UITextField
         let magnifyingGlass = textFieldSearchBar?.leftView as? UIImageView
+        textFieldSearchBar?.textColor = Colors.textColor
         magnifyingGlass?.tintColor = .gray
         
     }

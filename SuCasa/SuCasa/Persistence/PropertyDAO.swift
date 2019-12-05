@@ -15,7 +15,7 @@ class PropertyDAO {
     static func createNewProperty(property: Property, photos: [UIImage], completion: @escaping () -> ()) {
         
         PropertyServices.savePhotos(photos: photos, property: property) {
-            
+            let geopoint = GeoPoint(latitude: property.coordinates.latitude, longitude: property.coordinates.longitude)
             let db = Firestore.firestore()
         
             var ref: DocumentReference? = nil
@@ -35,7 +35,7 @@ class PropertyDAO {
                 "price": property.price,
                 "monthsAvailable": property.monthsAvailable,
                 "urls": property.urls,
-                //"coordinates": property.coordinates
+                "coordinates": geopoint
             ]) { err in
                 if let err = err {
                     print("Error adding document: \(err)")

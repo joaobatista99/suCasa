@@ -23,7 +23,9 @@ class OngsCollectionViewController: UIViewController {
 
         OngsCollectionView.delegate = self
         OngsCollectionView.dataSource = self
-         self.navigationController?.navigationBar.tintColor = Colors.buttonColor
+        
+        self.navigationController?.navigationBar.tintColor = .white
+        
     }
     
 

@@ -77,9 +77,6 @@ class TitleViewController: UIViewController {
         if titleTextField.text!.isEmpty {
             return false
         }
-        else if rulesTextField.text!.isEmpty {
-            return false
-        }
         
         //If all text field is filled, return true
         return true

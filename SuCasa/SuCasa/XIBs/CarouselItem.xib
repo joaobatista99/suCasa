@@ -20,13 +20,13 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Djq-M9-Wcs">
-                    <rect key="frame" x="0.0" y="44" width="517" height="571"/>
+                    <rect key="frame" x="0.0" y="0.0" width="517" height="649"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DFi-5P-IVA">
-                            <rect key="frame" x="0.0" y="0.0" width="517" height="571"/>
+                            <rect key="frame" x="0.0" y="0.0" width="517" height="649"/>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="DFi-5P-IVA" firstAttribute="leading" secondItem="Djq-M9-Wcs" secondAttribute="leading" id="8T1-dE-p38"/>
                         <constraint firstItem="DFi-5P-IVA" firstAttribute="top" secondItem="Djq-M9-Wcs" secondAttribute="top" id="UCc-1D-11M"/>
@@ -35,12 +35,12 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="Djq-M9-Wcs" firstAttribute="leading" secondItem="qE3-Gc-1eO" secondAttribute="leading" id="0UT-0V-NB0"/>
-                <constraint firstItem="qE3-Gc-1eO" firstAttribute="trailing" secondItem="Djq-M9-Wcs" secondAttribute="trailing" id="lpS-lZ-hWr"/>
-                <constraint firstItem="qE3-Gc-1eO" firstAttribute="bottom" secondItem="Djq-M9-Wcs" secondAttribute="bottom" id="mMB-p8-mZk"/>
-                <constraint firstItem="Djq-M9-Wcs" firstAttribute="top" secondItem="qE3-Gc-1eO" secondAttribute="top" id="rsv-7d-iXw"/>
+                <constraint firstItem="Djq-M9-Wcs" firstAttribute="leading" secondItem="haO-mt-aHn" secondAttribute="leading" id="0UT-0V-NB0"/>
+                <constraint firstAttribute="trailing" secondItem="Djq-M9-Wcs" secondAttribute="trailing" id="lpS-lZ-hWr"/>
+                <constraint firstAttribute="bottom" secondItem="Djq-M9-Wcs" secondAttribute="bottom" id="mMB-p8-mZk"/>
+                <constraint firstItem="Djq-M9-Wcs" firstAttribute="top" secondItem="haO-mt-aHn" secondAttribute="top" id="rsv-7d-iXw"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>

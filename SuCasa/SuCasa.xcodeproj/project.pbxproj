@@ -40,18 +40,9 @@
 		BA1B7D972386DCFA00D06E3A /* CarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1B7D962386DCFA00D06E3A /* CarouselItem.swift */; };
 		BA1B7D992386DF2B00D06E3A /* CarouselPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1B7D982386DF2B00D06E3A /* CarouselPageViewController.swift */; };
 		BA36C53F23904FED00EC1517 /* RoundedBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA36C53E23904FED00EC1517 /* RoundedBorderButton.swift */; };
+		BA4871302398193A008602E2 /* CustomNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA48712F23981939008602E2 /* CustomNavViewController.swift */; };
 		BA5D40DA2375EA050041AC6B /* AdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5D40D92375EA050041AC6B /* AdViewController.swift */; };
 		BA5D40DC2375F93A0041AC6B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5D40DB2375F93A0041AC6B /* Login.storyboard */; };
-		BA670ED3237457F9005E3FDA /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA670EC9237457F8005E3FDA /* OpenSans-BoldItalic.ttf */; };
-		BA670ED4237457F9005E3FDA /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA670ECA237457F8005E3FDA /* OpenSans-ExtraBold.ttf */; };
-		BA670ED5237457F9005E3FDA /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA670ECB237457F8005E3FDA /* OpenSans-ExtraBoldItalic.ttf */; };
-		BA670ED6237457F9005E3FDA /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA670ECC237457F8005E3FDA /* OpenSans-LightItalic.ttf */; };
-		BA670ED7237457F9005E3FDA /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA670ECD237457F9005E3FDA /* OpenSans-Regular.ttf */; };
-		BA670ED8237457F9005E3FDA /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA670ECE237457F9005E3FDA /* OpenSans-Bold.ttf */; };
-		BA670ED9237457F9005E3FDA /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA670ECF237457F9005E3FDA /* OpenSans-Italic.ttf */; };
-		BA670EDA237457F9005E3FDA /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA670ED0237457F9005E3FDA /* OpenSans-Semibold.ttf */; };
-		BA670EDB237457F9005E3FDA /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA670ED1237457F9005E3FDA /* OpenSans-Light.ttf */; };
-		BA670EDC237457F9005E3FDA /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA670ED2237457F9005E3FDA /* OpenSans-SemiboldItalic.ttf */; };
 		BA670EDF23746054005E3FDA /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA670EDE23746054005E3FDA /* Profile.storyboard */; };
 		BA7794B623735DB700F8D024 /* Ad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA7794B523735DB700F8D024 /* Ad.storyboard */; };
 		BA9FC263238ED94100D2D3A5 /* PropertyDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9FC262238ED94100D2D3A5 /* PropertyDetail.storyboard */; };
@@ -111,18 +102,9 @@
 		BA1B7D962386DCFA00D06E3A /* CarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItem.swift; sourceTree = "<group>"; };
 		BA1B7D982386DF2B00D06E3A /* CarouselPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselPageViewController.swift; sourceTree = "<group>"; };
 		BA36C53E23904FED00EC1517 /* RoundedBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBorderButton.swift; sourceTree = "<group>"; };
+		BA48712F23981939008602E2 /* CustomNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavViewController.swift; sourceTree = "<group>"; };
 		BA5D40D92375EA050041AC6B /* AdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewController.swift; sourceTree = "<group>"; };
 		BA5D40DB2375F93A0041AC6B /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		BA670EC9237457F8005E3FDA /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
-		BA670ECA237457F8005E3FDA /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
-		BA670ECB237457F8005E3FDA /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
-		BA670ECC237457F8005E3FDA /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
-		BA670ECD237457F9005E3FDA /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
-		BA670ECE237457F9005E3FDA /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
-		BA670ECF237457F9005E3FDA /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
-		BA670ED0237457F9005E3FDA /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
-		BA670ED1237457F9005E3FDA /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
-		BA670ED2237457F9005E3FDA /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		BA670EDE23746054005E3FDA /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		BA7794B523735DB700F8D024 /* Ad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ad.storyboard; sourceTree = "<group>"; };
 		BA9FC262238ED94100D2D3A5 /* PropertyDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PropertyDetail.storyboard; sourceTree = "<group>"; };
@@ -217,23 +199,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		BA670EDD23745801005E3FDA /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				BA670ECE237457F9005E3FDA /* OpenSans-Bold.ttf */,
-				BA670EC9237457F8005E3FDA /* OpenSans-BoldItalic.ttf */,
-				BA670ECA237457F8005E3FDA /* OpenSans-ExtraBold.ttf */,
-				BA670ECB237457F8005E3FDA /* OpenSans-ExtraBoldItalic.ttf */,
-				BA670ECF237457F9005E3FDA /* OpenSans-Italic.ttf */,
-				BA670ED1237457F9005E3FDA /* OpenSans-Light.ttf */,
-				BA670ECC237457F8005E3FDA /* OpenSans-LightItalic.ttf */,
-				BA670ECD237457F9005E3FDA /* OpenSans-Regular.ttf */,
-				BA670ED0237457F9005E3FDA /* OpenSans-Semibold.ttf */,
-				BA670ED2237457F9005E3FDA /* OpenSans-SemiboldItalic.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
 		BAACB3D7238EF2CF00C231F0 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,11 +280,11 @@
 				BAB9EFBD237095CD00B480F1 /* SuCasa.xcdatamodeld */,
 				BAB8D9FE2371DD400039CBC5 /* GoogleService-Info.plist */,
 				BAB9EFC0237095D000B480F1 /* Assets.xcassets */,
-				BA670EDD23745801005E3FDA /* Fonts */,
 				BAB8DA002371E88A0039CBC5 /* Storyboards */,
 				BAB8DA052372004E0039CBC5 /* Controllers */,
 				BA1B7D962386DCFA00D06E3A /* CarouselItem.swift */,
 				BA36C53E23904FED00EC1517 /* RoundedBorderButton.swift */,
+				BA48712F23981939008602E2 /* CustomNavViewController.swift */,
 			);
 			path = SuCasa;
 			sourceTree = "<group>";
@@ -393,15 +358,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA670ED8237457F9005E3FDA /* OpenSans-Bold.ttf in Resources */,
-				BA670EDC237457F9005E3FDA /* OpenSans-SemiboldItalic.ttf in Resources */,
-				BA670ED7237457F9005E3FDA /* OpenSans-Regular.ttf in Resources */,
-				BA670EDB237457F9005E3FDA /* OpenSans-Light.ttf in Resources */,
-				BA670ED3237457F9005E3FDA /* OpenSans-BoldItalic.ttf in Resources */,
-				BA670EDA237457F9005E3FDA /* OpenSans-Semibold.ttf in Resources */,
 				BAB9EFC4237095D000B480F1 /* LaunchScreen.storyboard in Resources */,
 				3658D2042379F75100A96E2F /* brazilCities.csv in Resources */,
-				BA670ED4237457F9005E3FDA /* OpenSans-ExtraBold.ttf in Resources */,
 				BA5D40DC2375F93A0041AC6B /* Login.storyboard in Resources */,
 				BA7794B623735DB700F8D024 /* Ad.storyboard in Resources */,
 				BAB9EFC1237095D000B480F1 /* Assets.xcassets in Resources */,
@@ -416,10 +374,7 @@
 				BAB8DA022371E8AE0039CBC5 /* Main.storyboard in Resources */,
 				3658D1FF2379EAC100A96E2F /* ResultsTableViewCell.xib in Resources */,
 				5E474EB52375D8640083D3A5 /* PropertyRegistration.storyboard in Resources */,
-				BA670ED9237457F9005E3FDA /* OpenSans-Italic.ttf in Resources */,
-				BA670ED5237457F9005E3FDA /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				BA1B7D932386DB3C00D06E3A /* CarouselItem.xib in Resources */,
-				BA670ED6237457F9005E3FDA /* OpenSans-LightItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +455,7 @@
 				5E5458E123901FEB00D4E13D /* LocationServices.swift in Sources */,
 				368DA2272386C3EA0035BE02 /* PropertyServices.swift in Sources */,
 				5E55AA1B237B34FD00887772 /* AddPhotosViewController.swift in Sources */,
+				BA4871302398193A008602E2 /* CustomNavViewController.swift in Sources */,
 				362DB1D0237A23E400D36357 /* City.swift in Sources */,
 				BAACB3CF238EF1D000C231F0 /* OngsCollectionViewController.swift in Sources */,
 				BAEB1462237B30AD008438D4 /* Property.swift in Sources */,
@@ -646,7 +602,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9KU377264X;
+				DEVELOPMENT_TEAM = NQW9RC6R9A;
 				INFOPLIST_FILE = SuCasa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -666,7 +622,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9KU377264X;
+				DEVELOPMENT_TEAM = NQW9RC6R9A;
 				INFOPLIST_FILE = SuCasa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
