@@ -260,7 +260,7 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             
             cell.adPriceLabel.text = "R$ \(property.price)/mês"
             cell.adTitleLabel.text = property.title
-            cell.availabilityLabel.text = "Disponível para \(property.monthsAvailable) pessoas"
+            cell.availabilityLabel.text = "Disponível para \(property.guestsTotal) pessoas"
             
             getDistance(property: property) { (distance) in
                 cell.distanceLabel.text = distance

@@ -42,16 +42,17 @@ class PropertyDetailViewController: UIViewController {
         }
         
         self.priceLabel.text = "R$" + String(format: "%.2f", self.property.price)
-        if(property.numberOfBeds == 1){
-            self.vacancyLabel.text = String(property.numberOfBeds) + " Lugar"
+        
+        if(property.guestsTotal == 1){
+            self.vacancyLabel.text = String(property.guestsTotal) + " Lugar"
         }
-        if(property.numberOfBeds > 1){
-            self.vacancyLabel.text = String(property.numberOfBeds) + " Lugares"
+        else if(property.guestsTotal > 1){
+            self.vacancyLabel.text = String(property.guestsTotal) + " Lugares"
         }
         if(property.numberOfRooms == 1){
             self.roomsLabel.text = String(property.numberOfRooms) + " Quarto"
         }
-        if(property.numberOfBeds > 1){
+        else if(property.numberOfBeds > 1){
             self.roomsLabel.text = String(property.numberOfRooms) + " Quartos"
         }
         
