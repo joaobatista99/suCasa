@@ -94,7 +94,7 @@ class PropertyDetailViewController: UIViewController {
     }
     
     @IBAction func contactButton(_ sender: Any) {
-         let alertOng = UIAlertController(title: "Os Dados de contato são exclusivos para ONG's. " , message: "Entre em contato com alguma ONG para ter mais informações sobre essa locação." , preferredStyle: .alert)
+         let alertOng = UIAlertController(title: "Os dados de contato são exclusivos para ONG's. " , message: "Entre em contato com alguma ONG para ter mais informações sobre essa locação." , preferredStyle: .alert)
         
         alertOng.addAction(UIAlertAction(title: "Conheça as ONG's parceiras", style: .default, handler:{(action) -> Void in
             self.performSegue(withIdentifier: "showOngs", sender: self)
