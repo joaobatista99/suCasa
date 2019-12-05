@@ -39,6 +39,9 @@ class PropertyDetailViewController: UIViewController {
             let str = "Aprox. "
             let b:String = String(format:"%.1f", self.distance)
             self.distanceLabel.text = str + b + " km"
+            
+            self.navigationController?.navigationBar.tintColor = .white
+
         }
         
         self.priceLabel.text = "R$" + String(property.price)
@@ -55,7 +58,7 @@ class PropertyDetailViewController: UIViewController {
             self.roomsLabel.text = String(property.numberOfRooms) + " Quartos"
         }
         
-        self.navigationController?.navigationBar.tintColor = Colors.buttonColor
+        //self.navigationController?.navigationBar.tintColor = Colors.buttonColor
         
     }
     

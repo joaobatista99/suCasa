@@ -35,6 +35,7 @@ class CarouselItem : UIView {
         Bundle.main.loadNibNamed(CarouselItem.carouselItemNib, owner: self, options: nil)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        contentView.translatesAutoresizingMaskIntoConstraints = true
         addSubview(contentView)
     }
 }
