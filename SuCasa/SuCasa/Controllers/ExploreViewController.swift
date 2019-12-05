@@ -118,22 +118,16 @@ class ExploreViewController: UIViewController {
         var distanceString: String = ""
         print(property.address)
         
-        LocationUtil.getLocationFromString(forPlaceCalled: property.address) { (location) in
-            
-            let loc = location!.coordinate
-            let lat = loc.latitude
-            let long = loc.longitude
-            
-            self.propertyLocation = CLLocation(latitude: lat, longitude: long)
-            self.distance = LocationUtil.shared.distanceBetweenCoordinates(placeLoc: self.propertyLocation)
-            
-            self.distance = self.distance / 1000
-            
-            distanceString = "APROX. " + String(format: "%.1f", self.distance) + "Km"
-            print(distanceString)
-            completion(distanceString)
-        }
+        self.propertyLocation = CLLocation(latitude: property.coordinates.latitude, longitude: property.coordinates.longitude)
         
+        self.distance = LocationUtil.shared.distanceBetweenCoordinates(placeLoc: self.propertyLocation)
+        
+        self.distance = self.distance / 1000
+        
+        distanceString = "APROX. " + String(format: "%.1f", self.distance) + "Km"
+        print(distanceString)
+        completion(distanceString)
+       
     }
     
     @IBAction func seeAllOngsButton(_ sender: Any) {

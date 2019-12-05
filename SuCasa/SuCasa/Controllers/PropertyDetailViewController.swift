@@ -28,11 +28,8 @@ class PropertyDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        LocationUtil.getLocationFromString(forPlaceCalled: property.address) { (location) in
-            let getLoc = location!.coordinate
-            let getLat: CLLocationDegrees = getLoc.latitude
-            let getLong: CLLocationDegrees = getLoc.longitude
-            self.propertyLocation = CLLocation(latitude: getLat, longitude: getLong)
+       
+            self.propertyLocation = CLLocation(latitude: property.coordinates.latitude, longitude: property.coordinates.longitude)
             self.distance = LocationUtil.shared.distanceBetweenCoordinates(placeLoc: self.propertyLocation)
             
             self.distance = self.distance/1000
@@ -43,7 +40,7 @@ class PropertyDetailViewController: UIViewController {
             
             self.navigationController?.navigationBar.tintColor = .white
 
-        }
+    
         
         self.priceLabel.text = "R$" + String(format: "%.2f", self.property.price)
         if(property.numberOfBeds == 1){
