@@ -60,6 +60,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="contactButton:" destination="EGF-jy-DcE" eventType="touchUpInside" id="Sd8-Nt-7uJ"/>
+                                </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="18D-TM-PyN">
                                 <rect key="frame" x="25" y="487.5" width="364" height="309"/>
@@ -138,7 +141,7 @@
                         <viewLayoutGuide key="safeArea" id="1y0-6i-agD"/>
                     </view>
                     <navigationItem key="navigationItem" id="cC7-CZ-Ef2">
-                        <barButtonItem key="backBarButtonItem" title="asdasd" id="o4q-iw-xPu"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="o4q-iw-xPu"/>
                     </navigationItem>
                     <connections>
                         <outlet property="containerView" destination="3v8-J9-6lQ" id="GQj-bp-mQC"/>
@@ -147,6 +150,7 @@
                         <outlet property="priceLabel" destination="pVJ-f4-p9d" id="JvZ-1V-ZdC"/>
                         <outlet property="roomsLabel" destination="74S-ZA-d8Y" id="yZR-6K-JYD"/>
                         <outlet property="vacancyLabel" destination="67g-Yf-yCb" id="vYE-lB-nFs"/>
+                        <segue destination="GY0-X9-4V8" kind="show" identifier="showOngs" id="atA-iy-NFj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5F3-Kh-1Qr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -328,6 +332,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uqC-Gp-7jC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="37.681159420289859" y="147.99107142857142"/>
+        </scene>
+        <!--allOngsVC-->
+        <scene sceneID="FXf-FE-ySP">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="allOngsVC" storyboardName="OngsCollection" referencedIdentifier="allOngsVC" id="GY0-X9-4V8" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="8DE-q4-lVE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1oP-ZG-YTc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1576" y="411"/>
         </scene>
     </scenes>
     <resources>

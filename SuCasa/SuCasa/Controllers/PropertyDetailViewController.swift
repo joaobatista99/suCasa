@@ -21,6 +21,7 @@ class PropertyDetailViewController: UIViewController {
     @IBOutlet weak var distanceLabel: UILabel!
     
     var property: Property!
+    var ongs: [Ong] = []
     var propertyLocation: CLLocation!
     var distance: CLLocationDistance!
     
@@ -84,8 +85,24 @@ class PropertyDetailViewController: UIViewController {
             tableViewController.property = self.property
         }
         
+        if segue.identifier == "showOngs",
+            let ongsViewController = segue.destination as? OngsCollectionViewController {
+            ongsViewController.ongs = self.ongs
+        }
+        
+        
     }
     
+    @IBAction func contactButton(_ sender: Any) {
+         let alertOng = UIAlertController(title: "Os Dados de contato são exclusivos para ONG's. " , message: "Entre em contato com alguma ONG para ter mais informações sobre essa locação." , preferredStyle: .alert)
+        
+        alertOng.addAction(UIAlertAction(title: "Conheça as ONG's parceiras", style: .default, handler:{(action) -> Void in
+            self.performSegue(withIdentifier: "showOngs", sender: self)
+        }))
+        alertOng.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: nil))
+        
+        self.present(alertOng, animated: true)
+    }
     
 }
 
