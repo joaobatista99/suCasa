@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		091925C285447A2B54292A40 /* Pods_SuCasa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9A42759A6AEB44F15643F6 /* Pods_SuCasa.framework */; };
 		362DB1D0237A23E400D36357 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362DB1CF237A23E400D36357 /* City.swift */; };
+		3655087F23993EA600483344 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3655087D23993EA600483344 /* ProfileTableViewCell.swift */; };
+		3655088023993EA600483344 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3655087E23993EA600483344 /* ProfileTableViewCell.xib */; };
+		365508822399450F00483344 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365508812399450F00483344 /* ProfileViewController.swift */; };
 		3658D1FA2379D7E200A96E2F /* SuggestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3658D1F82379D7E200A96E2F /* SuggestionsTableViewCell.swift */; };
 		3658D1FB2379D7E200A96E2F /* SuggestionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3658D1F92379D7E200A96E2F /* SuggestionsTableViewCell.xib */; };
 		3658D1FE2379EAC100A96E2F /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3658D1FC2379EAC100A96E2F /* ResultsTableViewCell.swift */; };
@@ -66,6 +69,9 @@
 /* Begin PBXFileReference section */
 		338DA7825B0047A78C499018 /* Pods-SuCasa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuCasa.release.xcconfig"; path = "Target Support Files/Pods-SuCasa/Pods-SuCasa.release.xcconfig"; sourceTree = "<group>"; };
 		362DB1CF237A23E400D36357 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		3655087D23993EA600483344 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		3655087E23993EA600483344 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		365508812399450F00483344 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3658D1F82379D7E200A96E2F /* SuggestionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsTableViewCell.swift; sourceTree = "<group>"; };
 		3658D1F92379D7E200A96E2F /* SuggestionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionsTableViewCell.xib; sourceTree = "<group>"; };
 		3658D1FC2379EAC100A96E2F /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
@@ -165,6 +171,7 @@
 				3658D1FD2379EAC100A96E2F /* ResultsTableViewCell.xib */,
 				36DD943A2375D5C0000012BB /* ExploreTableViewCell.xib */,
 				3658D1F92379D7E200A96E2F /* SuggestionsTableViewCell.xib */,
+				3655087E23993EA600483344 /* ProfileTableViewCell.xib */,
 				BA1B7D922386DB3C00D06E3A /* CarouselItem.xib */,
 			);
 			path = XIBs;
@@ -174,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				BAACB3C5238EF16900C231F0 /* OngCell.swift */,
+				3655087D23993EA600483344 /* ProfileTableViewCell.swift */,
 				BAACB3C4238EF16900C231F0 /* OngsCollectionViewCell.swift */,
 				36DD94392375D5C0000012BB /* ExploreTableViewCell.swift */,
 				3658D1FC2379EAC100A96E2F /* ResultsTableViewCell.swift */,
@@ -233,6 +241,7 @@
 				BA1B7D942386DCA000D06E3A /* PropertyDetailViewController.swift */,
 				BA1B7D982386DF2B00D06E3A /* CarouselPageViewController.swift */,
 				5E9D49942391A696002A7BDF /* PropertyDetailTableViewController.swift */,
+				365508812399450F00483344 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -356,6 +365,7 @@
 				BAB9EFC1237095D000B480F1 /* Assets.xcassets in Resources */,
 				BAACB3CB238EF1C300C231F0 /* OngsCollection.storyboard in Resources */,
 				BA670EDF23746054005E3FDA /* Profile.storyboard in Resources */,
+				3655088023993EA600483344 /* ProfileTableViewCell.xib in Resources */,
 				BAB8D9FF2371DD400039CBC5 /* GoogleService-Info.plist in Resources */,
 				36DD943C2375D5C0000012BB /* ExploreTableViewCell.xib in Resources */,
 				BAACB3CD238EF1C300C231F0 /* OngProfile.storyboard in Resources */,
@@ -438,6 +448,7 @@
 				BA36C53F23904FED00EC1517 /* RoundedBorderButton.swift in Sources */,
 				366757A3238EDA450085ED4F /* OngDetailViewController.swift in Sources */,
 				BA1B7D972386DCFA00D06E3A /* CarouselItem.swift in Sources */,
+				3655087F23993EA600483344 /* ProfileTableViewCell.swift in Sources */,
 				BAB8DA07237201200039CBC5 /* IntroViewController.swift in Sources */,
 				5E033A2023843AAC001AC697 /* MonthlyViewController.swift in Sources */,
 				5E9D49952391A696002A7BDF /* PropertyDetailTableViewController.swift in Sources */,
@@ -451,6 +462,7 @@
 				36DD943B2375D5C0000012BB /* ExploreTableViewCell.swift in Sources */,
 				BAACB3D3238EF1DE00C231F0 /* OngServices.swift in Sources */,
 				BA1B7D952386DCA000D06E3A /* PropertyDetailViewController.swift in Sources */,
+				365508822399450F00483344 /* ProfileViewController.swift in Sources */,
 				BAACB3D2238EF1DE00C231F0 /* CityServices.swift in Sources */,
 				5E55AA1D237B351800887772 /* TitleViewController.swift in Sources */,
 			);
