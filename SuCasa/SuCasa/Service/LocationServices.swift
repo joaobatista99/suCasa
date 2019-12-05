@@ -92,7 +92,8 @@ var currentLocation = CLLocationCoordinate2D()
         return currentLoc.distance(from: placeLoc)
         
     }
-    func getLocationFromString(forPlaceCalled name: String,
+    
+    static func getLocationFromString(forPlaceCalled name: String,
                      completion: @escaping(CLLocation?) -> Void) {
         
         let geocoder = CLGeocoder()

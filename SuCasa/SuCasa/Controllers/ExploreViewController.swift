@@ -40,6 +40,10 @@ class ExploreViewController: UIViewController {
     var ongs: [Ong] =  []
     var selectedOng: Ong!
     
+    /// Distance and location variables
+    var propertyLocation: CLLocation!
+    var distance: CLLocationDistance!
+    
     /// This enum shows the search bar's  state to display the differents XIBs related to it.
     enum SearchBarState {
         case results      //This state is when the button search is clicked
@@ -70,8 +74,6 @@ class ExploreViewController: UIViewController {
         }
     }
     
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -87,7 +89,6 @@ class ExploreViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         refresh()
     }
-    
     
     /// This  method  is to get your location
     fileprivate func getCityLocation() {
@@ -110,6 +111,23 @@ class ExploreViewController: UIViewController {
             }
             
         }
+    }
+    
+    fileprivate func getDistance(property: Property, completion: @escaping(_ distance: String) -> ()) {
+        
+        var distanceString: String = ""
+        print(property.address)
+        
+        self.propertyLocation = CLLocation(latitude: property.coordinates.latitude, longitude: property.coordinates.longitude)
+        
+        self.distance = LocationUtil.shared.distanceBetweenCoordinates(placeLoc: self.propertyLocation)
+        
+        self.distance = self.distance / 1000
+        
+        distanceString = "APROX. " + String(format: "%.1f", self.distance) + "Km"
+        print(distanceString)
+        completion(distanceString)
+       
     }
     
     @IBAction func seeAllOngsButton(_ sender: Any) {
@@ -238,7 +256,10 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             cell.adPriceLabel.text = "R$ \(property.price)/mês"
             cell.adTitleLabel.text = property.title
             cell.availabilityLabel.text = "Disponível para \(property.monthsAvailable) pessoas"
-            cell.distanceLabel.text = "APROX. A 1 km"
+            
+            getDistance(property: property) { (distance) in
+                cell.distanceLabel.text = distance
+            }
             
             cell.adImage.sd_setImage(with: urlFromImage,
                                      placeholderImage: placeHolderImage,
