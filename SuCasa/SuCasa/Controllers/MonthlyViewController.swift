@@ -49,12 +49,13 @@ class MonthlyViewController: UIViewController {
         self.showSpinner(onView: view)
         assignTextFieldsToProperty()
         
-//        LocationUtil.getLocationFromString(forPlaceCalled: self.property.address) { (location) in
-//            guard let location = location else { return }
-//            self.property.coordinates = location
-//
-//
-//        }
+        LocationUtil.getLocationFromString(forPlaceCalled: self.property.address) { (location) in
+            guard let location = location else {
+                return
+            }
+            self.property.coordinates = location.coordinate
+
+        }
         
         PropertyDAO.createNewProperty(property: self.property, photos: self.images) {
             self.removeSpinner()

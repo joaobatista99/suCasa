@@ -46,7 +46,7 @@ class PropertyServices {
             }
         }
     }
-    
+
     static func retrieveProperty(completionHandler: @escaping(_ properties: [Property], _ error: Error?) -> Void) {
         
         var prop: [Property] = []
@@ -84,14 +84,13 @@ class PropertyServices {
                 let price = document.get("price") as!                           Float
                 let monthsAvailable = document.get("monthsAvailable") as!       Int
                 let urls = document.get("urls") as!                             [String]
-                //let coordinates = document.get("coordinates") as!               GeoPoint
+                let geopoint  = document.get("coordinates") as!                 GeoPoint
                 
-//                let lat = coordinates.latitude
-//                let long = coordinates.longitude
-//                
-//                let point = CLLocation(latitude: lat, longitude: long)
+                let coordinates = CLLocationCoordinate2D(latitude: geopoint.latitude,
+                                                         longitude: geopoint.longitude)
                 
-                let property = Property(space: space, type: type, guestsTotal: guestsTotal, numberOfRooms: numberOfRooms, numberOfBeds: numberOfBeds, country: country, address: address, city: city, postalCode: postalCode, complement: complement, title: title, rules: rules, price: price, monthsAvailable: monthsAvailable, urls: urls)
+
+                let property = Property(space: space, type: type, guestsTotal: guestsTotal, numberOfRooms: numberOfRooms, numberOfBeds: numberOfBeds, country: country, address: address, city: city, postalCode: postalCode, complement: complement, title: title, rules: rules, price: price, monthsAvailable: monthsAvailable, urls: urls, coordinates: coordinates)
                 
                 prop.append(property)
                 
