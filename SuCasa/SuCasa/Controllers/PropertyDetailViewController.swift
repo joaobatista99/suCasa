@@ -21,6 +21,7 @@ class PropertyDetailViewController: UIViewController {
     @IBOutlet weak var distanceLabel: UILabel!
     
     var property: Property!
+    var ongs: [Ong] = []
     var propertyLocation: CLLocation!
     var distance: CLLocationDistance!
     
@@ -39,6 +40,9 @@ class PropertyDetailViewController: UIViewController {
             let str = "Aprox. "
             let b:String = String(format:"%.1f", self.distance)
             self.distanceLabel.text = str + b + " km"
+            
+            self.navigationController?.navigationBar.tintColor = .white
+
         }
         
         self.priceLabel.text = "R$" + String(format: "%.2f", self.property.price)
@@ -55,7 +59,7 @@ class PropertyDetailViewController: UIViewController {
             self.roomsLabel.text = String(property.numberOfRooms) + " Quartos"
         }
         
-        self.navigationController?.navigationBar.tintColor = Colors.buttonColor
+        //self.navigationController?.navigationBar.tintColor = Colors.buttonColor
         
     }
     
@@ -81,8 +85,24 @@ class PropertyDetailViewController: UIViewController {
             tableViewController.property = self.property
         }
         
+        if segue.identifier == "showOngs",
+            let ongsViewController = segue.destination as? OngsCollectionViewController {
+            ongsViewController.ongs = self.ongs
+        }
+        
+        
     }
     
+    @IBAction func contactButton(_ sender: Any) {
+         let alertOng = UIAlertController(title: "Os Dados de contato são exclusivos para ONG's. " , message: "Entre em contato com alguma ONG para ter mais informações sobre essa locação." , preferredStyle: .alert)
+        
+        alertOng.addAction(UIAlertAction(title: "Conheça as ONG's parceiras", style: .default, handler:{(action) -> Void in
+            self.performSegue(withIdentifier: "showOngs", sender: self)
+        }))
+        alertOng.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: nil))
+        
+        self.present(alertOng, animated: true)
+    }
     
 }
 

@@ -154,6 +154,7 @@ class ExploreViewController: UIViewController {
         else if segue.identifier == "showPropertyDetail" {
             let propertyDetail = segue.destination as? PropertyDetailViewController
             propertyDetail?.property = self.selectedProperty
+            propertyDetail?.ongs     = self.ongs
         }
         
     }

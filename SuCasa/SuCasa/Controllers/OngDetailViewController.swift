@@ -24,7 +24,9 @@ class OngDetailViewController: UIViewController {
         super.viewDidLoad()
         
         setInformations()
+        
         self.navigationController?.navigationBar.tintColor = Colors.buttonColor
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
