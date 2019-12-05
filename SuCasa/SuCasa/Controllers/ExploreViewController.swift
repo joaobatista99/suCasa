@@ -366,8 +366,7 @@ extension ExploreViewController: UISearchBarDelegate {
     func setSearchController() {
         self.searchController.searchBar.delegate = self
         self.searchController.obscuresBackgroundDuringPresentation = false
-        self.searchController.searchBar.placeholder = "Experimente 'Apartamento'"
-        self.searchController.searchBar.searchTextField.textColor = .black
+        self.searchController.searchBar.placeholder = "Experimente 'Campinas'"
         self.navigationItem.searchController = self.searchController
         definesPresentationContext = false
         self.navigationItem.hidesSearchBarWhenScrolling = false
@@ -375,6 +374,7 @@ extension ExploreViewController: UISearchBarDelegate {
         
         let textFieldSearchBar = searchController.searchBar.value(forKey: "searchField") as? UITextField
         let magnifyingGlass = textFieldSearchBar?.leftView as? UIImageView
+        textFieldSearchBar?.textColor = Colors.textColor
         magnifyingGlass?.tintColor = .gray
         
     }

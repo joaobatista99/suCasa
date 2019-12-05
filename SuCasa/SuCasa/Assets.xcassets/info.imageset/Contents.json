@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Prancheta 1 cópia.png",
+      "filename" : "Prancheta 1 cópia-1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Prancheta 1 cópia@2x.png",
+      "filename" : "Prancheta 1 cópia@2x-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Prancheta 1 cópia@3x.png",
+      "filename" : "Prancheta 1 cópia@3x-1.png",
       "scale" : "3x"
     }
   ],
