@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Alugueis-->
+        <!--Aluguéis-->
         <scene sceneID="c3d-7j-mje">
             <objects>
                 <viewController id="s7G-6i-Vpu" customClass="AdViewController" customModule="SuCasa" customModuleProvider="target" sceneMemberID="viewController">
@@ -60,7 +60,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PAs-DT-4sZ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Alugueis" largeTitleDisplayMode="always" id="b9I-MN-Oi4">
+                    <navigationItem key="navigationItem" title="Aluguéis" largeTitleDisplayMode="always" id="b9I-MN-Oi4">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="z6z-rN-pA6">
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
