@@ -151,7 +151,6 @@ class LocationViewController: UIViewController {
                               }
                               
                               if let postalCode = place.postalCode{
-                                  print(postalCode)
                                   self.postalCodeTextField.text = postalCode
                               }
                               

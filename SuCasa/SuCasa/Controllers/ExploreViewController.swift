@@ -104,7 +104,6 @@ class ExploreViewController: UIViewController {
                     //city label for current location indicator
                     if let city = place.locality {
                         self.cityLabel.text = city
-                        print("cidade carregada")
                     }
                 }
                 
@@ -116,7 +115,6 @@ class ExploreViewController: UIViewController {
     fileprivate func getDistance(property: Property, completion: @escaping(_ distance: String) -> ()) {
         
         var distanceString: String = ""
-        print(property.address)
         
         self.propertyLocation = CLLocation(latitude: property.coordinates.latitude, longitude: property.coordinates.longitude)
         
@@ -125,7 +123,6 @@ class ExploreViewController: UIViewController {
         self.distance = self.distance / 1000
         
         distanceString = "APROX. " + String(format: "%.1f", self.distance) + "Km"
-        print(distanceString)
         completion(distanceString)
        
     }
