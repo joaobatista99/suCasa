@@ -19,7 +19,7 @@ class ExploreViewController: UIViewController {
     //refresh control
     var refreshControl = UIRefreshControl()
     
-    var placeHolderImage = UIImage(named: "waiting")
+    var placeHolderImage = UIImage(named: "thui ")
     
     /// Collection View Variables
     @IBOutlet weak var collectionView: UICollectionView!
