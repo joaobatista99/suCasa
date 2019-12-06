@@ -83,11 +83,11 @@ class ExploreViewController: UIViewController {
         
         refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
         tableView.addSubview(refreshControl)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         refresh()
+        self.navigationController?.navigationBar.tintColor = .systemBlue
     }
     
     /// This  method  is to get your location
@@ -250,7 +250,7 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             
             let property = self.properties[indexPath.row]
             
-            cell.adPriceLabel.text = "R$ \(property.price)/mês"
+            cell.adPriceLabel.text = "R$" + String(format: "%.2f", property.price)
             cell.adTitleLabel.text = property.title
             cell.availabilityLabel.text = "Disponível para \(property.guestsTotal) pessoas"
             
@@ -416,7 +416,7 @@ extension ExploreViewController: UISearchBarDelegate {
         self.filteredProperties = []
         self.currentState = .none
         self.headerView.isHidden = false
-        self.headerView.frame.size.height = 382
+        self.headerView.frame.size.height = 400
         isFiltering = false
         self.tableView.reloadData()
     }
