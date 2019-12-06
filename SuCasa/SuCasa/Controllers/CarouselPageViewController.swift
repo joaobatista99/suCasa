@@ -38,7 +38,7 @@ class CarouselPageViewController: UIPageViewController {
     
     //variables that are used to populate the carrousel
     var property: Property!
-    var placeHolderImage = UIImage(named: "waiting")
+    var placeHolderImage = UIImage(named: "loading")
     var imageUrl: [URL] = []
     var photo: [UIImage] = []
     //delegate for passing information for customized pagecontrol
