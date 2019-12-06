@@ -21,11 +21,11 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>O app precisa de permissão para acessar sua localização</string>
+	<string>O app usa sua localização para calcular a distância entre as locações e você.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>O app precisa de permissão para acessar sua localização</string>
+	<string>O app usa sua localização para calcular a distância entre as locações e você.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>O app precisa acessar suas fotos para continuar</string>
+	<string>O app acessa suas fotos para poder criar um anúncio.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>OpenSans-Bold.ttf</string>
