@@ -14,9 +14,9 @@ class ProfileViewController: UIViewController {
     
     var itemArray: [String] = ["Nome", "Localização", "E-Mail", "Telefone", "Idiomas"]
     
-    var secondLabelArray: [String] = ["Arthur Rodrigues", "Campinas, SP (Brasil)",
-                                      "arthursmr17@gmail.com", "(19) 99950-6396",
-                                      "Português e Inglês"]
+    var secondLabelArray: [String] = ["Berhman Garcon", "Campinas, SP (Brasil)",
+                                      "berhman@example.com", "(19) 99950-6396",
+                                      "Português, Inglês, Francês, Crioulo"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

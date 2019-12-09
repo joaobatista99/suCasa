@@ -25,7 +25,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thui" translatesAutoresizingMaskIntoConstraints="NO" id="jp7-dv-d33">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="994663_661807883850267_69452454_n" translatesAutoresizingMaskIntoConstraints="NO" id="jp7-dv-d33">
                                             <rect key="frame" x="124" y="12" width="166" height="166"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
@@ -131,7 +131,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="994663_661807883850267_69452454_n" width="502" height="480"/>
         <image name="Perfil_off" width="25" height="25"/>
-        <image name="thui" width="700" height="700"/>
     </resources>
 </document>

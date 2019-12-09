@@ -100,7 +100,6 @@ class ExploreViewController: UIViewController {
             } else {
                 
                 if let place = placeMark {
-                    
                     //city label for current location indicator
                     if let city = place.locality {
                         self.cityLabel.text = city
@@ -250,7 +249,13 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             
             let property = self.properties[indexPath.row]
             
-            cell.adPriceLabel.text = "R$" + String(format: "%.2f", property.price)
+            let currencyFormatter = NumberFormatter()
+            currencyFormatter.usesGroupingSeparator = true
+            currencyFormatter.numberStyle = .currency
+            currencyFormatter.locale = Locale.current
+            let priceString = currencyFormatter.string(from: NSNumber(value: property.price))!
+            
+            cell.adPriceLabel.text = priceString +  "/mês"
             cell.adTitleLabel.text = property.title
             cell.availabilityLabel.text = "Disponível para \(property.guestsTotal) pessoas"
             
@@ -289,7 +294,15 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             //Converting string url to URL
             let urlFromImage = URL (string: property.urls[0])
             
-            cell.adPriceLabel.text = "R$ \(property.price)/mês"
+            let currencyFormatter = NumberFormatter()
+            currencyFormatter.usesGroupingSeparator = true
+            currencyFormatter.numberStyle = .currency
+            currencyFormatter.locale = Locale.current
+            let priceString = currencyFormatter.string(from: NSNumber(value: property.price))!
+
+
+            
+            cell.adPriceLabel.text = priceString +  "/mês"
             cell.adTitleLabel.text = property.title
             cell.availabilityLabel.text = "Disponível para \(property.monthsAvailable) pessoas"
             cell.distanceLabel.text = "APROX. A 1 km"

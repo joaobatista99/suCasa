@@ -12,7 +12,7 @@ import CoreLocation
 
 
 class PropertyDetailViewController: UIViewController {
-
+    
     @IBOutlet weak var roomsLabel: UILabel!
     @IBOutlet weak var vacancyLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -28,21 +28,26 @@ class PropertyDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-            self.propertyLocation = CLLocation(latitude: property.coordinates.latitude, longitude: property.coordinates.longitude)
-            self.distance = LocationUtil.shared.distanceBetweenCoordinates(placeLoc: self.propertyLocation)
-            
-            self.distance = self.distance/1000
-            
-            let str = "Aprox. "
-            let b:String = String(format:"%.1f", self.distance)
-            self.distanceLabel.text = str + b + " km"
-            
-            self.navigationController?.navigationBar.tintColor = .white
-
-    
         
-        self.priceLabel.text = "R$" + String(format: "%.2f", self.property.price)
+        self.propertyLocation = CLLocation(latitude: property.coordinates.latitude, longitude: property.coordinates.longitude)
+        self.distance = LocationUtil.shared.distanceBetweenCoordinates(placeLoc: self.propertyLocation)
+        
+        self.distance = self.distance/1000
+        
+        let str = "Aprox. "
+        let b:String = String(format:"%.1f", self.distance)
+        self.distanceLabel.text = str + b + " km"
+        
+        self.navigationController?.navigationBar.tintColor = .white
+        
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.usesGroupingSeparator = true
+        currencyFormatter.numberStyle = .currency
+        currencyFormatter.locale = Locale.current
+        let priceString = currencyFormatter.string(from: NSNumber(value: property.price))!
+        
+        
+        self.priceLabel.text = priceString 
         
         if(property.guestsTotal == 1){
             self.vacancyLabel.text = String(property.guestsTotal) + " Lugar"
@@ -61,14 +66,14 @@ class PropertyDetailViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-           super.viewWillAppear(animated)
-           tabBarController?.tabBar.isHidden = true
-       }
-
-       override func viewWillDisappear(_ animated: Bool) {
-           super.viewWillDisappear(animated)
-           tabBarController?.tabBar.isHidden = false
-       }
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        tabBarController?.tabBar.isHidden = false
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "embedDetailCarousel",
@@ -101,14 +106,14 @@ extension PropertyDetailViewController: CarouselPageViewControllerDelegate {
     func carouselPageViewController(carouselPageViewController: CarouselPageViewController, didUpdatePageCount count: Int) {
         pageControl.numberOfPages = count
     }
-       
+    
     
     func carouselPageViewController(carouselPageViewController: CarouselPageViewController, didUpdatePageIndex index: Int) {
         pageControl.currentPage = index
     }
     
     func getDistance(){
-       
+        
     }
     
 }
