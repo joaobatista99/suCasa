@@ -56,7 +56,7 @@ class IntroViewController: UIViewController {
         self.tutorialTwoLabel.text = NSLocalizedString("Compartilhe experiências e viva novas culturas", comment: "")
         self.tutorialThreeLabel.text = NSLocalizedString("Flexibilidade e segurança para ambas as partes", comment: "")
         
-        self.signInButton.titleLabel!.text = NSLocalizedString("Entrar", comment: "")
+        self.signInButton.titleLabel?.text = NSLocalizedString("Entrar", comment: "")
     }
     
     /*
