@@ -170,7 +170,7 @@ class ExploreViewController: UIViewController {
         
         
         
-        distanceString = NSLocalizedString("APROX.", comment: "") + (distanceLocalized ?? String(format: "%.1f", self.distance) + "Km")
+        distanceString = NSLocalizedString("APROX. ", comment: "") + (distanceLocalized ?? String(format: "%.1f", self.distance) + "Km")
         
         completion(distanceString)
         
