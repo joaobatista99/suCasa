@@ -6,6 +6,18 @@
   Copyright © 2020 João Victor Batista. All rights reserved.
 */
 
-"ong-name" = "Name";
-"distancia-casa" = ""
+//MARK: IntroViewController
 
+"Somos a SuCasa" = "We are SuCasa"
+"Encontre propostas de aluguel com um valor acessível" = "Find affordable rental offers"
+"Compartilhe experiências e viva novas culturas" = "Share experiences and live new cultures"
+"Flexibilidade e segurança para ambas as partes" = "Flexibility and security for both parties"
+"Entrar" = "Sing In"
+
+//MARK: ExploreViewController
+
+"Localização atual" = "Where am I?";
+"ONG's Parceiras" = "NGO's partners";
+"As melhores estadias para você" = "The best stays for you";
+"Veja nossa seleção de lugares para ficar com os melhores preços" = "See our selection of places to stay at the best prices";
+"Ver tudo" = "See More";
