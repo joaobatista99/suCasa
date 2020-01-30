@@ -19,6 +19,8 @@ class PropertyDetailViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var averageMonthLabel: UILabel!
+    @IBOutlet weak var contactButton: UIButton!
     
     var property: Property!
     var ongs: [Ong] = []
@@ -34,34 +36,37 @@ class PropertyDetailViewController: UIViewController {
         
         self.distance = self.distance/1000
         
-        let str = "Aprox. "
-        let b:String = String(format:"%.1f", self.distance)
-        self.distanceLabel.text = str + b + " km"
-        
         self.navigationController?.navigationBar.tintColor = .white
         
+        setupLocalization()
+
+    }
+    
+    private func setupLocalization(){
+        let formattedStringVacancy = NSLocalizedString("%d Lugar", comment: "")
+        self.vacancyLabel.text = String.localizedStringWithFormat(formattedStringVacancy, property.guestsTotal)
+        
+        let formattedStringRooms = NSLocalizedString("%d Quarto", comment: "")
+        self.roomsLabel.text = String.localizedStringWithFormat(formattedStringRooms, property.numberOfRooms)
+        
         let currencyFormatter = NumberFormatter()
-        currencyFormatter.usesGroupingSeparator = true
-        currencyFormatter.numberStyle = .currency
-        currencyFormatter.locale = Locale.current
-        let priceString = currencyFormatter.string(from: NSNumber(value: property.price))!
+            currencyFormatter.usesGroupingSeparator = true
+            currencyFormatter.numberStyle = .currency
+            currencyFormatter.locale = Locale.current
+            let priceString = currencyFormatter.string(from: NSNumber(value: property.price))!
         
+            self.priceLabel.text = priceString
         
-        self.priceLabel.text = priceString 
+        let distanceFormatter = MeasurementFormatter()
+               distanceFormatter.locale = Locale.current
+               let distanceLocalized = distanceFormatter.string(for: self.distance)
+               
+               
+        self.distanceLabel.text = NSLocalizedString("APROX. ", comment: "") + (distanceLocalized ?? String(format: "%.1f", self.distance) + "Km")
         
-        if(property.guestsTotal == 1){
-            self.vacancyLabel.text = String(property.guestsTotal) + " Lugar"
-        }
-        else if(property.guestsTotal > 1){
-            self.vacancyLabel.text = String(property.guestsTotal) + " Lugares"
-        }
-        if(property.numberOfRooms == 1){
-            self.roomsLabel.text = String(property.numberOfRooms) + " Quarto"
-        }
-        else if(property.numberOfBeds > 1){
-            self.roomsLabel.text = String(property.numberOfRooms) + " Quartos"
-        }
+        self.averageMonthLabel.text = NSLocalizedString("em média/mês", comment: "")
         
+        self.contactButton.setTitle(NSLocalizedString("Contato", comment: ""), for: .normal)
         
     }
     

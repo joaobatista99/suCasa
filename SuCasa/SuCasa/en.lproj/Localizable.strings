@@ -23,6 +23,16 @@
 "Ver tudo" = "See More";
 "APROX. " = "Approx. ";
 "Disponível para %d pessoas" = "Available for %d people";
-"mês" = "months";
+"mês" = "month";
 "Cidades" = "Cities";
+"Experimente 'Campinas'" = "Try 'Amsterdam'";
 "%d encontradas" = "%d found";
+
+//MARK: PropertyDetailViewController
+
+"%d Lugar" = "%d Place";
+"%d Quarto"= "%d Room";
+"%d mês" = "%d month";
+"em média/mês" = "average/month";
+"Contato" = "Contact";
+

@@ -56,30 +56,8 @@ class IntroViewController: UIViewController {
         self.tutorialTwoLabel.text = NSLocalizedString("Compartilhe experiências e viva novas culturas", comment: "")
         self.tutorialThreeLabel.text = NSLocalizedString("Flexibilidade e segurança para ambas as partes", comment: "")
         
-        self.signInButton.titleLabel?.text = NSLocalizedString("Entrar", comment: "")
+        self.signInButton.setTitle(NSLocalizedString("Entrar", comment: ""), for: .normal)
     }
-    
-    /*
-     
-     English
-     
-     "Somos a SuCasa" = "We are SuCasa"
-     "Encontre propostas de aluguel com um valor acessível" = "Find affordable rental offers"
-     "Compartilhe experiências e viva novas culturas" = "Share experiences and live new cultures"
-     "Flexibilidade e segurança para ambas as partes" = "Flexibility and security for both parties"
-     "Entrar" = "Sing In"
-     
-     
-     Português
-     
-     "Somos a SuCasa" = "Somos a SuCasa"
-     "Encontre propostas de aluguel com um valor acessível" = "Encontre propostas de aluguel com um valor acessível"
-     "Compartilhe experiências e viva novas culturas" = "Compartilhe experiências e viva novas culturas"
-     "Entrar" = "Entrar"
-     
-     
-     */
-    
     
 }
 

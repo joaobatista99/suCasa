@@ -9,12 +9,12 @@
 import UIKit
 
 class PropertyDetailTableViewController: UITableViewController {
-
     
-
+    
+    
     var property: Property!
     
-   
+    
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var nameAndAgeLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -26,19 +26,18 @@ class PropertyDetailTableViewController: UITableViewController {
         
         if let property = self.property {
             self.mainTitle.text = property.title
-             nameAndAgeLabel.text = "José Alfredo | 36 anos"
-             descriptionLabel.text = "Gosto de viajar, conhecer novas pessoas e culturas. Tenho dois cachorros, Buck e Gula, muito dóceis e também adoram fazer novas amizades."
-             languagesLabel.text = "Idiomas: Português, Espanhol, Francês"
+            nameAndAgeLabel.text = "José Alfredo | 36 anos"
+            descriptionLabel.text = "Gosto de viajar, conhecer novas pessoas e culturas. Tenho dois cachorros, Buck e Gula, muito dóceis e também adoram fazer novas amizades."
+            languagesLabel.text = "Idiomas: Português, Espanhol, Francês"
             
-            if(property.monthsAvailable == 1){
-                months.text = String(property.monthsAvailable) + " mês"
-            }else{
-                months.text = String(property.monthsAvailable) + " meses"
-            }
+            
+            let formattedStringMonths = NSLocalizedString("%d mês", comment: "")
+            months.text = String.localizedStringWithFormat(formattedStringMonths, property.monthsAvailable)
+            
         }
-       
+        
     }
-
-
-
+    
+    
+    
 }

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>%d Lugar</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@Place@</string>
+		<key>Place</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>zero</key>
+			<string></string>
+			<key>one</key>
+			<string>%d Place</string>
+			<key>two</key>
+			<string></string>
+			<key>few</key>
+			<string></string>
+			<key>many</key>
+			<string></string>
+			<key>other</key>
+			<string>%d Places</string>
+		</dict>
+	</dict>
+	<key>%d mês</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@month@</string>
+		<key>month</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>other</key>
+			<string>%d months</string>
+			<key>one</key>
+			<string>%d month</string>
+		</dict>
+	</dict>
+	<key>%d Quarto</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@Room@</string>
+		<key>Room</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>%d Room</string>
+			<key>other</key>
+			<string>%d Rooms</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

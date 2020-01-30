@@ -11,6 +11,7 @@
 "Somos a SuCasa" = "Somos a SuCasa";
 "Encontre propostas de aluguel com um valor acessível" = "Encontre propostas de aluguel com um valor acessível";
 "Compartilhe experiências e viva novas culturas" = "Compartilhe experiências e viva novas culturas";
+"Flexibilidade e segurança para ambas as partes" = "Flexibilidade e segurança para ambas as partes";
 "Entrar" = "Entrar";
 
 //MARK: ExploreViewController
@@ -20,3 +21,17 @@
 "As melhores estadias para você" = "As melhores estadias para você";
 "Veja nossa seleção de lugares para ficar com os melhores preços" = "Veja nossa seleção de lugares para ficar com os melhores preços";
 "Ver tudo" = "Ver tudo";
+"APROX. " = "Aprox. ";
+"Disponível para %d pessoas" = "Disponível para %d pessoas";
+"mês" = "mês";
+"Cidades" = "Cidades";
+"Experimente 'Campinas'" = "Experimente 'Campinas'";
+"%d encontradas" = "%d encontradas";
+
+//MARK: PropertyDetailViewController
+
+"%d Lugar" = "%d Lugar";
+"%d Quarto" = "%d Quarto";
+"%d mês" = "%d mês";
+"em média/mês" = "em média/mês";
+"Contato" = "Contato";

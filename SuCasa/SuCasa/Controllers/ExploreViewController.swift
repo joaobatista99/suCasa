@@ -106,28 +106,6 @@ class ExploreViewController: UIViewController {
         self.seeMoreButton.setTitle(NSLocalizedString("Ver tudo", comment: ""), for: .normal)
     }
     
-    /*
-     
-     English
-     
-     "Localização atual" = "Where am I?"
-     "ONG's Parceiras" = "NGO's partners"
-     "As melhores estadias para você" = "The best stays for you"
-     "Veja nossa seleção de lugares para ficar com os melhores preços" = "See our selection of places to stay at the best prices"
-     "Ver tudo" = "See More"
-     
-     Português
-     
-     "Localização atual" =  "Localização atual"
-     "ONG's Parceiras" = "ONG's Parceiras"
-     "As melhores estadias para você" = "As melhores estadias para você"
-     "Veja nossa seleção de lugares para ficar com os melhores preços" = "Veja nossa seleção de lugares para ficar com os melhores preços"
-     "Ver tudo" = "Ver tudo"
-     
-     */
-    
-    
-    
     override func viewWillAppear(_ animated: Bool) {
         refresh()
         self.navigationController?.navigationBar.tintColor = .systemBlue
@@ -148,15 +126,11 @@ class ExploreViewController: UIViewController {
                         self.cityLabel.text = city
                     }
                 }
-                
             }
-            
         }
     }
     
     fileprivate func getDistance(property: Property, completion: @escaping(_ distance: String) -> ()) {
-        
-        var distanceString: String = ""
         
         self.propertyLocation = CLLocation(latitude: property.coordinates.latitude, longitude: property.coordinates.longitude)
         
@@ -168,9 +142,7 @@ class ExploreViewController: UIViewController {
         distanceFormatter.locale = Locale.current
         let distanceLocalized = distanceFormatter.string(for: self.distance)
         
-        
-        
-        distanceString = NSLocalizedString("APROX. ", comment: "") + (distanceLocalized ?? String(format: "%.1f", self.distance) + "Km")
+        var distanceString = NSLocalizedString("APROX. ", comment: "") + (distanceLocalized ?? String(format: "%.1f", self.distance) + "Km")
         
         completion(distanceString)
         

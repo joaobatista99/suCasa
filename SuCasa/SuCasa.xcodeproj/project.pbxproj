@@ -65,6 +65,7 @@
 		BAB9EFC4237095D000B480F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB9EFC2237095D000B480F1 /* LaunchScreen.storyboard */; };
 		BAEB1462237B30AD008438D4 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEB1461237B30AD008438D4 /* Property.swift */; };
 		BAF25C0C23E2F9C6006E8A6E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAF25C0A23E2F9C6006E8A6E /* Localizable.strings */; };
+		BAF25C1623E3298A006E8A6E /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = BAF25C1823E3298A006E8A6E /* Localizable.stringsdict */; };
 		BAFE3515237C727F00966F86 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFE3514237C727F00966F86 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
@@ -132,6 +133,8 @@
 		BAEB1461237B30AD008438D4 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		BAF25C0B23E2F9C6006E8A6E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BAF25C0D23E2F9D2006E8A6E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		BAF25C1723E3298A006E8A6E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "pt-BR"; path = "pt-BR.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
+		BAF25C1923E3298D006E8A6E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		BAFE3514237C727F00966F86 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -292,6 +295,7 @@
 				BA36C53E23904FED00EC1517 /* RoundedBorderButton.swift */,
 				BA48712F23981939008602E2 /* CustomNavViewController.swift */,
 				BAF25C0A23E2F9C6006E8A6E /* Localizable.strings */,
+				BAF25C1823E3298A006E8A6E /* Localizable.stringsdict */,
 			);
 			path = SuCasa;
 			sourceTree = "<group>";
@@ -380,6 +384,7 @@
 				3658D1FB2379D7E200A96E2F /* SuggestionsTableViewCell.xib in Resources */,
 				BA9FC263238ED94100D2D3A5 /* PropertyDetail.storyboard in Resources */,
 				BAF25C0C23E2F9C6006E8A6E /* Localizable.strings in Resources */,
+				BAF25C1623E3298A006E8A6E /* Localizable.stringsdict in Resources */,
 				BAB8DA022371E8AE0039CBC5 /* Main.storyboard in Resources */,
 				3658D1FF2379EAC100A96E2F /* ResultsTableViewCell.xib in Resources */,
 				5E474EB52375D8640083D3A5 /* PropertyRegistration.storyboard in Resources */,
@@ -496,6 +501,15 @@
 				BAF25C0D23E2F9D2006E8A6E /* pt-BR */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		BAF25C1823E3298A006E8A6E /* Localizable.stringsdict */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAF25C1723E3298A006E8A6E /* pt-BR */,
+				BAF25C1923E3298D006E8A6E /* en */,
+			);
+			name = Localizable.stringsdict;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
