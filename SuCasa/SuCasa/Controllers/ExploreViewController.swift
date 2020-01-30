@@ -121,7 +121,14 @@ class ExploreViewController: UIViewController {
         
         self.distance = self.distance / 1000
         
-        distanceString = "APROX. " + String(format: "%.1f", self.distance) + "Km"
+        let distanceFormatter = MeasurementFormatter()
+        distanceFormatter.locale = Locale.current
+        let distanceLocalized = distanceFormatter.string(for: self.distance)
+        
+        
+        
+        distanceString = NSLocalizedString("APROX.", comment: "") + (distanceLocalized ?? String(format: "%.1f", self.distance) + "Km")
+        
         completion(distanceString)
        
     }
@@ -255,9 +262,12 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             currencyFormatter.locale = Locale.current
             let priceString = currencyFormatter.string(from: NSNumber(value: property.price))!
             
-            cell.adPriceLabel.text = priceString +  "/mês"
+            let formatString = NSLocalizedString("Disponível para %d pessoas",
+            comment: "")
+            
+            cell.adPriceLabel.text = priceString + "/" + NSLocalizedString("mês", comment: "")
             cell.adTitleLabel.text = property.title
-            cell.availabilityLabel.text = "Disponível para \(property.guestsTotal) pessoas"
+            cell.availabilityLabel.text = String.localizedStringWithFormat(formatString, property.guestsTotal)
             
             getDistance(property: property) { (distance) in
                 cell.distanceLabel.text = distance
@@ -299,13 +309,18 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             currencyFormatter.numberStyle = .currency
             currencyFormatter.locale = Locale.current
             let priceString = currencyFormatter.string(from: NSNumber(value: property.price))!
-
+            
+            let formatString = NSLocalizedString("Disponível para %d pessoas",
+            comment: "")
 
             
-            cell.adPriceLabel.text = priceString +  "/mês"
+            cell.adPriceLabel.text = priceString + "/" + NSLocalizedString("mês", comment: "")
             cell.adTitleLabel.text = property.title
-            cell.availabilityLabel.text = "Disponível para \(property.monthsAvailable) pessoas"
-            cell.distanceLabel.text = "APROX. A 1 km"
+            cell.availabilityLabel.text = String.localizedStringWithFormat(formatString, property.guestsTotal)
+            
+            getDistance(property: property) { (distance) in
+                cell.distanceLabel.text = distance
+            }
             
             cell.adImage.sd_setImage(with: urlFromImage,
                                      placeholderImage: placeHolderImage,
@@ -342,9 +357,10 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
         case .none:
             return ""
         case .suggestions:
-            return "Cidades"
+            return NSLocalizedString("Cidades", comment: "")
         case .results:
-            return ("\(self.filteredProperties.count) encontradas")
+            let formattedString = NSLocalizedString("%d encontradas" , comment: "")
+            return String.localizedStringWithFormat(formattedString, self.filteredProperties.count)
         }
     }
     
@@ -376,7 +392,7 @@ extension ExploreViewController: UISearchBarDelegate {
     func setSearchController() {
         self.searchController.searchBar.delegate = self
         self.searchController.obscuresBackgroundDuringPresentation = false
-        self.searchController.searchBar.placeholder = "Experimente 'Campinas'"
+        self.searchController.searchBar.placeholder = NSLocalizedString("Experimente 'Campinas'", comment: "")
         self.navigationItem.searchController = self.searchController
         definesPresentationContext = false
         self.navigationItem.hidesSearchBarWhenScrolling = false
