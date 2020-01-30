@@ -7,13 +7,20 @@
 //
 
 import UIKit
+import Foundation
 
 class GuestsViewController: UIViewController {
 
     @IBOutlet weak var totalGuestsTextField: UITextField!
     @IBOutlet weak var bedroomNumberTextField: UITextField!
     @IBOutlet weak var bedNumberTextField: UITextField!
+    
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var TitleGuestsLabel: UILabel!
+    @IBOutlet weak var descriptionGuestsLabel: UILabel!
+    @IBOutlet weak var totalGuestsLabel: UILabel!
+    @IBOutlet weak var numberOfRoomsLabel: UILabel!
+    @IBOutlet weak var numberOfBedsLabel: UILabel!
     
     var property: Property!
     
@@ -22,6 +29,8 @@ class GuestsViewController: UIViewController {
         
         setUpTextFields()
         nextButton.isHidden = true
+        
+        self.setLocalizedStrings()
         
         self.navigationController?.navigationBar.tintColor = Colors.buttonColor
         
@@ -32,6 +41,21 @@ class GuestsViewController: UIViewController {
         //keyboard notifications
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    //set labels that have to be localized
+    func setLocalizedStrings(){
+        //"Próximo" = "Next";
+        nextButton.setTitle(NSLocalizedString("Próximo", comment: "botão de próximo"), for: .normal)
+        //"Quantos hóspedes podem ficar?" =  "How many guests can you receive?"
+        TitleGuestsLabel.text = NSLocalizedString("Quantos hóspedes podem ficar?", comment: "quantidade de hóspedes?")
+        //"Garanta que você tem camas suficientes para acomodar confortavelmente todos os seus hóspedes." = "Guarantee that you have enough beds to comfortably accomodate all your guests."
+        descriptionGuestsLabel.text = NSLocalizedString("Garanta que você tem camas suficientes para acomodar confortavelmente todos os seus hóspedes.", comment: "")
+        //"Total de hóspedes:" = "Total number of guests:";
+        totalGuestsLabel.text = NSLocalizedString("Total de hóspedes:", comment: "")
+        //"Número de quartos para hóspedes:" = "Number of guest rooms:";
+        numberOfRoomsLabel.text = NSLocalizedString("Número de quartos para hóspedes:", comment: "")
+        //Número de camas para hóspedes = "Number of guest beds:"
+        numberOfBedsLabel.text = NSLocalizedString("Número de camas para hóspedes", comment: "")
     }
     
     //Scroll when keyboard activates

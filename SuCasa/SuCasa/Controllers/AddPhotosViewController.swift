@@ -9,6 +9,7 @@
 import UIKit
 import BSImagePicker
 import Photos
+import Foundation
 
 class AddPhotosViewController: UIViewController {
 
@@ -19,11 +20,16 @@ class AddPhotosViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var photosAdded: UILabel!
     
+    @IBOutlet weak var addPhotosTitleLabel: UILabel!
+    @IBOutlet weak var addPhotosDescriptionLabel: UILabel!
+    @IBOutlet weak var addPhotosButton: RoundedBorderButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.tintColor = Colors.buttonColor
-
+        self.setLocalizedStrings()
         nextButton.isHidden = true
         photosAdded.isHidden = true
     }
@@ -34,6 +40,19 @@ class AddPhotosViewController: UIViewController {
             locationVC.property = self.property
             locationVC.images   = self.images
         }
+    }
+    
+    func setLocalizedStrings(){
+        //"Próximo"  = "Next";
+        nextButton.setTitle(NSLocalizedString("Próximo", comment: "botão de próximo"), for: .normal)
+        //"Fotos Adicionadas!" = "Photos have been added!"
+        photosAdded.text = NSLocalizedString("Fotos Adicionadas!", comment: "")
+        //"Adicione fotos do seu espaço"  =  "Add photos of your space"
+        addPhotosTitleLabel.text = NSLocalizedString("Adicione fotos do seu espaço", comment: "")
+        //"As fotos ajudam os hóspedes a imaginarem como é ficar na sua acomodação. Você pode começar com uma foto e adicionar outras depois de publicar." = "The pictures help the guests imagine what it is like to stay in your accomodation. You can start with one photo and  add  more after publishing."
+        addPhotosDescriptionLabel.text = NSLocalizedString("As fotos ajudam os hóspedes a imaginarem como é ficar na sua acomodação. Você pode começar com uma foto e adicionar outras depois de publicar.", comment: "")
+        //"Adicionar Fotos = "Add Photos";
+        addPhotosButton.titleLabel?.text  =  NSLocalizedString("Adicionar Fotos", comment: "Botão de adicionar fotos")
     }
     
     //function to upload images from device

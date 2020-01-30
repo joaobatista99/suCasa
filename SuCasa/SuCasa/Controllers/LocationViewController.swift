@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Foundation
 
 class LocationViewController: UIViewController {
     
@@ -21,7 +22,16 @@ class LocationViewController: UIViewController {
     @IBOutlet weak var complementTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollContent: UIView!
+    
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var locationTitleLabel: UILabel!
+    @IBOutlet weak var locationDescriptionLabel: UILabel!
+    @IBOutlet weak var useCurrentLocButton: RoundedBorderButton!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var adressLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var ZIPLabel: UILabel!
+    @IBOutlet weak var complementLabel: UILabel!
     
     //location manager
     let locationManager = CLLocationManager()
@@ -34,6 +44,8 @@ class LocationViewController: UIViewController {
         self.adressTextField.delegate     = self
         self.cityTextField.delegate       = self
         self.postalCodeTextField.delegate = self
+        
+        self.setLocalizedStrings()
         
         //gesture to dismiss keyboard
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(TitleViewController.endSelection(_:))))
@@ -49,6 +61,27 @@ class LocationViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = Colors.buttonColor
 
         
+    }
+    
+    func setLocalizedStrings(){
+        //"Próximo" = "Next";
+        nextButton.setTitle(NSLocalizedString("Próximo", comment: "botão de proximo"), for: .normal)
+        //"Onde fica sua acomodação?" = "Where is your accomodation located?"
+        locationTitleLabel.text = NSLocalizedString("Onde fica sua acomodação?", comment: "")
+        //"Somente as ONGs próximas receberão sua localização exata para poder instruir os insteressados." = "Only nearby NGOs will receive your exact location in order to instruct those interested.";
+        locationDescriptionLabel.text = NSLocalizedString("Somente as ONGs próximas receberão sua localização exata para poder instruir os insteressados.", comment: "")
+        //"Usar minha localização atual" = "Use my current location";
+        useCurrentLocButton.titleLabel?.text  = NSLocalizedString("Usar minha localização atual", comment: "")
+        //"País/Região" =  "Country/Region";
+        countryLabel.text = NSLocalizedString("País/Região", comment: "")
+        //"Endereço" = "Adress";
+        adressLabel.text = NSLocalizedString("Endereço", comment: "")
+        //"Cidade" = "City";
+        cityLabel.text =  NSLocalizedString("Cidade", comment: "")
+        //"CEP" = "ZIP code";
+        ZIPLabel.text = NSLocalizedString("CEP", comment: "")
+        //"Complemento" = "Complement";
+        complementLabel.text = NSLocalizedString("Complemento", comment: "")
     }
     
     //setup text style for textfields

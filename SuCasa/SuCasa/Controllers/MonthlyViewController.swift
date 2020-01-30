@@ -7,13 +7,20 @@
 //
 
 import UIKit
-
+import  Foundation
 
 class MonthlyViewController: UIViewController {
 
     @IBOutlet weak var monthly: UITextField!
     @IBOutlet weak var monsthsQuantity: UITextField!
+    
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var monthlyLabel: UILabel!
+    @IBOutlet weak var periodLabel: UILabel!
+    @IBOutlet weak var concludeButton: UIButton!
+    
     
     var property: Property!
     
@@ -21,6 +28,8 @@ class MonthlyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.setLocalizedStrings()
         
         monthly.delegate         = self
         monthly.tag              = 0
@@ -42,6 +51,21 @@ class MonthlyViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = Colors.buttonColor
 
         
+    }
+    
+    func setLocalizedStrings(){
+        //"Próximo" =  "Next";
+        nextButton.setTitle(NSLocalizedString("Próximo", comment: "botão de  próximo"), for: .normal)
+        //"Mensalidade" = "Monthly payment";
+        titleLabel.text = NSLocalizedString("Mensalidade", comment: "")
+        //"Defina um valor mínimo que seu hóspede possa pagar e qual o máximo de tempo que  ele pode ficar." = "Determine a minimmum amount your guest could pay and the maximum amount of time they could stay.";
+        descriptionLabel.text = NSLocalizedString("Defina um valor mínimo que seu hóspede possa pagar e qual o máximo de tempo que  ele pode ficar.", comment: "")
+        //"Mensalidade Mínima"  = "Minimum Monthly Payment";
+        monthlyLabel.text = NSLocalizedString("Mensalidade Mínima", comment: "")
+        //"Período Máximo" = "Maximum amount of time";
+        periodLabel.text = NSLocalizedString("Período Máximo", comment: "")
+        //"Concluir" = "Conclude";
+        concludeButton.setTitle(NSLocalizedString("Concluir", comment: "botão de concluir"), for: .normal)
     }
     
     @IBAction func proceedToNext(_ sender: UIButton) {

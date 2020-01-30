@@ -7,15 +7,22 @@
 //
 
 import UIKit
+import Foundation
 
 class CompleteRegistrationViewController: UIViewController {
 
+    @IBOutlet weak var congratsLabel: UILabel!
     @IBOutlet weak var dismissButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         dismissButton.imageView?.contentMode = .scaleAspectFit
+    }
+    
+    func setLocalizedStrings(){
+        //"Parabéns, seu anúncio foi criado com sucesso!" = "Congratulations, your advertisement has been successfully created!;"
+        congratsLabel.text = NSLocalizedString("Parabéns, seu anúncio foi criado com sucesso!", comment: "")
     }
     
     
