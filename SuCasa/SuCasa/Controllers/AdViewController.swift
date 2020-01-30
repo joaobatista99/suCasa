@@ -9,11 +9,27 @@
 import UIKit
 
 class AdViewController: UIViewController {
+    
+    
+    @IBOutlet weak var adLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.adLabel.text = NSLocalizedString("Quer ajudar imigrantes? Cadastre seu imóvel aqui!", comment: "")
+        
     }
+    
+    /*
+     English
+     
+     "Quer ajudar imigrantes? Cadastre seu imóvel aqui!" = "Want to help immigrants? Register your property here!"
+     
+     Português
+     
+    "Quer ajudar imigrantes? Cadastre seu imóvel aqui!" = "Quer ajudar imigrantes? Cadastre seu imóvel aqui!"
+     
+     */
     
 
     //function to create new add
