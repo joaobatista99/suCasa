@@ -13,6 +13,13 @@ class ExploreViewController: UIViewController {
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var headerSubTitle: UILabel!
     
+    //label
+    @IBOutlet weak var whereAmILabel: UILabel!
+    @IBOutlet weak var ongPartnerLabel: UILabel!
+    @IBOutlet weak var titleBestForYouLabel: UILabel!
+    @IBOutlet weak var descriptionBestForYouLabel: UILabel!
+    @IBOutlet weak var seeMoreButton: UIButton!
+    
     //location manager
     let locationManager = CLLocationManager()
     
@@ -83,7 +90,42 @@ class ExploreViewController: UIViewController {
         
         refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
         tableView.addSubview(refreshControl)
+        
+        localizationExploreViewController()
+        
     }
+    
+    func localizationExploreViewController () {
+        
+        self.whereAmILabel.text = NSLocalizedString("Localização atual", comment: "")
+        self.ongPartnerLabel.text = NSLocalizedString("ONG'S Parceiras", comment: "")
+        self.titleBestForYouLabel.text = NSLocalizedString("As melhores estadias para você ", comment: "")
+        self.descriptionBestForYouLabel.text = NSLocalizedString("Veja nossa seleção de lugares para ficar com os melhores preços", comment: "")
+        
+        self.seeMoreButton.titleLabel?.text = NSLocalizedString("Ver tudo", comment: "")
+    }
+    
+    /*
+     
+     English
+     
+     "Localização atual" = "Where am I?"
+     "ONG's Parceiras" = "NGO's partners"
+     "As melhores estadias para você" = "The best stays for you"
+     "Veja nossa seleção de lugares para ficar com os melhores preços" = "See our selection of places to stay at the best prices"
+     "Ver tudo" = "See More"
+     
+     Português
+     
+     "Localização atual" =  "Localização atual"
+     "ONG's Parceiras" = "ONG's Parceiras"
+     "As melhores estadias para você" = "As melhores estadias para você"
+     "Veja nossa seleção de lugares para ficar com os melhores preços" = "Veja nossa seleção de lugares para ficar com os melhores preços"
+     "Ver tudo" = "Ver tudo"
+     
+     */
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         refresh()

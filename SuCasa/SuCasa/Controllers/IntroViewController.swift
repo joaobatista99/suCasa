@@ -13,8 +13,7 @@ class IntroViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    // labels
-    
+    //labels
     @IBOutlet weak var aboutOneLabel: UILabel! //Somos a SuCasa
     @IBOutlet weak var tutorialOneLabel: UILabel! //Encontre propostas de aluguel com um valor acessível.
     
@@ -54,10 +53,10 @@ class IntroViewController: UIViewController {
         self.aboutThreeLabel.text = NSLocalizedString("Somos a SuCasa", comment: "")
         
         self.tutorialOneLabel.text = NSLocalizedString("Encontre propostas de aluguel com um valor acessível", comment: "")
-        self.tutorialTwoLabel.text = NSLocalizedString("Compartilhe experiências e viva novas culturas", "")
+        self.tutorialTwoLabel.text = NSLocalizedString("Compartilhe experiências e viva novas culturas", comment: "")
         self.tutorialThreeLabel.text = NSLocalizedString("Flexibilidade e segurança para ambas as partes", comment: "")
         
-        self.signInButton.titleLabel = NSLocalizedString("Entrar", comment: "")
+        self.signInButton.titleLabel!.text = NSLocalizedString("Entrar", comment: "")
     }
     
     /*
