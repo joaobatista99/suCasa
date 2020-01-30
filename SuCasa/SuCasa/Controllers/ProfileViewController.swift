@@ -28,6 +28,8 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         setTableView()
         registerXibs()
+        
+      
     }
     
     func registerXibs() {

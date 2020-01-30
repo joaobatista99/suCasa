@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UXd-qk-WEO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UXd-qk-WEO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -191,8 +191,15 @@
                         <viewLayoutGuide key="safeArea" id="3cG-3h-bht"/>
                     </view>
                     <connections>
+                        <outlet property="aboutOneLabel" destination="rbZ-1M-1MY" id="rpI-wU-cZz"/>
+                        <outlet property="aboutThreeLabel" destination="LZD-GI-maS" id="lwn-Mh-E33"/>
+                        <outlet property="aboutTwoLabel" destination="Z1u-nq-vwg" id="237-Vn-OOH"/>
                         <outlet property="pageControl" destination="QR2-HA-2sC" id="TmO-6a-KmN"/>
                         <outlet property="scrollView" destination="QYP-XU-rHm" id="Mgl-jx-3DF"/>
+                        <outlet property="signInButton" destination="37X-KH-EC4" id="Fp2-hS-D5l"/>
+                        <outlet property="tutorialOneLabel" destination="1fb-AL-TRP" id="7Mu-dB-weo"/>
+                        <outlet property="tutorialThreeLabel" destination="PhE-ud-mzf" id="7eg-3c-Bzi"/>
+                        <outlet property="tutorialTwoLabel" destination="vzQ-tA-mgq" id="suZ-1O-zVY"/>
                         <segue destination="98V-x9-a6x" kind="presentation" identifier="startApp" animates="NO" modalPresentationStyle="fullScreen" id="ZdW-d0-2nT"/>
                     </connections>
                 </viewController>
