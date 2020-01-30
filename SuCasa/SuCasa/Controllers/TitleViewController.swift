@@ -14,6 +14,10 @@ class TitleViewController: UIViewController {
     
     @IBOutlet weak var rulesTextField: UITextField!
     
+    @IBOutlet weak var nextButton: UIButton!
+    
+    var property: Property!
+    var images: [UIImage]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,13 +38,18 @@ class TitleViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 
         setUpText()
+        
+        nextButton.isHidden = true
+        
+        self.navigationController?.navigationBar.tintColor = Colors.buttonColor
+
+
     }
     
     //dismiss keyboard if users touches screen
     @objc func endSelection(_ force: Bool) -> Bool {
            return self.view.endEditing(force)
     }
-    
     
     //Scroll when keyboard activates
     @objc func keyboardWillShow(notification:NSNotification){
@@ -56,24 +65,49 @@ class TitleViewController: UIViewController {
         if self.view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0
         }
+        
+        // if all text field is filled, 'next button' appear
+        if isTextFieldsFilled() {
+            nextButton.isHidden = false
+        }
+    }
+    
+    func isTextFieldsFilled() -> Bool{
+        
+        if titleTextField.text!.isEmpty {
+            return false
+        }
+        
+        //If all text field is filled, return true
+        return true
     }
     
     //setup text style for textfields
     fileprivate func setUpText() {
         
-        let attributes = [
-            NSAttributedString.Key.foregroundColor: Colors.placeholderColor,
-            NSAttributedString.Key.font : UIFont(name: "OpenSans-Regular", size: 12) // Note the !
-        ]
+        let attributes = [NSAttributedString.Key.foregroundColor: Colors.placeholderColor]
         
         titleTextField.attributedPlaceholder = NSAttributedString(string: "Adicione seu título", attributes: attributes as [NSAttributedString.Key : Any])
         rulesTextField.attributedPlaceholder = NSAttributedString(string: "Adicione suas regras (Opcional)", attributes: attributes as [NSAttributedString.Key : Any])
         
         titleTextField.textColor = Colors.textColor
-        titleTextField.font = UIFont(name: "OpenSans-Regular", size: 12)
         
         rulesTextField.textColor = Colors.textColor
-        rulesTextField.font = UIFont(name: "OpenSans-Regular", size: 12)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToMonthlyValues",
+            let locationVC = segue.destination as? MonthlyViewController {
+                locationVC.property = self.property
+                locationVC.images = self.images
+        }
+    }
+
+    @IBAction func proceedToNextView(_ sender: Any) {
+        self.property.title = titleTextField.text!
+        self.property.rules = rulesTextField.text!
+        
+        performSegue(withIdentifier: "goToMonthlyValues", sender: "self")
     }
 }
 

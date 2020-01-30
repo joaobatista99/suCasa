@@ -8,8 +8,11 @@ target 'SuCasa' do
   # Pods for SuCasa
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
-  pod 'Firebase/Database'
+  pod 'Firebase/Core'
   pod 'Firebase/Storage'
-  pod 'BSImagePicker'
+  pod 'Firebase/Firestore'
+  pod 'BSImagePicker' 
+  pod 'SDWebImage'
+  
  
 end

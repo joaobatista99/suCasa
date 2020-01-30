@@ -1,35 +1,48 @@
-//
-//  ExploreViewController.swift
-//  SuCasa
-//
-//  Created by Arthur Rodrigues on 08/11/19.
-//  Copyright © 2019 João Victor Batista. All rights reserved.
-//
-
 import UIKit
 import MapKit
+import SDWebImage
 
 class ExploreViewController: UIViewController {
     
     //Mocked informations
-    let imagesAd = ["casa1", "casa2", "casa3", "casa4", "casa5"]
-    let distanceAd = [10, 34.5, 55, 53, 90]
-    let priceAd = [200, 185, 150, 190, 320]
-    let availabilityAd = [02, 01, 01, 04, 03]
-    let titleAd = ["Casa no centro, muito aconchegante", "Vila Souzas - Apartamento", "Campo Sítio 3 Irmãs",
-                    "Casa dos Imigrantes", "Flat Completo"]
-    let searchRecents = ["campinas", "são josé dos campos", "são paulo", "guarulhos", "mogi mirim"]
-    var cities: [City] = []
+    let searchRecents = ["campinas", "são josé dos campos", "são paulo", "guarulhos", "valinhos"]
 
-    
     /// Table View Variables
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var headerTitle: UILabel!
+    @IBOutlet weak var headerSubTitle: UILabel!
     
+    //location manager
+    let locationManager = CLLocationManager()
+    
+    //refresh control
+    var refreshControl = UIRefreshControl()
+    
+    var placeHolderImage = UIImage(named: "thui ")
+    
+    /// Collection View Variables
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var headerView: UIView!
     
     /// Search Controller Variables
     let searchController = UISearchController(searchResultsController: nil)
     var isFiltering = false
+    
+    var cities: [City] = []
     var filteredCities: [City] = []
+    var selectedCity: String!
+    
+    var properties: [Property] = []
+    var filteredProperties: [Property] = []
+    var selectedProperty: Property!
+    
+    var ongs: [Ong] =  []
+    var selectedOng: Ong!
+    
+    /// Distance and location variables
+    var propertyLocation: CLLocation!
+    var distance: CLLocationDistance!
     
     /// This enum shows the search bar's  state to display the differents XIBs related to it.
     enum SearchBarState {
@@ -38,14 +51,18 @@ class ExploreViewController: UIViewController {
         case none         //This state is when the search bar has not been clicked
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+          return .default
+    }
+    
     fileprivate var _currentState = SearchBarState.none
-
+    
     var currentState: SearchBarState {
         set {
             //Necessary conditions to control what will be displayed on the screen
             
             /*The state can't go from results to none.
-              This is the reason to do this check */
+             This is the reason to do this check */
             if _currentState == .none && newValue == .results {
                 print("error changing the state")
             } else {
@@ -60,52 +77,204 @@ class ExploreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setTableView()
-        setSearchController()
-        readCSVtoGetCities()
+        self.setSearchController()
+        
+        self.cities = CityServices.readCSVtoGetCities()
+        
+        refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+        tableView.addSubview(refreshControl)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        refresh()
+        self.navigationController?.navigationBar.tintColor = .systemBlue
+    }
+    
+    /// This  method  is to get your location
+    fileprivate func getCityLocation() {
+        
+        LocationUtil.shared.buildLocationAlert { (alert, placeMark) in
+            
+            if let errorAlert = alert {
+                self.present(errorAlert, animated: true)
+            } else {
+                
+                if let place = placeMark {
+                    //city label for current location indicator
+                    if let city = place.locality {
+                        self.cityLabel.text = city
+                    }
+                }
+                
+            }
+            
+        }
+    }
+    
+    fileprivate func getDistance(property: Property, completion: @escaping(_ distance: String) -> ()) {
+        
+        var distanceString: String = ""
+        
+        self.propertyLocation = CLLocation(latitude: property.coordinates.latitude, longitude: property.coordinates.longitude)
+        
+        self.distance = LocationUtil.shared.distanceBetweenCoordinates(placeLoc: self.propertyLocation)
+        
+        self.distance = self.distance / 1000
+        
+        distanceString = "APROX. " + String(format: "%.1f", self.distance) + "Km"
+        completion(distanceString)
+       
+    }
+    
+    @IBAction func seeAllOngsButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "showAllOngs", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier  == "showOngDetail" {
+            let detailOngVc = segue.destination as? OngDetailViewController
+            detailOngVc?.ong = self.selectedOng
+        }
+            
+        else if segue.identifier == "showAllOngs"{
+            let allOngsVC = segue.destination as? OngsCollectionViewController
+            allOngsVC?.ongs = self.ongs
+        }
+        else if segue.identifier == "showPropertyDetail" {
+            let propertyDetail = segue.destination as? PropertyDetailViewController
+            propertyDetail?.property = self.selectedProperty
+            propertyDetail?.ongs     = self.ongs
+        }
         
     }
     
-    func readCSVtoGetCities() {
-
-        let fileURL = Bundle.main.url(forResource: "brazilCities", withExtension: "csv")
-
-        do {
-            let content = try String(contentsOf: fileURL!, encoding: String.Encoding.utf8)
-            let parsedCSV: [[String]] = content.components(separatedBy: "\n").map{$0.components(separatedBy: ";")}
-                        
-            for i in 1 ..< parsedCSV.count - 1 {
-                let city = City(id: parsedCSV[i][0], city: parsedCSV[i][1])
-                self.cities.append(city)
+   @objc func refresh() {
+        
+        getCityLocation()
+    
+        //after retrieving data from database it will set the view
+        PropertyServices.retrieveProperty(completionHandler: { (auxProperties , error) in
+            
+            //checking if the retrieve was successfull
+            if auxProperties.count > 0 {
+                self.properties = auxProperties
+                self.setTableView()
+                self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
             }
-        } catch {
-            print("error \(error)")
-        }
-    }
+        })
+        
+        //Retriving Ongs from database
+        OngServices.retrieveOng { (ongs, error) in
+            
+            if ongs.count > 0 {
+                self.ongs = ongs
+                self.setCollectionView()
+            }
+         }
+   }
+  
+    private func updateResultsProperties() {
+            
+            let city = self.selectedCity.filter { !"\r".contains($0) }
+            //Getting all properties that is located on the city that was selected
+            
+            // for each property, filter using case insensitive
+            for prop in properties {
+                
+                let isFilter: ComparisonResult = city.compare(prop.city, options: .caseInsensitive, range: nil, locale: nil)
+                
+                if isFilter  == .orderedSame {
+                    filteredProperties.append(prop)
+                }
+            }
+      }
+
 }
 
 /// Search bar behavior
 extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        switch currentState {
+        case .none:
+            self.selectedProperty = self.properties[indexPath.row]
+            self.performSegue(withIdentifier: "showPropertyDetail", sender: self)
+            
+        case .suggestions:
+            if isFiltering {
+                self.selectedCity = self.filteredCities[indexPath.row].name ?? "default"
+                updateResultsProperties()
+
+            } else {
+                self.selectedCity = searchRecents[indexPath.row]
+                updateResultsProperties()
+            }
+            currentState = .results
+            isFiltering = false
+            self.tableView.reloadData()
+            
+        case .results:
+            self.selectedProperty = self.filteredProperties[indexPath.row]
+            self.performSegue(withIdentifier: "showPropertyDetail", sender: self)
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering {
             return self.filteredCities.count
         }
-        return titleAd.count
+        
+        switch currentState {
+        case .none:
+            return self.properties.count
+        case .suggestions:
+            return self.searchRecents.count
+        case .results:
+            return filteredProperties.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-//      This switch is to define which xib will be displaying
+        //      This switch is to define which xib will be displaying
         switch currentState {
         case .none:
             let cell = tableView.dequeueReusableCell(withIdentifier: "exploreCell", for: indexPath) as! ExploreTableViewCell
-            cell.adImage.image = UIImage(named: imagesAd[indexPath.row])
-            cell.adPriceLabel.text = "R$ \(priceAd[indexPath.row])/mês"
-            cell.adTitleLabel.text = titleAd[indexPath.row]
-            cell.availabilityLabel.text = "Disponível para \(availabilityAd[indexPath.row]) pessoas"
-            cell.distanceLabel.text = "APROX. A \(distanceAd[indexPath.row])km"
+            
+            //Converting string url to URL
+            let urlFromImage = URL (string: self.properties[indexPath.row].urls[0])
+            
+            let property = self.properties[indexPath.row]
+            
+            let currencyFormatter = NumberFormatter()
+            currencyFormatter.usesGroupingSeparator = true
+            currencyFormatter.numberStyle = .currency
+            currencyFormatter.locale = Locale.current
+            let priceString = currencyFormatter.string(from: NSNumber(value: property.price))!
+            
+            cell.adPriceLabel.text = priceString +  "/mês"
+            cell.adTitleLabel.text = property.title
+            cell.availabilityLabel.text = "Disponível para \(property.guestsTotal) pessoas"
+            
+            getDistance(property: property) { (distance) in
+                cell.distanceLabel.text = distance
+            }
+            
+            cell.adImage.sd_setImage(with: urlFromImage,
+                                     placeholderImage: placeHolderImage,
+                                     options: SDWebImageOptions.lowPriority,
+                                     context: nil,
+                                     progress: nil) { (downloadedImage, error, cacheType, downloadURL) in
+                                        if let error = error {
+                                            //print("Error downloading the image: \(error.localizedDescription)")
+                                        } else {
+                                            //print("Successfully downloaded image: \(String(describing: downloadURL?.absoluteString))")
+                                        }
+            }
+            
             return cell
             
         case .suggestions:
@@ -117,10 +286,40 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             }
             return cell
             
-        case .results: break
+        case .results:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "exploreCell") as! ExploreTableViewCell
             
+            let property = self.filteredProperties[indexPath.row]
+            
+            //Converting string url to URL
+            let urlFromImage = URL (string: property.urls[0])
+            
+            let currencyFormatter = NumberFormatter()
+            currencyFormatter.usesGroupingSeparator = true
+            currencyFormatter.numberStyle = .currency
+            currencyFormatter.locale = Locale.current
+            let priceString = currencyFormatter.string(from: NSNumber(value: property.price))!
+
+
+            
+            cell.adPriceLabel.text = priceString +  "/mês"
+            cell.adTitleLabel.text = property.title
+            cell.availabilityLabel.text = "Disponível para \(property.monthsAvailable) pessoas"
+            cell.distanceLabel.text = "APROX. A 1 km"
+            
+            cell.adImage.sd_setImage(with: urlFromImage,
+                                     placeholderImage: placeHolderImage,
+                                     options: SDWebImageOptions.lowPriority,
+                                     context: nil,
+                                     progress: nil) { (downloadedImage, error, cacheType, downloadURL) in
+                                        if let error = error {
+                                            //print("Error downloading the image: \(error.localizedDescription)")
+                                        } else {
+                                            //print("Successfully downloaded image: \(String(describing: downloadURL?.absoluteString))")
+                                        }
+            }
+            return cell
         }
-        return UITableViewCell()
     }
     
     /// This method returns and estimated row value to the table view cell
@@ -128,41 +327,37 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch currentState {
         case .none:
-            return 270
+            return 288
         case .suggestions:
             return 44
-        default:
-            print("error to set height to the row")
+        case .results:
+            return 288
         }
-        return 270
     }
     
     /// This method is to set a title for the header
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
+
         switch currentState {
         case .none:
-            return "As melhores estadias para você"
+            return ""
         case .suggestions:
-            return "Buscas recentes"
-        default:
-            print("error to set a title for header")
+            return "Cidades"
+        case .results:
+            return ("\(self.filteredProperties.count) encontradas")
         }
-        return ""
     }
-    
     
     /// This method sets the table view
     func setTableView(){
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.keyboardDismissMode = .onDrag
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight = 100.0
-        
         registerXibs()
     }
-    
     
     /// This method register the xibs that is used to display on the screen
     func registerXibs() {
@@ -181,20 +376,25 @@ extension ExploreViewController: UISearchBarDelegate {
     func setSearchController() {
         self.searchController.searchBar.delegate = self
         self.searchController.obscuresBackgroundDuringPresentation = false
-        self.searchController.searchBar.placeholder = "Experimente 'Apartamento'"
+        self.searchController.searchBar.placeholder = "Experimente 'Campinas'"
         self.navigationItem.searchController = self.searchController
         definesPresentationContext = false
         self.navigationItem.hidesSearchBarWhenScrolling = false
-        self.searchController.searchBar.searchTextField.textColor = .black
-        self.searchController.searchBar.barTintColor = .black
         self.currentState = SearchBarState.none
+        
+        let textFieldSearchBar = searchController.searchBar.value(forKey: "searchField") as? UITextField
+        let magnifyingGlass = textFieldSearchBar?.leftView as? UIImageView
+        textFieldSearchBar?.textColor = Colors.textColor
+        magnifyingGlass?.tintColor = .gray
+        
     }
     
     /// This method is called when the search bar's text changes
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
+        currentState = .suggestions
         isFiltering = true
-        
+        self.filteredProperties = []
         //Filtering cities from searchText
         filteredCities = cities.filter({( city : City) -> Bool in
             
@@ -204,7 +404,7 @@ extension ExploreViewController: UISearchBarDelegate {
         })
         
         /* if searchText is empty, set isFiltering
-        to false to show up recents searches */
+         to false to show up recents searches */
         if searchText.isEmpty {
             isFiltering = false
         }
@@ -216,6 +416,9 @@ extension ExploreViewController: UISearchBarDelegate {
         
         //Change the current state to suggestions when touching the search bar
         self.currentState = SearchBarState.suggestions
+        self.filteredProperties = []
+        self.headerView.isHidden = true
+        self.headerView.frame.size.height = 0
         self.tableView.reloadData()
         return true
     }
@@ -223,8 +426,58 @@ extension ExploreViewController: UISearchBarDelegate {
     
     /// This method is called when the search bar's cancel button is touched
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.filteredProperties = []
         self.currentState = .none
+        self.headerView.isHidden = false
+        self.headerView.frame.size.height = 400
         isFiltering = false
         self.tableView.reloadData()
     }
+
+}
+
+extension ExploreViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.ongs.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ongsCell", for: indexPath) as! OngsCollectionViewCell
+        
+        let ong = self.ongs[indexPath.row]
+        
+        
+        let imageURL =  URL(string: ong.url[0])
+        
+        //sd_setImage will get image from database
+        cell.ongImage.sd_setImage(with: imageURL,
+                                  placeholderImage: placeHolderImage,
+                                  options: SDWebImageOptions.lowPriority,
+                                  context: nil,
+                                  progress: nil) { (downloadedImage, error, cacheType, downloadURL) in
+                                    if let error = error {
+                                        //print("Error downloading the ong image: \(error.localizedDescription)")
+                                    } else {
+                                        //print("Successfully downloaded ong image: \(String(describing: downloadURL?.absoluteString))")
+                                    }
+        }
+        cell.ongName.text = ong.name
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        self.selectedOng = self.ongs[indexPath.row]
+        self.performSegue(withIdentifier: "showOngDetail", sender: self)
+    }
+    
+    
+    func setCollectionView() {
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+    }
+    
 }

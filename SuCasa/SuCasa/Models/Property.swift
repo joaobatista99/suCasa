@@ -34,23 +34,26 @@ class Property {
         }
     }
 
-    var space        : SpaceType
-    var type         : PropertyType
-    var guestsTotal  : Int
-    var numberOfRooms: Int
-    var numberOfBeds : Int
-    var country      : String
-    var address       : String
-    var city         : String
-    var postalCode   : Int
-    var complement   : String
-    var title        : String
-    var rules        : String
-    //var photos       : [String]
+    var space                 : String
+    var type                  : String
+    var guestsTotal           : Int
+    var numberOfRooms         : Int
+    var numberOfBeds          : Int
+    var country               : String
+    var address               : String
+    var city                  : String
+    var postalCode            : Int
+    var complement            : String
+    var title                 : String
+    var rules                 : String
+    var price                 : Float
+    var monthsAvailable       : Int
+    var urls                  : [String]
+    var coordinates           : CLLocationCoordinate2D
 
     init(){
-        self.space = .apartment
-        self.type = .apartment
+        self.space = ""
+        self.type = ""
         self.guestsTotal = 0
         self.numberOfRooms = 0
         self.numberOfBeds = 0
@@ -61,7 +64,32 @@ class Property {
         self.complement = ""
         self.title = ""
         self.rules = ""
-        //self.photos = []
+        self.price = 0.0
+        self.monthsAvailable = 0
+        self.urls = []
+        self.coordinates = CLLocationCoordinate2D()
+    }
+    
+    init(space: String, type: String, guestsTotal: Int, numberOfRooms: Int, numberOfBeds: Int,
+        country: String, address: String, city: String, postalCode: Int, complement: String,
+        title: String, rules: String, price: Float, monthsAvailable: Int, urls: [String], coordinates: CLLocationCoordinate2D)  {
+        
+        self.space = space
+        self.type = type
+        self.guestsTotal = guestsTotal
+        self.numberOfRooms = numberOfRooms
+        self.numberOfBeds = numberOfBeds
+        self.country = country
+        self.address = address
+        self.city = city
+        self.postalCode = postalCode
+        self.complement = complement
+        self.title = title
+        self.rules = rules
+        self.price = price
+        self.monthsAvailable = monthsAvailable
+        self.urls = urls
+        self.coordinates = coordinates
     }
     
 }

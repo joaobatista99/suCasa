@@ -12,13 +12,31 @@ import Photos
 
 class AddPhotosViewController: UIViewController {
 
-   
+    var property: Property!
+    
+    var images: [UIImage] = []
+    
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var photosAdded: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.tintColor = Colors.buttonColor
+
+        nextButton.isHidden = true
+        photosAdded.isHidden = true
+    }
+        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToTitle",
+            let locationVC = segue.destination as? TitleViewController {
+            locationVC.property = self.property
+            locationVC.images   = self.images
+        }
     }
     
-
+    //function to upload images from device
     @IBAction func loadImage(_ sender: Any) {
         
         let imagePicker = BSImagePickerViewController()
@@ -37,12 +55,43 @@ class AddPhotosViewController: UIViewController {
             }, cancel: { (assets: [PHAsset]) -> Void in
               // User cancelled. And this where the assets currently selected.
             }, finish: { (assets: [PHAsset]) -> Void in
-                
+                self.images = self.getAssetThumbnail(assets: assets)
         }, completion: nil)
         
+        
+    }
+    
+    //function to convert PHAsset into UIImage
+        func getAssetThumbnail(assets: [PHAsset]) -> [UIImage] {
+        
+        var arrayOfImages = [UIImage]()
+        let manager = PHImageManager.default()
+        let option = PHImageRequestOptions()
+        var thumbnail = UIImage()
+        option.isSynchronous = true
+        option.isNetworkAccessAllowed = true
+        
+        for asset in assets{
+            manager.requestImage(for: asset, targetSize: CGSize(width: asset.pixelWidth, height: asset.pixelHeight), contentMode: .aspectFit, options: option, resultHandler: {(result, info)->Void in
+
+                if let information = info  as? [String: Any],
+                   let error = information[PHImageErrorKey] {
+                    print("Error: \(error)")
+                } else {
+                    thumbnail = result!
+                    arrayOfImages.append(thumbnail)
+                }
+                
+            })
+        }
+    
+
+        self.nextButton.isHidden = false
+        self.photosAdded.isHidden = false
+        
+        
+        return arrayOfImages
     }
 }
 
-extension AddPhotosViewController: UIImagePickerControllerDelegate {
-    
-}
+

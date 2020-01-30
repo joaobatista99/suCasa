@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import CoreData
+import FirebaseFirestore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,9 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+
         //configures firebase
         FirebaseApp.configure()
+        _ = Firestore.firestore()
         
         //determines where the app will launch
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
