@@ -20,10 +20,18 @@ class OngDetailViewController: UIViewController {
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var phone: UILabel!
     
+    @IBOutlet weak var ongNameLabel: UILabel!
+    @IBOutlet weak var localizationLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setInformations()
+        setLocalizedStrings()
         
         self.navigationController?.navigationBar.tintColor = Colors.buttonColor
         
@@ -59,6 +67,13 @@ class OngDetailViewController: UIViewController {
                                 }
             }
         }
+    }
+    
+    private func setLocalizedStrings(){
+        ongNameLabel.text = NSLocalizedString("Nome", comment: "Nome - Label")
+        localizationLabel.text = NSLocalizedString("Localização", comment: "Localização - Label")
+        emailLabel.text = NSLocalizedString("E-mail", comment: "E-mail - Label")
+        phoneLabel.text = NSLocalizedString("Telefone", comment: "Telefone - Label")
     }
 
     

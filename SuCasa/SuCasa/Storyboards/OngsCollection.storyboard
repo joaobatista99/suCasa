@@ -3,7 +3,7 @@
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -114,6 +114,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="OngsCollectionView" destination="7t5-Hx-jNg" id="M87-g2-bSU"/>
+                        <outlet property="ongsCollectionDescriptionLabel" destination="qcD-4A-Du8" id="jow-MB-dC6"/>
+                        <outlet property="ongsCollectionTitleLabel" destination="Tkb-kc-zFz" id="zhO-f2-ya8"/>
                         <segue destination="hkg-dn-S51" kind="show" identifier="showOngDetail" id="hi4-Dg-TyR"/>
                     </connections>
                 </viewController>

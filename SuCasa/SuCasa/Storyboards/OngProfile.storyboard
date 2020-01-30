@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -167,10 +167,14 @@
                     </view>
                     <connections>
                         <outlet property="email" destination="goE-0i-KDq" id="7FJ-HI-mWd"/>
+                        <outlet property="emailLabel" destination="WOx-9l-n4n" id="Ebh-A9-eCj"/>
+                        <outlet property="localizationLabel" destination="LDW-CI-Kkd" id="jLA-5s-EDM"/>
                         <outlet property="location" destination="9zz-DJ-SM3" id="Fv6-A7-59e"/>
                         <outlet property="ongImage" destination="mFE-EN-6uv" id="bab-k9-yP2"/>
                         <outlet property="ongName" destination="1BM-V2-1kO" id="jPB-KT-jjg"/>
+                        <outlet property="ongNameLabel" destination="58H-V1-704" id="ZYq-qy-Gmn"/>
                         <outlet property="phone" destination="az6-KE-xuJ" id="khC-JD-VdU"/>
+                        <outlet property="phoneLabel" destination="G4z-ny-FWF" id="Y4O-RB-dq7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ion-36-spj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

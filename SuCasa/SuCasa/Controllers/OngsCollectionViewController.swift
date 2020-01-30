@@ -18,11 +18,16 @@ class OngsCollectionViewController: UIViewController {
     var selectedOng: Ong!
     var placeHolderImage = UIImage(named: "waiting")
     
+    @IBOutlet weak var ongsCollectionTitleLabel: UILabel!
+    @IBOutlet weak var ongsCollectionDescriptionLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         OngsCollectionView.delegate = self
         OngsCollectionView.dataSource = self
+        setLocalizedStrings()
         
         self.navigationController?.navigationBar.tintColor = .white
         
@@ -45,6 +50,11 @@ class OngsCollectionViewController: UIViewController {
             let detailOngVc = segue.destination as? OngDetailViewController
             detailOngVc?.ong = self.selectedOng
         }    
+    }
+    
+    private func setLocalizedStrings(){
+        ongsCollectionTitleLabel.text = NSLocalizedString("Conheça nossas ONGs parceiras", comment: "Conheça nossas ONGs parceiras - Label")
+        ongsCollectionDescriptionLabel.text = NSLocalizedString("Entre em contato com uma ONG e faça o agendamento para conhecer uma locação e o locador.", comment: "Entre em contato com uma ONG e faça o agendamento para conhecer uma locação e o locador. - Label")
     }
 
     
