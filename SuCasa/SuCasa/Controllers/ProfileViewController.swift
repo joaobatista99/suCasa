@@ -12,6 +12,12 @@ class ProfileViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var profileNavigation: UINavigationItem!
+    @IBOutlet weak var helpLabel: UILabel!
+    @IBOutlet weak var logoutLabel: UILabel!
+    @IBOutlet weak var editBarButton: UIBarButtonItem!
+    
+    
     var itemArray: [String] = ["Nome", "Localização", "E-Mail", "Telefone", "Idiomas"]
     
     var secondLabelArray: [String] = ["Berhman Garcon", "Campinas, SP (Brasil)",
@@ -28,6 +34,13 @@ class ProfileViewController: UIViewController {
         let nib = UINib(nibName: "ProfileTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "profileCell")
     }
+    private func setLocalizedStrings(){
+        helpLabel.text = NSLocalizedString("Ajuda e Suporte", comment: "Ajuda e Suporte - Label")
+        logoutLabel.text = NSLocalizedString("Sair", comment: "Sair - Label")
+        profileNavigation.title = NSLocalizedString("Perfil", comment: "Perfil - Label")
+        editBarButton.title = NSLocalizedString("Editar", comment: "Editar - Label")
+    }
+    
 }
 
 

@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -98,6 +98,10 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="editBarButton" destination="1rg-Kd-ukd" id="3Bg-9v-4bZ"/>
+                        <outlet property="helpLabel" destination="9re-bA-UTj" id="k2F-SQ-2vj"/>
+                        <outlet property="logoutLabel" destination="zzc-iG-7ve" id="Hxf-SA-SOd"/>
+                        <outlet property="profileNavigation" destination="IGK-yM-RRM" id="lK9-AA-sjz"/>
                         <outlet property="tableView" destination="YTn-NB-d6G" id="Qct-w0-XMD"/>
                     </connections>
                 </viewController>
