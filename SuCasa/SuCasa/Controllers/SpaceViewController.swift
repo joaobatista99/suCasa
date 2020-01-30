@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class SpaceViewController: UIViewController {
 
@@ -22,11 +23,22 @@ class SpaceViewController: UIViewController {
     private var property: Property = Property()
     private var editingFieldName: String?
     
+    @IBOutlet weak var spaceTitleLabel: UILabel!
+    
+    @IBOutlet weak var propertyType1Label: UILabel!
+    
+    @IBOutlet weak var propertyType2Label: UILabel!
+    
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUpPickerViews()
         setUpTextField()
+            
+        self.setLocalizedStrings()
         
         //keyboard notifications
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -37,6 +49,17 @@ class SpaceViewController: UIViewController {
         //Tap gesture to hide keyboard
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         view.addGestureRecognizer(tap)
+    }
+    
+    func setLocalizedStrings(){
+        spaceTitleLabel.text = NSLocalizedString("Como é seu espaço?", comment: "como é seu espaço? - titulo")
+        //"Como é seu espaço?" = "What is your space like?";
+        propertyType1Label.text = NSLocalizedString("Selecione a opção que o descreve melhor:", comment: "selecione a opcao que o descreve melhor:")
+        //"Selecione a opção que o descreve melhor:" = "Select the option that describes it best:";
+        propertyType2Label.text = NSLocalizedString("Agora escolha um tipo de propriedade:", comment: "agora escolha um tipo  de propriedade")
+        //"Agora escolha um tipo de propriedade:" = "Now select a type of property:";
+        nextButton.setTitle(NSLocalizedString("Próximo", comment: "botão de próximo"), for: .normal)
+        //"Próximo" = "Next";
     }
     
     //Scroll when keyboard activates

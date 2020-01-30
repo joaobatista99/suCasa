@@ -6,7 +6,13 @@
   Copyright © 2020 João Victor Batista. All rights reserved.
 */
 
-//MARK: ExploreViewController
+
+//MARK: OngsCollectionViewController
+
+"Conheça nossas ONGs parceiras" = "Conheça nossas ONGs parceiras";
+"Entre em contato com uma ONG e faça o agendamento para conhecer uma locação e o locador." = "Entre em contato com uma ONG e faça o agendamento para conhecer uma locação e o locador.";
+
+//MARK: IntroViewController
 
 "Somos a SuCasa" = "Somos a SuCasa";
 "Encontre propostas de aluguel com um valor acessível" = "Encontre propostas de aluguel com um valor acessível";
@@ -14,13 +20,103 @@
 "Flexibilidade e segurança para ambas as partes" = "Flexibilidade e segurança para ambas as partes";
 "Entrar" = "Entrar";
 
+
 //MARK: ExploreViewController
 
-"Localização atual" =  "Localização atual";
+"Localização atual" = "Localização atual";
 "ONG's Parceiras" = "ONG's Parceiras";
 "As melhores estadias para você" = "As melhores estadias para você";
 "Veja nossa seleção de lugares para ficar com os melhores preços" = "Veja nossa seleção de lugares para ficar com os melhores preços";
 "Ver tudo" = "Ver tudo";
+
+//MARK: AdViewController
+
+"Quer ajudar imigrantes? Cadastre seu imóvel aqui!" = "Quer ajudar imigrantes? Cadastre seu imóvel aqui!";
+
+
+//MARK: SpaceViewController
+
+"Como é seu espaço?" = "Como é seu espaço?";
+"Selecione a opção que o descreve melhor:" = "Selecione a opção que o descreve melhor:";
+"Agora escolha um tipo de propriedade:" = "Agora escolha um tipo de propriedade:";
+"Próximo" = "Próximo";
+
+
+//MARK: GuestsViewController
+
+"Quantos hóspedes podem ficar?" =  "Quantos hóspedes podem ficar?";
+"Garanta que você tem camas suficientes para acomodar confortavelmente todos os seus hóspedes." = "Garanta que você tem camas suficientes para acomodar confortavelmente todos os seus hóspedes.";
+"Total de hóspedes:" = "Total de hóspedes:";
+"Número de quartos para hóspedes:" = "Número de quartos para hóspedes:";
+"Número de camas para hóspedes" = "Número de camas para hóspedes";
+
+
+//MARK: AddPhotosViewController
+
+"Fotos Adicionadas!" = "Fotos Adicionadas!";
+"Adicione fotos do seu espaço"  =  "Adicione fotos do seu espaço";
+"As fotos ajudam os hóspedes a imaginarem como é ficar na sua acomodação. Você pode começar com uma foto e adicionar outras depois de publicar." = "As fotos ajudam os hóspedes a imaginarem como é ficar na sua acomodação. Você pode começar com uma foto e adicionar outras depois de publicar.";
+"Adicionar Fotos" = "Adicionar Fotos";
+
+
+//MARK: TitleViewController
+
+"Atraia os hóspedes com um título de anúncio que destaque o que há de especial em sua acomodação." = "Atraia os hóspedes com um título de anúncio que destaque o que há de especial em sua acomodação.";
+"Dê um título ao seu espaço" = "Dê um título ao seu espaço";
+"Título"  =  "Título";
+"Descreva as regras da casa" = "Descreva as regras da casa";
+
+
+//MARK: LocationViewController
+
+"Onde fica sua acomodação?" = "Onde fica sua acomodação?";
+"Somente as ONGs próximas receberão sua localização exata para poder instruir os insteressados." = "Oomente as ONGs próximas receberão sua localização exata para poder instruir os insteressados.";
+"Usar minha localização atual" = "Usar minha localização atual";
+"País/Região" =  "País/Região";
+"Endereço" = "Endereço";
+"Cidade" = "Cidade";
+"CEP" = "CEP";
+"Complemento" = "Complemento";
+
+
+//MARK: MonthlyViewController
+
+"Mensalidade" = "Mensalidade";
+"Defina um valor mínimo que seu hóspede possa pagar e qual o máximo de tempo que ele pode ficar." = "Defina um valor mínimo que seu hóspede possa pagar e qual o máximo de tempo que  ele pode ficar.";
+"Mensalidade Mínima"  = "Mensalidade Mínima";
+"Período Máximo" = "Período Máximo";
+"Concluir" = "Concluir";
+
+
+//MARK: CompleteRegistrationViewController
+
+"Parabéns, seu anúncio foi criado com sucesso!" = "Parabéns, seu anúncio foi criado com sucesso!";
+
+
+//MARK: OngDetailViewController
+
+"Nome" = "Nome";
+"Localização" = "Localização";
+"E-mail" = "E-mail";
+"Telefone" = "Telefone";
+
+
+//MARK: ProfileViewController
+
+"Ajuda e Suporte" = "Ajuda e Suporte";
+"Sair" = "Sair";
+"Perfil" = "Perfil";
+"Editar" = "Editar";
+
+
+//MARK: TabBarViewController
+
+"Explore" = "Explore";
+"Aluguéis" = "Aluguéis";
+
+
+//MARK: XIBTableViewExploreViewController
+
 "APROX. " = "Aprox. ";
 "Disponível para %d pessoas" = "Disponível para %d pessoas";
 "mês" = "mês";
@@ -35,3 +131,4 @@
 "%d mês" = "%d mês";
 "em média/mês" = "em média/mês";
 "Contato" = "Contato";
+

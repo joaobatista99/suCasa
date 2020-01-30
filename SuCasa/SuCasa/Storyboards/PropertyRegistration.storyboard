@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -172,8 +172,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="nextButton" destination="VxP-A5-IyD" id="Jdd-o6-2dc"/>
+                        <outlet property="nextButton" destination="VxP-A5-IyD" id="1Fg-xI-077"/>
                         <outlet property="propertyType" destination="FiH-tB-wFi" id="Cge-mY-RAg"/>
+                        <outlet property="propertyType1Label" destination="U8U-aM-epX" id="Wgn-qE-x8w"/>
+                        <outlet property="propertyType2Label" destination="Ejh-Jq-xHE" id="Boj-Fu-FNL"/>
+                        <outlet property="spaceTitleLabel" destination="geo-E2-BFf" id="zPb-ao-aiF"/>
                         <outlet property="spaceType" destination="xpu-u7-dOE" id="cfd-s2-3cO"/>
                         <segue destination="PAW-ok-E21" kind="show" identifier="goToGuests" id="14O-NL-YpU"/>
                     </connections>
@@ -436,9 +439,14 @@
                         </view>
                     </navigationItem>
                     <connections>
+                        <outlet property="TitleGuestsLabel" destination="UIP-44-0zE" id="kRR-b1-odK"/>
                         <outlet property="bedNumberTextField" destination="OxW-aV-zSh" id="jj7-7V-GIE"/>
                         <outlet property="bedroomNumberTextField" destination="i1Q-gJ-NUa" id="KSK-Qr-dzP"/>
+                        <outlet property="descriptionGuestsLabel" destination="dts-vJ-OMi" id="Wjw-UV-EOv"/>
                         <outlet property="nextButton" destination="hPl-p2-L6R" id="r0Q-Cs-ENv"/>
+                        <outlet property="numberOfBedsLabel" destination="43Q-AY-gwA" id="O4r-RB-XpZ"/>
+                        <outlet property="numberOfRoomsLabel" destination="k5D-K7-cdx" id="W7S-fY-zkF"/>
+                        <outlet property="totalGuestsLabel" destination="6cl-yx-R6l" id="NK7-rO-Dm8"/>
                         <outlet property="totalGuestsTextField" destination="d9F-lM-bcY" id="4jZ-fC-wP9"/>
                         <segue destination="sMF-ys-ix3" kind="show" identifier="goToLocation" id="Szm-Pj-Ixy"/>
                     </connections>
@@ -717,14 +725,22 @@
                         </view>
                     </navigationItem>
                     <connections>
+                        <outlet property="ZIPLabel" destination="7RV-50-hbJ" id="aUa-ub-iQa"/>
+                        <outlet property="adressLabel" destination="KUB-SZ-hxs" id="a5T-7l-Kb0"/>
                         <outlet property="adressTextField" destination="KaQ-l2-RYj" id="YSN-l0-FMG"/>
+                        <outlet property="cityLabel" destination="afx-3u-ib8" id="tse-FZ-I9d"/>
                         <outlet property="cityTextField" destination="gpc-Qs-dnY" id="Wpn-aj-hbd"/>
+                        <outlet property="complementLabel" destination="4Jn-uf-ikW" id="CWL-4A-KqH"/>
                         <outlet property="complementTextField" destination="hIA-zA-bLa" id="UFg-dY-wE4"/>
+                        <outlet property="countryLabel" destination="dwh-BE-IOw" id="ygU-iW-IEw"/>
                         <outlet property="countryTextField" destination="y2w-gQ-lbF" id="lDT-pa-YgY"/>
+                        <outlet property="locationDescriptionLabel" destination="QQm-ew-UD2" id="YO5-eG-NOV"/>
+                        <outlet property="locationTitleLabel" destination="14C-KB-qrg" id="Oor-lZ-0rg"/>
                         <outlet property="nextButton" destination="aQL-zN-L5M" id="Svr-BD-vCS"/>
                         <outlet property="postalCodeTextField" destination="DdU-ik-n7R" id="WEf-iL-hCp"/>
                         <outlet property="scrollContent" destination="Jt9-CK-Dqo" id="ceW-9K-qbI"/>
                         <outlet property="scrollView" destination="VGz-bl-ZIK" id="KZE-EK-lDb"/>
+                        <outlet property="useCurrentLocButton" destination="8JI-Pg-TXM" id="PD0-RO-m5u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YfT-kP-OLJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -833,6 +849,9 @@
                         </view>
                     </navigationItem>
                     <connections>
+                        <outlet property="addPhotosButton" destination="y7d-eY-IXf" id="igC-fR-cVX"/>
+                        <outlet property="addPhotosDescriptionLabel" destination="84r-ja-z2W" id="43a-dy-d30"/>
+                        <outlet property="addPhotosTitleLabel" destination="7Yf-tV-XAG" id="9jQ-9b-CWq"/>
                         <outlet property="nextButton" destination="qjP-vQ-Wbf" id="xng-WS-SIn"/>
                         <outlet property="photosAdded" destination="m0f-hj-HUu" id="wtN-4A-oCb"/>
                     </connections>
@@ -967,8 +986,12 @@
                         </view>
                     </navigationItem>
                     <connections>
+                        <outlet property="addTitleLabel" destination="DpX-p8-uOh" id="000-M9-cwp"/>
+                        <outlet property="descriptionLabel" destination="Fhp-49-kgx" id="WY3-ki-j5O"/>
                         <outlet property="nextButton" destination="db6-bB-vKm" id="fhD-tw-Msi"/>
+                        <outlet property="rulesLabel" destination="ZVA-5z-Cif" id="Swr-ab-8q3"/>
                         <outlet property="rulesTextField" destination="kWp-ma-xGL" id="h9i-ig-cVe"/>
+                        <outlet property="titleLabel" destination="PMM-QG-wo0" id="UjX-EC-A1S"/>
                         <outlet property="titleTextField" destination="2OF-4o-c46" id="vql-eZ-K9Q"/>
                         <segue destination="k6Z-ya-Bp1" kind="show" identifier="goToMonthlyValues" id="Axb-l0-qcs"/>
                     </connections>
@@ -1100,9 +1123,14 @@
                         </view>
                     </navigationItem>
                     <connections>
+                        <outlet property="concludeButton" destination="jSH-to-Q74" id="cl5-Ly-DJv"/>
+                        <outlet property="descriptionLabel" destination="kia-77-vts" id="OKZ-1k-06J"/>
                         <outlet property="monsthsQuantity" destination="nQ7-2p-Ixq" id="ZAu-Sg-E5I"/>
                         <outlet property="monthly" destination="dFC-DT-yez" id="FFW-i5-ZUF"/>
+                        <outlet property="monthlyLabel" destination="L7x-Eo-CVu" id="FJr-jc-4jh"/>
                         <outlet property="nextButton" destination="jSH-to-Q74" id="ZaP-G4-Sop"/>
+                        <outlet property="periodLabel" destination="1ju-KO-ctd" id="ydy-PC-Z9n"/>
+                        <outlet property="titleLabel" destination="KDs-Oc-clO" id="ilw-pd-FEE"/>
                         <segue destination="d9O-GD-ffu" kind="show" identifier="doneId" id="K1G-Oi-HQH"/>
                     </connections>
                 </viewController>
@@ -1165,6 +1193,7 @@
                         </view>
                     </navigationItem>
                     <connections>
+                        <outlet property="congratsLabel" destination="eyx-zG-Oje" id="iA7-bg-b4K"/>
                         <outlet property="dismissButton" destination="TaS-US-KkY" id="MWg-oh-DW2"/>
                     </connections>
                 </viewController>

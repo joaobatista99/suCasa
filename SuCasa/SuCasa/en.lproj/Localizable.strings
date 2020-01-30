@@ -6,6 +6,11 @@
   Copyright © 2020 João Victor Batista. All rights reserved.
 */
 
+//MARK: OngsCollectionViewController
+
+"Conheça nossas ONGs parceiras" = "Meet our partnered NGOs";
+"Entre em contato com uma ONG e faça o agendamento para conhecer uma locação e o locador." = "Contact one of the NGOs and schedule a meeting with the owner.";
+
 //MARK: IntroViewController
 
 "Somos a SuCasa" = "We are SuCasa";
@@ -16,11 +21,93 @@
 
 //MARK: ExploreViewController
 
-"Localização atual" = "Where am I?";
-"ONG's Parceiras" = "NGO's partners";
+"Localização atual" = "Current location";
+"ONG's Parceiras" = "Partnered NGOs";
 "As melhores estadias para você" = "The best stays for you";
 "Veja nossa seleção de lugares para ficar com os melhores preços" = "See our selection of places to stay at the best prices";
 "Ver tudo" = "See More";
+
+//MARK: AdViewController
+
+"Quer ajudar imigrantes? Cadastre seu imóvel aqui!" = "Want to help immigrants? Register your property here!";
+
+//MARK: SpaceViewController
+
+"Como é seu espaço?" = "What is your space like?";
+"Selecione a opção que o descreve melhor:" = "Select the option that describes it best:";
+"Agora escolha um tipo de propriedade:" = "Now select a type of property:";
+"Próximo" = "Next";
+
+//MARK: GuestsViewController
+
+
+"Quantos hóspedes podem ficar?" =  "How many guests can you receive?";
+"Garanta que você tem camas suficientes para acomodar confortavelmente todos os seus hóspedes." = "Guarantee that you have enough beds to comfortably accomodate all your guests.";
+"Total de hóspedes:" = "Total number of guests:";
+"Número de quartos para hóspedes:" = "Number of guest rooms:";
+"Número de camas para hóspedes" = "Number of guest beds:";
+
+//MARK: AddPhotosViewController
+
+"Fotos Adicionadas!" = "The photos have been added!";
+"Adicione fotos do seu espaço"  =  "Add photos of your space";
+"As fotos ajudam os hóspedes a imaginarem como é ficar na sua acomodação. Você pode começar com uma foto e adicionar outras depois de publicar." = "The pictures help the guests imagine what it is like to stay in your accomodation. You can start with one photo and  add  more after publishing.";
+"Adicionar Fotos" = "Add Photos";
+
+//MARK: TitleViewController
+
+"Atraia os hóspedes com um título de anúncio que destaque o que há de especial em sua acomodação." = "Attract guests with a title that highlights what is special about your accomodation.";
+"Dê um título ao seu espaço" = "Give your space a title";
+"Título"  =  "Title";
+"Descreva as regras da casa" = "Describe the house rules";
+
+
+//MARK: LocationViewController
+
+"Onde fica sua acomodação?" = "Where is your accomodation located?";
+"Somente as ONGs próximas receberão sua localização exata para poder instruir os insteressados." = "Only nearby NGOs will receive your exact location in order to instruct those interested.";
+"Usar minha localização atual" = "Use my current location";
+"País/Região" =  "Country/Region";
+"Endereço" = "Adress";
+"Cidade" = "City";
+"CEP" = "ZIP code";
+"Complemento" = "Complement";
+
+//MARK: MonthlyViewController
+
+"Mensalidade" = "Monthly payment";
+"Defina um valor mínimo que seu hóspede possa pagar e qual o máximo de tempo que ele pode ficar." = "Determine a minimmum amount your guest could pay and the maximum amount of time they could stay.";
+"Mensalidade Mínima"  = "Minimum Monthly Payment";
+"Período Máximo" = "Maximum amount of time";
+"Concluir" = "Conclude";
+
+//MARK: CompleteRegistrationViewController
+
+"Parabéns, seu anúncio foi criado com sucesso!" = "Congratulations, your advertisement has been successfully created!";
+
+//MARK: OngDetailViewController
+
+"Nome" = "Name";
+"Localização" = "Location";
+"E-mail" = "E-mail";
+"Telefone" = "Phone";
+
+//MARK: ProfileViewController
+
+"Ajuda e Suporte" = "Help and Support";
+"Sair" = "Sign Out";
+"Perfil" = "Profile";
+"Editar" = "Edit";
+
+//MARK: TabBarViewController
+
+"Explore" = "Explore";
+"Aluguéis" = "Rentals";
+
+
+//MARK: XIBTableViewExploreViewController
+
+
 "APROX. " = "Approx. ";
 "Disponível para %d pessoas" = "Available for %d people";
 "mês" = "month";
