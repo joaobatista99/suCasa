@@ -1,5 +1,5 @@
 //
-//  AdNavViewController.swift
+//  TabBarViewController.swift
 //  SuCasa
 //
 //  Created by Giovani de Oliveira Coutinho on 30/01/20.
@@ -8,12 +8,13 @@
 
 import UIKit
 
-class AdNavViewController: UINavigationController {
-    @IBOutlet weak var tabBarItemLabel: UITabBarItem!
+class TabBarViewController: UITabBarController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.tabBarItemLabel.title = "Jorge"
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBar.items![0].title = NSLocalizedString("Explore", comment: "Explore - tab")
+        self.tabBar.items![1].title = NSLocalizedString("Aluguéis", comment: "Aluguéis - tab")
+        self.tabBar.items![2].title = NSLocalizedString("Perfil", comment: "Perfil - tab")
         // Do any additional setup after loading the view.
     }
     

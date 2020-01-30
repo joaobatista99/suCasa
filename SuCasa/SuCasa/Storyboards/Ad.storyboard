@@ -91,12 +91,12 @@
         <!--Alugueis-->
         <scene sceneID="SbZ-b9-Yb2">
             <objects>
-                <navigationController storyboardIdentifier="Ad" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gE9-WU-LaB" customClass="AdNavViewController" customModule="SuCasa" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Ad" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gE9-WU-LaB" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Alugueis" image="House_off" id="3MN-Z5-ycj"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="BlN-Wt-6ES">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
@@ -109,7 +109,6 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <outlet property="tabBarItemLabel" destination="3MN-Z5-ycj" id="v1h-xU-v8e"/>
                         <segue destination="s7G-6i-Vpu" kind="relationship" relationship="rootViewController" id="rcg-UB-QX1"/>
                     </connections>
                 </navigationController>

@@ -34,7 +34,7 @@
 		5E75BB61238EE754007A0EE6 /* CompleteRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75BB60238EE754007A0EE6 /* CompleteRegistrationViewController.swift */; };
 		5E75BB65238EEB39007A0EE6 /* LoadingAnimationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75BB64238EEB39007A0EE6 /* LoadingAnimationExtension.swift */; };
 		5E9D49952391A696002A7BDF /* PropertyDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9D49942391A696002A7BDF /* PropertyDetailTableViewController.swift */; };
-		AD3C249223E3131200372082 /* AdNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3C249123E3131200372082 /* AdNavViewController.swift */; };
+		AD3C249423E3191900372082 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3C249323E3191900372082 /* TabBarViewController.swift */; };
 		BA075ACF2383066D001CAE86 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA075ACE2383066D001CAE86 /* LocationViewController.swift */; };
 		BA1B7D932386DB3C00D06E3A /* CarouselItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA1B7D922386DB3C00D06E3A /* CarouselItem.xib */; };
 		BA1B7D952386DCA000D06E3A /* PropertyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1B7D942386DCA000D06E3A /* PropertyDetailViewController.swift */; };
@@ -98,7 +98,7 @@
 		5E9D49942391A696002A7BDF /* PropertyDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailTableViewController.swift; sourceTree = "<group>"; };
 		8F6CA9F7B8D35C36B0A15AB3 /* Pods-SuCasa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuCasa.debug.xcconfig"; path = "Target Support Files/Pods-SuCasa/Pods-SuCasa.debug.xcconfig"; sourceTree = "<group>"; };
 		AB9A42759A6AEB44F15643F6 /* Pods_SuCasa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuCasa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD3C249123E3131200372082 /* AdNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdNavViewController.swift; sourceTree = "<group>"; };
+		AD3C249323E3191900372082 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		BA075ACE2383066D001CAE86 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		BA1B7D922386DB3C00D06E3A /* CarouselItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselItem.xib; sourceTree = "<group>"; };
 		BA1B7D942386DCA000D06E3A /* PropertyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailViewController.swift; sourceTree = "<group>"; };
@@ -247,7 +247,7 @@
 				BA1B7D982386DF2B00D06E3A /* CarouselPageViewController.swift */,
 				5E9D49942391A696002A7BDF /* PropertyDetailTableViewController.swift */,
 				365508812399450F00483344 /* ProfileViewController.swift */,
-				AD3C249123E3131200372082 /* AdNavViewController.swift */,
+				AD3C249323E3191900372082 /* TabBarViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -442,11 +442,11 @@
 				3658D1FA2379D7E200A96E2F /* SuggestionsTableViewCell.swift in Sources */,
 				BA1B7D992386DF2B00D06E3A /* CarouselPageViewController.swift in Sources */,
 				36AC92F1237DD83400012AA9 /* StringExtension.swift in Sources */,
-				AD3C249223E3131200372082 /* AdNavViewController.swift in Sources */,
 				5E75BB65238EEB39007A0EE6 /* LoadingAnimationExtension.swift in Sources */,
 				BA075ACF2383066D001CAE86 /* LocationViewController.swift in Sources */,
 				3658D1FE2379EAC100A96E2F /* ResultsTableViewCell.swift in Sources */,
 				BAACB3D5238EF1E700C231F0 /* Ong.swift in Sources */,
+				AD3C249423E3191900372082 /* TabBarViewController.swift in Sources */,
 				BA5D40DA2375EA050041AC6B /* AdViewController.swift in Sources */,
 				BAB9EFBF237095CD00B480F1 /* SuCasa.xcdatamodeld in Sources */,
 				5E55AA19237B34E500887772 /* GuestsViewController.swift in Sources */,
@@ -622,7 +622,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = 76DX35F6T7;
+				DEVELOPMENT_TEAM = W7GK3PM9D9;
 				INFOPLIST_FILE = SuCasa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -643,7 +643,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = 76DX35F6T7;
+				DEVELOPMENT_TEAM = W7GK3PM9D9;
 				INFOPLIST_FILE = SuCasa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
