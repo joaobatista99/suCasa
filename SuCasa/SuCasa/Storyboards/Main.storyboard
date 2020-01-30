@@ -404,8 +404,13 @@
                     <connections>
                         <outlet property="cityLabel" destination="yd7-RX-l0L" id="gd6-YM-CWn"/>
                         <outlet property="collectionView" destination="FwT-Fn-Zbd" id="xAa-2b-5q1"/>
+                        <outlet property="descriptionBestForYouLabel" destination="PX4-B4-4Re" id="cn1-ms-Sft"/>
                         <outlet property="headerView" destination="eXT-6h-B8v" id="Hk9-SM-XRD"/>
+                        <outlet property="ongPartnerLabel" destination="bHY-qy-wBM" id="hga-Mt-DSh"/>
+                        <outlet property="seeMoreButton" destination="4gg-lG-Ga5" id="mcZ-5Y-355"/>
                         <outlet property="tableView" destination="5Ax-bw-Cal" id="Yub-Ru-fGC"/>
+                        <outlet property="titleBestForYouLabel" destination="ACP-Kb-Lrb" id="30i-jY-Uo8"/>
+                        <outlet property="whereAmILabel" destination="XUH-FL-Ccx" id="pOu-J4-Cm3"/>
                         <segue destination="YDf-BQ-biC" kind="show" identifier="showOngDetail" id="0ID-8T-83k"/>
                         <segue destination="xky-Tx-GWT" kind="show" identifier="showAllOngs" id="Mrk-rT-utY"/>
                         <segue destination="Dfc-zA-sHe" kind="show" identifier="showPropertyDetail" id="Ya1-sX-WON"/>
