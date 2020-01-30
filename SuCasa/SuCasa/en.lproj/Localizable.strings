@@ -8,11 +8,11 @@
 
 //MARK: IntroViewController
 
-"Somos a SuCasa" = "We are SuCasa"
-"Encontre propostas de aluguel com um valor acessível" = "Find affordable rental offers"
-"Compartilhe experiências e viva novas culturas" = "Share experiences and live new cultures"
-"Flexibilidade e segurança para ambas as partes" = "Flexibility and security for both parties"
-"Entrar" = "Sing In"
+"Somos a SuCasa" = "We are SuCasa";
+"Encontre propostas de aluguel com um valor acessível" = "Find affordable rental offers";
+"Compartilhe experiências e viva novas culturas" = "Share experiences and live new cultures";
+"Flexibilidade e segurança para ambas as partes" = "Flexibility and security for both parties";
+"Entrar" = "Sing In";
 
 //MARK: ExploreViewController
 
