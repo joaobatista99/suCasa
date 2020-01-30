@@ -6,7 +6,7 @@ class ExploreViewController: UIViewController {
     
     //Mocked informations
     let searchRecents = ["campinas", "são josé dos campos", "são paulo", "guarulhos", "valinhos"]
-
+    
     /// Table View Variables
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cityLabel: UILabel!
@@ -59,7 +59,7 @@ class ExploreViewController: UIViewController {
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-          return .default
+        return .default
     }
     
     fileprivate var _currentState = SearchBarState.none
@@ -98,11 +98,12 @@ class ExploreViewController: UIViewController {
     func localizationExploreViewController () {
         
         self.whereAmILabel.text = NSLocalizedString("Localização atual", comment: "")
-        self.ongPartnerLabel.text = NSLocalizedString("ONG'S Parceiras", comment: "")
-        self.titleBestForYouLabel.text = NSLocalizedString("As melhores estadias para você ", comment: "")
+        self.ongPartnerLabel.text = NSLocalizedString("ONG's Parceiras", comment: "")
+        self.titleBestForYouLabel.text = NSLocalizedString("As melhores estadias para você", comment: "")
         self.descriptionBestForYouLabel.text = NSLocalizedString("Veja nossa seleção de lugares para ficar com os melhores preços", comment: "")
         
-        self.seeMoreButton.titleLabel?.text = NSLocalizedString("Ver tudo", comment: "")
+        
+        self.seeMoreButton.setTitle(NSLocalizedString("Ver tudo", comment: ""), for: .normal)
     }
     
     /*
@@ -172,7 +173,7 @@ class ExploreViewController: UIViewController {
         distanceString = NSLocalizedString("APROX.", comment: "") + (distanceLocalized ?? String(format: "%.1f", self.distance) + "Km")
         
         completion(distanceString)
-       
+        
     }
     
     @IBAction func seeAllOngsButton(_ sender: Any) {
@@ -198,10 +199,10 @@ class ExploreViewController: UIViewController {
         
     }
     
-   @objc func refresh() {
+    @objc func refresh() {
         
         getCityLocation()
-    
+        
         //after retrieving data from database it will set the view
         PropertyServices.retrieveProperty(completionHandler: { (auxProperties , error) in
             
@@ -221,25 +222,25 @@ class ExploreViewController: UIViewController {
                 self.ongs = ongs
                 self.setCollectionView()
             }
-         }
-   }
-  
+        }
+    }
+    
     private func updateResultsProperties() {
+        
+        let city = self.selectedCity.filter { !"\r".contains($0) }
+        //Getting all properties that is located on the city that was selected
+        
+        // for each property, filter using case insensitive
+        for prop in properties {
             
-            let city = self.selectedCity.filter { !"\r".contains($0) }
-            //Getting all properties that is located on the city that was selected
+            let isFilter: ComparisonResult = city.compare(prop.city, options: .caseInsensitive, range: nil, locale: nil)
             
-            // for each property, filter using case insensitive
-            for prop in properties {
-                
-                let isFilter: ComparisonResult = city.compare(prop.city, options: .caseInsensitive, range: nil, locale: nil)
-                
-                if isFilter  == .orderedSame {
-                    filteredProperties.append(prop)
-                }
+            if isFilter  == .orderedSame {
+                filteredProperties.append(prop)
             }
-      }
-
+        }
+    }
+    
 }
 
 /// Search bar behavior
@@ -256,7 +257,7 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             if isFiltering {
                 self.selectedCity = self.filteredCities[indexPath.row].name ?? "default"
                 updateResultsProperties()
-
+                
             } else {
                 self.selectedCity = searchRecents[indexPath.row]
                 updateResultsProperties()
@@ -305,7 +306,7 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             let priceString = currencyFormatter.string(from: NSNumber(value: property.price))!
             
             let formatString = NSLocalizedString("Disponível para %d pessoas",
-            comment: "")
+                                                 comment: "")
             
             cell.adPriceLabel.text = priceString + "/" + NSLocalizedString("mês", comment: "")
             cell.adTitleLabel.text = property.title
@@ -353,8 +354,8 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             let priceString = currencyFormatter.string(from: NSNumber(value: property.price))!
             
             let formatString = NSLocalizedString("Disponível para %d pessoas",
-            comment: "")
-
+                                                 comment: "")
+            
             
             cell.adPriceLabel.text = priceString + "/" + NSLocalizedString("mês", comment: "")
             cell.adTitleLabel.text = property.title
@@ -394,7 +395,7 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
     
     /// This method is to set a title for the header
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-
+        
         switch currentState {
         case .none:
             return ""
@@ -491,7 +492,7 @@ extension ExploreViewController: UISearchBarDelegate {
         isFiltering = false
         self.tableView.reloadData()
     }
-
+    
 }
 
 extension ExploreViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
