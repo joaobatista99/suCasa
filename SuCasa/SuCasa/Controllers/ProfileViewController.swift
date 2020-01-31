@@ -18,7 +18,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var editBarButton: UIBarButtonItem!
     
     
-    var itemArray: [String] = ["Nome", "Localização", "E-Mail", "Telefone", "Idiomas"]
+    var itemArray: [String] = [NSLocalizedString("Nome", comment: ""), NSLocalizedString("Localização", comment: ""), NSLocalizedString("E-mail", comment: ""), NSLocalizedString("Telefone", comment: ""), NSLocalizedString("Idiomas", comment: "")]
     
     var secondLabelArray: [String] = ["Berhman Garcon", "Campinas, SP (Brasil)",
                                       "berhman@example.com", "(19) 99950-6396",

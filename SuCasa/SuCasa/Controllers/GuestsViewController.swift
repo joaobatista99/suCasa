@@ -125,9 +125,9 @@ extension GuestsViewController: UITextFieldDelegate {
         let attributes = [NSAttributedString.Key.foregroundColor: Colors.placeholderColor]
         
         
-        totalGuestsTextField.attributedPlaceholder = NSAttributedString(string: "Selecione", attributes: attributes as [NSAttributedString.Key : Any])
-        bedroomNumberTextField.attributedPlaceholder = NSAttributedString(string: "Selecione", attributes: attributes as [NSAttributedString.Key : Any])
-        bedNumberTextField.attributedPlaceholder = NSAttributedString(string: "Selecione", attributes: attributes as [NSAttributedString.Key : Any])
+        totalGuestsTextField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Selecione", comment: ""), attributes: attributes as [NSAttributedString.Key : Any])
+        bedroomNumberTextField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Selecione", comment: ""), attributes: attributes as [NSAttributedString.Key : Any])
+        bedNumberTextField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Selecione", comment: ""), attributes: attributes as [NSAttributedString.Key : Any])
        
         totalGuestsTextField.textColor = Colors.textColor
         
@@ -145,7 +145,7 @@ extension GuestsViewController: UITextFieldDelegate {
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         
         //creating done button
-        let doneButton = UIBarButtonItem(title: "Concluido", style: UIBarButtonItem.Style.done, target: self, action: #selector(self.donePicker))
+        let doneButton = UIBarButtonItem(title: NSLocalizedString("Concluído", comment: ""), style: UIBarButtonItem.Style.done, target: self, action: #selector(self.donePicker))
         
         //putting the flexible space and the done button into the toolbar
         toolBar.setItems([flexibleSpace, doneButton], animated: false)

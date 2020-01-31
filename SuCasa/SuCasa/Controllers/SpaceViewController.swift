@@ -108,27 +108,27 @@ class SpaceViewController: UIViewController {
             
         case "space":
             if spaceType.isFirstResponder {
-                spaceType.text = Property.SpaceType.allCases[pickerView.selectedRow(inComponent: 0)].rawValue
+                spaceType.text = Property.SpaceType.allCases[pickerView.selectedRow(inComponent: 0)].localizedString()
                 
-                self.property.space = Property.SpaceType.allCases[pickerView.selectedRow(inComponent: 0)].rawValue
+                self.property.space = Property.SpaceType.allCases[pickerView.selectedRow(inComponent: 0)].localizedString()
                 
                 propertyType.isUserInteractionEnabled = true
             }
         case "apartment":
             if propertyType.isFirstResponder {
                 
-                propertyType.text = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[pickerView.selectedRow(inComponent: 0)].rawValue
+                propertyType.text = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[pickerView.selectedRow(inComponent: 0)].localizedString()
                 
-                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[pickerView.selectedRow(inComponent: 0)].rawValue
+                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[pickerView.selectedRow(inComponent: 0)].localizedString()
                 
             }
         case "house":
             if propertyType.isFirstResponder {
                 
-                propertyType.text = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[pickerView.selectedRow(inComponent: 0)].rawValue
+                propertyType.text = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[pickerView.selectedRow(inComponent: 0)].localizedString()
                 
                 // assign the property type based on what was chosen
-                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[pickerView.selectedRow(inComponent: 0)].rawValue
+                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[pickerView.selectedRow(inComponent: 0)].localizedString()
             }
         default:
             break
@@ -153,7 +153,7 @@ class SpaceViewController: UIViewController {
         }
         else {
             // choosing what options will be set on the second picker view
-            editingFieldName = spaceType.text == "Apartamento" ? "apartment" :  "house"
+            editingFieldName = spaceType.text == NSLocalizedString("Apartamento", comment: "") ? "apartment" :  "house"
         }
         
         // assign space type pickerview to correct text field
@@ -219,7 +219,7 @@ extension SpaceViewController: UIPickerViewDataSource, UIPickerViewDelegate {
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         
         //creating done button
-        let doneButton = UIBarButtonItem(title: "Concluido", style: UIBarButtonItem.Style.done, target: self, action: #selector(self.donePicker))
+        let doneButton = UIBarButtonItem(title: NSLocalizedString("Concluído", comment: ""), style: UIBarButtonItem.Style.done, target: self, action: #selector(self.donePicker))
         
         //putting the flexible space and the done button into the toolbar
         toolBar.setItems([flexibleSpace, doneButton], animated: false)
@@ -253,7 +253,7 @@ extension SpaceViewController: UIPickerViewDataSource, UIPickerViewDelegate {
         
 
         if (editingFieldName == "space") {
-            return Property.SpaceType.allCases[row].rawValue
+            return Property.SpaceType.allCases[row].localizedString()
 
         }
         else {
@@ -261,7 +261,7 @@ extension SpaceViewController: UIPickerViewDataSource, UIPickerViewDelegate {
             let spaceType: Property.SpaceType = editingFieldName  == "house" ? .house : .apartment
             
             //return the spaceType raw value based on what was set in the first picker view (house or apartment)
-            return Property.PropertyType.allCases.filter({$0.spaceType() == spaceType})[row].rawValue
+            return Property.PropertyType.allCases.filter({$0.spaceType() == spaceType})[row].localizedString()
 
         }
     }
@@ -275,23 +275,23 @@ extension SpaceViewController: UIPickerViewDataSource, UIPickerViewDelegate {
                 //disable property type's user interaction
                 // (it need to have a value to be set)
                 propertyType.isUserInteractionEnabled = true
-                spaceType.text = Property.SpaceType.allCases[row].rawValue
-                self.property.space = Property.SpaceType.allCases[row].rawValue
+                spaceType.text = Property.SpaceType.allCases[row].localizedString()
+                self.property.space = Property.SpaceType.allCases[row].localizedString()
                 clearTextField(textField: propertyType)
                 nextButton.isHidden = true
 
             //second text field set with "Apartamento"
             case "apartment":
-                propertyType.text = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[row].rawValue
-                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[row].rawValue
+                propertyType.text = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[row].localizedString()
+                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[row].localizedString()
                 nextButton.isHidden = false
             
             //second text field set with "Casa"
             case "house":
-                propertyType.text = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[row].rawValue
+                propertyType.text = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[row].localizedString()
                 nextButton.isHidden = false
                 // assign the property type based on what was chosen
-                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[row].rawValue
+                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[row].localizedString()
             
             default:
                 break
@@ -316,8 +316,8 @@ extension SpaceViewController: UITextFieldDelegate {
         
         let attributes = [NSAttributedString.Key.foregroundColor: Colors.placeholderColor]
         
-        spaceType.attributedPlaceholder = NSAttributedString(string: "Selecione", attributes: attributes as [NSAttributedString.Key : Any])
-        propertyType.attributedPlaceholder = NSAttributedString(string: "Selecione o tipo de propriedade", attributes: attributes as [NSAttributedString.Key : Any])
+        spaceType.attributedPlaceholder =  NSAttributedString(string: NSLocalizedString("Selecione", comment: ""), attributes: attributes as [NSAttributedString.Key : Any])
+        propertyType.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Selecione o tipo de propriedade", comment: ""), attributes: attributes as [NSAttributedString.Key : Any])
         
         
         spaceType.textColor = Colors.textColor

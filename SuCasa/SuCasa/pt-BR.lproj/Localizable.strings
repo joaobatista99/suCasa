@@ -40,6 +40,8 @@
 "Selecione a opção que o descreve melhor:" = "Selecione a opção que o descreve melhor:";
 "Agora escolha um tipo de propriedade:" = "Agora escolha um tipo de propriedade:";
 "Próximo" = "Próximo";
+"Selecione" = "Selecione";
+"Selecione o tipo de propriedade" = "Selecione o tipo de propriedade";
 
 
 //MARK: GuestsViewController
@@ -65,7 +67,8 @@
 "Dê um título ao seu espaço" = "Dê um título ao seu espaço";
 "Título"  =  "Título";
 "Descreva as regras da casa" = "Descreva as regras da casa";
-
+"Adicione seu título" = "Adicione seu título";
+"Adicione suas regras (Opcional)" = "Adicione suas regras (Opcional)";
 
 //MARK: LocationViewController
 
@@ -86,7 +89,8 @@
 "Mensalidade Mínima"  = "Mensalidade Mínima";
 "Período Máximo" = "Período Máximo";
 "Concluir" = "Concluir";
-
+"Adicione o valor em R$" = "Adicione o valor em R$";
+"Adicione a quantidade de meses" = "Adicione a quantidade de meses";
 
 //MARK: CompleteRegistrationViewController
 
@@ -107,6 +111,7 @@
 "Sair" = "Sair";
 "Perfil" = "Perfil";
 "Editar" = "Editar";
+"Idiomas" = "Idiomas";
 
 
 //MARK: TabBarViewController
@@ -131,4 +136,14 @@
 "%d mês" = "%d mês";
 "em média/mês" = "em média/mês";
 "Contato" = "Contato";
+
+//MARK: PickerOptions
+"Apartamento" = "Apartamento";
+"Casa" = "Casa";
+"Condominio" = "Condominio";
+"Casa de rua" = "Casa de rua";
+
+//MARK: DoneButtonPicker
+
+"Concluído" = "Concluído";
 

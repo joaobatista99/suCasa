@@ -37,6 +37,8 @@
 "Selecione a opção que o descreve melhor:" = "Select the option that describes it best:";
 "Agora escolha um tipo de propriedade:" = "Now select a type of property:";
 "Próximo" = "Next";
+"Selecione" = "Select";
+"Selecione o tipo de propriedade" = "Select the property type";
 
 //MARK: GuestsViewController
 
@@ -59,6 +61,8 @@
 "Dê um título ao seu espaço" = "Give your space a title";
 "Título"  =  "Title";
 "Descreva as regras da casa" = "Describe the house rules";
+"Adicione seu título" = "Add your title";
+"Adicione suas regras (Opcional)" = "Add your rules (Optional)";
 
 
 //MARK: LocationViewController
@@ -79,6 +83,8 @@
 "Mensalidade Mínima"  = "Minimum Monthly Payment";
 "Período Máximo" = "Maximum amount of time";
 "Concluir" = "Conclude";
+"Adicione o valor em R$" = "Add the cost in $";
+"Adicione a quantidade de meses" = "Add months quantity";
 
 //MARK: CompleteRegistrationViewController
 
@@ -98,11 +104,12 @@
 "Perfil" = "Profile";
 "Editar" = "Edit";
 
+
 //MARK: TabBarViewController
 
 "Explore" = "Explore";
 "Aluguéis" = "Rentals";
-
+"Idiomas" = "Languages";
 
 //MARK: XIBTableViewExploreViewController
 
@@ -122,3 +129,12 @@
 "em média/mês" = "average/month";
 "Contato" = "Contact";
 
+//MARK: PickerOptions
+"Apartamento" = "Apartment";
+"Casa" = "House";
+"Condominio" = "Condominium";
+"Casa de rua" = "Street house";
+
+//MARK: DoneButtonPicker
+
+"Concluído" = "Done";

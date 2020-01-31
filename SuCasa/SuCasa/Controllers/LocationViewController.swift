@@ -118,7 +118,7 @@ class LocationViewController: UIViewController {
         let toolbar:UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0,  width: self.view.frame.size.width, height: 30))
         //create left side empty space so that done button set on right side
         let flexSpace = UIBarButtonItem(barButtonSystemItem:    .flexibleSpace, target: nil, action: nil)
-        let doneBtn: UIBarButtonItem = UIBarButtonItem(title: "Concluído", style: .done, target: self, action: #selector(doneButton))
+        let doneBtn: UIBarButtonItem = UIBarButtonItem(title: NSLocalizedString("Concluído", comment: ""), style: .done, target: self, action: #selector(doneButton))
         toolbar.setItems([flexSpace, doneBtn], animated: false)
         toolbar.sizeToFit()
         

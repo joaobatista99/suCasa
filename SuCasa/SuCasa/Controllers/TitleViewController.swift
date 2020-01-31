@@ -107,8 +107,8 @@ class TitleViewController: UIViewController {
         
         let attributes = [NSAttributedString.Key.foregroundColor: Colors.placeholderColor]
         
-        titleTextField.attributedPlaceholder = NSAttributedString(string: "Adicione seu título", attributes: attributes as [NSAttributedString.Key : Any])
-        rulesTextField.attributedPlaceholder = NSAttributedString(string: "Adicione suas regras (Opcional)", attributes: attributes as [NSAttributedString.Key : Any])
+        titleTextField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Adicione seu título", comment: ""), attributes: attributes as [NSAttributedString.Key : Any])
+        rulesTextField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Adicione suas regras (Opcional)", comment: ""), attributes: attributes as [NSAttributedString.Key : Any])
         
         titleTextField.textColor = Colors.textColor
         

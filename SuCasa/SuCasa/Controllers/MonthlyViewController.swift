@@ -54,17 +54,11 @@ class MonthlyViewController: UIViewController {
     }
     
     func setLocalizedStrings(){
-        //"Próximo" =  "Next";
         nextButton.setTitle(NSLocalizedString("Próximo", comment: "botão de  próximo"), for: .normal)
-        //"Mensalidade" = "Monthly payment";
         titleLabel.text = NSLocalizedString("Mensalidade", comment: "")
-        //"Defina um valor mínimo que seu hóspede possa pagar e qual o máximo de tempo que  ele pode ficar." = "Determine a minimmum amount your guest could pay and the maximum amount of time they could stay.";
-        descriptionLabel.text = NSLocalizedString("Defina um valor mínimo que seu hóspede possa pagar e qual o máximo de tempo que  ele pode ficar.", comment: "")
-        //"Mensalidade Mínima"  = "Minimum Monthly Payment";
+        descriptionLabel.text = NSLocalizedString("Defina um valor mínimo que seu hóspede possa pagar e qual o máximo de tempo que ele pode ficar.", comment: "")
         monthlyLabel.text = NSLocalizedString("Mensalidade Mínima", comment: "")
-        //"Período Máximo" = "Maximum amount of time";
         periodLabel.text = NSLocalizedString("Período Máximo", comment: "")
-        //"Concluir" = "Conclude";
         concludeButton.setTitle(NSLocalizedString("Concluir", comment: "botão de concluir"), for: .normal)
     }
     
@@ -133,8 +127,8 @@ class MonthlyViewController: UIViewController {
         
         let attributes = [NSAttributedString.Key.foregroundColor: Colors.placeholderColor]
         
-        monthly.attributedPlaceholder = NSAttributedString(string: "Adicione o valor em R$", attributes: attributes as [NSAttributedString.Key : Any])
-        monsthsQuantity.attributedPlaceholder = NSAttributedString(string: "Adicione a quantidade de meses", attributes: attributes as [NSAttributedString.Key : Any])
+        monthly.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Adicione o valor em R$", comment: ""), attributes: attributes as [NSAttributedString.Key : Any])
+        monsthsQuantity.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Adicione a quantidade de meses", comment: ""), attributes: attributes as [NSAttributedString.Key : Any])
         
         monsthsQuantity.textColor = Colors.textColor
         monsthsQuantity.keyboardType = .numberPad
@@ -152,7 +146,7 @@ class MonthlyViewController: UIViewController {
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         
         //creating done button
-        let doneButton = UIBarButtonItem(title: "Concluido", style: UIBarButtonItem.Style.done, target: self, action: #selector(self.doneButton))
+        let doneButton = UIBarButtonItem(title: NSLocalizedString("Concluído", comment: ""), style: UIBarButtonItem.Style.done, target: self, action: #selector(self.doneButton))
         
         //putting the flexible space and the done button into the toolbar
         toolBar.setItems([flexibleSpace, doneButton], animated: false)

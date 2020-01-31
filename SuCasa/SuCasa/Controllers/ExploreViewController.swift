@@ -142,7 +142,7 @@ class ExploreViewController: UIViewController {
         distanceFormatter.locale = Locale.current
         let distanceLocalized = distanceFormatter.string(for: self.distance)
         
-        var distanceString = NSLocalizedString("APROX. ", comment: "") + (distanceLocalized ?? String(format: "%.1f", self.distance) + "Km")
+        let distanceString = NSLocalizedString("APROX. ", comment: "") + (distanceLocalized ?? String(format: "%.1f", self.distance) + "Km")
         
         completion(distanceString)
         

@@ -14,6 +14,10 @@ class Property {
     enum SpaceType : String, CaseIterable {
         case apartment = "Apartamento"
         case house = "Casa"
+        
+        func localizedString() -> String {
+            return NSLocalizedString(self.rawValue, comment: "")
+        }
     }
     
     enum PropertyType : String, CaseIterable {
@@ -31,6 +35,10 @@ class Property {
                 case .condominium: return .house
             case .street: return .house
             }
+        }
+        
+        func localizedString() -> String {
+            return NSLocalizedString(self.rawValue, comment: "")
         }
     }
 
