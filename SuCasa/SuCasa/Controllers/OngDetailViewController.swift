@@ -25,7 +25,18 @@ class OngDetailViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     
+    @IBOutlet weak var scrollViewConstraint: NSLayoutConstraint!
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        
+        if(phoneLabel.font.pointSize>33.0){
+            scrollViewConstraint = scrollViewConstraint.changeMultiplier(multiplier: 1.5)
+        }else{
+            scrollViewConstraint = scrollViewConstraint.changeMultiplier(multiplier: 1.0)
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +50,13 @@ class OngDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        if(phoneLabel.font.pointSize>33.0){
+            scrollViewConstraint = scrollViewConstraint.changeMultiplier(multiplier: 1.5)
+        }else{
+            scrollViewConstraint = scrollViewConstraint.changeMultiplier(multiplier: 1.0)
+        }
+        
         tabBarController?.tabBar.isHidden = true
     }
 
