@@ -52,7 +52,7 @@ class AddPhotosViewController: UIViewController {
         //"As fotos ajudam os hóspedes a imaginarem como é ficar na sua acomodação. Você pode começar com uma foto e adicionar outras depois de publicar." = "The pictures help the guests imagine what it is like to stay in your accomodation. You can start with one photo and  add  more after publishing."
         addPhotosDescriptionLabel.text = NSLocalizedString("As fotos ajudam os hóspedes a imaginarem como é ficar na sua acomodação. Você pode começar com uma foto e adicionar outras depois de publicar.", comment: "")
         //"Adicionar Fotos = "Add Photos";
-        addPhotosButton.titleLabel?.text  =  NSLocalizedString("Adicionar Fotos", comment: "Botão de adicionar fotos")
+        addPhotosButton.setTitle(NSLocalizedString("Adicionar Fotos", comment: "Botão de adicionar fotos"), for: .normal) 
     }
     
     //function to upload images from device

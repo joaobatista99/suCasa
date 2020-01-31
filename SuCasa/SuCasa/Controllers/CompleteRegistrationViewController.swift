@@ -16,15 +16,13 @@ class CompleteRegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setLocalizedStrings()
         dismissButton.imageView?.contentMode = .scaleAspectFit
     }
     
     func setLocalizedStrings(){
-        //"Parabéns, seu anúncio foi criado com sucesso!" = "Congratulations, your advertisement has been successfully created!;"
-        congratsLabel.text = NSLocalizedString("Parabéns, seu anúncio foi criado com sucesso!", comment: "")
+        self.congratsLabel.text = NSLocalizedString("Parabéns, seu anúncio foi criado com sucesso!", comment: "")
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

@@ -28,7 +28,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         setTableView()
         registerXibs()
-        
+        setLocalizedStrings()
       
     }
     

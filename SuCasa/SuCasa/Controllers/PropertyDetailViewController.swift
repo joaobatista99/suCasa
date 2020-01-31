@@ -39,7 +39,7 @@ class PropertyDetailViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = .white
         
         setupLocalization()
-
+        
     }
     
     private func setupLocalization(){
@@ -50,18 +50,18 @@ class PropertyDetailViewController: UIViewController {
         self.roomsLabel.text = String.localizedStringWithFormat(formattedStringRooms, property.numberOfRooms)
         
         let currencyFormatter = NumberFormatter()
-            currencyFormatter.usesGroupingSeparator = true
-            currencyFormatter.numberStyle = .currency
-            currencyFormatter.locale = Locale.current
-            let priceString = currencyFormatter.string(from: NSNumber(value: property.price))!
+        currencyFormatter.usesGroupingSeparator = true
+        currencyFormatter.numberStyle = .currency
+        currencyFormatter.locale = Locale.current
+        let priceString = currencyFormatter.string(from: NSNumber(value: property.price))!
         
-            self.priceLabel.text = priceString
+        self.priceLabel.text = priceString
         
         let distanceFormatter = MeasurementFormatter()
-               distanceFormatter.locale = Locale.current
-               let distanceLocalized = distanceFormatter.string(for: self.distance)
-               
-               
+        distanceFormatter.locale = Locale.current
+        let distanceLocalized = distanceFormatter.string(for: self.distance)
+        
+        
         self.distanceLabel.text = NSLocalizedString("APROX. ", comment: "") + (distanceLocalized ?? String(format: "%.1f", self.distance) + "Km")
         
         self.averageMonthLabel.text = NSLocalizedString("em média/mês", comment: "")

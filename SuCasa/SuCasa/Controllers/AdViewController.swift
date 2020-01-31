@@ -17,6 +17,7 @@ class AdViewController: UIViewController {
         super.viewDidLoad()
 
         self.adLabel.text = NSLocalizedString("Quer ajudar imigrantes? Cadastre seu imóvel aqui!", comment: "")
+        self.navigationItem.title = NSLocalizedString("Aluguéis", comment: "")
         
     }
     
