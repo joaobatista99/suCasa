@@ -10,9 +10,7 @@ class ExploreViewController: UIViewController {
     /// Table View Variables
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cityLabel: UILabel!
-    @IBOutlet weak var headerTitle: UILabel!
-    @IBOutlet weak var headerSubTitle: UILabel!
-    
+
     //label
     @IBOutlet weak var whereAmILabel: UILabel!
     @IBOutlet weak var ongPartnerLabel: UILabel!
@@ -109,6 +107,18 @@ class ExploreViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         refresh()
         self.navigationController?.navigationBar.tintColor = .systemBlue
+        
+        if ongPartnerLabel.font.pointSize >= 33.0 {
+            ongPartnerLabel.font = ongPartnerLabel.font.withSize(33.0)
+            titleBestForYouLabel.font = titleBestForYouLabel.font.withSize(28.0)
+            descriptionBestForYouLabel.font = descriptionBestForYouLabel.font.withSize(22.0)
+            cityLabel.font = cityLabel.font.withSize(22.0)
+            whereAmILabel.font = whereAmILabel.font.withSize(22.0)
+            headerView.frame.size.height = 450.0
+            
+        }
+         
+        
     }
     
     /// This  method  is to get your location
@@ -300,6 +310,14 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
                                         }
             }
             
+            if ongPartnerLabel.font.pointSize >= 33.0 {
+                cell.adPriceLabel.font = cell.adPriceLabel.font.withSize(20.0)
+                cell.availabilityLabel.font = cell.availabilityLabel.font.withSize(20.0)
+                cell.adTitleLabel.font = cell.adTitleLabel.font.withSize(28.0)
+                cell.distanceLabel.font = cell.distanceLabel.font.withSize(22.0)
+                
+            }
+            
             return cell
             
         case .suggestions:
@@ -348,6 +366,15 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
                                             //print("Successfully downloaded image: \(String(describing: downloadURL?.absoluteString))")
                                         }
             }
+            
+            if ongPartnerLabel.font.pointSize >= 33.0 {
+                cell.adPriceLabel.font = cell.adPriceLabel.font.withSize(20.0)
+                cell.availabilityLabel.font = cell.availabilityLabel.font.withSize(20.0)
+                cell.adTitleLabel.font = cell.adTitleLabel.font.withSize(28.0)
+                cell.distanceLabel.font = cell.distanceLabel.font.withSize(22.0)
+                
+            }
+            
             return cell
         }
     }
@@ -357,10 +384,16 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch currentState {
         case .none:
+            if ongPartnerLabel.font.pointSize >= 33.0 {
+                return 370
+            }
             return 288
         case .suggestions:
             return 44
         case .results:
+            if ongPartnerLabel.font.pointSize >= 33.0 {
+                return 370
+            }
             return 288
         }
     }
@@ -496,9 +529,26 @@ extension ExploreViewController: UICollectionViewDataSource, UICollectionViewDel
         }
         cell.ongName.text = ong.name
         
+        if ongPartnerLabel.font.pointSize >= 33.0 {
+            cell.ongName.font = cell.ongName.font.withSize(24.0)
+        }
+        
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        var size = CGSize(width: 144.0, height: 140.0)
+        
+        if ongPartnerLabel.font.pointSize >= 33.0 {
+            size = CGSize(width: 164.0, height: 160.0)
+        }
+        
+        return size
+        
+    }
+    
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         self.selectedOng = self.ongs[indexPath.row]
