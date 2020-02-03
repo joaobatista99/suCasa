@@ -11,11 +11,15 @@ import UIKit
 class AdViewController: UIViewController {
     
     
+    @IBOutlet weak var adTitle: UINavigationItem!
     @IBOutlet weak var adLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        adLabel.font =  UIFont.preferredFont(forTextStyle: .subheadline)
+      //  self.navigationItem.title = UIFont.preferredFont(forTextStyle: .headline)
+        
         self.adLabel.text = NSLocalizedString("Quer ajudar imigrantes? Cadastre seu imóvel aqui!", comment: "")
         self.navigationItem.title = NSLocalizedString("Aluguéis", comment: "")
         

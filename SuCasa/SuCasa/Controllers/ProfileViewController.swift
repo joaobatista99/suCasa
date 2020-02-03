@@ -26,6 +26,11 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        helpLabel.font = UIFont.preferredFont(forTextStyle: .subheadline)
+        logoutLabel.font = UIFont.preferredFont(forTextStyle: .subheadline)
+ 
+        
         setTableView()
         registerXibs()
         setLocalizedStrings()

@@ -15,7 +15,10 @@ class ProfileTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        firstLabel.font = UIFont.preferredFont(forTextStyle: .subheadline)
+        secondLabel.font = UIFont.preferredFont(forTextStyle: .subheadline)
     }
+
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
