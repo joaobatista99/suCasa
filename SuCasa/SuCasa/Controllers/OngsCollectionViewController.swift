@@ -38,9 +38,9 @@ class OngsCollectionViewController: UIViewController {
         super.viewWillAppear(animated)
         tabBarController?.tabBar.isHidden = true
         
-        if ongsCollectionTitleLabel.font.pointSize > 52.0 {
-            ongsCollectionTitleLabel.font = ongsCollectionTitleLabel.font.withSize(52.0)
-            ongsCollectionDescriptionLabel.font = ongsCollectionDescriptionLabel.font.withSize(40.0)
+        if ongsCollectionTitleLabel.font.pointSize >= 40.0 {
+            ongsCollectionTitleLabel.font = ongsCollectionTitleLabel.font.withSize(40.0)
+            ongsCollectionDescriptionLabel.font = ongsCollectionDescriptionLabel.font.withSize(28.0)
         }
     }
     
@@ -106,8 +106,8 @@ extension OngsCollectionViewController :  UICollectionViewDataSource, UICollecti
         
         cell.ongName.text = ong.name
         
-        if ongsCollectionTitleLabel.font.pointSize >= 52.0 {
-            cell.ongName.font = cell.ongName.font.withSize(40.0)
+        if ongsCollectionTitleLabel.font.pointSize >= 40.0 {
+            cell.ongName.font = cell.ongName.font.withSize(28.0)
         }
         
         return  cell
@@ -117,7 +117,7 @@ extension OngsCollectionViewController :  UICollectionViewDataSource, UICollecti
         
         var size = CGSize(width: 170.0, height: 140.0)
         
-        if ongsCollectionTitleLabel.font.pointSize >= 44.0 {
+        if ongsCollectionTitleLabel.font.pointSize >= 40.0 {
             size = CGSize(width: 230.0, height: 200.0)
         }
         
