@@ -21,6 +21,11 @@ class ExploreTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        distanceLabel.font = UIFont.preferredFont(forTextStyle: .subheadline)
+        adTitleLabel.font = UIFont.preferredFont(forTextStyle: .subheadline)
+        adPriceLabel.font =  UIFont.preferredFont(forTextStyle: .subheadline)
+        availabilityLabel.font = UIFont.preferredFont(forTextStyle: .subheadline)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
