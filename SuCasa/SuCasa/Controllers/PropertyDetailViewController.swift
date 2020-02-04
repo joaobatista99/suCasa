@@ -22,6 +22,11 @@ class PropertyDetailViewController: UIViewController {
     @IBOutlet weak var averageMonthLabel: UILabel!
     @IBOutlet weak var contactButton: UIButton!
     
+    @IBOutlet weak var constraintImageToIcon: NSLayoutConstraint!
+    @IBOutlet weak var constraintImageToPriceLabel: NSLayoutConstraint!
+    @IBOutlet weak var constraintIconToView: NSLayoutConstraint!
+    @IBOutlet weak var constraintLabelToView: NSLayoutConstraint!
+    
     var property: Property!
     var ongs: [Ong] = []
     var propertyLocation: CLLocation!
@@ -41,6 +46,8 @@ class PropertyDetailViewController: UIViewController {
         setupLocalization()
         
     }
+    
+    
     
     private func setupLocalization(){
         let formattedStringVacancy = NSLocalizedString("%d Lugar", comment: "")
@@ -73,6 +80,17 @@ class PropertyDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.tabBar.isHidden = true
+        
+        if vacancyLabel.font.pointSize > 20.0 {
+            vacancyLabel.font = vacancyLabel.font.withSize(24.0)
+            roomsLabel.font = roomsLabel.font.withSize(23.0)
+            priceLabel.font = priceLabel.font.withSize(20.0)
+            distanceLabel.font = distanceLabel.font.withSize(23.0)
+            averageMonthLabel.font = averageMonthLabel.font.withSize(20.0)
+            constraintImageToIcon.constant = 24.0
+            constraintImageToPriceLabel.constant = 24.0
+            constraintIconToView.constant = 90.0
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {

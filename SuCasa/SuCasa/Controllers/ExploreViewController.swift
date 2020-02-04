@@ -49,6 +49,8 @@ class ExploreViewController: UIViewController {
     var propertyLocation: CLLocation!
     var distance: CLLocationDistance!
     
+    let screenSize: CGRect = UIScreen.main.bounds
+    
     /// This enum shows the search bar's  state to display the differents XIBs related to it.
     enum SearchBarState {
         case results      //This state is when the button search is clicked
@@ -107,15 +109,14 @@ class ExploreViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         refresh()
         self.navigationController?.navigationBar.tintColor = .systemBlue
-        
-        if ongPartnerLabel.font.pointSize >= 33.0 {
-            ongPartnerLabel.font = ongPartnerLabel.font.withSize(33.0)
+    
+        if ongPartnerLabel.font.pointSize >= 34 {
+            ongPartnerLabel.font = ongPartnerLabel.font.withSize(30.0)
             titleBestForYouLabel.font = titleBestForYouLabel.font.withSize(28.0)
             descriptionBestForYouLabel.font = descriptionBestForYouLabel.font.withSize(22.0)
             cityLabel.font = cityLabel.font.withSize(22.0)
             whereAmILabel.font = whereAmILabel.font.withSize(22.0)
             headerView.frame.size.height = 450.0
-            
         }
          
         
@@ -310,7 +311,7 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
                                         }
             }
             
-            if ongPartnerLabel.font.pointSize >= 33.0 {
+            if ongPartnerLabel.font.pointSize >= 30{
                 cell.adPriceLabel.font = cell.adPriceLabel.font.withSize(20.0)
                 cell.availabilityLabel.font = cell.availabilityLabel.font.withSize(20.0)
                 cell.adTitleLabel.font = cell.adTitleLabel.font.withSize(28.0)
@@ -367,7 +368,7 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
                                         }
             }
             
-            if ongPartnerLabel.font.pointSize >= 33.0 {
+            if ongPartnerLabel.font.pointSize >= 30 {
                 cell.adPriceLabel.font = cell.adPriceLabel.font.withSize(20.0)
                 cell.availabilityLabel.font = cell.availabilityLabel.font.withSize(20.0)
                 cell.adTitleLabel.font = cell.adTitleLabel.font.withSize(28.0)
@@ -384,14 +385,14 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch currentState {
         case .none:
-            if ongPartnerLabel.font.pointSize >= 33.0 {
+            if ongPartnerLabel.font.pointSize >= 30 {
                 return 370
             }
             return 288
         case .suggestions:
             return 44
         case .results:
-            if ongPartnerLabel.font.pointSize >= 33.0 {
+            if ongPartnerLabel.font.pointSize >= 30 {
                 return 370
             }
             return 288
@@ -529,7 +530,7 @@ extension ExploreViewController: UICollectionViewDataSource, UICollectionViewDel
         }
         cell.ongName.text = ong.name
         
-        if ongPartnerLabel.font.pointSize >= 33.0 {
+        if ongPartnerLabel.font.pointSize >= 30{
             cell.ongName.font = cell.ongName.font.withSize(24.0)
         }
         
@@ -540,7 +541,7 @@ extension ExploreViewController: UICollectionViewDataSource, UICollectionViewDel
         
         var size = CGSize(width: 144.0, height: 140.0)
         
-        if ongPartnerLabel.font.pointSize >= 33.0 {
+        if ongPartnerLabel.font.pointSize >= 30 {
             size = CGSize(width: 164.0, height: 160.0)
         }
         
