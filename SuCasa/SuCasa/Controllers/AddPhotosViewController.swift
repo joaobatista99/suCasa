@@ -23,7 +23,45 @@ class AddPhotosViewController: UIViewController {
     @IBOutlet weak var addPhotosTitleLabel: UILabel!
     @IBOutlet weak var addPhotosDescriptionLabel: UILabel!
     @IBOutlet weak var addPhotosButton: RoundedBorderButton!
+    let screenSize: CGRect = UIScreen.main.bounds
     
+    @IBOutlet weak var nextButtonPhotosAddedTop: NSLayoutConstraint!
+    @IBOutlet weak var addPhotosDescriptionHeight: NSLayoutConstraint!
+    @IBOutlet weak var addPhotosTitleHeight: NSLayoutConstraint!
+ 
+    @IBOutlet weak var photosAddedHeight: NSLayoutConstraint!
+    @IBOutlet weak var addPhotosDescriptionTop: NSLayoutConstraint!
+    
+    @IBOutlet weak var titleDescriptionTop: NSLayoutConstraint!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if addPhotosTitleLabel.font.pointSize >= 33.0 {
+            addPhotosTitleLabel.font  =  addPhotosTitleLabel.font.withSize(33.0)
+            addPhotosDescriptionLabel.font  = addPhotosDescriptionLabel.font.withSize(23.0)
+            addPhotosButton.titleLabel?.font = addPhotosButton.titleLabel?.font.withSize(33.0)
+            photosAdded.font = photosAdded.font.withSize(23.0)
+            nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(33.0)
+        }
+        
+        if screenSize.height >= 667.0 {
+            addPhotosDescriptionHeight = addPhotosDescriptionHeight.changeMultiplier(multiplier: 0.28)
+            addPhotosTitleHeight =  addPhotosTitleHeight.changeMultiplier(multiplier: 0.13)
+            photosAddedHeight = photosAddedHeight.changeMultiplier(multiplier: 0.1)
+            
+        }
+        else if screenSize.height < 667.0 {
+            addPhotosDescriptionHeight = addPhotosDescriptionHeight.changeMultiplier(multiplier: 0.38)
+            addPhotosTitleHeight =  addPhotosTitleHeight.changeMultiplier(multiplier: 0.15)
+            photosAddedHeight = photosAddedHeight.changeMultiplier(multiplier: 0.16)
+            nextButtonPhotosAddedTop.constant = 5
+            titleDescriptionTop.constant =  1
+            addPhotosDescriptionTop.constant  = 1
+        }
+        
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
