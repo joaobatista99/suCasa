@@ -15,17 +15,69 @@ class GuestsViewController: UIViewController {
     @IBOutlet weak var bedroomNumberTextField: UITextField!
     @IBOutlet weak var bedNumberTextField: UITextField!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var TitleGuestsLabel: UILabel!
     @IBOutlet weak var descriptionGuestsLabel: UILabel!
     @IBOutlet weak var totalGuestsLabel: UILabel!
     @IBOutlet weak var numberOfRoomsLabel: UILabel!
     @IBOutlet weak var numberOfBedsLabel: UILabel!
-    
+    let screenSize: CGRect = UIScreen.main.bounds
     var property: Property!
+    
+    @IBOutlet weak var descriptionGuestsHeight: NSLayoutConstraint!
+    @IBOutlet weak var numberOfRoomsHeight: NSLayoutConstraint!
+    @IBOutlet weak var numberOfBedsHeight: NSLayoutConstraint!
+    @IBOutlet weak var totalGuestsHeight: NSLayoutConstraint!
+    @IBOutlet weak var scrollHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var howManyGuestsConstraint: NSLayoutConstraint!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if TitleGuestsLabel.font.pointSize >= 33.0 {
+            TitleGuestsLabel.font  =  TitleGuestsLabel.font.withSize(33.0)
+            descriptionGuestsLabel.font  = descriptionGuestsLabel.font.withSize(23.0)
+            totalGuestsLabel.font = totalGuestsLabel.font.withSize(23.0)
+            numberOfRoomsLabel.font = numberOfRoomsLabel.font?.withSize(23.0)
+            numberOfBedsLabel.font = numberOfBedsLabel.font?.withSize(23.0)
+            totalGuestsTextField.font = totalGuestsTextField.font?.withSize(23.0)
+            bedroomNumberTextField.font = bedroomNumberTextField.font?.withSize(23.0)
+            bedNumberTextField.font =  bedNumberTextField.font?.withSize(23.0)
+        }
+        
+        if screenSize.height >= 667.0 {
+            descriptionGuestsHeight = descriptionGuestsHeight.changeMultiplier(multiplier: 0.1)
+            numberOfRoomsHeight = numberOfRoomsHeight.changeMultiplier(multiplier: 0.08)
+            numberOfBedsHeight =  numberOfBedsHeight.changeMultiplier(multiplier: 0.08)
+            totalGuestsHeight = totalGuestsHeight.changeMultiplier(multiplier: 0.09)
+            howManyGuestsConstraint = howManyGuestsConstraint.changeMultiplier(multiplier: 0.1)
+        }
+        else if screenSize.height < 667.0 {
+            scrollHeightConstraint = scrollHeightConstraint.changeMultiplier(multiplier: 1.9)
+            descriptionGuestsHeight = descriptionGuestsHeight.changeMultiplier(multiplier: 0.16)
+            numberOfRoomsHeight = numberOfRoomsHeight.changeMultiplier(multiplier: 0.08)
+            numberOfBedsHeight =  numberOfBedsHeight.changeMultiplier(multiplier: 0.08)
+            totalGuestsHeight = totalGuestsHeight.changeMultiplier(multiplier: 0.09)
+            howManyGuestsConstraint = howManyGuestsConstraint.changeMultiplier(multiplier: 0.12)
+        }
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        scrollView.contentOffset.x = 0
+        print(scrollView.contentSize)
+
+        scrollView.contentSize =  CGSize(width: (320), height: scrollView.contentSize.height)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         setUpTextFields()
         nextButton.isHidden = true
@@ -42,6 +94,8 @@ class GuestsViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+    
+    
     //set labels that have to be localized
     func setLocalizedStrings(){
         //"Próximo" = "Next";

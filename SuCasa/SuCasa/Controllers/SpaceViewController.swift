@@ -10,15 +10,15 @@ import UIKit
 import Foundation
 
 class SpaceViewController: UIViewController {
-
+    
     // Outlet variables
     @IBOutlet weak var spaceType: UITextField!
     @IBOutlet weak var propertyType: UITextField!
     @IBOutlet weak var nextButton: UIButton!
-
+    
     
     private var pickerView = UIPickerView()
-
+    
     
     private var property: Property = Property()
     private var editingFieldName: String?
@@ -29,7 +29,33 @@ class SpaceViewController: UIViewController {
     
     @IBOutlet weak var propertyType2Label: UILabel!
     
-
+    @IBOutlet weak var propertyTypeLabel1HeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var propertyTypeLabel2HeightConstraint: NSLayoutConstraint!
+    
+    let screenSize: CGRect = UIScreen.main.bounds
+    
+    override  func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if spaceTitleLabel.font.pointSize >= 33.0 {
+            spaceTitleLabel.font  =  spaceTitleLabel.font.withSize(33.0)
+            propertyType1Label.font  = propertyType1Label.font.withSize(23.0)
+            propertyType2Label.font = propertyType2Label.font.withSize(23.0)
+            spaceType.font = spaceType.font?.withSize(23.0)
+            propertyType.font = propertyType.font?.withSize(23.0)
+        }
+        
+        
+        if screenSize.height == 667.0 {
+            propertyTypeLabel1HeightConstraint = propertyTypeLabel1HeightConstraint.changeMultiplier(multiplier: 0.08)
+            propertyTypeLabel2HeightConstraint = propertyTypeLabel2HeightConstraint.changeMultiplier(multiplier: 0.08)
+        }
+        else if screenSize.height < 667.0 {
+            propertyTypeLabel1HeightConstraint = propertyTypeLabel1HeightConstraint.changeMultiplier(multiplier: 0.12)
+            propertyTypeLabel2HeightConstraint = propertyTypeLabel2HeightConstraint.changeMultiplier(multiplier: 0.12)
+        }
+        
+    }
     
     
     override func viewDidLoad() {
@@ -37,7 +63,7 @@ class SpaceViewController: UIViewController {
         
         setUpPickerViews()
         setUpTextField()
-            
+        
         self.setLocalizedStrings()
         
         //keyboard notifications
@@ -89,12 +115,12 @@ class SpaceViewController: UIViewController {
         
         //check if any text is nil or empty
         if  self.spaceType.text?.isNilOrEmpty() ?? false
-        && propertyType.text?.isNilOrEmpty() ?? false {
+            && propertyType.text?.isNilOrEmpty() ?? false {
             
             //notificateWithAlert()
         }
             
-        //if both text field is filled, perform segue
+            //if both text field is filled, perform segue
         else {
             self.performSegue(withIdentifier: "goToGuests", sender: self)
         }
@@ -142,7 +168,7 @@ class SpaceViewController: UIViewController {
     }
     
     /*The following two IBAction func is used to know what
-    text field is pressed to change the picker view */
+     text field is pressed to change the picker view */
     
     /// This IBAction is to assign the picker view on the editing text field
     /// - Parameter sender: Editing did begin
@@ -164,7 +190,7 @@ class SpaceViewController: UIViewController {
             updateFirstResponderLabel()
         }
     }
-        
+    
     /// This method will be called when the done button at the picker view has been pressed
     @objc func donePicker() {
         
@@ -239,7 +265,7 @@ extension SpaceViewController: UIPickerViewDataSource, UIPickerViewDelegate {
             return Property.SpaceType.allCases.count
         }
             
-        //second text field pressed
+            //second text field pressed
         else {
             // this ternary is to know what option was set on the first picker view
             let spaceType: Property.SpaceType = editingFieldName  == "house" ? .house : .apartment
@@ -251,10 +277,10 @@ extension SpaceViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
-
+        
         if (editingFieldName == "space") {
             return Property.SpaceType.allCases[row].localizedString()
-
+            
         }
         else {
             // this ternary is to know what option was set on the first picker view
@@ -262,40 +288,40 @@ extension SpaceViewController: UIPickerViewDataSource, UIPickerViewDelegate {
             
             //return the spaceType raw value based on what was set in the first picker view (house or apartment)
             return Property.PropertyType.allCases.filter({$0.spaceType() == spaceType})[row].localizedString()
-
+            
         }
     }
     
     /// This method get the information on the picker view and put it on the spaceType text field
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-
+        
         switch (editingFieldName) {
-            case "space":
-                //disable property type's user interaction
-                // (it need to have a value to be set)
-                propertyType.isUserInteractionEnabled = true
-                spaceType.text = Property.SpaceType.allCases[row].localizedString()
-                self.property.space = Property.SpaceType.allCases[row].localizedString()
-                clearTextField(textField: propertyType)
-                nextButton.isHidden = true
-
-            //second text field set with "Apartamento"
-            case "apartment":
-                propertyType.text = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[row].localizedString()
-                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[row].localizedString()
-                nextButton.isHidden = false
+        case "space":
+            //disable property type's user interaction
+            // (it need to have a value to be set)
+            propertyType.isUserInteractionEnabled = true
+            spaceType.text = Property.SpaceType.allCases[row].localizedString()
+            self.property.space = Property.SpaceType.allCases[row].localizedString()
+            clearTextField(textField: propertyType)
+            nextButton.isHidden = true
             
-            //second text field set with "Casa"
-            case "house":
-                propertyType.text = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[row].localizedString()
-                nextButton.isHidden = false
-                // assign the property type based on what was chosen
-                self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[row].localizedString()
+        //second text field set with "Apartamento"
+        case "apartment":
+            propertyType.text = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[row].localizedString()
+            self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .apartment})[row].localizedString()
+            nextButton.isHidden = false
             
-            default:
-                break
-
+        //second text field set with "Casa"
+        case "house":
+            propertyType.text = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[row].localizedString()
+            nextButton.isHidden = false
+            // assign the property type based on what was chosen
+            self.property.type = Property.PropertyType.allCases.filter({$0.spaceType() == .house})[row].localizedString()
+            
+        default:
+            break
+            
         }
     }
 }
@@ -323,8 +349,8 @@ extension SpaceViewController: UITextFieldDelegate {
         spaceType.textColor = Colors.textColor
         
         /* Set user interaction to false because it's
-           necessary to choose an option in the first
-           picker view then it will be available */
+         necessary to choose an option in the first
+         picker view then it will be available */
         propertyType.isUserInteractionEnabled = false
         propertyType.textColor = Colors.textColor
     }
