@@ -9,7 +9,7 @@
 import UIKit
 
 class TitleViewController: UIViewController {
-
+    
     @IBOutlet weak var titleTextField: UITextField!
     
     @IBOutlet weak var rulesTextField: UITextField!
@@ -21,8 +21,34 @@ class TitleViewController: UIViewController {
     @IBOutlet weak var addTitleLabel: UILabel!
     @IBOutlet weak var rulesLabel: UILabel!
     
+    @IBOutlet weak var rulesHeightConstraint: NSLayoutConstraint!
+    
     var property: Property!
     var images: [UIImage]!
+    let screenSize: CGRect = UIScreen.main.bounds
+    
+    override  func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if titleLabel.font.pointSize >= 33.0 {
+            titleLabel.font  =  titleLabel.font.withSize(33.0)
+            addTitleLabel.font  =  addTitleLabel.font.withSize(23.0)
+            rulesLabel.font  =  rulesLabel.font.withSize(23.0)
+            descriptionLabel.font  =  descriptionLabel.font.withSize(23.0)
+            titleTextField.font  =  titleTextField.font?.withSize(23.0)
+            rulesTextField.font  =  rulesTextField.font?.withSize(23.0)
+        }
+        
+        
+        if screenSize.height == 667.0 {
+            rulesHeightConstraint = rulesHeightConstraint.changeMultiplier(multiplier: 0.03)
+            
+        }
+        else if screenSize.height < 667.0 {
+            rulesHeightConstraint = rulesHeightConstraint.changeMultiplier(multiplier: 0.05)
+            
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,14 +69,14 @@ class TitleViewController: UIViewController {
         //keyboard notifications
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-
+        
         setUpText()
         
         nextButton.isHidden = true
         
         self.navigationController?.navigationBar.tintColor = Colors.buttonColor
-
-
+        
+        
     }
     
     func setLocalizedStrings(){
@@ -68,7 +94,7 @@ class TitleViewController: UIViewController {
     
     //dismiss keyboard if users touches screen
     @objc func endSelection(_ force: Bool) -> Bool {
-           return self.view.endEditing(force)
+        return self.view.endEditing(force)
     }
     
     //Scroll when keyboard activates
@@ -118,11 +144,11 @@ class TitleViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToMonthlyValues",
             let locationVC = segue.destination as? MonthlyViewController {
-                locationVC.property = self.property
-                locationVC.images = self.images
+            locationVC.property = self.property
+            locationVC.images = self.images
         }
     }
-
+    
     @IBAction func proceedToNextView(_ sender: Any) {
         self.property.title = titleTextField.text!
         self.property.rules = rulesTextField.text!

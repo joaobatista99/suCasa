@@ -169,7 +169,7 @@
             <objects>
                 <tableViewController id="EDe-Qn-7WH" customClass="PropertyDetailTableViewController" customModule="SuCasa" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" indicatorStyle="black" bouncesZoom="NO" dataMode="static" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="250" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="kdm-09-qqy">
-                        <rect key="frame" x="0.0" y="0.0" width="364" height="314"/>
+                        <rect key="frame" x="0.0" y="0.0" width="364" height="306"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="separatorColor" name="Color"/>
