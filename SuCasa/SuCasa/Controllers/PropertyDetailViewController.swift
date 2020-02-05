@@ -64,12 +64,16 @@ class PropertyDetailViewController: UIViewController {
         
         self.priceLabel.text = priceString
         
+        self.priceLabel.accessibilityLabel = priceString + NSLocalizedString("em média/mês", comment: "")
+        
         let distanceFormatter = MeasurementFormatter()
         distanceFormatter.locale = Locale.current
         let distanceLocalized = distanceFormatter.string(for: self.distance)
         
         
         self.distanceLabel.text = NSLocalizedString("APROX. ", comment: "") + (distanceLocalized ?? String(format: "%.1f", self.distance) + "Km")
+        
+        self.distanceLabel.accessibilityLabel = NSLocalizedString("Aproximadamente", comment: "") + (distanceLocalized ?? String(format: "%.1f", self.distance) + "Km")
         
         self.averageMonthLabel.text = NSLocalizedString("em média/mês", comment: "")
         

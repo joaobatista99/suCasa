@@ -36,7 +36,7 @@ class PropertyDetailTableViewController: UITableViewController {
         if let property = self.property {
             self.mainTitle.text = property.title
             
-            nameAndAgeLabel.text = "José Alfredo | 36 anos"
+            nameAndAgeLabel.text = "José Alfredo 36 anos"
             descriptionLabel.text = "Gosto de viajar, conhecer novas pessoas e culturas. Tenho dois cachorros, Buck e Gula, muito dóceis e também adoram fazer novas amizades."
             languagesLabel.text = "Idiomas: Português, Espanhol, Francês"
             

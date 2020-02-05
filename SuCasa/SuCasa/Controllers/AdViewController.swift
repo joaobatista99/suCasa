@@ -11,6 +11,7 @@ import UIKit
 class AdViewController: UIViewController {
     
     
+    @IBOutlet weak var addButton: UIBarButtonItem!
     @IBOutlet weak var adTitle: UINavigationItem!
     @IBOutlet weak var adLabel: UILabel!
 
@@ -22,6 +23,8 @@ class AdViewController: UIViewController {
         
         self.adLabel.text = NSLocalizedString("Quer ajudar imigrantes? Cadastre seu imóvel aqui!", comment: "")
         self.navigationItem.title = NSLocalizedString("Aluguéis", comment: "")
+        
+        self.addButton.accessibilityLabel = NSLocalizedString("Adicionar imóvel", comment: "")
         
     }
     

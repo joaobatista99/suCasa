@@ -26,10 +26,13 @@
 "As melhores estadias para você" = "The best stays for you";
 "Veja nossa seleção de lugares para ficar com os melhores preços" = "See our selection of places to stay at the best prices";
 "Ver tudo" = "See More";
+"Aproximadamente" = "about";
 
 //MARK: AdViewController
 
 "Quer ajudar imigrantes? Cadastre seu imóvel aqui!" = "Want to help immigrants? Register your property here!";
+
+"Adicionar imóvel" = "Add property";
 
 //MARK: SpaceViewController
 

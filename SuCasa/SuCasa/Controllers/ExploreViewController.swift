@@ -153,7 +153,8 @@ class ExploreViewController: UIViewController {
         distanceFormatter.locale = Locale.current
         let distanceLocalized = distanceFormatter.string(for: self.distance)
         
-        let distanceString = NSLocalizedString("APROX. ", comment: "") + (distanceLocalized ?? String(format: "%.1f", self.distance) + "Km")
+        let distanceString = distanceLocalized ?? String(format: "%.1f", self.distance) + "Km"
+    
         
         completion(distanceString)
         
@@ -296,7 +297,8 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             cell.availabilityLabel.text = String.localizedStringWithFormat(formatString, property.guestsTotal)
             
             getDistance(property: property) { (distance) in
-                cell.distanceLabel.text = distance
+                cell.distanceLabel.text = NSLocalizedString("APROX. ", comment: "") + distance
+                cell.distanceLabel.accessibilityLabel = NSLocalizedString("Aproximadamente", comment: "") + distance
             }
             
             cell.adImage.sd_setImage(with: urlFromImage,

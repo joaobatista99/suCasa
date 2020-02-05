@@ -73,6 +73,7 @@
                     <connections>
                         <outlet property="adLabel" destination="Skl-81-kYi" id="AO7-Du-qun"/>
                         <outlet property="adTitle" destination="b9I-MN-Oi4" id="5BF-DN-VUP"/>
+                        <outlet property="addButton" destination="z6z-rN-pA6" id="Kw6-SC-dNv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yXB-wr-x5t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -97,7 +98,7 @@
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="BlN-Wt-6ES">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
