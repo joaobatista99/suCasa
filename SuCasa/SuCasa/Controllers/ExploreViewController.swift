@@ -5,7 +5,7 @@ import SDWebImage
 class ExploreViewController: UIViewController {
     
     //Mocked informations
-    let searchRecents = ["campinas", "são josé dos campos", "são paulo", "guarulhos", "valinhos"]
+    let searchRecents = ["Campinas", "São José dos Campos", "São Paulo", "Guarulhos", "Valinhos"]
     
     /// Table View Variables
     @IBOutlet weak var tableView: UITableView!

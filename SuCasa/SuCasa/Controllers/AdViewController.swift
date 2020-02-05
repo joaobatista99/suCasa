@@ -18,23 +18,13 @@ class AdViewController: UIViewController {
         super.viewDidLoad()
 
         adLabel.font =  UIFont.preferredFont(forTextStyle: .subheadline)
-      //  self.navigationItem.title = UIFont.preferredFont(forTextStyle: .headline)
+      
         
         self.adLabel.text = NSLocalizedString("Quer ajudar imigrantes? Cadastre seu imóvel aqui!", comment: "")
         self.navigationItem.title = NSLocalizedString("Aluguéis", comment: "")
         
     }
     
-    /*
-     English
-     
-     "Quer ajudar imigrantes? Cadastre seu imóvel aqui!" = "Want to help immigrants? Register your property here!"
-     
-     Português
-     
-    "Quer ajudar imigrantes? Cadastre seu imóvel aqui!" = "Quer ajudar imigrantes? Cadastre seu imóvel aqui!"
-     
-     */
     
 
     //function to create new add
