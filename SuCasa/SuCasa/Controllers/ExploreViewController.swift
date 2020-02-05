@@ -112,7 +112,7 @@ class ExploreViewController: UIViewController {
     
         if ongPartnerLabel.font.pointSize >= 34 {
             ongPartnerLabel.font = ongPartnerLabel.font.withSize(30.0)
-            titleBestForYouLabel.font = titleBestForYouLabel.font.withSize(28.0)
+            titleBestForYouLabel.font = titleBestForYouLabel.font.withSize(30.0)
             descriptionBestForYouLabel.font = descriptionBestForYouLabel.font.withSize(22.0)
             cityLabel.font = cityLabel.font.withSize(22.0)
             whereAmILabel.font = whereAmILabel.font.withSize(22.0)
@@ -311,12 +311,12 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
                                         }
             }
             
-            if ongPartnerLabel.font.pointSize >= 30{
-                cell.adPriceLabel.font = cell.adPriceLabel.font.withSize(20.0)
+            if  cell.adTitleLabel.font.pointSize > 23 {
+                cell.adPriceLabel.font = cell.adPriceLabel.font.withSize(21.0)
                 cell.availabilityLabel.font = cell.availabilityLabel.font.withSize(20.0)
-                cell.adTitleLabel.font = cell.adTitleLabel.font.withSize(28.0)
-                cell.distanceLabel.font = cell.distanceLabel.font.withSize(22.0)
-                
+                cell.adTitleLabel.font = cell.adTitleLabel.font.withSize(23.0)
+                cell.distanceLabel.font = cell.distanceLabel.font.withSize(21.0)
+
             }
             
             return cell
@@ -368,14 +368,14 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
                                         }
             }
             
-            if ongPartnerLabel.font.pointSize >= 30 {
-                cell.adPriceLabel.font = cell.adPriceLabel.font.withSize(20.0)
+            if  cell.adTitleLabel.font.pointSize > 23 {
+                cell.adPriceLabel.font = cell.adPriceLabel.font.withSize(21.0)
                 cell.availabilityLabel.font = cell.availabilityLabel.font.withSize(20.0)
-                cell.adTitleLabel.font = cell.adTitleLabel.font.withSize(28.0)
-                cell.distanceLabel.font = cell.distanceLabel.font.withSize(22.0)
-                
+                cell.adTitleLabel.font = cell.adTitleLabel.font.withSize(23.0)
+                cell.distanceLabel.font = cell.distanceLabel.font.withSize(21.0)
+
             }
-            
+
             return cell
         }
     }
@@ -530,7 +530,7 @@ extension ExploreViewController: UICollectionViewDataSource, UICollectionViewDel
         }
         cell.ongName.text = ong.name
         
-        if ongPartnerLabel.font.pointSize >= 30{
+        if cell.ongName.font.pointSize > 24{
             cell.ongName.font = cell.ongName.font.withSize(24.0)
         }
         

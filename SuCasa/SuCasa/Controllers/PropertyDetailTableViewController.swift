@@ -22,6 +22,8 @@ class PropertyDetailTableViewController: UITableViewController {
     @IBOutlet weak var months: UILabel!
     @IBOutlet weak var userCell: UITableViewCell!
     
+    let screenSize : CGRect = UIScreen.main.bounds
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,9 +58,13 @@ class PropertyDetailTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.row == 1  {
-            if mainTitle.font.pointSize >= 23.0 {
+            if mainTitle.font.pointSize >= 23.0 && screenSize.height < 667 {
+                return 350
+            }
+            else if mainTitle.font.pointSize >= 23.0 {
                 return 320
             }
+            
             return 151
         }
         
