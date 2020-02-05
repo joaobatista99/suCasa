@@ -20,11 +20,39 @@ class MonthlyViewController: UIViewController {
     @IBOutlet weak var monthlyLabel: UILabel!
     @IBOutlet weak var periodLabel: UILabel!
     @IBOutlet weak var concludeButton: UIButton!
+    @IBOutlet weak var monthlyHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var periodHeightConstraint: NSLayoutConstraint!
     
     
     var property: Property!
     
     var images: [UIImage]!
+    let screenSize: CGRect = UIScreen.main.bounds
+    
+    override  func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if titleLabel.font.pointSize >= 33.0 {
+            titleLabel.font  =  titleLabel.font.withSize(33.0)
+            monthlyLabel.font  =  monthlyLabel.font.withSize(23.0)
+            periodLabel.font  =  periodLabel.font.withSize(23.0)
+            descriptionLabel.font  =  descriptionLabel.font.withSize(23.0)
+            monthly.font  =  monthly.font?.withSize(23.0)
+            monsthsQuantity.font  =  monsthsQuantity.font?.withSize(23.0)
+        }
+        
+        
+        if screenSize.height == 667.0 {
+            monthlyHeightConstraint = monthlyHeightConstraint.changeMultiplier(multiplier: 0.03)
+            periodHeightConstraint = periodHeightConstraint.changeMultiplier(multiplier: 0.03)
+
+        }
+        else if screenSize.height < 667.0 {
+            monthlyHeightConstraint = monthlyHeightConstraint.changeMultiplier(multiplier: 0.05)
+            periodHeightConstraint = periodHeightConstraint.changeMultiplier(multiplier: 0.05)
+
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
