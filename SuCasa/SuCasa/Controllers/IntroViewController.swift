@@ -25,6 +25,10 @@ class IntroViewController: UIViewController {
     
     @IBOutlet weak var signInButton: UIButton!
     
+    @IBOutlet weak var pageThreeImage: UIImageView!
+    @IBOutlet weak var pageTwoImage: UIImageView!
+    @IBOutlet weak var pageOneImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,7 +43,6 @@ class IntroViewController: UIViewController {
         LocalizationIntroVewController()
         
     }
-    
     
     @IBAction func startApp(_ sender: Any) {
         UserDefaults.standard.set(true, forKey: "tutorialSeen")
