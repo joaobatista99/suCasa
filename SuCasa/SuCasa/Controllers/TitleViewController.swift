@@ -34,11 +34,11 @@ class TitleViewController: UIViewController {
             rulesHeightConstraint = rulesHeightConstraint.changeMultiplier(multiplier: 0.03)
             if titleLabel.font.pointSize >= 40.0 {
                 titleLabel.font  =  titleLabel.font.withSize(40.0)
-                addTitleLabel.font  =  addTitleLabel.font.withSize(28.0)
-                rulesLabel.font  =  rulesLabel.font.withSize(28.0)
-                descriptionLabel.font  =  descriptionLabel.font.withSize(28.0)
-                titleTextField.font  =  titleTextField.font?.withSize(28.0)
-                rulesTextField.font  =  rulesTextField.font?.withSize(28.0)
+                addTitleLabel.font  =  addTitleLabel.font.withSize(35.0)
+                rulesLabel.font  =  rulesLabel.font.withSize(35.0)
+                descriptionLabel.font  =  descriptionLabel.font.withSize(35.0)
+                titleTextField.font  =  titleTextField.font?.withSize(35.0)
+                rulesTextField.font  =  rulesTextField.font?.withSize(35.0)
                 nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(40.0)
             }
         }
