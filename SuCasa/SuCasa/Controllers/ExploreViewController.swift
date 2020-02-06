@@ -93,6 +93,9 @@ class ExploreViewController: UIViewController {
         
         localizationExploreViewController()
         
+        self.seeMoreButton.accessibilityHint = NSLocalizedString("VerMaisHint", comment: "")
+
+        
     }
     
     func localizationExploreViewController () {
@@ -110,7 +113,7 @@ class ExploreViewController: UIViewController {
         refresh()
         self.navigationController?.navigationBar.tintColor = .systemBlue
     
-        if ongPartnerLabel.font.pointSize >= 34 {
+        if ongPartnerLabel.font.pointSize > 34 {
             ongPartnerLabel.font = ongPartnerLabel.font.withSize(30.0)
             titleBestForYouLabel.font = titleBestForYouLabel.font.withSize(30.0)
             descriptionBestForYouLabel.font = descriptionBestForYouLabel.font.withSize(22.0)
@@ -135,6 +138,7 @@ class ExploreViewController: UIViewController {
                     //city label for current location indicator
                     if let city = place.locality {
                         self.cityLabel.text = city
+                        self.whereAmILabel.accessibilityLabel = NSLocalizedString("Localização atual", comment: "") + city
                     }
                 }
             }
@@ -318,8 +322,10 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.availabilityLabel.font = cell.availabilityLabel.font.withSize(20.0)
                 cell.adTitleLabel.font = cell.adTitleLabel.font.withSize(23.0)
                 cell.distanceLabel.font = cell.distanceLabel.font.withSize(21.0)
-
+                
             }
+            
+            cell.accessibilityHint = NSLocalizedString("ToqueParaDetalhesHint", comment: "")
             
             return cell
             
@@ -377,6 +383,9 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.distanceLabel.font = cell.distanceLabel.font.withSize(21.0)
 
             }
+            
+            cell.accessibilityHint = NSLocalizedString("ToqueParaDetalhesHint", comment: "")
+
 
             return cell
         }
@@ -535,6 +544,8 @@ extension ExploreViewController: UICollectionViewDataSource, UICollectionViewDel
         if cell.ongName.font.pointSize > 24{
             cell.ongName.font = cell.ongName.font.withSize(24.0)
         }
+        
+        cell.ongName.accessibilityHint = NSLocalizedString("ToqueParaDetalhesHint", comment: "")
         
         return cell
     }

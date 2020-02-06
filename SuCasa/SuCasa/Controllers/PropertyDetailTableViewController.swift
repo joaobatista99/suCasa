@@ -22,6 +22,7 @@ class PropertyDetailTableViewController: UITableViewController {
     @IBOutlet weak var months: UILabel!
     @IBOutlet weak var userCell: UITableViewCell!
     
+  
     let screenSize : CGRect = UIScreen.main.bounds
     
     
@@ -32,12 +33,14 @@ class PropertyDetailTableViewController: UITableViewController {
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight = 250
         
-        
+       
         if let property = self.property {
             self.mainTitle.text = property.title
             
             nameAndAgeLabel.text = "José Alfredo 36 anos"
+            
             descriptionLabel.text = "Gosto de viajar, conhecer novas pessoas e culturas. Tenho dois cachorros, Buck e Gula, muito dóceis e também adoram fazer novas amizades."
+            
             languagesLabel.text = "Idiomas: Português, Espanhol, Francês"
             
             if mainTitle.font.pointSize >= 23.0 {
@@ -54,7 +57,7 @@ class PropertyDetailTableViewController: UITableViewController {
             
         }
     }
-
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.row == 1  {

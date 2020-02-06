@@ -34,6 +34,8 @@ class ProfileViewController: UIViewController {
         setTableView()
         registerXibs()
         setLocalizedStrings()
+        
+         self.editBarButton.accessibilityLabel = NSLocalizedString("Editar", comment: "")
       
     }
     

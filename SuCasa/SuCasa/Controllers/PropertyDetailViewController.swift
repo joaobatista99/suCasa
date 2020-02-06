@@ -45,6 +45,10 @@ class PropertyDetailViewController: UIViewController {
         
         setupLocalization()
         
+        self.contactButton.accessibilityHint = NSLocalizedString("ContatoHint", comment: "")
+        
+        self.pageControl.accessibilityLabel = NSLocalizedString("ImagensLabel", comment: "")
+        
     }
     
     
@@ -139,9 +143,7 @@ extension PropertyDetailViewController: CarouselPageViewControllerDelegate {
         pageControl.currentPage = index
     }
     
-    func getDistance(){
-        
-    }
+    
     
 }
 

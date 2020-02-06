@@ -42,6 +42,8 @@ class IntroViewController: UIViewController {
                
         LocalizationIntroVewController()
         
+        self.signInButton.accessibilityHint = NSLocalizedString("EntrarHint", comment: "")
+        
     }
     
     @IBAction func startApp(_ sender: Any) {
