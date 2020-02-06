@@ -98,7 +98,7 @@
                                                 <rect key="frame" x="828" y="0.0" width="414" height="818"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="cRw-v6-sJt">
-                                                        <rect key="frame" x="-11.5" y="190.5" width="437" height="437"/>
+                                                        <rect key="frame" x="0.0" y="190.5" width="414" height="437"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="cRw-v6-sJt" secondAttribute="height" multiplier="1:1" priority="750" id="Wxc-Sz-fad"/>
                                                         </constraints>
@@ -333,7 +333,7 @@
                                             <rect key="frame" x="20" y="14" width="37.5" height="36"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yd7-RX-l0L">
-                                            <rect key="frame" x="62.5" y="35.5" width="165.5" height="0.0"/>
+                                            <rect key="frame" x="62.5" y="35.5" width="331" height="0.0"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -363,7 +363,7 @@
                                         <constraint firstItem="bHY-qy-wBM" firstAttribute="top" secondItem="Udl-4G-0Lp" secondAttribute="bottom" constant="16" id="4TZ-Yj-IkZ"/>
                                         <constraint firstItem="yd7-RX-l0L" firstAttribute="top" secondItem="XUH-FL-Ccx" secondAttribute="bottom" constant="1" id="5g9-Wo-d6O"/>
                                         <constraint firstItem="Udl-4G-0Lp" firstAttribute="centerY" secondItem="eXT-6h-B8v" secondAttribute="centerY" multiplier="0.2" id="8Ek-I8-hUU"/>
-                                        <constraint firstItem="yd7-RX-l0L" firstAttribute="width" secondItem="eXT-6h-B8v" secondAttribute="width" multiplier="0.4" id="Dlf-bk-SQT"/>
+                                        <constraint firstItem="yd7-RX-l0L" firstAttribute="width" secondItem="eXT-6h-B8v" secondAttribute="width" multiplier="0.8" id="Dlf-bk-SQT"/>
                                         <constraint firstItem="4gg-lG-Ga5" firstAttribute="trailing" secondItem="FwT-Fn-Zbd" secondAttribute="trailing" id="E4B-vE-dEJ"/>
                                         <constraint firstItem="ACP-Kb-Lrb" firstAttribute="leading" secondItem="FwT-Fn-Zbd" secondAttribute="leading" id="EqS-2k-95u"/>
                                         <constraint firstItem="PX4-B4-4Re" firstAttribute="leading" secondItem="ACP-Kb-Lrb" secondAttribute="leading" id="FCg-Bx-n2D"/>
