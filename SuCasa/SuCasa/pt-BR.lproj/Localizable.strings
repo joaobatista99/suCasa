@@ -19,7 +19,7 @@
 "Compartilhe experiências e viva novas culturas" = "Compartilhe experiências e viva novas culturas";
 "Flexibilidade e segurança para ambas as partes" = "Flexibilidade e segurança para ambas as partes";
 "Entrar" = "Entrar";
-
+"EntrarHint" = "Iniciar a aplicação";
 
 //MARK: ExploreViewController
 
@@ -29,6 +29,10 @@
 "Veja nossa seleção de lugares para ficar com os melhores preços" = "Veja nossa seleção de lugares para ficar com os melhores preços";
 "Ver tudo" = "Ver tudo";
 "Aproximadamente" = "Aproximadamente";
+"VerMaisHint" = "Veja mais ongs parceiras";
+"ToqueParaDetalhesHint" = "Toque duas vezes para ver mais detalhes sobre o item";
+"LocalizaçãoNãoEncontrada" = "Não Encontrada";
+
 
 //MARK: AdViewController
 
@@ -137,6 +141,9 @@
 "%d mês" = "%d mês";
 "em média/mês" = "em média/mês";
 "Contato" = "Contato";
+"ContatoHint" = "Entre em contato";
+"ImagensLabel" = "Imagens da propriedade";
+
 
 //MARK: PickerOptions
 "Apartamento" = "Apartamento";

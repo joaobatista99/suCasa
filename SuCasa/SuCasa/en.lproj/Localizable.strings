@@ -18,6 +18,7 @@
 "Compartilhe experiências e viva novas culturas" = "Share experiences and live new cultures";
 "Flexibilidade e segurança para ambas as partes" = "Flexibility and security for both parties";
 "Entrar" = "Sing In";
+"EntrarHint" = "Start the application";
 
 //MARK: ExploreViewController
 
@@ -27,6 +28,10 @@
 "Veja nossa seleção de lugares para ficar com os melhores preços" = "See our selection of places to stay at the best prices";
 "Ver tudo" = "See More";
 "Aproximadamente" = "about";
+"VerMaisHint" = "Discover more partnered NGO's";
+"ToqueParaDetalhesHint" = "Double tap for more details about the item";
+"LocalizaçãoNãoEncontrada" = "Not Found";
+
 
 //MARK: AdViewController
 
@@ -107,7 +112,6 @@
 "Perfil" = "Profile";
 "Editar" = "Edit";
 
-
 //MARK: TabBarViewController
 
 "Explore" = "Explore";
@@ -115,7 +119,6 @@
 "Idiomas" = "Languages";
 
 //MARK: XIBTableViewExploreViewController
-
 
 "APROX. " = "Approx. ";
 "Disponível para %d pessoas" = "Available for %d people";
@@ -131,6 +134,8 @@
 "%d mês" = "%d month";
 "em média/mês" = "average/month";
 "Contato" = "Contact";
+"ContatoHint" = "Contact";
+"ImagensLabel" = "Property images";
 
 //MARK: PickerOptions
 "Apartamento" = "Apartment";
@@ -141,3 +146,10 @@
 //MARK: DoneButtonPicker
 
 "Concluído" = "Done";
+
+//MARK: ButtonsHints
+
+
+
+
+
