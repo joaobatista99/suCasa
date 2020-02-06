@@ -135,6 +135,7 @@
 "em média/mês" = "average/month";
 "Contato" = "Contact";
 "ContatoHint" = "Contact";
+"ImagensLabel" = "Property images";
 
 //MARK: PickerOptions
 "Apartamento" = "Apartment";
