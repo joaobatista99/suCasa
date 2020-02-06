@@ -10,7 +10,7 @@ import UIKit
 import  Foundation
 
 class MonthlyViewController: UIViewController {
-
+    
     @IBOutlet weak var monthly: UITextField!
     @IBOutlet weak var monsthsQuantity: UITextField!
     
@@ -38,8 +38,7 @@ class MonthlyViewController: UIViewController {
     func fixDynamicFonts(){
         
         if screenSize.height >= 667.0 {
-            monthlyHeightConstraint = monthlyHeightConstraint.changeMultiplier(multiplier: 0.04)
-            periodHeightConstraint = periodHeightConstraint.changeMultiplier(multiplier: 0.04)
+            
             if titleLabel.font.pointSize >= 40.0 {
                 titleLabel.font  =  titleLabel.font.withSize(40.0)
                 monthlyLabel.font  =  monthlyLabel.font.withSize(35.0)
@@ -48,8 +47,11 @@ class MonthlyViewController: UIViewController {
                 monthly.font  =  monthly.font?.withSize(35.0)
                 monsthsQuantity.font  =  monsthsQuantity.font?.withSize(35.0)
                 nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(40.0)
+                
+                monthlyHeightConstraint = monthlyHeightConstraint.changeMultiplier(multiplier: 0.04)
+                periodHeightConstraint = periodHeightConstraint.changeMultiplier(multiplier: 0.04)
             }
-
+            
         }
         else if screenSize.height < 667.0 {
             if titleLabel.font.pointSize >= 33.0 {
@@ -60,13 +62,15 @@ class MonthlyViewController: UIViewController {
                 monthly.font  =  monthly.font?.withSize(23.0)
                 monsthsQuantity.font  =  monsthsQuantity.font?.withSize(23.0)
                 nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(33.0)
+                
+                monthlyHeightConstraint = monthlyHeightConstraint.changeMultiplier(multiplier: 0.05)
+                periodHeightConstraint = periodHeightConstraint.changeMultiplier(multiplier: 0.05)
             }
-            monthlyHeightConstraint = monthlyHeightConstraint.changeMultiplier(multiplier: 0.05)
-            periodHeightConstraint = periodHeightConstraint.changeMultiplier(multiplier: 0.05)
-
+            
+            
         }
         
-
+        
     }
     
     override func viewDidLoad() {
@@ -86,13 +90,13 @@ class MonthlyViewController: UIViewController {
         //keyboard notifications
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-
+        
         setUpText()
         
         nextButton.isHidden = true
         
         self.navigationController?.navigationBar.tintColor = Colors.buttonColor
-
+        
         
     }
     
@@ -115,7 +119,7 @@ class MonthlyViewController: UIViewController {
                 return
             }
             self.property.coordinates = location.coordinate
-
+            
         }
         
         PropertyDAO.createNewProperty(property: self.property, photos: self.images) {
@@ -123,7 +127,7 @@ class MonthlyViewController: UIViewController {
             self.performSegue(withIdentifier: "doneId", sender: self)
         }
         
-
+        
         
     }
     
@@ -134,7 +138,7 @@ class MonthlyViewController: UIViewController {
     
     //dismiss keyboard if users touches screen
     @objc func endSelection(_ force: Bool) -> Bool {
-           return self.view.endEditing(force)
+        return self.view.endEditing(force)
     }
     
     //Scroll when keyboard activates
@@ -160,7 +164,7 @@ class MonthlyViewController: UIViewController {
     
     /// This method will be called when the done button at the picker view has been pressed
     @objc func doneButton() {
-
+        
         //End editing will hide the keyboard
         self.view.endEditing(true)
     }
@@ -200,17 +204,17 @@ class MonthlyViewController: UIViewController {
     }
     
     func isTextFieldsFilled() -> Bool{
-           
-           if monsthsQuantity.text!.isEmpty {
-               return false
-           }
-           else if monthly.text!.isEmpty {
-               return false
-           }
-           
-           //If all text field is filled, return true
-           return true
-       }
+        
+        if monsthsQuantity.text!.isEmpty {
+            return false
+        }
+        else if monthly.text!.isEmpty {
+            return false
+        }
+        
+        //If all text field is filled, return true
+        return true
+    }
 }
 
 extension MonthlyViewController: UITextFieldDelegate {

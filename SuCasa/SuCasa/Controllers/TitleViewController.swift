@@ -36,30 +36,32 @@ class TitleViewController: UIViewController {
     
     func fixDynamicFonts(){
         if screenSize.height >= 667.0 {
-                   rulesHeightConstraint = rulesHeightConstraint.changeMultiplier(multiplier: 0.03)
-                   if titleLabel.font.pointSize >= 40.0 {
-                       titleLabel.font  =  titleLabel.font.withSize(40.0)
-                       addTitleLabel.font  =  addTitleLabel.font.withSize(35.0)
-                       rulesLabel.font  =  rulesLabel.font.withSize(35.0)
-                       descriptionLabel.font  =  descriptionLabel.font.withSize(35.0)
-                       titleTextField.font  =  titleTextField.font?.withSize(35.0)
-                       rulesTextField.font  =  rulesTextField.font?.withSize(35.0)
-                       nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(40.0)
-                   }
-               }
-               else if screenSize.height < 667.0 {
-                   if titleLabel.font.pointSize >= 33.0 {
-                       titleLabel.font  =  titleLabel.font.withSize(33.0)
-                       addTitleLabel.font  =  addTitleLabel.font.withSize(23.0)
-                       rulesLabel.font  =  rulesLabel.font.withSize(23.0)
-                       descriptionLabel.font  =  descriptionLabel.font.withSize(23.0)
-                       titleTextField.font  =  titleTextField.font?.withSize(23.0)
-                       rulesTextField.font  =  rulesTextField.font?.withSize(23.0)
-                       nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(33.0)
-                   }
-                   rulesHeightConstraint = rulesHeightConstraint.changeMultiplier(multiplier: 0.05)
-                   
-               }
+            
+            if titleLabel.font.pointSize >= 40.0 {
+                titleLabel.font  =  titleLabel.font.withSize(40.0)
+                addTitleLabel.font  =  addTitleLabel.font.withSize(35.0)
+                rulesLabel.font  =  rulesLabel.font.withSize(35.0)
+                descriptionLabel.font  =  descriptionLabel.font.withSize(35.0)
+                titleTextField.font  =  titleTextField.font?.withSize(35.0)
+                rulesTextField.font  =  rulesTextField.font?.withSize(35.0)
+                nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(40.0)
+                rulesHeightConstraint = rulesHeightConstraint.changeMultiplier(multiplier: 0.03)
+            }
+        }
+        else if screenSize.height < 667.0 {
+            if titleLabel.font.pointSize >= 33.0 {
+                titleLabel.font  =  titleLabel.font.withSize(33.0)
+                addTitleLabel.font  =  addTitleLabel.font.withSize(23.0)
+                rulesLabel.font  =  rulesLabel.font.withSize(23.0)
+                descriptionLabel.font  =  descriptionLabel.font.withSize(23.0)
+                titleTextField.font  =  titleTextField.font?.withSize(23.0)
+                rulesTextField.font  =  rulesTextField.font?.withSize(23.0)
+                nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(33.0)
+                rulesHeightConstraint = rulesHeightConstraint.changeMultiplier(multiplier: 0.05)
+            }
+            
+            
+        }
     }
     
     
