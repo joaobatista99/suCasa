@@ -29,21 +29,29 @@ class TitleViewController: UIViewController {
     
     override  func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if titleLabel.font.pointSize >= 33.0 {
-            titleLabel.font  =  titleLabel.font.withSize(33.0)
-            addTitleLabel.font  =  addTitleLabel.font.withSize(23.0)
-            rulesLabel.font  =  rulesLabel.font.withSize(23.0)
-            descriptionLabel.font  =  descriptionLabel.font.withSize(23.0)
-            titleTextField.font  =  titleTextField.font?.withSize(23.0)
-            rulesTextField.font  =  rulesTextField.font?.withSize(23.0)
-        }
         
-        
-        if screenSize.height == 667.0 {
+        if screenSize.height >= 667.0 {
             rulesHeightConstraint = rulesHeightConstraint.changeMultiplier(multiplier: 0.03)
-            
+            if titleLabel.font.pointSize >= 40.0 {
+                titleLabel.font  =  titleLabel.font.withSize(40.0)
+                addTitleLabel.font  =  addTitleLabel.font.withSize(28.0)
+                rulesLabel.font  =  rulesLabel.font.withSize(28.0)
+                descriptionLabel.font  =  descriptionLabel.font.withSize(28.0)
+                titleTextField.font  =  titleTextField.font?.withSize(28.0)
+                rulesTextField.font  =  rulesTextField.font?.withSize(28.0)
+                nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(40.0)
+            }
         }
         else if screenSize.height < 667.0 {
+            if titleLabel.font.pointSize >= 33.0 {
+                titleLabel.font  =  titleLabel.font.withSize(33.0)
+                addTitleLabel.font  =  addTitleLabel.font.withSize(23.0)
+                rulesLabel.font  =  rulesLabel.font.withSize(23.0)
+                descriptionLabel.font  =  descriptionLabel.font.withSize(23.0)
+                titleTextField.font  =  titleTextField.font?.withSize(23.0)
+                rulesTextField.font  =  rulesTextField.font?.withSize(23.0)
+                nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(33.0)
+            }
             rulesHeightConstraint = rulesHeightConstraint.changeMultiplier(multiplier: 0.05)
             
         }
