@@ -37,11 +37,11 @@ class MonthlyViewController: UIViewController {
             periodHeightConstraint = periodHeightConstraint.changeMultiplier(multiplier: 0.04)
             if titleLabel.font.pointSize >= 40.0 {
                 titleLabel.font  =  titleLabel.font.withSize(40.0)
-                monthlyLabel.font  =  monthlyLabel.font.withSize(28.0)
-                periodLabel.font  =  periodLabel.font.withSize(28.0)
-                descriptionLabel.font  =  descriptionLabel.font.withSize(28.0)
-                monthly.font  =  monthly.font?.withSize(28.0)
-                monsthsQuantity.font  =  monsthsQuantity.font?.withSize(28.0)
+                monthlyLabel.font  =  monthlyLabel.font.withSize(35.0)
+                periodLabel.font  =  periodLabel.font.withSize(35.0)
+                descriptionLabel.font  =  descriptionLabel.font.withSize(35.0)
+                monthly.font  =  monthly.font?.withSize(35.0)
+                monsthsQuantity.font  =  monsthsQuantity.font?.withSize(35.0)
                 nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(40.0)
             }
 
