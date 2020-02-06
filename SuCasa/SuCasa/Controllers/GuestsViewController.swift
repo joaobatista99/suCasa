@@ -36,8 +36,12 @@ class GuestsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-       
+        self.fixDynamicFonts()
         
+        
+    }
+    
+    func fixDynamicFonts(){
         if screenSize.height >= 667.0 {
             if TitleGuestsLabel.font.pointSize >= 40.0 {
                 TitleGuestsLabel.font  =  TitleGuestsLabel.font.withSize(40.0)

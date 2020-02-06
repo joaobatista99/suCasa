@@ -32,6 +32,11 @@ class MonthlyViewController: UIViewController {
     override  func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.fixDynamicFonts()
+    }
+    
+    func fixDynamicFonts(){
+        
         if screenSize.height >= 667.0 {
             monthlyHeightConstraint = monthlyHeightConstraint.changeMultiplier(multiplier: 0.04)
             periodHeightConstraint = periodHeightConstraint.changeMultiplier(multiplier: 0.04)
@@ -61,6 +66,7 @@ class MonthlyViewController: UIViewController {
 
         }
         
+
     }
     
     override func viewDidLoad() {
