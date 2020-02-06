@@ -34,24 +34,34 @@ class AddPhotosViewController: UIViewController {
     
     @IBOutlet weak var titleDescriptionTop: NSLayoutConstraint!
     
+    @IBOutlet weak var nextButtonTop: NSLayoutConstraint!
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if addPhotosTitleLabel.font.pointSize >= 33.0 {
-            addPhotosTitleLabel.font  =  addPhotosTitleLabel.font.withSize(33.0)
-            addPhotosDescriptionLabel.font  = addPhotosDescriptionLabel.font.withSize(23.0)
-            addPhotosButton.titleLabel?.font = addPhotosButton.titleLabel?.font.withSize(33.0)
-            photosAdded.font = photosAdded.font.withSize(23.0)
-            nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(33.0)
-        }
+        
         
         if screenSize.height >= 667.0 {
-            addPhotosDescriptionHeight = addPhotosDescriptionHeight.changeMultiplier(multiplier: 0.28)
-            addPhotosTitleHeight =  addPhotosTitleHeight.changeMultiplier(multiplier: 0.13)
+            if addPhotosTitleLabel.font.pointSize >= 40.0 {
+                addPhotosTitleLabel.font  =  addPhotosTitleLabel.font.withSize(40.0)
+                addPhotosDescriptionLabel.font  = addPhotosDescriptionLabel.font.withSize(35.0)
+                addPhotosButton.titleLabel?.font = addPhotosButton.titleLabel?.font.withSize(40.0)
+                photosAdded.font = photosAdded.font.withSize(35.0)
+                nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(40.0)
+            }
+            addPhotosDescriptionHeight = addPhotosDescriptionHeight.changeMultiplier(multiplier: 0.35)
+            addPhotosTitleHeight =  addPhotosTitleHeight.changeMultiplier(multiplier: 0.16)
             photosAddedHeight = photosAddedHeight.changeMultiplier(multiplier: 0.1)
-            
+            nextButtonTop.constant = 90
         }
         else if screenSize.height < 667.0 {
+            if addPhotosTitleLabel.font.pointSize >= 33.0 {
+                addPhotosTitleLabel.font  =  addPhotosTitleLabel.font.withSize(33.0)
+                addPhotosDescriptionLabel.font  = addPhotosDescriptionLabel.font.withSize(23.0)
+                addPhotosButton.titleLabel?.font = addPhotosButton.titleLabel?.font.withSize(33.0)
+                photosAdded.font = photosAdded.font.withSize(23.0)
+                nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(33.0)
+            }
             addPhotosDescriptionHeight = addPhotosDescriptionHeight.changeMultiplier(multiplier: 0.38)
             addPhotosTitleHeight =  addPhotosTitleHeight.changeMultiplier(multiplier: 0.15)
             photosAddedHeight = photosAddedHeight.changeMultiplier(multiplier: 0.16)

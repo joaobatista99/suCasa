@@ -37,21 +37,30 @@ class SpaceViewController: UIViewController {
     
     override  func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if spaceTitleLabel.font.pointSize >= 33.0 {
-            spaceTitleLabel.font  =  spaceTitleLabel.font.withSize(33.0)
-            propertyType1Label.font  = propertyType1Label.font.withSize(27.0)
-            propertyType2Label.font = propertyType2Label.font.withSize(27.0)
-            spaceType.font = spaceType.font?.withSize(27.0)
-            propertyType.font = propertyType.font?.withSize(27.0)
-            nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(37.0)
-        }
         
         
-        if screenSize.height == 667.0 {
-            propertyTypeLabel1HeightConstraint = propertyTypeLabel1HeightConstraint.changeMultiplier(multiplier: 0.08)
-            propertyTypeLabel2HeightConstraint = propertyTypeLabel2HeightConstraint.changeMultiplier(multiplier: 0.08)
+        
+        if screenSize.height >= 667.0 {
+            if spaceTitleLabel.font.pointSize >= 40.0 {
+                spaceTitleLabel.font  =  spaceTitleLabel.font.withSize(40.0)
+                propertyType1Label.font  = propertyType1Label.font.withSize(35.0)
+                propertyType2Label.font = propertyType2Label.font.withSize(35.0)
+                spaceType.font = spaceType.font?.withSize(35.0)
+                propertyType.font = propertyType.font?.withSize(35.0)
+                nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(40.0)
+            }
+            propertyTypeLabel1HeightConstraint = propertyTypeLabel1HeightConstraint.changeMultiplier(multiplier: 0.12)
+            propertyTypeLabel2HeightConstraint = propertyTypeLabel2HeightConstraint.changeMultiplier(multiplier: 0.12)
         }
         else if screenSize.height < 667.0 {
+            if spaceTitleLabel.font.pointSize >= 33.0 {
+                spaceTitleLabel.font  =  spaceTitleLabel.font.withSize(33.0)
+                propertyType1Label.font  = propertyType1Label.font.withSize(27.0)
+                propertyType2Label.font = propertyType2Label.font.withSize(27.0)
+                spaceType.font = spaceType.font?.withSize(27.0)
+                propertyType.font = propertyType.font?.withSize(27.0)
+                nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(37.0)
+            }
             propertyTypeLabel1HeightConstraint = propertyTypeLabel1HeightConstraint.changeMultiplier(multiplier: 0.12)
             propertyTypeLabel2HeightConstraint = propertyTypeLabel2HeightConstraint.changeMultiplier(multiplier: 0.12)
         }

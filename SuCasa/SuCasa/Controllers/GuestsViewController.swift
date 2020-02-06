@@ -36,28 +36,40 @@ class GuestsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if TitleGuestsLabel.font.pointSize >= 33.0 {
-            TitleGuestsLabel.font  =  TitleGuestsLabel.font.withSize(33.0)
-            descriptionGuestsLabel.font  = descriptionGuestsLabel.font.withSize(27.0)
-            totalGuestsLabel.font = totalGuestsLabel.font.withSize(27.0)
-            numberOfRoomsLabel.font = numberOfRoomsLabel.font?.withSize(27.0)
-            numberOfBedsLabel.font = numberOfBedsLabel.font?.withSize(27.0)
-            totalGuestsTextField.font = totalGuestsTextField.font?.withSize(27.0)
-            bedroomNumberTextField.font = bedroomNumberTextField.font?.withSize(27.0)
-            bedNumberTextField.font =  bedNumberTextField.font?.withSize(27.0)
-            nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(33.0)
-        }
+       
         
         if screenSize.height >= 667.0 {
-            descriptionGuestsHeight = descriptionGuestsHeight.changeMultiplier(multiplier: 0.1)
+            if TitleGuestsLabel.font.pointSize >= 40.0 {
+                TitleGuestsLabel.font  =  TitleGuestsLabel.font.withSize(40.0)
+                descriptionGuestsLabel.font  = descriptionGuestsLabel.font.withSize(35.0)
+                totalGuestsLabel.font = totalGuestsLabel.font.withSize(35.0)
+                numberOfRoomsLabel.font = numberOfRoomsLabel.font?.withSize(35.0)
+                numberOfBedsLabel.font = numberOfBedsLabel.font?.withSize(35.0)
+                totalGuestsTextField.font = totalGuestsTextField.font?.withSize(35.0)
+                bedroomNumberTextField.font = bedroomNumberTextField.font?.withSize(35.0)
+                bedNumberTextField.font =  bedNumberTextField.font?.withSize(35.0)
+                nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(40.0)
+            }
+            descriptionGuestsHeight = descriptionGuestsHeight.changeMultiplier(multiplier: 0.21)
             numberOfRoomsHeight = numberOfRoomsHeight.changeMultiplier(multiplier: 0.08)
             numberOfBedsHeight =  numberOfBedsHeight.changeMultiplier(multiplier: 0.08)
             totalGuestsHeight = totalGuestsHeight.changeMultiplier(multiplier: 0.08)
             howManyGuestsConstraint = howManyGuestsConstraint.changeMultiplier(multiplier: 0.1)
         }
         else if screenSize.height < 667.0 {
-            scrollHeightConstraint = scrollHeightConstraint.changeMultiplier(multiplier: 1.9)
-            descriptionGuestsHeight = descriptionGuestsHeight.changeMultiplier(multiplier: 0.16)
+            if TitleGuestsLabel.font.pointSize >= 33.0 {
+                TitleGuestsLabel.font  =  TitleGuestsLabel.font.withSize(33.0)
+                descriptionGuestsLabel.font  = descriptionGuestsLabel.font.withSize(27.0)
+                totalGuestsLabel.font = totalGuestsLabel.font.withSize(27.0)
+                numberOfRoomsLabel.font = numberOfRoomsLabel.font?.withSize(27.0)
+                numberOfBedsLabel.font = numberOfBedsLabel.font?.withSize(27.0)
+                totalGuestsTextField.font = totalGuestsTextField.font?.withSize(27.0)
+                bedroomNumberTextField.font = bedroomNumberTextField.font?.withSize(27.0)
+                bedNumberTextField.font =  bedNumberTextField.font?.withSize(27.0)
+                nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(33.0)
+            }
+            scrollHeightConstraint = scrollHeightConstraint.changeMultiplier(multiplier: 2.5)
+            descriptionGuestsHeight = descriptionGuestsHeight.changeMultiplier(multiplier: 0.19)
             numberOfRoomsHeight = numberOfRoomsHeight.changeMultiplier(multiplier: 0.08)
             numberOfBedsHeight =  numberOfBedsHeight.changeMultiplier(multiplier: 0.08)
             totalGuestsHeight = totalGuestsHeight.changeMultiplier(multiplier: 0.08)
