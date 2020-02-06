@@ -309,7 +309,9 @@
                         <outlet property="languagesLabel" destination="qFZ-zK-AvN" id="LIP-8i-cOw"/>
                         <outlet property="mainTitle" destination="EXY-eb-H2F" id="y3E-Ej-05w"/>
                         <outlet property="months" destination="XMi-ba-ep2" id="fwx-h8-ony"/>
+                        <outlet property="monthsCell" destination="Vkj-G4-nxv" id="lFO-u0-h2M"/>
                         <outlet property="nameAndAgeLabel" destination="YqL-QF-5PQ" id="i8Z-G5-SIz"/>
+                        <outlet property="titleCell" destination="4du-FA-l00" id="OnD-cQ-jov"/>
                         <outlet property="userCell" destination="Pa3-w8-Yss" id="4Nk-4l-Qe7"/>
                     </connections>
                 </tableViewController>

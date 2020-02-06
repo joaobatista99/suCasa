@@ -45,17 +45,17 @@
 	<key>%d mês</key>
 	<dict>
 		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@mês@</string>
-		<key>mês</key>
+		<string>%#@mes@</string>
+		<key>mes</key>
 		<dict>
 			<key>NSStringFormatSpecTypeKey</key>
 			<string>NSStringPluralRuleType</string>
 			<key>NSStringFormatValueTypeKey</key>
 			<string>d</string>
-			<key>other</key>
-			<string>%d meses</string>
 			<key>one</key>
 			<string>%d mês</string>
+			<key>other</key>
+			<string>%d meses</string>
 		</dict>
 	</dict>
 </dict>

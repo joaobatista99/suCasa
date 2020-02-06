@@ -143,6 +143,10 @@
 "Contato" = "Contato";
 "ContatoHint" = "Entre em contato";
 "ImagensLabel" = "Imagens da propriedade";
+"InformaçãoDoProprietário" = "Informações do Proprietário";
+"InformaçãooDoImóvel" = "Informação Do Imóvel";
+"PeríodoMáximodeEstadia" = "Período Máximo de Estadia";
+
 
 
 //MARK: PickerOptions

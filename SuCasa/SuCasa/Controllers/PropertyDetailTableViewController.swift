@@ -6,6 +6,7 @@
 //  Copyright © 2019 João Victor Batista. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class PropertyDetailTableViewController: UITableViewController {
@@ -21,9 +22,15 @@ class PropertyDetailTableViewController: UITableViewController {
     @IBOutlet weak var languagesLabel: UILabel!
     @IBOutlet weak var months: UILabel!
     @IBOutlet weak var userCell: UITableViewCell!
+    @IBOutlet weak var titleCell: UITableViewCell!
+    @IBOutlet weak var monthsCell: UITableViewCell!
     
   
     let screenSize : CGRect = UIScreen.main.bounds
+    
+    var name = "José Alfredo 36 anos"
+    var info = "Gosto de viajar, conhecer novas pessoas e culturas. Tenho dois cachorros, Buck e Gula, muito dóceis e também adoram fazer novas amizades."
+    var languages = "Idiomas: Português, Espanhol, Francês"
     
     
     override func viewDidLoad() {
@@ -37,11 +44,18 @@ class PropertyDetailTableViewController: UITableViewController {
         if let property = self.property {
             self.mainTitle.text = property.title
             
-            nameAndAgeLabel.text = "José Alfredo 36 anos"
+            nameAndAgeLabel.text = name
             
-            descriptionLabel.text = "Gosto de viajar, conhecer novas pessoas e culturas. Tenho dois cachorros, Buck e Gula, muito dóceis e também adoram fazer novas amizades."
+            descriptionLabel.text = info
+            languagesLabel.text = languages
             
-            languagesLabel.text = "Idiomas: Português, Espanhol, Francês"
+            let formattedStringMonths = NSLocalizedString("%d mês", comment: "")
+            months.text = String.localizedStringWithFormat(formattedStringMonths, property.monthsAvailable)
+            
+            userCell.accessibilityLabel = NSLocalizedString("InformaçãoDoProprietário", comment: "") + name + description + languages
+            titleCell.accessibilityLabel = NSLocalizedString("PeríodoMáximodeEstadia", comment: "") + property.title
+            monthsCell.accessibilityLabel = NSLocalizedString("InformaçãoDoImóvel", comment: "") + String.localizedStringWithFormat(formattedStringMonths, property.monthsAvailable)
+            
             
             if mainTitle.font.pointSize >= 23.0 {
                 mainTitle.font = mainTitle.font.withSize(23.0)
@@ -52,8 +66,7 @@ class PropertyDetailTableViewController: UITableViewController {
                
             }
             
-            let formattedStringMonths = NSLocalizedString("%d mês", comment: "")
-            months.text = String.localizedStringWithFormat(formattedStringMonths, property.monthsAvailable)
+       
             
         }
     }
@@ -65,10 +78,10 @@ class PropertyDetailTableViewController: UITableViewController {
                 return 350
             }
             else if mainTitle.font.pointSize >= 23.0 {
-                return 320
+                return 330
             }
             
-            return 151
+            return 200
         }
         
         return UITableView.automaticDimension

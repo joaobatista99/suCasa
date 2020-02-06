@@ -136,6 +136,9 @@
 "Contato" = "Contact";
 "ContatoHint" = "Contact";
 "ImagensLabel" = "Property images";
+"InformaçãoDoProprietário" = "Landlord Informations";
+"InformaçãoDoImóvel" = "Property Information";
+"PeríodoMáximodeEstadia" = "Maximum Stay Period";
 
 //MARK: PickerOptions
 "Apartamento" = "Apartment";
@@ -147,7 +150,6 @@
 
 "Concluído" = "Done";
 
-//MARK: ButtonsHints
 
 
 
