@@ -76,46 +76,50 @@ class LocationViewController: UIViewController {
                      cityTextField.font = cityTextField.font?.withSize(35.0)
                      postalCodeTextField.font =  postalCodeTextField.font?.withSize(35.0)
                      complementTextField.font =  complementTextField.font?.withSize(35.0)
+                    
+                    locationTitleHeight = locationTitleHeight.changeMultiplier(multiplier: 0.1)
+                    locationDescriptionHeight = locationDescriptionHeight.changeMultiplier(multiplier: 0.21)
+                    countryLabelHeight = countryLabelHeight.changeMultiplier(multiplier: 0.04)
+                    adressLabelHeight = adressLabelHeight.changeMultiplier(multiplier: 0.04)
+                    cityLabelHeight = cityLabelHeight.changeMultiplier(multiplier: 0.04)
+                    ZIPLabelHeight = ZIPLabelHeight.changeMultiplier(multiplier: 0.04)
+                    complementLabelHeight = complementLabelHeight.changeMultiplier(multiplier: 0.04)
+                    scrollContentHeight = scrollContentHeight.changeMultiplier(multiplier: 1.6)
+                    nextButtonHeight = nextButtonHeight.changeMultiplier(multiplier: 0.04)
                  }
-                 locationTitleHeight = locationTitleHeight.changeMultiplier(multiplier: 0.1)
-                 locationDescriptionHeight = locationDescriptionHeight.changeMultiplier(multiplier: 0.21)
-                 countryLabelHeight = countryLabelHeight.changeMultiplier(multiplier: 0.04)
-                 adressLabelHeight = adressLabelHeight.changeMultiplier(multiplier: 0.04)
-                 cityLabelHeight = cityLabelHeight.changeMultiplier(multiplier: 0.04)
-                 ZIPLabelHeight = ZIPLabelHeight.changeMultiplier(multiplier: 0.04)
-                 complementLabelHeight = complementLabelHeight.changeMultiplier(multiplier: 0.04)
-                 scrollContentHeight = scrollContentHeight.changeMultiplier(multiplier: 1.6)
-                 nextButtonHeight = nextButtonHeight.changeMultiplier(multiplier: 0.04)
+                 
              }
              else if screenSize.height < 667.0 {
-                 if locationTitleLabel.font.pointSize >= 33.0 {
-                     locationTitleLabel.font  =  locationTitleLabel.font.withSize(33.0)
-                     locationDescriptionLabel.font = locationDescriptionLabel.font.withSize(27.0)
-                     countryLabel.font = countryLabel.font.withSize(27.0)
-                     adressLabel.font = adressLabel.font.withSize(27.0)
-                     cityLabel.font  = cityLabel.font.withSize(27.0)
-                     ZIPLabel.font =  ZIPLabel.font.withSize(27.0)
-                     complementLabel.font  = complementLabel.font.withSize(27.0)
-                     useCurrentLocButton.titleLabel?.font =  useCurrentLocButton.titleLabel?.font.withSize(23.0)
-                     nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(33.0)
-                     countryTextField.font  = countryTextField.font?.withSize(27.0)
-                     adressTextField.font  = adressTextField.font?.withSize(27.0)
-                     cityTextField.font = cityTextField.font?.withSize(27.0)
-                     postalCodeTextField.font =  postalCodeTextField.font?.withSize(27.0)
-                     complementTextField.font =  complementTextField.font?.withSize(27.0)
-                 }
-                 locationTitleHeight = locationTitleHeight.changeMultiplier(multiplier: 0.09)
-                 locationDescriptionHeight = locationDescriptionHeight.changeMultiplier(multiplier: 0.15)
-                 countryLabelHeight = countryLabelHeight.changeMultiplier(multiplier: 0.07)
-                 adressLabelHeight = adressLabelHeight.changeMultiplier(multiplier: 0.07)
-                 cityLabelHeight = cityLabelHeight.changeMultiplier(multiplier: 0.07)
-                 ZIPLabelHeight = ZIPLabelHeight.changeMultiplier(multiplier: 0.07)
-                 complementLabelHeight = complementLabelHeight.changeMultiplier(multiplier: 0.07)
-                 useCurrentLocButtonHeight =  useCurrentLocButtonHeight.changeMultiplier(multiplier: 0.03)
-                 scrollContentHeight = scrollContentHeight.changeMultiplier(multiplier: 2.1)
-                 nextButtonHeight = nextButtonHeight.changeMultiplier(multiplier: 0.03)
-             }
-             
+                if locationTitleLabel.font.pointSize >= 33.0 {
+                    locationTitleLabel.font  =  locationTitleLabel.font.withSize(33.0)
+                    locationDescriptionLabel.font = locationDescriptionLabel.font.withSize(27.0)
+                    countryLabel.font = countryLabel.font.withSize(27.0)
+                    adressLabel.font = adressLabel.font.withSize(27.0)
+                    cityLabel.font  = cityLabel.font.withSize(27.0)
+                    ZIPLabel.font =  ZIPLabel.font.withSize(27.0)
+                    complementLabel.font  = complementLabel.font.withSize(27.0)
+                    useCurrentLocButton.titleLabel?.font =  useCurrentLocButton.titleLabel?.font.withSize(23.0)
+                    nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(33.0)
+                    countryTextField.font  = countryTextField.font?.withSize(27.0)
+                    adressTextField.font  = adressTextField.font?.withSize(27.0)
+                    cityTextField.font = cityTextField.font?.withSize(27.0)
+                    postalCodeTextField.font =  postalCodeTextField.font?.withSize(27.0)
+                    complementTextField.font =  complementTextField.font?.withSize(27.0)
+                    
+                    locationTitleHeight = locationTitleHeight.changeMultiplier(multiplier: 0.09)
+                    locationDescriptionHeight = locationDescriptionHeight.changeMultiplier(multiplier: 0.15)
+                    countryLabelHeight = countryLabelHeight.changeMultiplier(multiplier: 0.07)
+                    adressLabelHeight = adressLabelHeight.changeMultiplier(multiplier: 0.07)
+                    cityLabelHeight = cityLabelHeight.changeMultiplier(multiplier: 0.07)
+                    ZIPLabelHeight = ZIPLabelHeight.changeMultiplier(multiplier: 0.07)
+                    complementLabelHeight = complementLabelHeight.changeMultiplier(multiplier: 0.07)
+                    useCurrentLocButtonHeight =  useCurrentLocButtonHeight.changeMultiplier(multiplier: 0.03)
+                    scrollContentHeight = scrollContentHeight.changeMultiplier(multiplier: 2.1)
+                    nextButtonHeight = nextButtonHeight.changeMultiplier(multiplier: 0.03)
+                }
+                
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

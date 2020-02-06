@@ -159,7 +159,6 @@
 				BAACB3D4238EF1E700C231F0 /* Ong.swift */,
 				362DB1CF237A23E400D36357 /* City.swift */,
 				BAFE3514237C727F00966F86 /* Colors.swift */,
-				BAEB1461237B30AD008438D4 /* Property.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -212,6 +211,7 @@
 		ADDDB10623E4633F00A18818 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BAEB1461237B30AD008438D4 /* Property.swift */,
 				ADDDB10723E4637400A18818 /* ConstraintExtension.swift */,
 			);
 			path = Extensions;
