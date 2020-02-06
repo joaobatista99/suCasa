@@ -52,9 +52,9 @@ class PropertyDetailTableViewController: UITableViewController {
             let formattedStringMonths = NSLocalizedString("%d mês", comment: "")
             months.text = String.localizedStringWithFormat(formattedStringMonths, property.monthsAvailable)
             
-            userCell.accessibilityLabel = NSLocalizedString("InformaçãoDoProprietário", comment: "") + name + description + languages
-            titleCell.accessibilityLabel = NSLocalizedString("PeríodoMáximodeEstadia", comment: "") + property.title
-            monthsCell.accessibilityLabel = NSLocalizedString("InformaçãoDoImóvel", comment: "") + String.localizedStringWithFormat(formattedStringMonths, property.monthsAvailable)
+            userCell.accessibilityLabel = NSLocalizedString("InformaçãoDoProprietário", comment: "") + name + info + languages
+            titleCell.accessibilityLabel = NSLocalizedString("InformaçãoDoImóvel", comment: "") +  property.title
+            monthsCell.accessibilityLabel = NSLocalizedString("PeríodoMáximodeEstadia", comment: "") + String.localizedStringWithFormat(formattedStringMonths, property.monthsAvailable)
             
             
             if mainTitle.font.pointSize >= 23.0 {
