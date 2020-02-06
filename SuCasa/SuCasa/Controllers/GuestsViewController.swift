@@ -38,20 +38,21 @@ class GuestsViewController: UIViewController {
         
         if TitleGuestsLabel.font.pointSize >= 33.0 {
             TitleGuestsLabel.font  =  TitleGuestsLabel.font.withSize(33.0)
-            descriptionGuestsLabel.font  = descriptionGuestsLabel.font.withSize(23.0)
-            totalGuestsLabel.font = totalGuestsLabel.font.withSize(23.0)
-            numberOfRoomsLabel.font = numberOfRoomsLabel.font?.withSize(23.0)
-            numberOfBedsLabel.font = numberOfBedsLabel.font?.withSize(23.0)
-            totalGuestsTextField.font = totalGuestsTextField.font?.withSize(23.0)
-            bedroomNumberTextField.font = bedroomNumberTextField.font?.withSize(23.0)
-            bedNumberTextField.font =  bedNumberTextField.font?.withSize(23.0)
+            descriptionGuestsLabel.font  = descriptionGuestsLabel.font.withSize(27.0)
+            totalGuestsLabel.font = totalGuestsLabel.font.withSize(27.0)
+            numberOfRoomsLabel.font = numberOfRoomsLabel.font?.withSize(27.0)
+            numberOfBedsLabel.font = numberOfBedsLabel.font?.withSize(27.0)
+            totalGuestsTextField.font = totalGuestsTextField.font?.withSize(27.0)
+            bedroomNumberTextField.font = bedroomNumberTextField.font?.withSize(27.0)
+            bedNumberTextField.font =  bedNumberTextField.font?.withSize(27.0)
+            nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(33.0)
         }
         
         if screenSize.height >= 667.0 {
             descriptionGuestsHeight = descriptionGuestsHeight.changeMultiplier(multiplier: 0.1)
             numberOfRoomsHeight = numberOfRoomsHeight.changeMultiplier(multiplier: 0.08)
             numberOfBedsHeight =  numberOfBedsHeight.changeMultiplier(multiplier: 0.08)
-            totalGuestsHeight = totalGuestsHeight.changeMultiplier(multiplier: 0.09)
+            totalGuestsHeight = totalGuestsHeight.changeMultiplier(multiplier: 0.08)
             howManyGuestsConstraint = howManyGuestsConstraint.changeMultiplier(multiplier: 0.1)
         }
         else if screenSize.height < 667.0 {
@@ -59,7 +60,7 @@ class GuestsViewController: UIViewController {
             descriptionGuestsHeight = descriptionGuestsHeight.changeMultiplier(multiplier: 0.16)
             numberOfRoomsHeight = numberOfRoomsHeight.changeMultiplier(multiplier: 0.08)
             numberOfBedsHeight =  numberOfBedsHeight.changeMultiplier(multiplier: 0.08)
-            totalGuestsHeight = totalGuestsHeight.changeMultiplier(multiplier: 0.09)
+            totalGuestsHeight = totalGuestsHeight.changeMultiplier(multiplier: 0.08)
             howManyGuestsConstraint = howManyGuestsConstraint.changeMultiplier(multiplier: 0.12)
         }
         
@@ -71,7 +72,7 @@ class GuestsViewController: UIViewController {
         scrollView.contentOffset.x = 0
         print(scrollView.contentSize)
 
-        scrollView.contentSize =  CGSize(width: (320), height: scrollView.contentSize.height)
+        scrollView.contentSize =  CGSize(width: (310), height: scrollView.contentSize.height + 150)
     }
     
     override func viewDidLoad() {

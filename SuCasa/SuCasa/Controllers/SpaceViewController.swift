@@ -39,10 +39,11 @@ class SpaceViewController: UIViewController {
         super.viewWillAppear(animated)
         if spaceTitleLabel.font.pointSize >= 33.0 {
             spaceTitleLabel.font  =  spaceTitleLabel.font.withSize(33.0)
-            propertyType1Label.font  = propertyType1Label.font.withSize(23.0)
-            propertyType2Label.font = propertyType2Label.font.withSize(23.0)
-            spaceType.font = spaceType.font?.withSize(23.0)
-            propertyType.font = propertyType.font?.withSize(23.0)
+            propertyType1Label.font  = propertyType1Label.font.withSize(27.0)
+            propertyType2Label.font = propertyType2Label.font.withSize(27.0)
+            spaceType.font = spaceType.font?.withSize(27.0)
+            propertyType.font = propertyType.font?.withSize(27.0)
+            nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(37.0)
         }
         
         
