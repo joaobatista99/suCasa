@@ -23,6 +23,9 @@ class MonthlyViewController: UIViewController {
     @IBOutlet weak var monthlyHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var periodHeightConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var viewMonths: UIView!
+    @IBOutlet weak var viewTime: UIView!
+    
     let notification = UINotificationFeedbackGenerator()
     
     var property: Property!
@@ -217,6 +220,32 @@ class MonthlyViewController: UIViewController {
         //If all text field is filled, return true
         return true
     }
+    
+    
+    @IBAction func textFieldDidBegnEditing(_ sender: UITextField) {
+        switch sender {
+        case monsthsQuantity:
+            viewTime.backgroundColor = Colors.acessoryViewSelcetedColor
+        case monthly:
+            viewMonths.backgroundColor = Colors.acessoryViewSelcetedColor
+        default:
+            break
+        }
+    }
+    
+    
+    @IBAction func textFieldEndEditing(_ sender: UITextField) {
+        switch sender {
+        case monsthsQuantity:
+            viewTime.backgroundColor = Colors.acessoryViewColor
+        case monthly:
+            viewMonths.backgroundColor = Colors.acessoryViewColor
+        default:
+            break
+        }
+    }
+    
+    
 }
 
 extension MonthlyViewController: UITextFieldDelegate {

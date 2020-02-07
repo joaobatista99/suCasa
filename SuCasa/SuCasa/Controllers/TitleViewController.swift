@@ -23,6 +23,9 @@ class TitleViewController: UIViewController {
     
     @IBOutlet weak var rulesHeightConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var viewTitle: UIView!
+    @IBOutlet weak var viewRules: UIView!
+    
     var property: Property!
     var images: [UIImage]!
     let screenSize: CGRect = UIScreen.main.bounds
@@ -171,6 +174,31 @@ class TitleViewController: UIViewController {
         
         performSegue(withIdentifier: "goToMonthlyValues", sender: "self")
     }
+    
+    
+    @IBAction func textFieldDidBegniEditng(_ sender: UITextField) {
+        switch sender{
+        case titleTextField:
+            viewTitle.backgroundColor = Colors.acessoryViewSelcetedColor
+        case rulesTextField:
+            viewRules.backgroundColor = Colors.acessoryViewSelcetedColor
+        default:
+            break
+        }
+    }
+    
+    @IBAction func textFieldEndEditing(_ sender: UITextField) {
+        switch sender{
+        case titleTextField:
+            viewTitle.backgroundColor = Colors.acessoryViewColor
+        case rulesTextField:
+            viewRules.backgroundColor = Colors.acessoryViewColor
+        default:
+            break
+        }
+    }
+    
+    
 }
 
 extension TitleViewController : UITextFieldDelegate {

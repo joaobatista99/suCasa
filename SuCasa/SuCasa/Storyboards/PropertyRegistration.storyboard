@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -69,6 +69,7 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="continue"/>
                                 <connections>
                                     <action selector="assignPickerViewToTextField:" destination="yR6-Tb-gLL" eventType="editingDidBegin" id="0ts-JM-SMZ"/>
+                                    <action selector="textFIeldEndEditing:" destination="yR6-Tb-gLL" eventType="editingDidEnd" id="fhs-1t-YmN"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agora escolha um tipo de propriedade:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ejh-Jq-xHE">
@@ -78,21 +79,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Selecione o tipo de propriedade" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FiH-tB-wFi">
-                                <rect key="frame" x="15" y="388.66666666666669" width="372.66666666666669" height="53.666666666666686"/>
+                                <rect key="frame" x="15" y="388.66666666666669" width="372.66666666666669" height="54"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="continue"/>
                                 <connections>
                                     <action selector="assignPickerViewToTextField:" destination="yR6-Tb-gLL" eventType="editingDidBegin" id="nUZ-hZ-8xc"/>
+                                    <action selector="textFIeldEndEditing:" destination="yR6-Tb-gLL" eventType="editingDidEnd" id="avS-Kn-Zxd"/>
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ma-Al-cBT">
                                 <rect key="frame" x="15" y="290" width="372.66666666666669" height="2"/>
                                 <color key="backgroundColor" red="0.79611998799999995" green="0.79994738099999996" blue="0.80392277239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="gTN-93-DqY"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2TB-wp-Uxa">
-                                <rect key="frame" x="15" y="443.33333333333331" width="372.66666666666669" height="1.6666666666666856"/>
+                                <rect key="frame" x="15" y="443.66666666666669" width="372.66666666666669" height="2"/>
                                 <color key="backgroundColor" red="0.79611998799999995" green="0.79994738099999996" blue="0.80392277239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VxP-A5-IyD">
@@ -120,9 +125,9 @@
                             <constraint firstItem="Ejh-Jq-xHE" firstAttribute="top" secondItem="5Ma-Al-cBT" secondAttribute="bottom" constant="20" id="345-Gp-8l0"/>
                             <constraint firstItem="5Ma-Al-cBT" firstAttribute="top" secondItem="xpu-u7-dOE" secondAttribute="bottom" constant="1" id="7dw-DM-r2h"/>
                             <constraint firstItem="U8U-aM-epX" firstAttribute="width" secondItem="yw3-aa-3ht" secondAttribute="width" multiplier="0.9" id="87N-wh-zJ9"/>
-                            <constraint firstItem="2TB-wp-Uxa" firstAttribute="height" secondItem="yw3-aa-3ht" secondAttribute="height" multiplier="0.002" id="B16-xl-17v"/>
                             <constraint firstItem="xpu-u7-dOE" firstAttribute="height" secondItem="yw3-aa-3ht" secondAttribute="height" multiplier="0.06" id="BsP-i8-gq0"/>
                             <constraint firstItem="VxP-A5-IyD" firstAttribute="centerX" secondItem="yw3-aa-3ht" secondAttribute="centerX" id="FPc-wt-0yI"/>
+                            <constraint firstItem="2TB-wp-Uxa" firstAttribute="height" secondItem="5Ma-Al-cBT" secondAttribute="height" id="IVp-3L-Mr5"/>
                             <constraint firstItem="2TB-wp-Uxa" firstAttribute="top" secondItem="FiH-tB-wFi" secondAttribute="bottom" constant="1" id="KHf-qP-A2a"/>
                             <constraint firstItem="2TB-wp-Uxa" firstAttribute="width" secondItem="yw3-aa-3ht" secondAttribute="width" multiplier="0.9" id="KRs-I8-BOI"/>
                             <constraint firstItem="U8U-aM-epX" firstAttribute="top" secondItem="geo-E2-BFf" secondAttribute="bottom" constant="20" id="L3W-fV-T30"/>
@@ -143,7 +148,6 @@
                             <constraint firstItem="1LD-S1-gL0" firstAttribute="bottom" secondItem="VxP-A5-IyD" secondAttribute="bottom" constant="40" id="nxM-Gj-LTu"/>
                             <constraint firstItem="2TB-wp-Uxa" firstAttribute="leading" secondItem="1LD-S1-gL0" secondAttribute="leading" constant="15" id="pHI-di-Twk"/>
                             <constraint firstItem="VxP-A5-IyD" firstAttribute="width" secondItem="yw3-aa-3ht" secondAttribute="width" multiplier="0.766" id="rfB-FF-lab"/>
-                            <constraint firstItem="5Ma-Al-cBT" firstAttribute="height" secondItem="yw3-aa-3ht" secondAttribute="height" multiplier="0.002" id="sZS-M1-M8I"/>
                             <constraint firstItem="Ejh-Jq-xHE" firstAttribute="leading" secondItem="1LD-S1-gL0" secondAttribute="leading" constant="15" id="uV4-wF-yaP"/>
                             <constraint firstItem="5Ma-Al-cBT" firstAttribute="leading" secondItem="1LD-S1-gL0" secondAttribute="leading" constant="15" id="vbl-6J-L2A"/>
                             <constraint firstItem="xpu-u7-dOE" firstAttribute="width" secondItem="yw3-aa-3ht" secondAttribute="width" multiplier="0.9" id="vlt-5y-3H7"/>
@@ -179,6 +183,8 @@
                         <outlet property="propertyTypeLabel2HeightConstraint" destination="amW-4o-1KH" id="0my-Lq-wEI"/>
                         <outlet property="spaceTitleLabel" destination="geo-E2-BFf" id="zPb-ao-aiF"/>
                         <outlet property="spaceType" destination="xpu-u7-dOE" id="cfd-s2-3cO"/>
+                        <outlet property="viewPropertyType" destination="2TB-wp-Uxa" id="LTw-xH-cdz"/>
+                        <outlet property="viewSpaceType" destination="5Ma-Al-cBT" id="MVp-Sq-Puj"/>
                         <segue destination="PAW-ok-E21" kind="show" identifier="goToGuests" id="14O-NL-YpU"/>
                     </connections>
                 </viewController>
@@ -294,69 +300,82 @@
                                 <rect key="frame" x="0.66666666666665719" y="98.333333333333314" width="412.66666666666674" height="753.33333333333348"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZTW-F6-pWP">
-                                        <rect key="frame" x="20" y="30" width="371.33333333333331" height="1130"/>
+                                        <rect key="frame" x="20" y="30" width="371.33333333333331" height="753.33333333333337"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantos hóspedes podem ficar?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UIP-44-0zE">
-                                                <rect key="frame" x="-0.66666666666665719" y="0.0" width="371.33333333333326" height="113"/>
+                                                <rect key="frame" x="-0.66666666666665719" y="0.0" width="371.33333333333326" height="75.333333333333329"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Garanta que você tem camas suficientes para acomodar confortavelmente todos os seus hóspedes." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="dts-vJ-OMi">
-                                                <rect key="frame" x="0.0" y="127.99999999999997" width="371.33333333333331" height="79"/>
+                                                <rect key="frame" x="0.0" y="90.333333333333314" width="371.33333333333331" height="52.666666666666657"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total de hóspedes" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6cl-yx-R6l">
-                                                <rect key="frame" x="0.0" y="221.99999999999997" width="371.33333333333331" height="34"/>
+                                                <rect key="frame" x="0.0" y="157.99999999999997" width="371.33333333333331" height="22.666666666666657"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Selecione" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d9F-lM-bcY">
-                                                <rect key="frame" x="0.0" y="261" width="371.33333333333331" height="56.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="185.66666666666666" width="371.33333333333331" height="37.666666666666657"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="continue"/>
+                                                <connections>
+                                                    <action selector="textFieldDidBeginiEditing:" destination="PAW-ok-E21" eventType="editingDidBegin" id="yzz-DB-pMb"/>
+                                                    <action selector="textFieldDidEndEditing:" destination="PAW-ok-E21" eventType="editingDidEnd" id="jCU-dr-lI8"/>
+                                                </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ywj-kT-yH1">
-                                                <rect key="frame" x="0.0" y="318.66666666666663" width="371.33333333333331" height="2"/>
+                                                <rect key="frame" x="0.0" y="224.33333333333334" width="371.33333333333331" height="2"/>
                                                 <color key="backgroundColor" red="0.88213974240000004" green="0.88627272840000004" blue="0.89029622080000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="OH2-dW-d2c"/>
+                                                </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número quartos para hóspedes" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k5D-K7-cdx">
-                                                <rect key="frame" x="0.0" y="340.66666666666663" width="371.33333333333331" height="25.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="246.33333333333334" width="371.33333333333331" height="17.000000000000028"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Selecione" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i1Q-gJ-NUa">
-                                                <rect key="frame" x="0.0" y="371.33333333333337" width="371.33333333333331" height="62"/>
+                                                <rect key="frame" x="0.0" y="268.33333333333337" width="371.33333333333331" height="41.333333333333314"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="continue"/>
+                                                <connections>
+                                                    <action selector="textFieldDidBeginiEditing:" destination="PAW-ok-E21" eventType="editingDidBegin" id="gkT-Ob-oli"/>
+                                                </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdb-cR-Uyg">
-                                                <rect key="frame" x="0.0" y="434.33333333333326" width="371.33333333333331" height="2.3333333333333144"/>
+                                                <rect key="frame" x="0.0" y="310.66666666666663" width="371.33333333333331" height="2"/>
                                                 <color key="backgroundColor" red="0.85102236269999998" green="0.85484880210000003" blue="0.85882478949999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número de camas para hóspedes" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="43Q-AY-gwA">
-                                                <rect key="frame" x="0.0" y="453.66666666666663" width="371.33333333333331" height="25.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="329.66666666666663" width="371.33333333333331" height="17"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Selecione" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OxW-aV-zSh">
-                                                <rect key="frame" x="0.0" y="484.33333333333326" width="371.33333333333331" height="62"/>
+                                                <rect key="frame" x="0.0" y="351.66666666666663" width="371.33333333333331" height="41.333333333333314"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="continue"/>
+                                                <connections>
+                                                    <action selector="textFieldDidBeginiEditing:" destination="PAW-ok-E21" eventType="editingDidBegin" id="2pB-xN-Xt0"/>
+                                                </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NBC-Jt-1tB">
-                                                <rect key="frame" x="0.0" y="547.33333333333326" width="371.33333333333331" height="2"/>
+                                                <rect key="frame" x="0.0" y="394" width="371.33333333333331" height="2"/>
                                                 <color key="backgroundColor" red="0.85077053309999995" green="0.85489839320000005" blue="0.85892719029999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                         </subviews>
@@ -370,25 +389,24 @@
                                             <constraint firstItem="d9F-lM-bcY" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.05" id="8Ih-h0-Xae"/>
                                             <constraint firstItem="Ywj-kT-yH1" firstAttribute="width" secondItem="ZTW-F6-pWP" secondAttribute="width" id="8RN-Bi-MXE"/>
                                             <constraint firstItem="k5D-K7-cdx" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.022735" id="9Qh-og-W36"/>
-                                            <constraint firstItem="qdb-cR-Uyg" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.00203597" id="9Tl-6N-2Cb"/>
                                             <constraint firstItem="6cl-yx-R6l" firstAttribute="top" secondItem="dts-vJ-OMi" secondAttribute="bottom" constant="15" id="AB1-as-rqb"/>
                                             <constraint firstItem="Ywj-kT-yH1" firstAttribute="leading" secondItem="ZTW-F6-pWP" secondAttribute="leading" id="BxT-1G-guV"/>
                                             <constraint firstItem="dts-vJ-OMi" firstAttribute="leading" secondItem="ZTW-F6-pWP" secondAttribute="leading" id="Ewd-aO-UwR"/>
+                                            <constraint firstItem="qdb-cR-Uyg" firstAttribute="height" secondItem="Ywj-kT-yH1" secondAttribute="height" id="GlG-1b-Sxx"/>
                                             <constraint firstItem="UIP-44-0zE" firstAttribute="leading" secondItem="ZTW-F6-pWP" secondAttribute="leading" constant="-0.66666666666665719" id="JnU-D1-Uki"/>
                                             <constraint firstItem="k5D-K7-cdx" firstAttribute="width" secondItem="ZTW-F6-pWP" secondAttribute="width" id="K5V-uP-UBh"/>
                                             <constraint firstItem="d9F-lM-bcY" firstAttribute="top" secondItem="6cl-yx-R6l" secondAttribute="bottom" constant="5" id="K6g-VV-IaW"/>
                                             <constraint firstItem="qdb-cR-Uyg" firstAttribute="width" secondItem="ZTW-F6-pWP" secondAttribute="width" id="Kvh-8I-OfL"/>
-                                            <constraint firstItem="NBC-Jt-1tB" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.00169664" id="Ndq-EB-eCL"/>
                                             <constraint firstItem="d9F-lM-bcY" firstAttribute="leading" secondItem="ZTW-F6-pWP" secondAttribute="leading" id="OZb-MK-LJx"/>
                                             <constraint firstItem="6cl-yx-R6l" firstAttribute="leading" secondItem="ZTW-F6-pWP" secondAttribute="leading" id="QVM-9Q-XcF"/>
                                             <constraint firstItem="d9F-lM-bcY" firstAttribute="width" secondItem="ZTW-F6-pWP" secondAttribute="width" id="R15-Ki-pHR"/>
                                             <constraint firstItem="43Q-AY-gwA" firstAttribute="width" secondItem="ZTW-F6-pWP" secondAttribute="width" id="Rr9-7B-hGf"/>
                                             <constraint firstItem="dts-vJ-OMi" firstAttribute="top" secondItem="UIP-44-0zE" secondAttribute="bottom" constant="15.000000000000014" id="SU1-UE-xAm"/>
                                             <constraint firstItem="Ywj-kT-yH1" firstAttribute="top" secondItem="d9F-lM-bcY" secondAttribute="bottom" constant="1" id="UWX-eH-M4f"/>
+                                            <constraint firstItem="NBC-Jt-1tB" firstAttribute="height" secondItem="Ywj-kT-yH1" secondAttribute="height" id="WK3-DJ-lXh"/>
                                             <constraint firstItem="UIP-44-0zE" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.1" id="Wr8-Qv-ghW"/>
                                             <constraint firstItem="NBC-Jt-1tB" firstAttribute="leading" secondItem="ZTW-F6-pWP" secondAttribute="leading" id="Z37-gf-eIc"/>
                                             <constraint firstItem="UIP-44-0zE" firstAttribute="top" secondItem="ZTW-F6-pWP" secondAttribute="top" id="bZb-cr-ZmJ"/>
-                                            <constraint firstItem="Ywj-kT-yH1" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.00203597" id="bgB-UJ-tdX"/>
                                             <constraint firstItem="i1Q-gJ-NUa" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.0546318" id="dZt-vr-Rw2"/>
                                             <constraint firstItem="dts-vJ-OMi" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.07" id="e3q-Ut-64u"/>
                                             <constraint firstItem="OxW-aV-zSh" firstAttribute="leading" secondItem="ZTW-F6-pWP" secondAttribute="leading" id="hRk-kw-Y7h"/>
@@ -415,7 +433,7 @@
                                     <constraint firstItem="ZTW-F6-pWP" firstAttribute="leading" secondItem="jjJ-yn-m9f" secondAttribute="leading" constant="20" id="Bcj-5f-58q"/>
                                     <constraint firstAttribute="bottom" secondItem="ZTW-F6-pWP" secondAttribute="bottom" constant="-202.66666666666674" id="aux-iA-Vbc"/>
                                     <constraint firstAttribute="trailing" secondItem="ZTW-F6-pWP" secondAttribute="trailing" constant="20.000000000000057" id="cnO-wO-w93"/>
-                                    <constraint firstItem="ZTW-F6-pWP" firstAttribute="height" secondItem="jjJ-yn-m9f" secondAttribute="height" multiplier="1.5" id="hyf-cA-Io4"/>
+                                    <constraint firstItem="ZTW-F6-pWP" firstAttribute="height" secondItem="jjJ-yn-m9f" secondAttribute="height" id="hyf-cA-Io4"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="OkA-L0-DUP"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="UQF-UW-1Vb"/>
@@ -483,6 +501,9 @@
                         <outlet property="totalGuestsHeight" destination="kZw-rw-feV" id="SlG-8n-p3D"/>
                         <outlet property="totalGuestsLabel" destination="6cl-yx-R6l" id="NK7-rO-Dm8"/>
                         <outlet property="totalGuestsTextField" destination="d9F-lM-bcY" id="4jZ-fC-wP9"/>
+                        <outlet property="viewNumberBed" destination="NBC-Jt-1tB" id="XVQ-0y-j7C"/>
+                        <outlet property="viewNumberRooms" destination="qdb-cR-Uyg" id="bCO-Lx-SHG"/>
+                        <outlet property="viewTotalGuests" destination="Ywj-kT-yH1" id="Xk7-zU-f6Y"/>
                         <segue destination="sMF-ys-ix3" kind="show" identifier="goToLocation" id="Szm-Pj-Ixy"/>
                     </connections>
                 </viewController>
@@ -536,90 +557,113 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="País/Região" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwh-BE-IOw">
-                                                <rect key="frame" x="20.666666666666657" y="289.66666666666669" width="372.66666666666674" height="18"/>
+                                                <rect key="frame" x="20.666666666666657" y="291" width="372.66666666666674" height="18"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Selecione" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y2w-gQ-lbF">
-                                                <rect key="frame" x="20.666666666666657" y="312.66666666666669" width="372.66666666666674" height="53.666666666666686"/>
+                                                <rect key="frame" x="20.666666666666657" y="314" width="372.66666666666674" height="53.666666666666686"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="continue" textContentType="country-name"/>
+                                                <connections>
+                                                    <action selector="textFieldDidBeginEditing:" destination="sMF-ys-ix3" eventType="editingDidBegin" id="12f-gS-bgq"/>
+                                                    <action selector="textFieldEndEditing:" destination="sMF-ys-ix3" eventType="editingDidEnd" id="ayg-ks-6Xp"/>
+                                                </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dCW-XL-RBw">
-                                                <rect key="frame" x="20.666666666666657" y="367.33333333333331" width="372.66666666666674" height="1"/>
+                                                <rect key="frame" x="20.666666666666657" y="368.66666666666669" width="372.66666666666674" height="2"/>
                                                 <color key="backgroundColor" red="0.87037628889999996" green="0.87450736760000003" blue="0.87853282690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="r9x-bv-Tfa"/>
+                                                </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Endereço" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUB-SZ-hxs">
-                                                <rect key="frame" x="20.666666666666657" y="383.33333333333331" width="372.66666666666674" height="17.666666666666686"/>
+                                                <rect key="frame" x="20.666666666666657" y="385.66666666666669" width="372.66666666666674" height="18"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ex.: Rua das Hortências, 123" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KaQ-l2-RYj">
-                                                <rect key="frame" x="20.666666666666657" y="406" width="372.66666666666674" height="54"/>
+                                                <rect key="frame" x="20.666666666666657" y="408.66666666666669" width="372.66666666666674" height="53.666666666666686"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="continue" textContentType="street-address"/>
+                                                <connections>
+                                                    <action selector="textFieldDidBeginEditing:" destination="sMF-ys-ix3" eventType="editingDidBegin" id="lex-TZ-Asj"/>
+                                                    <action selector="textFieldEndEditing:" destination="sMF-ys-ix3" eventType="editingDidEnd" id="eCY-VB-2HR"/>
+                                                </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="niI-QC-XYr">
-                                                <rect key="frame" x="20.666666666666657" y="461" width="372.66666666666674" height="0.33333333333331439"/>
+                                                <rect key="frame" x="20.666666666666657" y="463.33333333333337" width="372.66666666666674" height="2"/>
                                                 <color key="backgroundColor" red="0.8664550781" green="0.87058556080000005" blue="0.87461173530000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cidade" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afx-3u-ib8">
-                                                <rect key="frame" x="20.666666666666657" y="476.33333333333337" width="372.66666666666674" height="18"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cidade" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afx-3u-ib8">
+                                                <rect key="frame" x="20.666666666666657" y="480.33333333333337" width="372.66666666666674" height="18"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Selecione" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gpc-Qs-dnY">
-                                                <rect key="frame" x="20.666666666666657" y="499.33333333333343" width="372.66666666666674" height="53.666666666666686"/>
+                                                <rect key="frame" x="20.666666666666657" y="503.33333333333343" width="372.66666666666674" height="53.666666666666686"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="continue" textContentType="address-level2"/>
+                                                <connections>
+                                                    <action selector="textFieldDidBeginEditing:" destination="sMF-ys-ix3" eventType="editingDidBegin" id="aBo-cD-HKq"/>
+                                                    <action selector="textFieldEndEditing:" destination="sMF-ys-ix3" eventType="editingDidEnd" id="nQr-yt-fVd"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CEP" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7RV-50-hbJ">
-                                                <rect key="frame" x="20.666666666666657" y="569.66666666666663" width="372.66666666666674" height="18"/>
+                                                <rect key="frame" x="20.666666666666657" y="575" width="372.66666666666674" height="18"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite seu CEP" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DdU-ik-n7R">
-                                                <rect key="frame" x="20.666666666666657" y="592.66666666666663" width="372.66666666666674" height="53.666666666666629"/>
+                                                <rect key="frame" x="20.666666666666657" y="598" width="372.66666666666674" height="53.666666666666629"/>
                                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="continue" textContentType="postal-code"/>
+                                                <connections>
+                                                    <action selector="textFieldDidBeginEditing:" destination="sMF-ys-ix3" eventType="editingDidBegin" id="RfX-fQ-I2b"/>
+                                                    <action selector="textFieldEndEditing:" destination="sMF-ys-ix3" eventType="editingDidEnd" id="9Dn-oz-I8c"/>
+                                                </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nhe-aS-OOo">
-                                                <rect key="frame" x="20.666666666666657" y="647.33333333333337" width="372.66666666666674" height="0.66666666666662877"/>
+                                                <rect key="frame" x="20.666666666666657" y="652.66666666666663" width="372.66666666666674" height="2"/>
                                                 <color key="backgroundColor" red="0.91362601519999997" green="0.91378277539999997" blue="0.91361618040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bZ-lJ-2qF">
-                                                <rect key="frame" x="20.666666666666657" y="554" width="372.66666666666674" height="0.66666666666662877"/>
+                                                <rect key="frame" x="20.666666666666657" y="558" width="372.66666666666674" height="2"/>
                                                 <color key="backgroundColor" red="0.87048107389999996" green="0.87056988479999997" blue="0.87456589939999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complemento" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Jn-uf-ikW">
-                                                <rect key="frame" x="20.666666666666657" y="663" width="372.66666666666674" height="17.666666666666629"/>
+                                                <rect key="frame" x="20.666666666666657" y="669.66666666666663" width="372.66666666666674" height="18"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="0.39253824949999999" green="0.40316331389999999" blue="0.45098674300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Complemento (Opcional)" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hIA-zA-bLa" userLabel="Complement TextField">
-                                                <rect key="frame" x="20.666666666666657" y="685.66666666666663" width="372.66666666666674" height="54"/>
+                                                <rect key="frame" x="20.666666666666657" y="692.66666666666663" width="372.66666666666674" height="53.666666666666629"/>
                                                 <color key="textColor" red="0.39248406889999998" green="0.4032950401" blue="0.4431427121" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="textFieldDidBeginEditing:" destination="sMF-ys-ix3" eventType="editingDidBegin" id="QK1-R2-59n"/>
+                                                    <action selector="textFieldEndEditing:" destination="sMF-ys-ix3" eventType="editingDidEnd" id="o6P-uf-8K8"/>
+                                                </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdr-mN-XeN">
-                                                <rect key="frame" x="20.666666666666657" y="740.66666666666663" width="372.66666666666674" height="0.33333333333337123"/>
+                                                <rect key="frame" x="20.666666666666657" y="747.33333333333337" width="372.66666666666674" height="2"/>
                                                 <color key="backgroundColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQL-zN-L5M">
-                                                <rect key="frame" x="48.333333333333343" y="760" width="317.33333333333326" height="53"/>
+                                                <rect key="frame" x="48.333333333333343" y="768.33333333333337" width="317.33333333333326" height="53"/>
                                                 <color key="backgroundColor" red="0.38467586040000001" green="0.097716085610000003" blue="0.15748378630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 <state key="normal" title="Próximo">
@@ -636,7 +680,7 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tun-Bw-N4I">
-                                                <rect key="frame" x="20.666666666666657" y="274" width="372.66666666666674" height="0.66666666666668561"/>
+                                                <rect key="frame" x="20.666666666666657" y="274" width="372.66666666666674" height="2"/>
                                                 <color key="backgroundColor" red="0.87048107389999996" green="0.87056988479999997" blue="0.87456589939999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                         </subviews>
@@ -644,24 +688,25 @@
                                         <constraints>
                                             <constraint firstItem="jdr-mN-XeN" firstAttribute="width" secondItem="hIA-zA-bLa" secondAttribute="width" id="0be-vv-m3F"/>
                                             <constraint firstItem="dwh-BE-IOw" firstAttribute="width" secondItem="Jt9-CK-Dqo" secondAttribute="width" multiplier="0.900161" id="1Rc-7u-WKa"/>
+                                            <constraint firstItem="niI-QC-XYr" firstAttribute="height" secondItem="dCW-XL-RBw" secondAttribute="height" id="3eY-9g-27s"/>
                                             <constraint firstItem="gpc-Qs-dnY" firstAttribute="top" secondItem="afx-3u-ib8" secondAttribute="bottom" constant="5" id="4HB-Gj-nWH"/>
-                                            <constraint firstItem="tun-Bw-N4I" firstAttribute="height" secondItem="Jt9-CK-Dqo" secondAttribute="height" multiplier="0.0006" id="961-sP-Sn6"/>
                                             <constraint firstItem="1bZ-lJ-2qF" firstAttribute="top" secondItem="gpc-Qs-dnY" secondAttribute="bottom" constant="1" id="9qw-br-hpk"/>
                                             <constraint firstItem="jdr-mN-XeN" firstAttribute="leading" secondItem="hIA-zA-bLa" secondAttribute="leading" id="AaT-w4-nnZ"/>
                                             <constraint firstItem="KaQ-l2-RYj" firstAttribute="top" secondItem="KUB-SZ-hxs" secondAttribute="bottom" constant="5" id="BC0-Wk-Vtv"/>
-                                            <constraint firstItem="jdr-mN-XeN" firstAttribute="height" secondItem="Jt9-CK-Dqo" secondAttribute="height" multiplier="0.0006" id="BFu-Ky-OCO"/>
+                                            <constraint firstItem="tun-Bw-N4I" firstAttribute="height" secondItem="dCW-XL-RBw" secondAttribute="height" id="Bce-Ep-uxe"/>
                                             <constraint firstItem="afx-3u-ib8" firstAttribute="top" secondItem="niI-QC-XYr" secondAttribute="bottom" constant="15" id="C4e-IH-YXq"/>
                                             <constraint firstItem="14C-KB-qrg" firstAttribute="width" secondItem="Jt9-CK-Dqo" secondAttribute="width" multiplier="0.900161" id="CeG-UA-2iZ"/>
                                             <constraint firstItem="afx-3u-ib8" firstAttribute="leading" secondItem="niI-QC-XYr" secondAttribute="leading" id="D6U-XU-2hG"/>
+                                            <constraint firstItem="1bZ-lJ-2qF" firstAttribute="height" secondItem="dCW-XL-RBw" secondAttribute="height" id="DQl-An-ZEK"/>
                                             <constraint firstItem="8JI-Pg-TXM" firstAttribute="top" secondItem="QQm-ew-UD2" secondAttribute="bottom" constant="20" id="E7f-ob-u91"/>
                                             <constraint firstItem="dCW-XL-RBw" firstAttribute="width" secondItem="Jt9-CK-Dqo" secondAttribute="width" multiplier="0.9" id="EdO-7C-cif"/>
-                                            <constraint firstItem="1bZ-lJ-2qF" firstAttribute="height" secondItem="Jt9-CK-Dqo" secondAttribute="height" multiplier="0.0006" id="EfH-ds-9aG"/>
                                             <constraint firstItem="gpc-Qs-dnY" firstAttribute="leading" secondItem="afx-3u-ib8" secondAttribute="leading" id="F4g-Vx-S8f"/>
                                             <constraint firstItem="niI-QC-XYr" firstAttribute="top" secondItem="KaQ-l2-RYj" secondAttribute="bottom" constant="1" id="G5p-4U-iCc"/>
                                             <constraint firstItem="8JI-Pg-TXM" firstAttribute="width" secondItem="Jt9-CK-Dqo" secondAttribute="width" multiplier="0.900161" id="Gdr-Xd-E6Y"/>
                                             <constraint firstItem="KUB-SZ-hxs" firstAttribute="leading" secondItem="dCW-XL-RBw" secondAttribute="leading" id="HbP-fo-jc8"/>
                                             <constraint firstItem="y2w-gQ-lbF" firstAttribute="width" secondItem="Jt9-CK-Dqo" secondAttribute="width" multiplier="0.9" id="HnQ-b7-fik"/>
                                             <constraint firstItem="14C-KB-qrg" firstAttribute="centerX" secondItem="Jt9-CK-Dqo" secondAttribute="centerX" id="IJe-Cn-YQ3"/>
+                                            <constraint firstItem="nhe-aS-OOo" firstAttribute="height" secondItem="dCW-XL-RBw" secondAttribute="height" id="Jxv-FY-tZl"/>
                                             <constraint firstItem="QQm-ew-UD2" firstAttribute="top" secondItem="14C-KB-qrg" secondAttribute="bottom" constant="10" id="K9M-tJ-6RV"/>
                                             <constraint firstItem="jdr-mN-XeN" firstAttribute="top" secondItem="hIA-zA-bLa" secondAttribute="bottom" constant="1" id="LSk-hB-T8k"/>
                                             <constraint firstItem="4Jn-uf-ikW" firstAttribute="width" secondItem="7RV-50-hbJ" secondAttribute="width" id="Lok-ot-OKH"/>
@@ -697,7 +742,6 @@
                                             <constraint firstItem="QQm-ew-UD2" firstAttribute="width" secondItem="Jt9-CK-Dqo" secondAttribute="width" multiplier="0.900161" id="kJl-Vl-9iR"/>
                                             <constraint firstItem="KUB-SZ-hxs" firstAttribute="width" secondItem="Jt9-CK-Dqo" secondAttribute="width" multiplier="0.9" id="km4-GT-OFN"/>
                                             <constraint firstItem="hIA-zA-bLa" firstAttribute="width" secondItem="DdU-ik-n7R" secondAttribute="width" id="ljn-VF-y7e"/>
-                                            <constraint firstItem="nhe-aS-OOo" firstAttribute="height" secondItem="Jt9-CK-Dqo" secondAttribute="height" multiplier="0.0006" id="lzK-QK-JQj"/>
                                             <constraint firstItem="tun-Bw-N4I" firstAttribute="width" secondItem="Jt9-CK-Dqo" secondAttribute="width" multiplier="0.9" id="mwc-3z-TYO"/>
                                             <constraint firstItem="tun-Bw-N4I" firstAttribute="centerX" secondItem="Jt9-CK-Dqo" secondAttribute="centerX" id="nyy-Tg-0eA"/>
                                             <constraint firstItem="7RV-50-hbJ" firstAttribute="height" secondItem="Jt9-CK-Dqo" secondAttribute="height" multiplier="0.02" id="opU-54-ML3"/>
@@ -708,7 +752,6 @@
                                             <constraint firstItem="DdU-ik-n7R" firstAttribute="height" secondItem="y2w-gQ-lbF" secondAttribute="height" id="quU-TU-rCd"/>
                                             <constraint firstItem="gpc-Qs-dnY" firstAttribute="height" secondItem="y2w-gQ-lbF" secondAttribute="height" id="s0h-Ib-wwZ"/>
                                             <constraint firstItem="dwh-BE-IOw" firstAttribute="height" secondItem="Jt9-CK-Dqo" secondAttribute="height" multiplier="0.02" id="thx-8G-CkW"/>
-                                            <constraint firstItem="niI-QC-XYr" firstAttribute="height" secondItem="Jt9-CK-Dqo" secondAttribute="height" multiplier="0.0006" id="tjE-o8-0OY"/>
                                             <constraint firstItem="4Jn-uf-ikW" firstAttribute="top" secondItem="nhe-aS-OOo" secondAttribute="bottom" constant="15" id="u21-LU-VC5"/>
                                             <constraint firstItem="hIA-zA-bLa" firstAttribute="leading" secondItem="4Jn-uf-ikW" secondAttribute="leading" id="uWH-N4-8tT"/>
                                             <constraint firstItem="hIA-zA-bLa" firstAttribute="height" secondItem="y2w-gQ-lbF" secondAttribute="height" id="uzf-vb-kao"/>
@@ -717,6 +760,7 @@
                                             <constraint firstItem="7RV-50-hbJ" firstAttribute="leading" secondItem="1bZ-lJ-2qF" secondAttribute="leading" id="wxl-BQ-dOn"/>
                                             <constraint firstItem="y2w-gQ-lbF" firstAttribute="leading" secondItem="dwh-BE-IOw" secondAttribute="leading" id="xzf-DL-7yC"/>
                                             <constraint firstItem="aQL-zN-L5M" firstAttribute="top" secondItem="jdr-mN-XeN" secondAttribute="bottom" constant="19" id="yKR-Pd-cb1"/>
+                                            <constraint firstItem="jdr-mN-XeN" firstAttribute="height" secondItem="dCW-XL-RBw" secondAttribute="height" id="z2j-2s-Mc2"/>
                                             <constraint firstItem="dCW-XL-RBw" firstAttribute="top" secondItem="y2w-gQ-lbF" secondAttribute="bottom" constant="1" id="zK4-2v-u5J"/>
                                             <constraint firstItem="1bZ-lJ-2qF" firstAttribute="width" secondItem="Jt9-CK-Dqo" secondAttribute="width" multiplier="0.9" id="zMe-0x-avb"/>
                                         </constraints>
@@ -738,7 +782,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="y2w-gQ-lbF" firstAttribute="height" secondItem="vQj-PI-8wH" secondAttribute="height" multiplier="0.06" id="GG6-ZJ-eAR"/>
-                            <constraint firstItem="dCW-XL-RBw" firstAttribute="height" secondItem="vQj-PI-8wH" secondAttribute="height" multiplier="0.001" id="RvG-wY-Xga"/>
                             <constraint firstItem="4Jn-uf-ikW" firstAttribute="height" secondItem="vQj-PI-8wH" secondAttribute="height" multiplier="0.02" id="TgE-jg-LQQ"/>
                             <constraint firstItem="VGz-bl-ZIK" firstAttribute="height" secondItem="vQj-PI-8wH" secondAttribute="height" id="f0h-3d-wJP"/>
                             <constraint firstItem="VGz-bl-ZIK" firstAttribute="width" secondItem="vQj-PI-8wH" secondAttribute="width" id="fb5-DI-4XV"/>
@@ -789,6 +832,11 @@
                         <outlet property="scrollView" destination="VGz-bl-ZIK" id="KZE-EK-lDb"/>
                         <outlet property="useCurrentLocButton" destination="8JI-Pg-TXM" id="PD0-RO-m5u"/>
                         <outlet property="useCurrentLocButtonHeight" destination="ehh-1g-Sdy" id="bHs-yM-RcQ"/>
+                        <outlet property="viewAdress" destination="niI-QC-XYr" id="Zcx-mf-cDs"/>
+                        <outlet property="viewCity" destination="1bZ-lJ-2qF" id="30j-g8-6ZQ"/>
+                        <outlet property="viewComplement" destination="jdr-mN-XeN" id="iuM-Kw-LaR"/>
+                        <outlet property="viewCountry" destination="dCW-XL-RBw" id="LzL-2u-awp"/>
+                        <outlet property="viewZip" destination="nhe-aS-OOo" id="yAB-31-S3L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YfT-kP-OLJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -950,26 +998,37 @@
                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="continue"/>
+                                <connections>
+                                    <action selector="textFieldDidBegniEditng:" destination="1Cl-bj-BOE" eventType="editingDidBegin" id="9La-og-rrj"/>
+                                    <action selector="textFieldEndEditing:" destination="1Cl-bj-BOE" eventType="editingDidEnd" id="1I1-df-eTK"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ON9-sY-BSG">
                                 <rect key="frame" x="20.666666666666657" y="357" width="372.66666666666674" height="2"/>
                                 <color key="backgroundColor" red="0.79611998799999995" green="0.79994738099999996" blue="0.80392277239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="678-u1-StP"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descreva as regras da casa" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVA-5z-Cif">
-                                <rect key="frame" x="20.666666666666657" y="379" width="372.66666666666674" height="26.666666666666686"/>
+                                <rect key="frame" x="20.666666666666657" y="379" width="372.66666666666674" height="27"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Adicione suas regras" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kWp-ma-xGL">
-                                <rect key="frame" x="20.666666666666657" y="415.66666666666669" width="372.66666666666674" height="54"/>
+                                <rect key="frame" x="20.666666666666657" y="416" width="372.66666666666674" height="53.666666666666686"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="continue"/>
+                                <connections>
+                                    <action selector="textFieldDidBegniEditng:" destination="1Cl-bj-BOE" eventType="editingDidBegin" id="eYf-az-sdl"/>
+                                    <action selector="textFieldEndEditing:" destination="1Cl-bj-BOE" eventType="editingDidEnd" id="Piq-Yx-fv0"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2mN-MO-iNZ">
-                                <rect key="frame" x="20.666666666666657" y="470.66666666666669" width="372.66666666666674" height="1.6666666666666856"/>
+                                <rect key="frame" x="20.666666666666657" y="470.66666666666669" width="372.66666666666674" height="2"/>
                                 <color key="backgroundColor" red="0.79611998799999995" green="0.79994738099999996" blue="0.80392277239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="db6-bB-vKm">
@@ -1020,7 +1079,6 @@
                             <constraint firstItem="2OF-4o-c46" firstAttribute="top" secondItem="DpX-p8-uOh" secondAttribute="bottom" constant="10" id="mlS-ZE-Jxe"/>
                             <constraint firstItem="kWp-ma-xGL" firstAttribute="height" secondItem="SsG-OD-Zvb" secondAttribute="height" multiplier="0.06" id="mpT-mV-yCX"/>
                             <constraint firstItem="2OF-4o-c46" firstAttribute="leading" secondItem="DpX-p8-uOh" secondAttribute="leading" id="odG-Cd-Q7f"/>
-                            <constraint firstItem="ON9-sY-BSG" firstAttribute="height" secondItem="SsG-OD-Zvb" secondAttribute="height" multiplier="0.002" id="pvh-Y9-gUF"/>
                             <constraint firstItem="PMM-QG-wo0" firstAttribute="width" secondItem="SsG-OD-Zvb" secondAttribute="width" multiplier="0.9" id="qXW-ba-Jtd"/>
                             <constraint firstItem="2mN-MO-iNZ" firstAttribute="top" secondItem="kWp-ma-xGL" secondAttribute="bottom" constant="1" id="rAb-vy-v1t"/>
                             <constraint firstItem="2OF-4o-c46" firstAttribute="width" secondItem="SsG-OD-Zvb" secondAttribute="width" multiplier="0.9" id="rZe-F6-RB3"/>
@@ -1052,6 +1110,8 @@
                         <outlet property="rulesTextField" destination="kWp-ma-xGL" id="h9i-ig-cVe"/>
                         <outlet property="titleLabel" destination="PMM-QG-wo0" id="UjX-EC-A1S"/>
                         <outlet property="titleTextField" destination="2OF-4o-c46" id="vql-eZ-K9Q"/>
+                        <outlet property="viewRules" destination="2mN-MO-iNZ" id="Rjo-oC-iuc"/>
+                        <outlet property="viewTitle" destination="ON9-sY-BSG" id="jxS-K0-EQ6"/>
                         <segue destination="k6Z-ya-Bp1" kind="show" identifier="goToMonthlyValues" id="Axb-l0-qcs"/>
                     </connections>
                 </viewController>
@@ -1090,6 +1150,10 @@
                                 <color key="textColor" red="0.39627143739999998" green="0.4035708308" blue="0.43529903889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="continue"/>
+                                <connections>
+                                    <action selector="textFieldDidBegnEditing:" destination="k6Z-ya-Bp1" eventType="editingDidBegin" id="gtf-w6-2d3"/>
+                                    <action selector="textFieldEndEditing:" destination="k6Z-ya-Bp1" eventType="editingDidEnd" id="EYr-3H-PVC"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R7u-AL-4CV">
                                 <rect key="frame" x="20.666666666666657" y="333.33333333333331" width="372.66666666666674" height="2"/>
@@ -1106,10 +1170,17 @@
                                 <color key="textColor" red="0.39627143739999998" green="0.4035708308" blue="0.43529903889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="continue"/>
+                                <connections>
+                                    <action selector="textFieldDidBegnEditing:" destination="k6Z-ya-Bp1" eventType="editingDidBegin" id="4Ao-qg-RIu"/>
+                                    <action selector="textFieldEndEditing:" destination="k6Z-ya-Bp1" eventType="editingDidEnd" id="zsd-eb-Ix5"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uS3-gf-RZS">
-                                <rect key="frame" x="20.666666666666657" y="435.33333333333331" width="372.66666666666674" height="1.6666666666666856"/>
+                                <rect key="frame" x="20.666666666666657" y="435.33333333333331" width="372.66666666666674" height="2"/>
                                 <color key="backgroundColor" red="0.85490775109999995" green="0.85489159820000005" blue="0.85490256549999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="TFx-hH-NVY"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSH-to-Q74">
                                 <rect key="frame" x="48.333333333333343" y="767" width="317.33333333333326" height="55"/>
@@ -1146,7 +1217,6 @@
                             <constraint firstItem="1ju-KO-ctd" firstAttribute="width" secondItem="X4P-bg-cj0" secondAttribute="width" multiplier="0.9" id="Kn1-Oc-cEb"/>
                             <constraint firstItem="1ju-KO-ctd" firstAttribute="height" secondItem="X4P-bg-cj0" secondAttribute="height" multiplier="0.0226935" id="M7b-DN-PIH"/>
                             <constraint firstItem="nQ7-2p-Ixq" firstAttribute="leading" secondItem="1ju-KO-ctd" secondAttribute="leading" id="Q3e-Xi-oxr"/>
-                            <constraint firstItem="uS3-gf-RZS" firstAttribute="height" secondItem="X4P-bg-cj0" secondAttribute="height" multiplier="0.002" id="Rlf-tR-MvQ"/>
                             <constraint firstItem="uS3-gf-RZS" firstAttribute="top" secondItem="nQ7-2p-Ixq" secondAttribute="bottom" constant="1" id="Ue9-B6-UPi"/>
                             <constraint firstItem="dFC-DT-yez" firstAttribute="leading" secondItem="L7x-Eo-CVu" secondAttribute="leading" id="ZoH-hr-NMj"/>
                             <constraint firstItem="kia-77-vts" firstAttribute="leading" secondItem="KDs-Oc-clO" secondAttribute="leading" id="f35-da-MV8"/>
@@ -1194,6 +1264,8 @@
                         <outlet property="periodHeightConstraint" destination="M7b-DN-PIH" id="YBa-sC-BAp"/>
                         <outlet property="periodLabel" destination="1ju-KO-ctd" id="ydy-PC-Z9n"/>
                         <outlet property="titleLabel" destination="KDs-Oc-clO" id="ilw-pd-FEE"/>
+                        <outlet property="viewMonths" destination="R7u-AL-4CV" id="zms-go-Tac"/>
+                        <outlet property="viewTime" destination="uS3-gf-RZS" id="kcT-Eb-ZrD"/>
                         <segue destination="d9O-GD-ffu" kind="show" identifier="doneId" id="K1G-Oi-HQH"/>
                     </connections>
                 </viewController>

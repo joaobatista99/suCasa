@@ -15,6 +15,8 @@ class SpaceViewController: UIViewController {
     @IBOutlet weak var spaceType: UITextField!
     @IBOutlet weak var propertyType: UITextField!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var viewSpaceType: UIView!
+    @IBOutlet weak var viewPropertyType: UIView!
     
     
     private var pickerView = UIPickerView()
@@ -190,10 +192,12 @@ class SpaceViewController: UIViewController {
         // define what type of component is being edited
         if (sender == spaceType) {
             editingFieldName = "space"
+            viewSpaceType.backgroundColor = Colors.acessoryViewSelcetedColor
         }
         else {
             // choosing what options will be set on the second picker view
             editingFieldName = spaceType.text == NSLocalizedString("Apartamento", comment: "") ? "apartment" :  "house"
+            viewPropertyType.backgroundColor = Colors.acessoryViewSelcetedColor
         }
         
         // assign space type pickerview to correct text field
@@ -204,6 +208,16 @@ class SpaceViewController: UIViewController {
             updateFirstResponderLabel()
         }
     }
+    
+    @IBAction func textFIeldEndEditing(_ sender: UITextField) {
+        if (sender == spaceType) {
+            viewSpaceType.backgroundColor = Colors.acessoryViewColor
+        }
+        else {
+            viewPropertyType.backgroundColor = Colors.acessoryViewColor
+        }
+    }
+    
     
     /// This method will be called when the done button at the picker view has been pressed
     @objc func donePicker() {

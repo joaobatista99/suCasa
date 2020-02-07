@@ -33,6 +33,10 @@ class GuestsViewController: UIViewController {
     @IBOutlet weak var scrollHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var howManyGuestsConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var viewTotalGuests: UIView!
+    @IBOutlet weak var viewNumberRooms: UIView!
+    @IBOutlet weak var viewNumberBed: UIView!
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -79,7 +83,6 @@ class GuestsViewController: UIViewController {
                 totalGuestsHeight = totalGuestsHeight.changeMultiplier(multiplier: 0.08)
                 howManyGuestsConstraint = howManyGuestsConstraint.changeMultiplier(multiplier: 0.12)
             }
-            
         }
         
     }
@@ -177,6 +180,34 @@ class GuestsViewController: UIViewController {
             locationVC.property = self.property
         }
     }
+    
+    @IBAction func textFieldDidBeginiEditing(_ sender: UITextField) {
+        
+        switch sender {
+        case totalGuestsTextField:
+            viewTotalGuests.backgroundColor = Colors.acessoryViewSelcetedColor
+        case bedNumberTextField:
+            viewNumberBed.backgroundColor = Colors.acessoryViewSelcetedColor
+        case bedroomNumberTextField:
+            viewNumberRooms.backgroundColor = Colors.acessoryViewSelcetedColor
+        default:
+            break
+        }
+    }
+    
+    @IBAction func textFieldDidEndEditing(_ sender: UITextField) {
+        switch sender {
+        case totalGuestsTextField:
+            viewTotalGuests.backgroundColor = Colors.acessoryViewColor
+        case bedNumberTextField:
+            viewNumberBed.backgroundColor = Colors.acessoryViewColor
+        case bedroomNumberTextField:
+            viewNumberRooms.backgroundColor = Colors.acessoryViewColor
+        default:
+            break
+        }
+    }
+    
     
 }
 

@@ -48,7 +48,16 @@ class LocationViewController: UIViewController {
     let screenSize: CGRect = UIScreen.main.bounds
     //location manager
     let locationManager = CLLocationManager()
-
+    
+    @IBOutlet weak var viewCountry: UIView!
+    
+    @IBOutlet weak var viewAdress: UIView!
+    
+    @IBOutlet weak var viewZip: UIView!
+    
+    @IBOutlet weak var viewCity: UIView!
+    
+    @IBOutlet weak var viewComplement: UIView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -302,6 +311,42 @@ class LocationViewController: UIViewController {
         
         property.complement = complementTextField.text!
     }
+    
+    @IBAction func textFieldDidBeginEditing(_ sender: UITextField) {
+        switch sender {
+        case countryTextField:
+            viewCountry.backgroundColor = Colors.acessoryViewSelcetedColor
+        case adressTextField:
+            viewAdress.backgroundColor = Colors.acessoryViewSelcetedColor
+        case cityTextField:
+            viewCity.backgroundColor = Colors.acessoryViewSelcetedColor
+        case postalCodeTextField:
+            viewZip.backgroundColor = Colors.acessoryViewSelcetedColor
+        case complementTextField:
+            viewComplement.backgroundColor = Colors.acessoryViewSelcetedColor
+        default:
+            break
+        }
+    }
+    
+    @IBAction func textFieldEndEditing(_ sender: UITextField) {
+        switch sender {
+        case countryTextField:
+            viewCountry.backgroundColor = Colors.acessoryViewColor
+        case adressTextField:
+            viewAdress.backgroundColor = Colors.acessoryViewColor
+        case cityTextField:
+            viewCity.backgroundColor = Colors.acessoryViewColor
+        case postalCodeTextField:
+            viewZip.backgroundColor = Colors.acessoryViewColor
+        case complementTextField:
+            viewComplement.backgroundColor = Colors.acessoryViewColor
+        default:
+            break
+        }
+    }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addPhotos",
