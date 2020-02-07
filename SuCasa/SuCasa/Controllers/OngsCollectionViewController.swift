@@ -22,6 +22,7 @@ class OngsCollectionViewController: UIViewController {
     @IBOutlet weak var ongsCollectionDescriptionLabel: UILabel!
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
         self.view.layoutSubviews()
     }
     

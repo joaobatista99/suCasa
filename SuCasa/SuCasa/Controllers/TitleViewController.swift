@@ -31,6 +31,7 @@ class TitleViewController: UIViewController {
     let screenSize: CGRect = UIScreen.main.bounds
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
         self.view.layoutSubviews()
     }
     

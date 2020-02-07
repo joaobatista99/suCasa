@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 
 class CompleteRegistrationViewController: UIViewController {
-
+    
     @IBOutlet weak var congratsLabel: UILabel!
     @IBOutlet weak var dismissButton: UIButton!
     let screenSize: CGRect = UIScreen.main.bounds
@@ -27,7 +27,7 @@ class CompleteRegistrationViewController: UIViewController {
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-       self.view.layoutSubviews()
+        self.view.layoutSubviews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,7 +36,7 @@ class CompleteRegistrationViewController: UIViewController {
         
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
@@ -52,7 +52,7 @@ class CompleteRegistrationViewController: UIViewController {
             if(congratsLabel.font.pointSize>40){
                 congratsLabel.font = congratsLabel.font.withSize(40)
             }
-
+            
         }
         else if screenSize.height < 667.0 {
             if(congratsLabel.font.pointSize>33){

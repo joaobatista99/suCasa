@@ -37,7 +37,8 @@ class AddPhotosViewController: UIViewController {
     @IBOutlet weak var nextButtonTop: NSLayoutConstraint!
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-       self.view.layoutSubviews()
+        super.traitCollectionDidChange(previousTraitCollection)
+        self.view.layoutSubviews()
     }
     
     override func viewWillAppear(_ animated: Bool) {

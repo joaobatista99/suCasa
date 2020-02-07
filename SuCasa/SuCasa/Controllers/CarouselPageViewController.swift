@@ -10,29 +10,29 @@ import UIKit
 import SDWebImage
 
 protocol CarouselPageViewControllerDelegate: class {
-
+    
     /**
      Called when the number of pages is updated.
-
+     
      - parameter tutorialPageViewController: the CarouselPageViewControllerDelegate instance
      - parameter count: the total number of pages.
      */
     func carouselPageViewController(carouselPageViewController: CarouselPageViewController,
-        didUpdatePageCount count: Int)
-
+                                    didUpdatePageCount count: Int)
+    
     /**
      Called when the current index is updated.
-
+     
      - parameter tutorialPageViewController: the CarouselPageViewControllerDelegate instance
      - parameter index: the index of the currently visible page.
      */
     func carouselPageViewController(carouselPageViewController: CarouselPageViewController,
-        didUpdatePageIndex index: Int)
-
+                                    didUpdatePageIndex index: Int)
+    
 }
 
 class CarouselPageViewController: UIPageViewController {
-
+    
     //items that will be presented by carousel
     fileprivate var items: [UIViewController] = []
     
@@ -62,7 +62,7 @@ class CarouselPageViewController: UIPageViewController {
                 self.items.append(newController)
                 
                 if self.items.count == self.property.urls.count {
-                
+                    
                     if let firstViewController = self.items.first {
                         self.setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
                         self.carouselDelegate?.carouselPageViewController(carouselPageViewController: self, didUpdatePageCount: self.property.urls.count)
@@ -71,27 +71,27 @@ class CarouselPageViewController: UIPageViewController {
             }
         }
         
-
+        
     }
     
     fileprivate func populateItems(imageUrl: URL, completionHandler: @escaping(_ photos: UIImageView) -> Void) {
         
         let image = UIImageView()
-            
-            image.sd_setImage(with: imageUrl,
-                              placeholderImage: placeHolderImage,
-                              options: SDWebImageOptions.lowPriority,
-                              context: nil,
-                              progress: nil) { (downloadedImage, error, cacheType, downloadURL) in
-                                if let error = error {
-                                    print("Error downloading the image: \(error.localizedDescription)")
-                                } else {
-                                    //print("Successfully downloaded image detail: \(imageUrl)")
-                                    completionHandler(image)
-                                }
-            }
         
-
+        image.sd_setImage(with: imageUrl,
+                          placeholderImage: placeHolderImage,
+                          options: SDWebImageOptions.lowPriority,
+                          context: nil,
+                          progress: nil) { (downloadedImage, error, cacheType, downloadURL) in
+                            if let error = error {
+                                print("Error downloading the image: \(error.localizedDescription)")
+                            } else {
+                                //print("Successfully downloaded image detail: \(imageUrl)")
+                                completionHandler(image)
+                            }
+        }
+        
+        
         
     }
     
@@ -99,11 +99,11 @@ class CarouselPageViewController: UIPageViewController {
         
         let newController = UIViewController()
         newController.view = CarouselItem(image: image)
-
+        
         return newController
     }
     
-
+    
 }
 
 extension CarouselPageViewController: UIPageViewControllerDataSource {
@@ -146,7 +146,7 @@ extension CarouselPageViewController: UIPageViewControllerDataSource {
         
         return items[nextIndex]
     }
-
+    
     
 }
 
@@ -161,7 +161,7 @@ extension CarouselPageViewController: UIPageViewControllerDelegate {
                             transitionCompleted completed: Bool) {
         if let firstViewController = viewControllers?.first,
             let index = items.firstIndex(of: firstViewController) {
-                carouselDelegate?.carouselPageViewController(carouselPageViewController: self, didUpdatePageIndex: index)
+            carouselDelegate?.carouselPageViewController(carouselPageViewController: self, didUpdatePageIndex: index)
         }
     }
 }

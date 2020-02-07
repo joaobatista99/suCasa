@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 
 class GuestsViewController: UIViewController {
-
+    
     @IBOutlet weak var totalGuestsTextField: UITextField!
     @IBOutlet weak var bedroomNumberTextField: UITextField!
     @IBOutlet weak var bedNumberTextField: UITextField!
@@ -38,6 +38,7 @@ class GuestsViewController: UIViewController {
     @IBOutlet weak var viewNumberBed: UIView!
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
         self.view.layoutSubviews()
     }
     
@@ -96,7 +97,7 @@ class GuestsViewController: UIViewController {
         
         scrollView.contentOffset.x = 0
         print(scrollView.contentSize)
-
+        
         scrollView.contentSize =  CGSize(width: (310), height: scrollView.contentSize.height + 150)
     }
     
@@ -236,7 +237,7 @@ extension GuestsViewController: UITextFieldDelegate {
         totalGuestsTextField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Selecione", comment: ""), attributes: attributes as [NSAttributedString.Key : Any])
         bedroomNumberTextField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Selecione", comment: ""), attributes: attributes as [NSAttributedString.Key : Any])
         bedNumberTextField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Selecione", comment: ""), attributes: attributes as [NSAttributedString.Key : Any])
-       
+        
         totalGuestsTextField.textColor = Colors.textColor
         
         bedroomNumberTextField.textColor = Colors.textColor
@@ -280,7 +281,7 @@ extension GuestsViewController: UITextFieldDelegate {
         return true
     }
     
-//    func isTextFieldFilled(textField: UITextField) {
-//        return textField.text?.isEmpty ? false : true
-//    }
+    //    func isTextFieldFilled(textField: UITextField) {
+    //        return textField.text?.isEmpty ? false : true
+    //    }
 }

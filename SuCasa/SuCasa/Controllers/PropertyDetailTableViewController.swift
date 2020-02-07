@@ -25,7 +25,7 @@ class PropertyDetailTableViewController: UITableViewController {
     @IBOutlet weak var titleCell: UITableViewCell!
     @IBOutlet weak var monthsCell: UITableViewCell!
     
-  
+    
     let screenSize : CGRect = UIScreen.main.bounds
     
     var name = "José Alfredo 36 anos"
@@ -33,6 +33,7 @@ class PropertyDetailTableViewController: UITableViewController {
     var languages = "Idiomas: Português, Espanhol, Francês"
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
         self.view.layoutSubviews()
         tableView.reloadData()
     }
@@ -44,7 +45,7 @@ class PropertyDetailTableViewController: UITableViewController {
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight = 250
         
-       
+        
         if let property = self.property {
             self.mainTitle.text = property.title
             

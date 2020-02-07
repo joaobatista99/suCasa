@@ -9,7 +9,7 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var profileNavigation: UINavigationItem!
@@ -24,6 +24,7 @@ class ProfileViewController: UIViewController {
                                       "berhman@example.com", "(19) 99950-6396",
                                       "Português, Inglês, Francês, Crioulo"]
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
         self.view.layoutSubviews()
     }
     
@@ -32,14 +33,14 @@ class ProfileViewController: UIViewController {
         
         helpLabel.font = UIFont.preferredFont(forTextStyle: .subheadline)
         logoutLabel.font = UIFont.preferredFont(forTextStyle: .subheadline)
- 
+        
         
         setTableView()
         registerXibs()
         setLocalizedStrings()
         
-         self.editBarButton.accessibilityLabel = NSLocalizedString("Editar", comment: "")
-      
+        self.editBarButton.accessibilityLabel = NSLocalizedString("Editar", comment: "")
+        
     }
     
     func registerXibs() {

@@ -33,6 +33,7 @@ class PropertyDetailViewController: UIViewController {
     var distance: CLLocationDistance!
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
         self.view.layoutSubviews()
     }
     

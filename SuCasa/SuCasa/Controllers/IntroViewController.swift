@@ -9,7 +9,7 @@
 import UIKit
 
 class IntroViewController: UIViewController {
-
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
@@ -30,6 +30,7 @@ class IntroViewController: UIViewController {
     @IBOutlet weak var pageOneImage: UIImageView!
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
         self.view.layoutSubviews()
     }
     
@@ -40,10 +41,10 @@ class IntroViewController: UIViewController {
         pageControl.currentPage = 0
         pageControl.numberOfPages = 3
         pageControl.hidesForSinglePage = true
-           
+        
         //scroll view delegate
         scrollView.delegate = self
-               
+        
         LocalizationIntroVewController()
         
         self.signInButton.accessibilityHint = NSLocalizedString("EntrarHint", comment: "")
@@ -81,5 +82,5 @@ extension IntroViewController: UIScrollViewDelegate {
         // Para atualizar o current page é necessário converter o float para Int
         pageControl.currentPage = Int(page)
         
-     }
+    }
 }

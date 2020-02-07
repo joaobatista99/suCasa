@@ -10,7 +10,7 @@ class ExploreViewController: UIViewController {
     /// Table View Variables
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cityLabel: UILabel!
-
+    
     //label
     @IBOutlet weak var whereAmILabel: UILabel!
     @IBOutlet weak var ongPartnerLabel: UILabel!
@@ -80,6 +80,7 @@ class ExploreViewController: UIViewController {
             return _currentState
         }
     }
+    
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         self.fixDynamicFonts()
@@ -88,7 +89,7 @@ class ExploreViewController: UIViewController {
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         self.view.layoutSubviews()
-   }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,7 +104,7 @@ class ExploreViewController: UIViewController {
         localizationExploreViewController()
         
         self.seeMoreButton.accessibilityHint = NSLocalizedString("VerMaisHint", comment: "")
-
+        
         
     }
     
@@ -119,7 +120,7 @@ class ExploreViewController: UIViewController {
     }
     
     func fixDynamicFonts(){
-        if ongPartnerLabel.font.pointSize > 30 {
+        if ongPartnerLabel.font.pointSize > 34 {
             ongPartnerLabel.font = ongPartnerLabel.font.withSize(30.0)
             titleBestForYouLabel.font = titleBestForYouLabel.font.withSize(30.0)
             descriptionBestForYouLabel.font = descriptionBestForYouLabel.font.withSize(22.0)
@@ -127,8 +128,8 @@ class ExploreViewController: UIViewController {
             whereAmILabel.font = whereAmILabel.font.withSize(22.0)
             headerView.frame.size.height = 450.0
         }
-        tableView.reloadData()
-        collectionView.reloadData()
+        self.tableView.reloadData()
+        self.collectionView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -170,7 +171,7 @@ class ExploreViewController: UIViewController {
         let distanceLocalized = distanceFormatter.string(for: self.distance)
         
         let distanceString = distanceLocalized ?? String(format: "%.1f", self.distance) + "Km"
-    
+        
         
         completion(distanceString)
         
@@ -393,12 +394,12 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.availabilityLabel.font = cell.availabilityLabel.font.withSize(20.0)
                 cell.adTitleLabel.font = cell.adTitleLabel.font.withSize(23.0)
                 cell.distanceLabel.font = cell.distanceLabel.font.withSize(21.0)
-
+                
             }
             
             cell.accessibilityHint = NSLocalizedString("ToqueParaDetalhesHint", comment: "")
-
-
+            
+            
             return cell
         }
     }
@@ -574,7 +575,7 @@ extension ExploreViewController: UICollectionViewDataSource, UICollectionViewDel
         
     }
     
-
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         self.selectedOng = self.ongs[indexPath.row]
