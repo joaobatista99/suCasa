@@ -23,6 +23,7 @@ class MonthlyViewController: UIViewController {
     @IBOutlet weak var monthlyHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var periodHeightConstraint: NSLayoutConstraint!
     
+    let notification = UINotificationFeedbackGenerator()
     
     var property: Property!
     
@@ -124,6 +125,7 @@ class MonthlyViewController: UIViewController {
         
         PropertyDAO.createNewProperty(property: self.property, photos: self.images) {
             self.removeSpinner()
+            self.notification.notificationOccurred(.success)
             self.performSegue(withIdentifier: "doneId", sender: self)
         }
         
