@@ -80,6 +80,15 @@ class ExploreViewController: UIViewController {
             return _currentState
         }
     }
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        self.fixDynamicFonts()
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        self.view.layoutSubviews()
+   }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,11 +118,8 @@ class ExploreViewController: UIViewController {
         self.seeMoreButton.setTitle(NSLocalizedString("Ver tudo", comment: ""), for: .normal)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        refresh()
-        self.navigationController?.navigationBar.tintColor = .systemBlue
-    
-        if ongPartnerLabel.font.pointSize > 34 {
+    func fixDynamicFonts(){
+        if ongPartnerLabel.font.pointSize > 30 {
             ongPartnerLabel.font = ongPartnerLabel.font.withSize(30.0)
             titleBestForYouLabel.font = titleBestForYouLabel.font.withSize(30.0)
             descriptionBestForYouLabel.font = descriptionBestForYouLabel.font.withSize(22.0)
@@ -121,8 +127,14 @@ class ExploreViewController: UIViewController {
             whereAmILabel.font = whereAmILabel.font.withSize(22.0)
             headerView.frame.size.height = 450.0
         }
-         
-        
+        tableView.reloadData()
+        collectionView.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        refresh()
+        self.navigationController?.navigationBar.tintColor = .systemBlue
+        self.fixDynamicFonts()
     }
     
     /// This  method  is to get your location

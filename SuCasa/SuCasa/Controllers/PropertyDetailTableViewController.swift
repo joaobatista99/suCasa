@@ -32,6 +32,10 @@ class PropertyDetailTableViewController: UITableViewController {
     var info = "Gosto de viajar, conhecer novas pessoas e culturas. Tenho dois cachorros, Buck e Gula, muito dóceis e também adoram fazer novas amizades."
     var languages = "Idiomas: Português, Espanhol, Francês"
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        self.view.layoutSubviews()
+        tableView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,20 +60,21 @@ class PropertyDetailTableViewController: UITableViewController {
             titleCell.accessibilityLabel = NSLocalizedString("InformaçãoDoImóvel", comment: "") +  property.title
             monthsCell.accessibilityLabel = NSLocalizedString("PeríodoMáximodeEstadia", comment: "") + String.localizedStringWithFormat(formattedStringMonths, property.monthsAvailable)
             
-            
-            if mainTitle.font.pointSize >= 23.0 {
-                mainTitle.font = mainTitle.font.withSize(23.0)
-                nameAndAgeLabel.font = nameAndAgeLabel.font.withSize(23.0)
-                descriptionLabel.font = descriptionLabel.font.withSize(23.0)
-                languagesLabel.font = languagesLabel.font.withSize(23.0)
-                months.font = months.font.withSize(23.0)
-               
-            }
-            
-       
+            self.fixDynamicFonts()
             
         }
     }
+    
+    func fixDynamicFonts(){
+        if mainTitle.font.pointSize >= 23.0 {
+            mainTitle.font = mainTitle.font.withSize(23.0)
+            nameAndAgeLabel.font = nameAndAgeLabel.font.withSize(23.0)
+            descriptionLabel.font = descriptionLabel.font.withSize(23.0)
+            languagesLabel.font = languagesLabel.font.withSize(23.0)
+            months.font = months.font.withSize(23.0)
+        }
+    }
+    
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         

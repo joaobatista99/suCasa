@@ -21,6 +21,9 @@ class OngsCollectionViewController: UIViewController {
     @IBOutlet weak var ongsCollectionTitleLabel: UILabel!
     @IBOutlet weak var ongsCollectionDescriptionLabel: UILabel!
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        self.view.layoutSubviews()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,14 +37,17 @@ class OngsCollectionViewController: UIViewController {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tabBarController?.tabBar.isHidden = true
-        
+    func fixDynamicFonts(){
         if ongsCollectionTitleLabel.font.pointSize >= 40.0 {
             ongsCollectionTitleLabel.font = ongsCollectionTitleLabel.font.withSize(40.0)
             ongsCollectionDescriptionLabel.font = ongsCollectionDescriptionLabel.font.withSize(28.0)
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = true
+        self.fixDynamicFonts()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

@@ -59,6 +59,10 @@ class LocationViewController: UIViewController {
     
     @IBOutlet weak var viewComplement: UIView!
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        self.view.layoutSubviews()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         

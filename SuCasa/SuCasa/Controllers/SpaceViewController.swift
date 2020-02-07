@@ -37,6 +37,10 @@ class SpaceViewController: UIViewController {
     
     let screenSize: CGRect = UIScreen.main.bounds
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        self.view.layoutSubviews()
+    }
+    
     override  func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.fixDynamicFonts()

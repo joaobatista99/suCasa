@@ -37,6 +37,10 @@ class GuestsViewController: UIViewController {
     @IBOutlet weak var viewNumberRooms: UIView!
     @IBOutlet weak var viewNumberBed: UIView!
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        self.view.layoutSubviews()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         

@@ -32,6 +32,9 @@ class PropertyDetailViewController: UIViewController {
     var propertyLocation: CLLocation!
     var distance: CLLocationDistance!
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        self.view.layoutSubviews()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,20 +88,11 @@ class PropertyDetailViewController: UIViewController {
         
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.tabBar.isHidden = true
-        
-        if vacancyLabel.font.pointSize > 20.0 {
-            vacancyLabel.font = vacancyLabel.font.withSize(24.0)
-            roomsLabel.font = roomsLabel.font.withSize(23.0)
-            priceLabel.font = priceLabel.font.withSize(20.0)
-            distanceLabel.font = distanceLabel.font.withSize(23.0)
-            averageMonthLabel.font = averageMonthLabel.font.withSize(20.0)
-            constraintImageToIcon.constant = 24.0
-            constraintImageToPriceLabel.constant = 24.0
-            constraintIconToView.constant = 90.0
-        }
+        self.fixDynamicFonts()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -124,6 +118,19 @@ class PropertyDetailViewController: UIViewController {
         }
         
         
+    }
+    
+    func fixDynamicFonts(){
+        if vacancyLabel.font.pointSize > 20.0 {
+            vacancyLabel.font = vacancyLabel.font.withSize(24.0)
+            roomsLabel.font = roomsLabel.font.withSize(23.0)
+            priceLabel.font = priceLabel.font.withSize(20.0)
+            distanceLabel.font = distanceLabel.font.withSize(23.0)
+            averageMonthLabel.font = averageMonthLabel.font.withSize(20.0)
+            constraintImageToIcon.constant = 24.0
+            constraintImageToPriceLabel.constant = 24.0
+            constraintIconToView.constant = 90.0
+        }
     }
     
     @IBAction func contactButton(_ sender: Any) {

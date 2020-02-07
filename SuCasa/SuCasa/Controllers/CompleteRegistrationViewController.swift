@@ -26,9 +26,28 @@ class CompleteRegistrationViewController: UIViewController {
         self.congratsLabel.text = NSLocalizedString("Parabéns, seu anúncio foi criado com sucesso!", comment: "")
     }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+       self.view.layoutSubviews()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.fixDynamicFonts()
+        
         navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    
+    @IBAction func dismissForms(_ sender: Any) {
+        navigationController?.dismiss(animated: true)
+    }
+    
+    func fixDynamicFonts(){
         if screenSize.height >= 667.0 {
             if(congratsLabel.font.pointSize>40){
                 congratsLabel.font = congratsLabel.font.withSize(40)
@@ -40,16 +59,6 @@ class CompleteRegistrationViewController: UIViewController {
                 congratsLabel.font = congratsLabel.font.withSize(33)
             }
         }
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
-    }
-    
-    
-    @IBAction func dismissForms(_ sender: Any) {
-        navigationController?.dismiss(animated: true)
     }
 }
 

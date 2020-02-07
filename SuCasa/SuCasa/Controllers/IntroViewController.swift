@@ -29,6 +29,10 @@ class IntroViewController: UIViewController {
     @IBOutlet weak var pageTwoImage: UIImageView!
     @IBOutlet weak var pageOneImage: UIImageView!
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        self.view.layoutSubviews()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

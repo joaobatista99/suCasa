@@ -30,6 +30,10 @@ class TitleViewController: UIViewController {
     var images: [UIImage]!
     let screenSize: CGRect = UIScreen.main.bounds
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        self.view.layoutSubviews()
+    }
+    
     override  func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         

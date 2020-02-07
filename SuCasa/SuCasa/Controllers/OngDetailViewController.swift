@@ -30,16 +30,9 @@ class OngDetailViewController: UIViewController {
     
     let screenSize: CGRect = UIScreen.main.bounds
     
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollectionDidChange(previousTraitCollection)
-        
-        if(phoneLabel.font.pointSize>28.0){
-            scrollViewConstraint = scrollViewConstraint.changeMultiplier(multiplier: 1.5)
-        }else{
-            scrollViewConstraint = scrollViewConstraint.changeMultiplier(multiplier: 1.0)
-        }
-        
-    }
+     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+           self.view.layoutSubviews()
+       }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,9 +44,7 @@ class OngDetailViewController: UIViewController {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
+    func fixDynamicFonts(){
         if(phoneLabel.font.pointSize>28.0){
             phone.font = phone.font.withSize(28.0)
             email.font = email.font.withSize(28.0)
@@ -75,6 +66,12 @@ class OngDetailViewController: UIViewController {
                 scrollViewConstraint = scrollViewConstraint.changeMultiplier(multiplier: 1.0)
             }
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.fixDynamicFonts()
             
             tabBarController?.tabBar.isHidden = true
         }
