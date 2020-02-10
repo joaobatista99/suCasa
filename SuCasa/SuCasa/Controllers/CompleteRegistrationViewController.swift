@@ -15,6 +15,10 @@ class CompleteRegistrationViewController: UIViewController {
     @IBOutlet weak var dismissButton: UIButton!
     let screenSize: CGRect = UIScreen.main.bounds
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        fixDynamicFonts()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,14 +53,11 @@ class CompleteRegistrationViewController: UIViewController {
     
     func fixDynamicFonts(){
         if screenSize.height >= 667.0 {
-            if(congratsLabel.font.pointSize>40){
-                congratsLabel.font = congratsLabel.font.withSize(40)
-            }
-            
+            congratsLabel.font = congratsLabel.font.preferredFont(withTextStyle: .largeTitle, maxSize: 40.0)
         }
         else if screenSize.height < 667.0 {
             if(congratsLabel.font.pointSize>33){
-                congratsLabel.font = congratsLabel.font.withSize(33)
+                congratsLabel.font = congratsLabel.font.preferredFont(withTextStyle: .largeTitle, maxSize: 33)
             }
         }
     }
