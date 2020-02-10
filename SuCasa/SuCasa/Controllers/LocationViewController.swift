@@ -118,7 +118,7 @@ class LocationViewController: UIViewController {
                 ZIPLabelHeight = ZIPLabelHeight.changeMultiplier(multiplier: 0.02)
                 complementLabelHeight = complementLabelHeight.changeMultiplier(multiplier: 0.02)
                 scrollContentHeight = scrollContentHeight.changeMultiplier(multiplier: 1.0)
-                nextButtonHeight = nextButtonHeight.changeMultiplier(multiplier: 0.0059)
+                nextButtonHeight = nextButtonHeight.changeMultiplier(multiplier: 0.059)
             }
         }
         else if screenSize.height < 667.0 {

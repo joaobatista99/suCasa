@@ -21,6 +21,11 @@ class OngsCollectionViewController: UIViewController {
     @IBOutlet weak var ongsCollectionTitleLabel: UILabel!
     @IBOutlet weak var ongsCollectionDescriptionLabel: UILabel!
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        fixDynamicFonts()
+    }
+    
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         self.view.layoutSubviews()
@@ -39,10 +44,9 @@ class OngsCollectionViewController: UIViewController {
     }
     
     func fixDynamicFonts(){
-        if ongsCollectionTitleLabel.font.pointSize >= 40.0 {
-            ongsCollectionTitleLabel.font = ongsCollectionTitleLabel.font.withSize(40.0)
-            ongsCollectionDescriptionLabel.font = ongsCollectionDescriptionLabel.font.withSize(28.0)
-        }
+        ongsCollectionTitleLabel.font = ongsCollectionTitleLabel.font.preferredFont(withTextStyle: .largeTitle, maxSize: 40.0)
+        ongsCollectionDescriptionLabel.font = ongsCollectionDescriptionLabel.font.preferredFont(withTextStyle: .body, maxSize: 28.0)
+        OngsCollectionView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -113,9 +117,7 @@ extension OngsCollectionViewController :  UICollectionViewDataSource, UICollecti
         
         cell.ongName.text = ong.name
         
-        if ongsCollectionTitleLabel.font.pointSize >= 40.0 {
-            cell.ongName.font = cell.ongName.font.withSize(28.0)
-        }
+        cell.ongName.font = cell.ongName.font.preferredFont(withTextStyle: .body, maxSize: 28.0)
         
         return  cell
     }
