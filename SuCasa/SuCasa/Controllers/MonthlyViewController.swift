@@ -33,6 +33,11 @@ class MonthlyViewController: UIViewController {
     var images: [UIImage]!
     let screenSize: CGRect = UIScreen.main.bounds
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        fixDynamicFonts()
+    }
+    
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         self.view.layoutSubviews()
@@ -48,30 +53,30 @@ class MonthlyViewController: UIViewController {
         
         if screenSize.height >= 667.0 {
             
+           
+            titleLabel.font  =  titleLabel.font.preferredFont(withTextStyle: .largeTitle, maxSize: 40.0)
+            monthlyLabel.font  =  monthlyLabel.font.preferredFont(withTextStyle: .headline, maxSize: 35.0)
+            periodLabel.font  =  periodLabel.font.preferredFont(withTextStyle: .headline, maxSize: 35.0)
+            descriptionLabel.font  =  descriptionLabel.font.preferredFont(withTextStyle: .headline, maxSize: 35.0)
+            monthly.font  =  monthly.font?.preferredFont(withTextStyle: .body, maxSize: 35.0)
+            monsthsQuantity.font  =  monsthsQuantity.font?.preferredFont(withTextStyle: .body, maxSize: 35.0)
+            nextButton.titleLabel?.font = nextButton.titleLabel?.font.preferredFont(withTextStyle: .title2, maxSize: 40.0)
             if titleLabel.font.pointSize >= 40.0 {
-                titleLabel.font  =  titleLabel.font.withSize(40.0)
-                monthlyLabel.font  =  monthlyLabel.font.withSize(35.0)
-                periodLabel.font  =  periodLabel.font.withSize(35.0)
-                descriptionLabel.font  =  descriptionLabel.font.withSize(35.0)
-                monthly.font  =  monthly.font?.withSize(35.0)
-                monsthsQuantity.font  =  monsthsQuantity.font?.withSize(35.0)
-                nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(40.0)
-                
                 monthlyHeightConstraint = monthlyHeightConstraint.changeMultiplier(multiplier: 0.04)
                 periodHeightConstraint = periodHeightConstraint.changeMultiplier(multiplier: 0.04)
             }
             
         }
         else if screenSize.height < 667.0 {
+           
+            titleLabel.font  =  titleLabel.font.preferredFont(withTextStyle: .largeTitle, maxSize: 33.0)
+            monthlyLabel.font  =  monthlyLabel.font.preferredFont(withTextStyle: .headline, maxSize: 23.0)
+            periodLabel.font  =  periodLabel.font.preferredFont(withTextStyle: .headline, maxSize: 23.0)
+            descriptionLabel.font  =  descriptionLabel.font.preferredFont(withTextStyle: .headline, maxSize: 23.0)
+            monthly.font  =  monthly.font?.preferredFont(withTextStyle: .body, maxSize: 23.0)
+            monsthsQuantity.font  =  monsthsQuantity.font?.preferredFont(withTextStyle: .body, maxSize: 23.0)
+            nextButton.titleLabel?.font = nextButton.titleLabel?.font.preferredFont(withTextStyle: .title2, maxSize: 33.0)
             if titleLabel.font.pointSize >= 33.0 {
-                titleLabel.font  =  titleLabel.font.withSize(33.0)
-                monthlyLabel.font  =  monthlyLabel.font.withSize(23.0)
-                periodLabel.font  =  periodLabel.font.withSize(23.0)
-                descriptionLabel.font  =  descriptionLabel.font.withSize(23.0)
-                monthly.font  =  monthly.font?.withSize(23.0)
-                monsthsQuantity.font  =  monsthsQuantity.font?.withSize(23.0)
-                nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(33.0)
-                
                 monthlyHeightConstraint = monthlyHeightConstraint.changeMultiplier(multiplier: 0.05)
                 periodHeightConstraint = periodHeightConstraint.changeMultiplier(multiplier: 0.05)
             }
