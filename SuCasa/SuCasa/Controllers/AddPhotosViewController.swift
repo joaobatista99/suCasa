@@ -43,12 +43,13 @@ class AddPhotosViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        
         self.fixDynamicFonts()
         
-        
-        
+    }
+
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        fixDynamicFonts()
     }
     
     func fixDynamicFonts(){
@@ -84,7 +85,6 @@ class AddPhotosViewController: UIViewController {
                 titleDescriptionTop.constant =  1
                 addPhotosDescriptionTop.constant  = 1
             }
-            
         }
     }
     
