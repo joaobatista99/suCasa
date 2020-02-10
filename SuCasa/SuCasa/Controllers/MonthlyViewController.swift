@@ -61,9 +61,12 @@ class MonthlyViewController: UIViewController {
             monthly.font  =  monthly.font?.preferredFont(withTextStyle: .body, maxSize: 35.0)
             monsthsQuantity.font  =  monsthsQuantity.font?.preferredFont(withTextStyle: .body, maxSize: 35.0)
             nextButton.titleLabel?.font = nextButton.titleLabel?.font.preferredFont(withTextStyle: .title2, maxSize: 40.0)
-            if titleLabel.font.pointSize >= 40.0 {
+            if titleLabel.font.pointSize >= 30.0 {
                 monthlyHeightConstraint = monthlyHeightConstraint.changeMultiplier(multiplier: 0.04)
                 periodHeightConstraint = periodHeightConstraint.changeMultiplier(multiplier: 0.04)
+            }else{
+                monthlyHeightConstraint = monthlyHeightConstraint.changeMultiplier(multiplier: 0.03)
+                periodHeightConstraint = periodHeightConstraint.changeMultiplier(multiplier: 0.03)
             }
             
         }
@@ -76,9 +79,12 @@ class MonthlyViewController: UIViewController {
             monthly.font  =  monthly.font?.preferredFont(withTextStyle: .body, maxSize: 23.0)
             monsthsQuantity.font  =  monsthsQuantity.font?.preferredFont(withTextStyle: .body, maxSize: 23.0)
             nextButton.titleLabel?.font = nextButton.titleLabel?.font.preferredFont(withTextStyle: .title2, maxSize: 33.0)
-            if titleLabel.font.pointSize >= 33.0 {
+            if titleLabel.font.pointSize >= 23.0 {
                 monthlyHeightConstraint = monthlyHeightConstraint.changeMultiplier(multiplier: 0.05)
                 periodHeightConstraint = periodHeightConstraint.changeMultiplier(multiplier: 0.05)
+            }else{
+                monthlyHeightConstraint = monthlyHeightConstraint.changeMultiplier(multiplier: 0.03)
+                periodHeightConstraint = periodHeightConstraint.changeMultiplier(multiplier: 0.03)
             }
             
             

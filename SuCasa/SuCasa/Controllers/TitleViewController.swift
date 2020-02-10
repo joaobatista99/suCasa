@@ -59,8 +59,11 @@ class TitleViewController: UIViewController {
             rulesTextField.font  =  rulesTextField.font?.preferredFont(withTextStyle: .body, maxSize: 35.0)
             nextButton.titleLabel?.font = nextButton.titleLabel?.font.preferredFont(withTextStyle: .title2, maxSize: 40.0)
             if titleLabel.font.pointSize >= 40.0 {
+                rulesHeightConstraint = rulesHeightConstraint.changeMultiplier(multiplier: 0.05)
+            }else{
                 rulesHeightConstraint = rulesHeightConstraint.changeMultiplier(multiplier: 0.03)
             }
+            
         }
         else if screenSize.height < 667.0 {
             
@@ -74,6 +77,8 @@ class TitleViewController: UIViewController {
             
             if titleLabel.font.pointSize >= 33.0 {
                 rulesHeightConstraint = rulesHeightConstraint.changeMultiplier(multiplier: 0.05)
+            }else{
+                rulesHeightConstraint = rulesHeightConstraint.changeMultiplier(multiplier: 0.03)
             }
             
             
