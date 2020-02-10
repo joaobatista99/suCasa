@@ -32,9 +32,16 @@ class PropertyDetailViewController: UIViewController {
     var propertyLocation: CLLocation!
     var distance: CLLocationDistance!
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        fixDynamicFonts()
+    }
+    
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         self.view.layoutSubviews()
+        containerView.setNeedsLayout()
+        
     }
     
     override func viewDidLoad() {
@@ -122,16 +129,27 @@ class PropertyDetailViewController: UIViewController {
     }
     
     func fixDynamicFonts(){
-        if vacancyLabel.font.pointSize > 20.0 {
-            vacancyLabel.font = vacancyLabel.font.withSize(24.0)
-            roomsLabel.font = roomsLabel.font.withSize(23.0)
-            priceLabel.font = priceLabel.font.withSize(20.0)
-            distanceLabel.font = distanceLabel.font.withSize(23.0)
-            averageMonthLabel.font = averageMonthLabel.font.withSize(20.0)
+        
+        contactButton.titleLabel?.font = contactButton.titleLabel?.font.preferredFont(withTextStyle: .title2, maxSize: 30.0)
+        
+        vacancyLabel.font = vacancyLabel.font.preferredFont(withTextStyle: .title2, maxSize: 24.0)
+        roomsLabel.font = roomsLabel.font.preferredFont(withTextStyle: .body, maxSize: 23.0)
+        priceLabel.font = priceLabel.font.preferredFont(withTextStyle: .body, maxSize: 20.0)
+        distanceLabel.font = distanceLabel.font.preferredFont(withTextStyle: .body, maxSize: 23.0)
+        averageMonthLabel.font = averageMonthLabel.font.preferredFont(withTextStyle: .callout, maxSize: 20.0)
+        
+        if vacancyLabel.font.pointSize >= 24.0 {
             constraintImageToIcon.constant = 24.0
             constraintImageToPriceLabel.constant = 24.0
             constraintIconToView.constant = 90.0
         }
+        else{
+            constraintImageToIcon.constant = 40.0
+            constraintImageToPriceLabel.constant = 40.0
+            constraintIconToView.constant = 50.0
+        }
+        
+        
     }
     
     @IBAction func contactButton(_ sender: Any) {

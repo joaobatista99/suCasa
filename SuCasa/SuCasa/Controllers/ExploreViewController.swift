@@ -120,14 +120,22 @@ class ExploreViewController: UIViewController {
     }
     
     func fixDynamicFonts(){
-        if ongPartnerLabel.font.pointSize > 34 {
-            ongPartnerLabel.font = ongPartnerLabel.font.withSize(30.0)
-            titleBestForYouLabel.font = titleBestForYouLabel.font.withSize(30.0)
-            descriptionBestForYouLabel.font = descriptionBestForYouLabel.font.withSize(22.0)
-            cityLabel.font = cityLabel.font.withSize(22.0)
-            whereAmILabel.font = whereAmILabel.font.withSize(22.0)
+        
+        
+    
+        
+        ongPartnerLabel.font = ongPartnerLabel.font.preferredFont(withTextStyle: .largeTitle, maxSize: 30.0)
+        titleBestForYouLabel.font = titleBestForYouLabel.font.preferredFont(withTextStyle: .headline, maxSize: 30.0)
+        descriptionBestForYouLabel.font = descriptionBestForYouLabel.font.preferredFont(withTextStyle: .body, maxSize: 22.0)
+        cityLabel.font = cityLabel.font.preferredFont(withTextStyle: .body, maxSize: 22.0)
+        whereAmILabel.font = whereAmILabel.font.preferredFont(withTextStyle: .body, maxSize: 22.0)
+        
+        if ongPartnerLabel.font.pointSize >= 30 {
             headerView.frame.size.height = 450.0
+        } else {
+            headerView.frame.size.height = 300.0
         }
+        
         self.tableView.reloadData()
         self.collectionView.reloadData()
     }
@@ -330,14 +338,13 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
                                         }
             }
             
-            if  cell.adTitleLabel.font.pointSize > 23 {
-                cell.adPriceLabel.font = cell.adPriceLabel.font.withSize(21.0)
-                cell.availabilityLabel.font = cell.availabilityLabel.font.withSize(20.0)
-                cell.adTitleLabel.font = cell.adTitleLabel.font.withSize(23.0)
-                cell.distanceLabel.font = cell.distanceLabel.font.withSize(21.0)
-                
-            }
-            
+           
+            cell.adPriceLabel.font = cell.adPriceLabel.font.preferredFont(withTextStyle: .subheadline, maxSize: 21.0)
+            cell.availabilityLabel.font = cell.availabilityLabel.font.preferredFont(withTextStyle: .subheadline, maxSize: 20.0)
+            cell.adTitleLabel.font = cell.adTitleLabel.font.preferredFont(withTextStyle: .body, maxSize: 23.0)
+            cell.distanceLabel.font = cell.distanceLabel.font.preferredFont(withTextStyle: .subheadline, maxSize: 21.0)
+
+        
             cell.accessibilityHint = NSLocalizedString("ToqueParaDetalhesHint", comment: "")
             
             return cell
@@ -389,13 +396,10 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
                                         }
             }
             
-            if  cell.adTitleLabel.font.pointSize > 23 {
-                cell.adPriceLabel.font = cell.adPriceLabel.font.withSize(21.0)
-                cell.availabilityLabel.font = cell.availabilityLabel.font.withSize(20.0)
-                cell.adTitleLabel.font = cell.adTitleLabel.font.withSize(23.0)
-                cell.distanceLabel.font = cell.distanceLabel.font.withSize(21.0)
-                
-            }
+            cell.adPriceLabel.font = cell.adPriceLabel.font.preferredFont(withTextStyle: .subheadline, maxSize: 21.0)
+            cell.availabilityLabel.font = cell.availabilityLabel.font.preferredFont(withTextStyle: .subheadline, maxSize: 20.0)
+            cell.adTitleLabel.font = cell.adTitleLabel.font.preferredFont(withTextStyle: .body, maxSize: 23.0)
+            cell.distanceLabel.font = cell.distanceLabel.font.preferredFont(withTextStyle: .subheadline, maxSize: 21.0)
             
             cell.accessibilityHint = NSLocalizedString("ToqueParaDetalhesHint", comment: "")
             
@@ -554,9 +558,9 @@ extension ExploreViewController: UICollectionViewDataSource, UICollectionViewDel
         }
         cell.ongName.text = ong.name
         
-        if cell.ongName.font.pointSize > 24{
-            cell.ongName.font = cell.ongName.font.withSize(24.0)
-        }
+       
+        cell.ongName.font = cell.ongName.font.preferredFont(withTextStyle: .body, maxSize: 24.0)
+
         
         cell.ongName.accessibilityHint = NSLocalizedString("ToqueParaDetalhesHint", comment: "")
         

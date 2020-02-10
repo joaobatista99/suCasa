@@ -49,15 +49,15 @@
                                     <rect key="frame" x="0.0" y="190" width="414" height="126"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajuda e Suporte" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9re-bA-UTj">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajuda e Suporte" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9re-bA-UTj">
                                             <rect key="frame" x="16" y="0.0" width="290" height="46.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sair" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzc-iG-7ve">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sair" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzc-iG-7ve">
                                             <rect key="frame" x="16" y="71.5" width="290" height="43.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -106,7 +106,7 @@
                         <viewLayoutGuide key="safeArea" id="Cga-du-4de"/>
                     </view>
                     <navigationItem key="navigationItem" title="Perfil" largeTitleDisplayMode="never" id="IGK-yM-RRM">
-                        <barButtonItem key="rightBarButtonItem" title="Editar" style="plain" id="1rg-Kd-ukd">
+                        <barButtonItem key="rightBarButtonItem" title="Editar" id="1rg-Kd-ukd">
                             <color key="tintColor" red="0.34024268390000001" green="0.065831795329999998" blue="0.1215666309" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </barButtonItem>
                     </navigationItem>

@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5996B8B7-A10F-4A34-9BFA-182B37ACB8E8"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SuCasa/Controllers/PropertyDetailViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "A32609F1-978D-42E5-9142-00AD382DAC95"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -30,9 +14,9 @@
             filePath = "SuCasa/Controllers/PropertyDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "viewWillDisappear(_:)"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -46,10 +30,10 @@
             filePath = "SuCasa/Controllers/PropertyDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "PropertyDetailViewController"
-            landmarkType = "3">
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -62,9 +46,9 @@
             filePath = "SuCasa/Controllers/PropertyDetailTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "tableView(_:heightForRowAt:)"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -80,7 +64,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "84"
             endingLineNumber = "84"
-            landmarkName = "viewDidLoad()"
+            landmarkName = "viewWillLayoutSubviews()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -96,7 +80,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "109"
             endingLineNumber = "109"
-            landmarkName = "viewWillAppear(_:)"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -110,9 +94,9 @@
             filePath = "SuCasa/Controllers/ExploreViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "544"
-            endingLineNumber = "544"
-            landmarkName = "collectionView(_:layout:sizeForItemAt:)"
+            startingLineNumber = "545"
+            endingLineNumber = "545"
+            landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -126,9 +110,9 @@
             filePath = "SuCasa/Controllers/ExploreViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "533"
-            endingLineNumber = "533"
-            landmarkName = "collectionView(_:cellForItemAt:)"
+            startingLineNumber = "534"
+            endingLineNumber = "534"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -142,8 +126,8 @@
             filePath = "SuCasa/Controllers/ExploreViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "371"
-            endingLineNumber = "371"
+            startingLineNumber = "375"
+            endingLineNumber = "375"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -158,8 +142,8 @@
             filePath = "SuCasa/Controllers/ExploreViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "315"
-            endingLineNumber = "315"
+            startingLineNumber = "320"
+            endingLineNumber = "320"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -174,9 +158,25 @@
             filePath = "SuCasa/Controllers/ExploreViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "314"
-            endingLineNumber = "314"
+            startingLineNumber = "319"
+            endingLineNumber = "319"
             landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "48256169-0FA7-46E3-AD7E-A9DFA7C5FC5A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SuCasa/Controllers/ExploreViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "fixDynamicFonts()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

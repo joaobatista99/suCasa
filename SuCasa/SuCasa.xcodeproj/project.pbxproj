@@ -64,7 +64,8 @@
 		BAB9EFBF237095CD00B480F1 /* SuCasa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAB9EFBD237095CD00B480F1 /* SuCasa.xcdatamodeld */; };
 		BAB9EFC1237095D000B480F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB9EFC0237095D000B480F1 /* Assets.xcassets */; };
 		BAB9EFC4237095D000B480F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB9EFC2237095D000B480F1 /* LaunchScreen.storyboard */; };
-		BAEB1462237B30AD008438D4 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEB1461237B30AD008438D4 /* Property.swift */; };
+		BABE1AB023F180790029A5AB /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABE1AAF23F180790029A5AB /* FontExtension.swift */; };
+		BABE1AB423F181B00029A5AB /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABE1AB323F181B00029A5AB /* Property.swift */; };
 		BAF25C0C23E2F9C6006E8A6E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAF25C0A23E2F9C6006E8A6E /* Localizable.strings */; };
 		BAF25C1623E3298A006E8A6E /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = BAF25C1823E3298A006E8A6E /* Localizable.stringsdict */; };
 		BAFE3515237C727F00966F86 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFE3514237C727F00966F86 /* Colors.swift */; };
@@ -132,7 +133,8 @@
 		BAB9EFC0237095D000B480F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAB9EFC3237095D000B480F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAB9EFC5237095D000B480F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BAEB1461237B30AD008438D4 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		BABE1AAF23F180790029A5AB /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
+		BABE1AB323F181B00029A5AB /* Property.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		BAF25C0B23E2F9C6006E8A6E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BAF25C0D23E2F9D2006E8A6E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		BAF25C1723E3298A006E8A6E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "pt-BR"; path = "pt-BR.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		362DB1CE237A23D400D36357 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BABE1AB323F181B00029A5AB /* Property.swift */,
 				BAACB3D4238EF1E700C231F0 /* Ong.swift */,
 				362DB1CF237A23E400D36357 /* City.swift */,
 				BAFE3514237C727F00966F86 /* Colors.swift */,
@@ -211,8 +214,8 @@
 		ADDDB10623E4633F00A18818 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				BAEB1461237B30AD008438D4 /* Property.swift */,
 				ADDDB10723E4637400A18818 /* ConstraintExtension.swift */,
+				BABE1AAF23F180790029A5AB /* FontExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BABE1AB423F181B00029A5AB /* Property.swift in Sources */,
 				BAB9EFB5237095CD00B480F1 /* AppDelegate.swift in Sources */,
 				BAFE3515237C727F00966F86 /* Colors.swift in Sources */,
 				BAACB3D9238EF2CF00C231F0 /* PropertyDAO.swift in Sources */,
@@ -479,13 +483,13 @@
 				BAB8DA07237201200039CBC5 /* IntroViewController.swift in Sources */,
 				5E033A2023843AAC001AC697 /* MonthlyViewController.swift in Sources */,
 				5E9D49952391A696002A7BDF /* PropertyDetailTableViewController.swift in Sources */,
+				BABE1AB023F180790029A5AB /* FontExtension.swift in Sources */,
 				5E5458E123901FEB00D4E13D /* LocationServices.swift in Sources */,
 				368DA2272386C3EA0035BE02 /* PropertyServices.swift in Sources */,
 				5E55AA1B237B34FD00887772 /* AddPhotosViewController.swift in Sources */,
 				BA4871302398193A008602E2 /* CustomNavViewController.swift in Sources */,
 				362DB1D0237A23E400D36357 /* City.swift in Sources */,
 				BAACB3CF238EF1D000C231F0 /* OngsCollectionViewController.swift in Sources */,
-				BAEB1462237B30AD008438D4 /* Property.swift in Sources */,
 				36DD943B2375D5C0000012BB /* ExploreTableViewCell.swift in Sources */,
 				BAACB3D3238EF1DE00C231F0 /* OngServices.swift in Sources */,
 				BA1B7D952386DCA000D06E3A /* PropertyDetailViewController.swift in Sources */,
@@ -648,7 +652,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = W7GK3PM9D9;
+				DEVELOPMENT_TEAM = NQW9RC6R9A;
 				INFOPLIST_FILE = SuCasa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -669,7 +673,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = W7GK3PM9D9;
+				DEVELOPMENT_TEAM = NQW9RC6R9A;
 				INFOPLIST_FILE = SuCasa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
