@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -888,7 +888,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjP-vQ-Wbf">
-                                <rect key="frame" x="48.333333333333343" y="593" width="317.33333333333326" height="55"/>
+                                <rect key="frame" x="48.333333333333343" y="773" width="317.33333333333326" height="55"/>
                                 <color key="backgroundColor" red="0.38467586040000001" green="0.097716085610000003" blue="0.15748378630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qjP-vQ-Wbf" secondAttribute="height" multiplier="5.76" id="v2S-yD-FNV"/>
@@ -918,7 +918,7 @@
                             <constraint firstItem="y7d-eY-IXf" firstAttribute="centerX" secondItem="zn5-ug-JVz" secondAttribute="centerX" id="1oS-HB-Wpq"/>
                             <constraint firstItem="7Yf-tV-XAG" firstAttribute="height" secondItem="mYQ-2l-PrZ" secondAttribute="height" multiplier="0.13" id="4EH-Vb-mnX"/>
                             <constraint firstItem="84r-ja-z2W" firstAttribute="width" secondItem="mYQ-2l-PrZ" secondAttribute="width" multiplier="0.9" id="ABY-FU-pfy"/>
-                            <constraint firstItem="qjP-vQ-Wbf" firstAttribute="top" secondItem="m0f-hj-HUu" secondAttribute="bottom" constant="170" id="Bz7-FU-Am4"/>
+                            <constraint firstItem="qjP-vQ-Wbf" firstAttribute="top" secondItem="m0f-hj-HUu" secondAttribute="bottom" constant="350" id="Bz7-FU-Am4"/>
                             <constraint firstItem="7Yf-tV-XAG" firstAttribute="leading" secondItem="zn5-ug-JVz" secondAttribute="leading" constant="15" id="Ece-6K-I0t"/>
                             <constraint firstItem="y7d-eY-IXf" firstAttribute="width" secondItem="mYQ-2l-PrZ" secondAttribute="width" multiplier="0.9" id="GI4-Ts-mcL"/>
                             <constraint firstItem="84r-ja-z2W" firstAttribute="top" secondItem="7Yf-tV-XAG" secondAttribute="bottom" constant="5" id="IwR-o4-rQo"/>
