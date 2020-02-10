@@ -66,6 +66,11 @@ class AddPhotosViewController: UIViewController {
                 addPhotosTitleHeight =  addPhotosTitleHeight.changeMultiplier(multiplier: 0.16)
                 photosAddedHeight = photosAddedHeight.changeMultiplier(multiplier: 0.1)
                 nextButtonTop.constant = 90
+            }else{
+                addPhotosDescriptionHeight = addPhotosDescriptionHeight.changeMultiplier(multiplier: 0.13)
+                addPhotosTitleHeight =  addPhotosTitleHeight.changeMultiplier(multiplier: 0.12)
+                photosAddedHeight = photosAddedHeight.changeMultiplier(multiplier: 0.036)
+                nextButtonTop.constant = 170
             }
             
         }
