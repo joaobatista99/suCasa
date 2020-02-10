@@ -35,6 +35,9 @@ class SpaceViewController: UIViewController {
     
     @IBOutlet weak var propertyTypeLabel2HeightConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var acessoryViewSpaceHeight: NSLayoutConstraint!
+    @IBOutlet weak var acessoryViewPropertyHeight: NSLayoutConstraint!
+    
     let screenSize: CGRect = UIScreen.main.bounds
     
     override func viewWillLayoutSubviews() {
@@ -53,6 +56,7 @@ class SpaceViewController: UIViewController {
         
     }
     
+    //this func manages dynamic text and sets a maxvalue
     func fixDynamicFonts(){
         if screenSize.height >= 667.0 {
             
@@ -66,22 +70,25 @@ class SpaceViewController: UIViewController {
             if spaceTitleLabel.font.pointSize >= 40.0 {
                 propertyTypeLabel1HeightConstraint = propertyTypeLabel1HeightConstraint.changeMultiplier(multiplier: 0.12)
                 propertyTypeLabel2HeightConstraint = propertyTypeLabel2HeightConstraint.changeMultiplier(multiplier: 0.12)
+            } else{
+                propertyTypeLabel1HeightConstraint = propertyTypeLabel1HeightConstraint.changeMultiplier(multiplier: 0.03)
+                propertyTypeLabel2HeightConstraint = propertyTypeLabel2HeightConstraint.changeMultiplier(multiplier: 0.03)
             }
         }
         else if screenSize.height < 667.0 {
-            
-            
             spaceTitleLabel.font  =  spaceTitleLabel.font.preferredFont(withTextStyle: .largeTitle, maxSize: 33.0)
             propertyType1Label.font  = propertyType1Label.font.preferredFont(withTextStyle: .headline, maxSize: 27.0)
             propertyType2Label.font = propertyType2Label.font.preferredFont(withTextStyle: .headline, maxSize: 27.0)
             spaceType.font = spaceType.font?.preferredFont(withTextStyle: .body, maxSize: 27.0)
             propertyType.font = propertyType.font?.preferredFont(withTextStyle: .body, maxSize: 27.0)
-            nextButton.titleLabel?.font = nextButton.titleLabel?.font.preferredFont(withTextStyle: .title2, maxSize: 27.0)
+            nextButton.titleLabel?.font = nextButton.titleLabel?.font.preferredFont(withTextStyle: .title2, maxSize: 33.0)
             
             if spaceTitleLabel.font.pointSize >= 33.0 {
-                
                 propertyTypeLabel1HeightConstraint = propertyTypeLabel1HeightConstraint.changeMultiplier(multiplier: 0.12)
                 propertyTypeLabel2HeightConstraint = propertyTypeLabel2HeightConstraint.changeMultiplier(multiplier: 0.12)
+            } else {
+                propertyTypeLabel1HeightConstraint = propertyTypeLabel1HeightConstraint.changeMultiplier(multiplier: 0.05)
+                propertyTypeLabel2HeightConstraint = propertyTypeLabel2HeightConstraint.changeMultiplier(multiplier: 0.05)
             }
         }
     }
@@ -206,11 +213,14 @@ class SpaceViewController: UIViewController {
         if (sender == spaceType) {
             editingFieldName = "space"
             viewSpaceType.backgroundColor = Colors.acessoryViewSelcetedColor
+            acessoryViewSpaceHeight.constant = 4.0
         }
         else {
             // choosing what options will be set on the second picker view
             editingFieldName = spaceType.text == NSLocalizedString("Apartamento", comment: "") ? "apartment" :  "house"
             viewPropertyType.backgroundColor = Colors.acessoryViewSelcetedColor
+            acessoryViewPropertyHeight.constant = 4.0
+
         }
         
         // assign space type pickerview to correct text field
@@ -225,9 +235,13 @@ class SpaceViewController: UIViewController {
     @IBAction func textFIeldEndEditing(_ sender: UITextField) {
         if (sender == spaceType) {
             viewSpaceType.backgroundColor = Colors.acessoryViewColor
+            acessoryViewSpaceHeight.constant = 2.0
+
         }
         else {
             viewPropertyType.backgroundColor = Colors.acessoryViewColor
+            acessoryViewPropertyHeight.constant = 2.0
+
         }
     }
     

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -50,7 +50,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecione a opção que o descreve melhor:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="2" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U8U-aM-epX">
-                                <rect key="frame" x="15" y="158.66666666666666" width="372.66666666666669" height="71.666666666666657"/>
+                                <rect key="frame" x="15" y="178.66666666666666" width="372.66666666666669" height="27"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -62,7 +62,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Selecione uma" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xpu-u7-dOE">
-                                <rect key="frame" x="15" y="235.33333333333334" width="372.66666666666669" height="53.666666666666657"/>
+                                <rect key="frame" x="15" y="210.66666666666666" width="372.66666666666669" height="53.666666666666657"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -73,13 +73,13 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agora escolha um tipo de propriedade:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ejh-Jq-xHE">
-                                <rect key="frame" x="15" y="312" width="372.66666666666669" height="71.666666666666686"/>
+                                <rect key="frame" x="15" y="287.33333333333331" width="372.66666666666669" height="27"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Selecione o tipo de propriedade" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FiH-tB-wFi">
-                                <rect key="frame" x="15" y="388.66666666666669" width="372.66666666666669" height="54"/>
+                                <rect key="frame" x="15" y="319.33333333333331" width="372.66666666666669" height="53.666666666666686"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -90,15 +90,18 @@
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ma-Al-cBT">
-                                <rect key="frame" x="15" y="290" width="372.66666666666669" height="2"/>
+                                <rect key="frame" x="15" y="265.33333333333331" width="372.66666666666669" height="2"/>
                                 <color key="backgroundColor" red="0.79611998799999995" green="0.79994738099999996" blue="0.80392277239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="gTN-93-DqY"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2TB-wp-Uxa">
-                                <rect key="frame" x="15" y="443.66666666666669" width="372.66666666666669" height="2"/>
+                                <rect key="frame" x="15" y="374" width="372.66666666666669" height="2"/>
                                 <color key="backgroundColor" red="0.79611998799999995" green="0.79994738099999996" blue="0.80392277239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="73s-5g-Hvm"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VxP-A5-IyD">
                                 <rect key="frame" x="48.333333333333343" y="767" width="317.33333333333326" height="55"/>
@@ -127,18 +130,17 @@
                             <constraint firstItem="U8U-aM-epX" firstAttribute="width" secondItem="yw3-aa-3ht" secondAttribute="width" multiplier="0.9" id="87N-wh-zJ9"/>
                             <constraint firstItem="xpu-u7-dOE" firstAttribute="height" secondItem="yw3-aa-3ht" secondAttribute="height" multiplier="0.06" id="BsP-i8-gq0"/>
                             <constraint firstItem="VxP-A5-IyD" firstAttribute="centerX" secondItem="yw3-aa-3ht" secondAttribute="centerX" id="FPc-wt-0yI"/>
-                            <constraint firstItem="2TB-wp-Uxa" firstAttribute="height" secondItem="5Ma-Al-cBT" secondAttribute="height" id="IVp-3L-Mr5"/>
                             <constraint firstItem="2TB-wp-Uxa" firstAttribute="top" secondItem="FiH-tB-wFi" secondAttribute="bottom" constant="1" id="KHf-qP-A2a"/>
                             <constraint firstItem="2TB-wp-Uxa" firstAttribute="width" secondItem="yw3-aa-3ht" secondAttribute="width" multiplier="0.9" id="KRs-I8-BOI"/>
-                            <constraint firstItem="U8U-aM-epX" firstAttribute="top" secondItem="geo-E2-BFf" secondAttribute="bottom" constant="20" id="L3W-fV-T30"/>
+                            <constraint firstItem="U8U-aM-epX" firstAttribute="top" secondItem="geo-E2-BFf" secondAttribute="bottom" constant="40" id="L3W-fV-T30"/>
                             <constraint firstItem="FiH-tB-wFi" firstAttribute="leading" secondItem="1LD-S1-gL0" secondAttribute="leading" constant="15" id="Odi-Po-oo8"/>
                             <constraint firstItem="5Ma-Al-cBT" firstAttribute="width" secondItem="yw3-aa-3ht" secondAttribute="width" multiplier="0.9" id="Uls-ul-BlI"/>
                             <constraint firstItem="xpu-u7-dOE" firstAttribute="top" secondItem="U8U-aM-epX" secondAttribute="bottom" constant="5" id="XSW-hc-zhV"/>
                             <constraint firstItem="FiH-tB-wFi" firstAttribute="top" secondItem="Ejh-Jq-xHE" secondAttribute="bottom" constant="5" id="YTo-IJ-hhY"/>
                             <constraint firstItem="Ejh-Jq-xHE" firstAttribute="width" secondItem="yw3-aa-3ht" secondAttribute="width" multiplier="0.9" id="adJ-3n-z1F"/>
-                            <constraint firstItem="Ejh-Jq-xHE" firstAttribute="height" secondItem="yw3-aa-3ht" secondAttribute="height" multiplier="0.08" id="amW-4o-1KH"/>
+                            <constraint firstItem="Ejh-Jq-xHE" firstAttribute="height" secondItem="yw3-aa-3ht" secondAttribute="height" multiplier="0.03" id="amW-4o-1KH"/>
                             <constraint firstItem="FiH-tB-wFi" firstAttribute="width" secondItem="yw3-aa-3ht" secondAttribute="width" multiplier="0.9" id="eow-g0-mzZ"/>
-                            <constraint firstItem="U8U-aM-epX" firstAttribute="height" secondItem="yw3-aa-3ht" secondAttribute="height" multiplier="0.08" id="f3V-UX-Xv2"/>
+                            <constraint firstItem="U8U-aM-epX" firstAttribute="height" secondItem="yw3-aa-3ht" secondAttribute="height" multiplier="0.03" id="f3V-UX-Xv2"/>
                             <constraint firstItem="geo-E2-BFf" firstAttribute="leading" secondItem="1LD-S1-gL0" secondAttribute="leading" constant="15" id="fa1-Dm-uEA"/>
                             <constraint firstItem="xpu-u7-dOE" firstAttribute="leading" secondItem="1LD-S1-gL0" secondAttribute="leading" constant="15" id="g70-4D-0An"/>
                             <constraint firstItem="geo-E2-BFf" firstAttribute="top" secondItem="1LD-S1-gL0" secondAttribute="top" constant="10" id="gIC-A2-MK0"/>
@@ -175,6 +177,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="acessoryViewPropertyHeight" destination="73s-5g-Hvm" id="rpM-HA-ke6"/>
+                        <outlet property="acessoryViewSpaceHeight" destination="gTN-93-DqY" id="GTz-RE-jr5"/>
                         <outlet property="nextButton" destination="VxP-A5-IyD" id="1Fg-xI-077"/>
                         <outlet property="propertyType" destination="FiH-tB-wFi" id="Cge-mY-RAg"/>
                         <outlet property="propertyType1Label" destination="U8U-aM-epX" id="Wgn-qE-x8w"/>
@@ -321,7 +325,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Selecione" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d9F-lM-bcY">
-                                                <rect key="frame" x="0.0" y="185.66666666666666" width="371.33333333333331" height="37.666666666666657"/>
+                                                <rect key="frame" x="0.0" y="185.66666666666666" width="371.33333333333331" height="45.333333333333343"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -332,20 +336,20 @@
                                                 </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ywj-kT-yH1">
-                                                <rect key="frame" x="0.0" y="224.33333333333334" width="371.33333333333331" height="2"/>
+                                                <rect key="frame" x="0.0" y="231.99999999999997" width="371.33333333333331" height="2"/>
                                                 <color key="backgroundColor" red="0.88213974240000004" green="0.88627272840000004" blue="0.89029622080000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="OH2-dW-d2c"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número quartos para hóspedes" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k5D-K7-cdx">
-                                                <rect key="frame" x="0.0" y="246.33333333333334" width="371.33333333333331" height="17.000000000000028"/>
+                                                <rect key="frame" x="0.0" y="253.99999999999997" width="371.33333333333331" height="22.333333333333343"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Selecione" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i1Q-gJ-NUa">
-                                                <rect key="frame" x="0.0" y="268.33333333333337" width="371.33333333333331" height="41.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="281.33333333333337" width="371.33333333333331" height="45.333333333333314"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -355,17 +359,11 @@
                                                 </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdb-cR-Uyg">
-                                                <rect key="frame" x="0.0" y="310.66666666666663" width="371.33333333333331" height="2"/>
+                                                <rect key="frame" x="0.0" y="327.66666666666663" width="371.33333333333331" height="2"/>
                                                 <color key="backgroundColor" red="0.85102236269999998" green="0.85484880210000003" blue="0.85882478949999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número de camas para hóspedes" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="43Q-AY-gwA">
-                                                <rect key="frame" x="0.0" y="329.66666666666663" width="371.33333333333331" height="17"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Selecione" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OxW-aV-zSh">
-                                                <rect key="frame" x="0.0" y="351.66666666666663" width="371.33333333333331" height="41.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="374.33333333333337" width="371.33333333333331" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -375,9 +373,15 @@
                                                 </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NBC-Jt-1tB">
-                                                <rect key="frame" x="0.0" y="394" width="371.33333333333331" height="2"/>
+                                                <rect key="frame" x="0.0" y="420.33333333333326" width="371.33333333333331" height="2"/>
                                                 <color key="backgroundColor" red="0.85077053309999995" green="0.85489839320000005" blue="0.85892719029999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número de camas para hóspedes" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="43Q-AY-gwA">
+                                                <rect key="frame" x="0.0" y="346.66666666666663" width="371.33333333333331" height="22.666666666666686"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -386,9 +390,9 @@
                                             <constraint firstItem="43Q-AY-gwA" firstAttribute="leading" secondItem="ZTW-F6-pWP" secondAttribute="leading" id="6Rb-sY-1eF"/>
                                             <constraint firstItem="OxW-aV-zSh" firstAttribute="width" secondItem="ZTW-F6-pWP" secondAttribute="width" id="6jQ-pB-vDb"/>
                                             <constraint firstItem="43Q-AY-gwA" firstAttribute="top" secondItem="qdb-cR-Uyg" secondAttribute="bottom" constant="17" id="7k2-AY-oO4"/>
-                                            <constraint firstItem="d9F-lM-bcY" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.05" id="8Ih-h0-Xae"/>
+                                            <constraint firstItem="d9F-lM-bcY" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.06" id="8Ih-h0-Xae"/>
                                             <constraint firstItem="Ywj-kT-yH1" firstAttribute="width" secondItem="ZTW-F6-pWP" secondAttribute="width" id="8RN-Bi-MXE"/>
-                                            <constraint firstItem="k5D-K7-cdx" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.022735" id="9Qh-og-W36"/>
+                                            <constraint firstItem="k5D-K7-cdx" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.03" id="9Qh-og-W36"/>
                                             <constraint firstItem="6cl-yx-R6l" firstAttribute="top" secondItem="dts-vJ-OMi" secondAttribute="bottom" constant="15" id="AB1-as-rqb"/>
                                             <constraint firstItem="Ywj-kT-yH1" firstAttribute="leading" secondItem="ZTW-F6-pWP" secondAttribute="leading" id="BxT-1G-guV"/>
                                             <constraint firstItem="dts-vJ-OMi" firstAttribute="leading" secondItem="ZTW-F6-pWP" secondAttribute="leading" id="Ewd-aO-UwR"/>
@@ -407,7 +411,7 @@
                                             <constraint firstItem="UIP-44-0zE" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.1" id="Wr8-Qv-ghW"/>
                                             <constraint firstItem="NBC-Jt-1tB" firstAttribute="leading" secondItem="ZTW-F6-pWP" secondAttribute="leading" id="Z37-gf-eIc"/>
                                             <constraint firstItem="UIP-44-0zE" firstAttribute="top" secondItem="ZTW-F6-pWP" secondAttribute="top" id="bZb-cr-ZmJ"/>
-                                            <constraint firstItem="i1Q-gJ-NUa" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.0546318" id="dZt-vr-Rw2"/>
+                                            <constraint firstItem="i1Q-gJ-NUa" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.06" id="dZt-vr-Rw2"/>
                                             <constraint firstItem="dts-vJ-OMi" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.07" id="e3q-Ut-64u"/>
                                             <constraint firstItem="OxW-aV-zSh" firstAttribute="leading" secondItem="ZTW-F6-pWP" secondAttribute="leading" id="hRk-kw-Y7h"/>
                                             <constraint firstItem="qdb-cR-Uyg" firstAttribute="top" secondItem="i1Q-gJ-NUa" secondAttribute="bottom" constant="1.0000000000000568" id="i5V-Lt-1RS"/>
@@ -417,12 +421,12 @@
                                             <constraint firstItem="i1Q-gJ-NUa" firstAttribute="width" secondItem="ZTW-F6-pWP" secondAttribute="width" id="lZS-4n-Kkn"/>
                                             <constraint firstItem="i1Q-gJ-NUa" firstAttribute="top" secondItem="k5D-K7-cdx" secondAttribute="bottom" constant="4.9999999999999432" id="m1Z-W3-vOn"/>
                                             <constraint firstItem="NBC-Jt-1tB" firstAttribute="top" secondItem="OxW-aV-zSh" secondAttribute="bottom" constant="1" id="mZ7-Tw-m6c"/>
-                                            <constraint firstItem="OxW-aV-zSh" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.0549712" id="mfu-Zg-krb"/>
+                                            <constraint firstItem="OxW-aV-zSh" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.06" id="mfu-Zg-krb"/>
                                             <constraint firstItem="NBC-Jt-1tB" firstAttribute="width" secondItem="ZTW-F6-pWP" secondAttribute="width" id="oRd-vB-bVp"/>
                                             <constraint firstItem="UIP-44-0zE" firstAttribute="width" secondItem="ZTW-F6-pWP" secondAttribute="width" id="ocy-9t-JCT"/>
                                             <constraint firstItem="6cl-yx-R6l" firstAttribute="width" secondItem="ZTW-F6-pWP" secondAttribute="width" id="pdZ-gg-Vlq"/>
                                             <constraint firstItem="qdb-cR-Uyg" firstAttribute="leading" secondItem="ZTW-F6-pWP" secondAttribute="leading" id="sv5-6b-q8b"/>
-                                            <constraint firstItem="43Q-AY-gwA" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.022735" id="wOQ-uz-Cq8"/>
+                                            <constraint firstItem="43Q-AY-gwA" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.03" id="wOQ-uz-Cq8"/>
                                             <constraint firstItem="dts-vJ-OMi" firstAttribute="width" secondItem="ZTW-F6-pWP" secondAttribute="width" id="zad-70-NRJ"/>
                                         </constraints>
                                     </view>
