@@ -50,15 +50,17 @@ class LocationViewController: UIViewController {
     let locationManager = CLLocationManager()
     
     @IBOutlet weak var viewCountry: UIView!
-    
     @IBOutlet weak var viewAdress: UIView!
-    
     @IBOutlet weak var viewZip: UIView!
-    
     @IBOutlet weak var viewCity: UIView!
-    
     @IBOutlet weak var viewComplement: UIView!
+    @IBOutlet weak var viewCountryHeight: NSLayoutConstraint!
+    @IBOutlet weak var viewAdressHeight: NSLayoutConstraint!
+    @IBOutlet weak var viewZipHeight: NSLayoutConstraint!
+    @IBOutlet weak var viewCityHeight: NSLayoutConstraint!
+    @IBOutlet weak var viewComplementHeight: NSLayoutConstraint!
     
+
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         self.view.layoutSubviews()
@@ -339,14 +341,19 @@ class LocationViewController: UIViewController {
         switch sender {
         case countryTextField:
             viewCountry.backgroundColor = Colors.acessoryViewSelcetedColor
+            viewCountryHeight.constant = 4.0
         case adressTextField:
             viewAdress.backgroundColor = Colors.acessoryViewSelcetedColor
+            viewAdressHeight.constant = 4.0
         case cityTextField:
             viewCity.backgroundColor = Colors.acessoryViewSelcetedColor
+            viewCityHeight.constant = 4.0
         case postalCodeTextField:
             viewZip.backgroundColor = Colors.acessoryViewSelcetedColor
+            viewZipHeight.constant = 4.0
         case complementTextField:
             viewComplement.backgroundColor = Colors.acessoryViewSelcetedColor
+            viewComplementHeight.constant = 4.0
         default:
             break
         }
@@ -356,14 +363,19 @@ class LocationViewController: UIViewController {
         switch sender {
         case countryTextField:
             viewCountry.backgroundColor = Colors.acessoryViewColor
+            viewCountryHeight.constant = 2.0
         case adressTextField:
             viewAdress.backgroundColor = Colors.acessoryViewColor
+            viewAdressHeight.constant = 2.0
         case cityTextField:
             viewCity.backgroundColor = Colors.acessoryViewColor
+            viewCityHeight.constant = 2.0
         case postalCodeTextField:
             viewZip.backgroundColor = Colors.acessoryViewColor
+            viewZipHeight.constant = 2.0
         case complementTextField:
             viewComplement.backgroundColor = Colors.acessoryViewColor
+            viewComplementHeight.constant = 2.0
         default:
             break
         }

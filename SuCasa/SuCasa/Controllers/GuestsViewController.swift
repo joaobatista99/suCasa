@@ -37,6 +37,11 @@ class GuestsViewController: UIViewController {
     @IBOutlet weak var viewNumberRooms: UIView!
     @IBOutlet weak var viewNumberBed: UIView!
     
+    @IBOutlet weak var viewTotalHeight: NSLayoutConstraint!
+    @IBOutlet weak var viewNumberHeight: NSLayoutConstraint!
+    @IBOutlet weak var viewNumberBedsHeight: NSLayoutConstraint!
+    
+    
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         fixDynamicFonts()
@@ -76,11 +81,11 @@ class GuestsViewController: UIViewController {
                 totalGuestsHeight = totalGuestsHeight.changeMultiplier(multiplier: 0.08)
                 howManyGuestsConstraint = howManyGuestsConstraint.changeMultiplier(multiplier: 0.1)
             } else {
-                descriptionGuestsHeight = descriptionGuestsHeight.changeMultiplier(multiplier: 0.07)
+                descriptionGuestsHeight = descriptionGuestsHeight.changeMultiplier(multiplier: 0.09)
                 numberOfRoomsHeight = numberOfRoomsHeight.changeMultiplier(multiplier: 0.03)
                 numberOfBedsHeight =  numberOfBedsHeight.changeMultiplier(multiplier: 0.03)
                 totalGuestsHeight = totalGuestsHeight.changeMultiplier(multiplier: 0.03)
-                howManyGuestsConstraint = howManyGuestsConstraint.changeMultiplier(multiplier: 0.1)
+                howManyGuestsConstraint = howManyGuestsConstraint.changeMultiplier(multiplier: 0.15)
             }
             
             
@@ -104,6 +109,12 @@ class GuestsViewController: UIViewController {
                     numberOfBedsHeight =  numberOfBedsHeight.changeMultiplier(multiplier: 0.08)
                     totalGuestsHeight = totalGuestsHeight.changeMultiplier(multiplier: 0.08)
                     howManyGuestsConstraint = howManyGuestsConstraint.changeMultiplier(multiplier: 0.12)
+                } else {
+                    descriptionGuestsHeight = descriptionGuestsHeight.changeMultiplier(multiplier: 0.09)
+                    numberOfRoomsHeight = numberOfRoomsHeight.changeMultiplier(multiplier: 0.03)
+                    numberOfBedsHeight =  numberOfBedsHeight.changeMultiplier(multiplier: 0.03)
+                    totalGuestsHeight = totalGuestsHeight.changeMultiplier(multiplier: 0.03)
+                    howManyGuestsConstraint = howManyGuestsConstraint.changeMultiplier(multiplier: 0.15)
                 }
         }
         
@@ -208,10 +219,13 @@ class GuestsViewController: UIViewController {
         switch sender {
         case totalGuestsTextField:
             viewTotalGuests.backgroundColor = Colors.acessoryViewSelcetedColor
+            viewTotalHeight.constant = 4.0
         case bedNumberTextField:
             viewNumberBed.backgroundColor = Colors.acessoryViewSelcetedColor
+            viewNumberBedsHeight.constant = 4.0
         case bedroomNumberTextField:
             viewNumberRooms.backgroundColor = Colors.acessoryViewSelcetedColor
+            viewNumberHeight.constant = 4.0
         default:
             break
         }
@@ -221,10 +235,13 @@ class GuestsViewController: UIViewController {
         switch sender {
         case totalGuestsTextField:
             viewTotalGuests.backgroundColor = Colors.acessoryViewColor
+            viewTotalHeight.constant = 2.0
         case bedNumberTextField:
             viewNumberBed.backgroundColor = Colors.acessoryViewColor
+            viewNumberBedsHeight.constant = 2.0
         case bedroomNumberTextField:
             viewNumberRooms.backgroundColor = Colors.acessoryViewColor
+            viewNumberHeight.constant = 2.0
         default:
             break
         }

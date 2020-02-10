@@ -25,6 +25,9 @@ class MonthlyViewController: UIViewController {
     
     @IBOutlet weak var viewMonths: UIView!
     @IBOutlet weak var viewTime: UIView!
+    @IBOutlet weak var viewMonthsHeight: NSLayoutConstraint!
+    @IBOutlet weak var viewTimeHeight: NSLayoutConstraint!
+    
     
     let notification = UINotificationFeedbackGenerator()
     
@@ -242,8 +245,10 @@ class MonthlyViewController: UIViewController {
         switch sender {
         case monsthsQuantity:
             viewTime.backgroundColor = Colors.acessoryViewSelcetedColor
+            viewTimeHeight.constant = 4.0
         case monthly:
             viewMonths.backgroundColor = Colors.acessoryViewSelcetedColor
+            viewMonthsHeight.constant = 4.0
         default:
             break
         }
@@ -254,8 +259,10 @@ class MonthlyViewController: UIViewController {
         switch sender {
         case monsthsQuantity:
             viewTime.backgroundColor = Colors.acessoryViewColor
+            viewTimeHeight.constant = 2.0
         case monthly:
             viewMonths.backgroundColor = Colors.acessoryViewColor
+            viewMonthsHeight.constant = 2.0
         default:
             break
         }

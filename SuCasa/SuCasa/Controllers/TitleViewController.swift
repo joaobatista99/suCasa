@@ -25,6 +25,8 @@ class TitleViewController: UIViewController {
     
     @IBOutlet weak var viewTitle: UIView!
     @IBOutlet weak var viewRules: UIView!
+    @IBOutlet weak var viewTitleHeight: NSLayoutConstraint!
+    @IBOutlet weak var viewRulesHeight: NSLayoutConstraint!
     
     var property: Property!
     var images: [UIImage]!
@@ -196,8 +198,10 @@ class TitleViewController: UIViewController {
         switch sender{
         case titleTextField:
             viewTitle.backgroundColor = Colors.acessoryViewSelcetedColor
+            viewTitleHeight.constant = 4.0
         case rulesTextField:
             viewRules.backgroundColor = Colors.acessoryViewSelcetedColor
+            viewRulesHeight.constant = 4.0
         default:
             break
         }
@@ -207,8 +211,10 @@ class TitleViewController: UIViewController {
         switch sender{
         case titleTextField:
             viewTitle.backgroundColor = Colors.acessoryViewColor
+            viewTitleHeight.constant = 2.0
         case rulesTextField:
             viewRules.backgroundColor = Colors.acessoryViewColor
+            viewRulesHeight.constant = 2.0
         default:
             break
         }
