@@ -53,13 +53,14 @@ class AddPhotosViewController: UIViewController {
     
     func fixDynamicFonts(){
         if screenSize.height >= 667.0 {
+           
+                addPhotosTitleLabel.font  =  addPhotosTitleLabel.font.preferredFont(withTextStyle: .largeTitle, maxSize: 40.0)
+                addPhotosDescriptionLabel.font  = addPhotosDescriptionLabel.font.preferredFont(withTextStyle: .headline, maxSize: 35.0)
+                addPhotosButton.titleLabel?.font = addPhotosButton.titleLabel?.font.preferredFont(withTextStyle: .body, maxSize: 40.0)
+                photosAdded.font = photosAdded.font.preferredFont(withTextStyle: .headline, maxSize: 35.0)
+                nextButton.titleLabel?.font = nextButton.titleLabel?.font.preferredFont(withTextStyle: .title2, maxSize: 35.0)
+            
             if addPhotosTitleLabel.font.pointSize >= 40.0 {
-                addPhotosTitleLabel.font  =  addPhotosTitleLabel.font.withSize(40.0)
-                addPhotosDescriptionLabel.font  = addPhotosDescriptionLabel.font.withSize(35.0)
-                addPhotosButton.titleLabel?.font = addPhotosButton.titleLabel?.font.withSize(40.0)
-                photosAdded.font = photosAdded.font.withSize(35.0)
-                nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(40.0)
-                
                 addPhotosDescriptionHeight = addPhotosDescriptionHeight.changeMultiplier(multiplier: 0.35)
                 addPhotosTitleHeight =  addPhotosTitleHeight.changeMultiplier(multiplier: 0.16)
                 photosAddedHeight = photosAddedHeight.changeMultiplier(multiplier: 0.1)
@@ -68,13 +69,14 @@ class AddPhotosViewController: UIViewController {
             
         }
         else if screenSize.height < 667.0 {
-            if addPhotosTitleLabel.font.pointSize >= 33.0 {
-                addPhotosTitleLabel.font  =  addPhotosTitleLabel.font.withSize(33.0)
-                addPhotosDescriptionLabel.font  = addPhotosDescriptionLabel.font.withSize(23.0)
-                addPhotosButton.titleLabel?.font = addPhotosButton.titleLabel?.font.withSize(33.0)
-                photosAdded.font = photosAdded.font.withSize(23.0)
-                nextButton.titleLabel?.font = nextButton.titleLabel?.font.withSize(33.0)
+            
+                addPhotosTitleLabel.font  =  addPhotosTitleLabel.font.preferredFont(withTextStyle: .largeTitle, maxSize: 33.0)
+                addPhotosDescriptionLabel.font  = addPhotosDescriptionLabel.font.preferredFont(withTextStyle: .headline, maxSize: 23.0)
+                addPhotosButton.titleLabel?.font = addPhotosButton.titleLabel?.font.preferredFont(withTextStyle: .body, maxSize: 23.0)
+                photosAdded.font = photosAdded.font.preferredFont(withTextStyle: .headline, maxSize: 23.0)
+                nextButton.titleLabel?.font = nextButton.titleLabel?.font.preferredFont(withTextStyle: .title2, maxSize: 33.0)
                 
+           if addPhotosTitleLabel.font.pointSize >= 33.0 {
                 addPhotosDescriptionHeight = addPhotosDescriptionHeight.changeMultiplier(multiplier: 0.38)
                 addPhotosTitleHeight =  addPhotosTitleHeight.changeMultiplier(multiplier: 0.15)
                 photosAddedHeight = photosAddedHeight.changeMultiplier(multiplier: 0.16)
