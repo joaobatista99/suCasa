@@ -30,6 +30,11 @@ class OngDetailViewController: UIViewController {
     
     let screenSize: CGRect = UIScreen.main.bounds
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        fixDynamicFonts()
+    }
+    
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         self.view.layoutSubviews()
@@ -46,26 +51,21 @@ class OngDetailViewController: UIViewController {
     }
     
     func fixDynamicFonts(){
-        if(phoneLabel.font.pointSize>28.0){
-            phone.font = phone.font.withSize(28.0)
-            email.font = email.font.withSize(28.0)
-            location.font = location.font.withSize(28.0)
-            ongName.font = ongName.font.withSize(28.0)
-            emailLabel.font = emailLabel.font.withSize(28.0)
-            phoneLabel.font = phoneLabel.font.withSize(28.0)
-            ongNameLabel.font = ongNameLabel.font.withSize(28.0)
-            localizationLabel.font = localizationLabel.font.withSize(28.0)
-            
-            if screenSize.height == 667.0 {
-                scrollViewConstraint = scrollViewConstraint.changeMultiplier(multiplier: 1.3)
-            }
-            else if screenSize.height < 667.0 {
-                scrollViewConstraint = scrollViewConstraint.changeMultiplier(multiplier: 1.5)
-            }
-                
-            else{
-                scrollViewConstraint = scrollViewConstraint.changeMultiplier(multiplier: 1.0)
-            }
+        phone.font = phone.font.preferredFont(withTextStyle: .body, maxSize: 28.0)
+        email.font = email.font.preferredFont(withTextStyle: .body, maxSize: 28.0)
+        location.font = location.font.preferredFont(withTextStyle: .body, maxSize: 28.0)
+        ongName.font = ongName.font.preferredFont(withTextStyle: .body, maxSize: 28.0)
+        emailLabel.font = emailLabel.font.preferredFont(withTextStyle: .headline, maxSize: 28.0)
+        phoneLabel.font = phoneLabel.font.preferredFont(withTextStyle: .headline, maxSize: 28.0)
+        ongNameLabel.font = ongNameLabel.font.preferredFont(withTextStyle: .headline, maxSize: 28.0)
+        localizationLabel.font = localizationLabel.font.preferredFont(withTextStyle: .headline, maxSize: 28.0)
+        
+        if screenSize.height == 667.0 {
+            scrollViewConstraint = scrollViewConstraint.changeMultiplier(multiplier: 1.3)
+        }else if screenSize.height < 667.0 {
+            scrollViewConstraint = scrollViewConstraint.changeMultiplier(multiplier: 1.5)
+        }else{
+            scrollViewConstraint = scrollViewConstraint.changeMultiplier(multiplier: 1.0)
         }
     }
     
