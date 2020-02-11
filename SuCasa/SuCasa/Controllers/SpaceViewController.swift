@@ -40,20 +40,12 @@ class SpaceViewController: UIViewController {
     
     let screenSize: CGRect = UIScreen.main.bounds
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        fixDynamicFonts()
-    }
+    
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
-        self.view.layoutSubviews()
-    }
-    
-    override  func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         self.fixDynamicFonts()
-        
+        self.view.setNeedsLayout()
     }
     
     //this func manages dynamic text and sets a maxvalue
@@ -115,13 +107,10 @@ class SpaceViewController: UIViewController {
     
     func setLocalizedStrings(){
         spaceTitleLabel.text = NSLocalizedString("Como é seu espaço?", comment: "como é seu espaço? - titulo")
-        //"Como é seu espaço?" = "What is your space like?";
         propertyType1Label.text = NSLocalizedString("Selecione a opção que o descreve melhor:", comment: "selecione a opcao que o descreve melhor:")
-        //"Selecione a opção que o descreve melhor:" = "Select the option that describes it best:";
         propertyType2Label.text = NSLocalizedString("Agora escolha um tipo de propriedade:", comment: "agora escolha um tipo  de propriedade")
-        //"Agora escolha um tipo de propriedade:" = "Now select a type of property:";
         nextButton.setTitle(NSLocalizedString("Próximo", comment: "botão de próximo"), for: .normal)
-        //"Próximo" = "Next";
+        
     }
     
     //Scroll when keyboard activates
@@ -220,7 +209,7 @@ class SpaceViewController: UIViewController {
             editingFieldName = spaceType.text == NSLocalizedString("Apartamento", comment: "") ? "apartment" :  "house"
             viewPropertyType.backgroundColor = Colors.acessoryViewSelcetedColor
             acessoryViewPropertyHeight.constant = 4.0
-
+            
         }
         
         // assign space type pickerview to correct text field
@@ -236,12 +225,12 @@ class SpaceViewController: UIViewController {
         if (sender == spaceType) {
             viewSpaceType.backgroundColor = Colors.acessoryViewColor
             acessoryViewSpaceHeight.constant = 2.0
-
+            
         }
         else {
             viewPropertyType.backgroundColor = Colors.acessoryViewColor
             acessoryViewPropertyHeight.constant = 2.0
-
+            
         }
     }
     

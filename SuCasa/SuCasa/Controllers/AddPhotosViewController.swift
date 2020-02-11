@@ -38,31 +38,21 @@ class AddPhotosViewController: UIViewController {
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
-        self.view.layoutSubviews()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         self.fixDynamicFonts()
-        
-    }
-
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        fixDynamicFonts()
+        self.view.setNeedsLayout()
     }
     
     func fixDynamicFonts(){
         if screenSize.height >= 667.0 {
            
                 addPhotosTitleLabel.font  =  addPhotosTitleLabel.font.preferredFont(withTextStyle: .largeTitle, maxSize: 40.0)
-                addPhotosDescriptionLabel.font  = addPhotosDescriptionLabel.font.preferredFont(withTextStyle: .headline, maxSize: 35.0)
+                addPhotosDescriptionLabel.font  = addPhotosDescriptionLabel.font.preferredFont(withTextStyle: .headline, maxSize: 33.0)
                 addPhotosButton.titleLabel?.font = addPhotosButton.titleLabel?.font.preferredFont(withTextStyle: .body, maxSize: 40.0)
                 photosAdded.font = photosAdded.font.preferredFont(withTextStyle: .headline, maxSize: 35.0)
                 nextButton.titleLabel?.font = nextButton.titleLabel?.font.preferredFont(withTextStyle: .title2, maxSize: 35.0)
             
             if addPhotosTitleLabel.font.pointSize >= 40.0 {
-                addPhotosDescriptionHeight = addPhotosDescriptionHeight.changeMultiplier(multiplier: 0.35)
+                addPhotosDescriptionHeight = addPhotosDescriptionHeight.changeMultiplier(multiplier: 0.4)
                 addPhotosTitleHeight =  addPhotosTitleHeight.changeMultiplier(multiplier: 0.16)
                 photosAddedHeight = photosAddedHeight.changeMultiplier(multiplier: 0.1)
                 nextButtonTop.constant = 90

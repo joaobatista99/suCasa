@@ -63,21 +63,9 @@ class LocationViewController: UIViewController {
 
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
-        self.view.layoutSubviews()
-    }
-    
-    override  func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
         fixDynamicFonts()
+        self.view.setNeedsLayout()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.fixDynamicFonts()
-        
-    }
-    
     
     func fixDynamicFonts(){
         
@@ -91,7 +79,7 @@ class LocationViewController: UIViewController {
             cityLabel.font  = cityLabel.font.preferredFont(withTextStyle: .headline, maxSize: 35.0)
             ZIPLabel.font =  ZIPLabel.font.preferredFont(withTextStyle: .headline, maxSize: 35.0)
             complementLabel.font  = complementLabel.font.preferredFont(withTextStyle: .headline, maxSize: 35.0)
-            useCurrentLocButton.titleLabel?.font =  useCurrentLocButton.titleLabel?.font.preferredFont(withTextStyle: .headline, maxSize: 30.0)
+            useCurrentLocButton.titleLabel?.font =  useCurrentLocButton.titleLabel?.font.preferredFont(withTextStyle: .headline, maxSize: 24.0)
             nextButton.titleLabel?.font = nextButton.titleLabel?.font.preferredFont(withTextStyle: .title2, maxSize: 40.0)
             countryTextField.font  = countryTextField.font?.preferredFont(withTextStyle: .body, maxSize: 35.0)
             adressTextField.font  = adressTextField.font?.preferredFont(withTextStyle: .body, maxSize: 35.0)

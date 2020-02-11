@@ -15,10 +15,12 @@ class CompleteRegistrationViewController: UIViewController {
     @IBOutlet weak var dismissButton: UIButton!
     let screenSize: CGRect = UIScreen.main.bounds
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        fixDynamicFonts()
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        self.fixDynamicFonts()
+        self.view.setNeedsLayout()
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,14 +32,9 @@ class CompleteRegistrationViewController: UIViewController {
         self.congratsLabel.text = NSLocalizedString("Parabéns, seu anúncio foi criado com sucesso!", comment: "")
     }
     
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        self.view.layoutSubviews()
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.fixDynamicFonts()
-        
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     

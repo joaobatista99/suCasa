@@ -42,23 +42,12 @@ class GuestsViewController: UIViewController {
     @IBOutlet weak var viewNumberBedsHeight: NSLayoutConstraint!
     
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        fixDynamicFonts()
-    }
-    
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
-        self.view.layoutSubviews()
+        self.fixDynamicFonts()
+        self.view.setNeedsLayout()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.fixDynamicFonts()
-        
-        
-    }
     
     func fixDynamicFonts(){
         if screenSize.height >= 667.0 {
@@ -73,23 +62,26 @@ class GuestsViewController: UIViewController {
             bedNumberTextField.font =  bedNumberTextField.font?.preferredFont(withTextStyle: .body, maxSize: 35.0)
             nextButton.titleLabel?.font = nextButton.titleLabel?.font.preferredFont(withTextStyle: .title2, maxSize:40.0)
             
-            
+        
             if TitleGuestsLabel.font.pointSize >= 40.0 {
-                descriptionGuestsHeight = descriptionGuestsHeight.changeMultiplier(multiplier: 0.21)
+                descriptionGuestsHeight = descriptionGuestsHeight.changeMultiplier(multiplier: 0.23)
                 numberOfRoomsHeight = numberOfRoomsHeight.changeMultiplier(multiplier: 0.08)
                 numberOfBedsHeight =  numberOfBedsHeight.changeMultiplier(multiplier: 0.08)
-                totalGuestsHeight = totalGuestsHeight.changeMultiplier(multiplier: 0.08)
-                howManyGuestsConstraint = howManyGuestsConstraint.changeMultiplier(multiplier: 0.1)
+                totalGuestsHeight = totalGuestsHeight.changeMultiplier(multiplier: 0.04)
+                howManyGuestsConstraint = howManyGuestsConstraint.changeMultiplier(multiplier: 0.15)
+                scrollHeightConstraint = scrollHeightConstraint.changeMultiplier(multiplier: 1.8)
             } else {
                 descriptionGuestsHeight = descriptionGuestsHeight.changeMultiplier(multiplier: 0.09)
                 numberOfRoomsHeight = numberOfRoomsHeight.changeMultiplier(multiplier: 0.03)
                 numberOfBedsHeight =  numberOfBedsHeight.changeMultiplier(multiplier: 0.03)
                 totalGuestsHeight = totalGuestsHeight.changeMultiplier(multiplier: 0.03)
                 howManyGuestsConstraint = howManyGuestsConstraint.changeMultiplier(multiplier: 0.15)
+                scrollHeightConstraint = scrollHeightConstraint.changeMultiplier(multiplier: 1)
+
             }
             
-            
         }
+            
         else if screenSize.height < 667.0 {
             
                 TitleGuestsLabel.font  =  TitleGuestsLabel.font.preferredFont(withTextStyle: .largeTitle, maxSize:33.0)
@@ -124,15 +116,11 @@ class GuestsViewController: UIViewController {
         super.viewDidAppear(animated)
         
         scrollView.contentOffset.x = 0
-        print(scrollView.contentSize)
         
-        scrollView.contentSize =  CGSize(width: (310), height: scrollView.contentSize.height + 150)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         
         setUpTextFields()
         nextButton.isHidden = true

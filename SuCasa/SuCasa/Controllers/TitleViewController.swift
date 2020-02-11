@@ -32,22 +32,12 @@ class TitleViewController: UIViewController {
     var images: [UIImage]!
     let screenSize: CGRect = UIScreen.main.bounds
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        fixDynamicFonts()
-    }
-    
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
-        self.view.layoutSubviews()
+        self.fixDynamicFonts()
+        self.view.setNeedsLayout()
     }
     
-    override  func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.fixDynamicFonts()
-        
-    }
     
     func fixDynamicFonts(){
         if screenSize.height >= 667.0 {

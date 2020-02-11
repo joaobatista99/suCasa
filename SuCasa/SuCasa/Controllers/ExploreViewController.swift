@@ -81,14 +81,10 @@ class ExploreViewController: UIViewController {
         }
     }
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        self.fixDynamicFonts()
-    }
-    
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
-        self.view.layoutSubviews()
+        self.fixDynamicFonts()
+        self.view.setNeedsLayout()
     }
     
     override func viewDidLoad() {
@@ -105,7 +101,6 @@ class ExploreViewController: UIViewController {
         
         self.seeMoreButton.accessibilityHint = NSLocalizedString("VerMaisHint", comment: "")
         
-        
     }
     
     func localizationExploreViewController () {
@@ -114,15 +109,10 @@ class ExploreViewController: UIViewController {
         self.ongPartnerLabel.text = NSLocalizedString("ONG's Parceiras", comment: "")
         self.titleBestForYouLabel.text = NSLocalizedString("As melhores estadias para você", comment: "")
         self.descriptionBestForYouLabel.text = NSLocalizedString("Veja nossa seleção de lugares para ficar com os melhores preços", comment: "")
-        
-        
         self.seeMoreButton.setTitle(NSLocalizedString("Ver tudo", comment: ""), for: .normal)
     }
     
     func fixDynamicFonts(){
-        
-        
-    
         
         ongPartnerLabel.font = ongPartnerLabel.font.preferredFont(withTextStyle: .largeTitle, maxSize: 30.0)
         titleBestForYouLabel.font = titleBestForYouLabel.font.preferredFont(withTextStyle: .headline, maxSize: 30.0)

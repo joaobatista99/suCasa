@@ -28,6 +28,9 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="994663_661807883850267_69452454_n" translatesAutoresizingMaskIntoConstraints="NO" id="jp7-dv-d33">
                                             <rect key="frame" x="124" y="12" width="166" height="166"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <accessibility key="accessibilityConfiguration" label="Foto do perfil">
+                                                <bool key="isElement" value="YES"/>
+                                            </accessibility>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="jp7-dv-d33" secondAttribute="height" multiplier="1:1" id="6Ci-BP-tn6"/>
                                             </constraints>

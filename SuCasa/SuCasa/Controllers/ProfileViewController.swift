@@ -23,9 +23,10 @@ class ProfileViewController: UIViewController {
     var secondLabelArray: [String] = ["Berhman Garcon", "Campinas, SP (Brasil)",
                                       "berhman@example.com", "(19) 99950-6396",
                                       "Português, Inglês, Francês, Crioulo"]
+   
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
-        self.view.layoutSubviews()
+        self.view.setNeedsLayout()
     }
     
     override func viewDidLoad() {

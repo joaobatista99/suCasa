@@ -30,15 +30,12 @@ class OngDetailViewController: UIViewController {
     
     let screenSize: CGRect = UIScreen.main.bounds
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        fixDynamicFonts()
-    }
-    
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
-        self.view.layoutSubviews()
+        self.fixDynamicFonts()
+        self.view.setNeedsLayout()
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,7 +69,6 @@ class OngDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.fixDynamicFonts()
         
         tabBarController?.tabBar.isHidden = true
     }

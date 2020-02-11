@@ -25,6 +25,8 @@ class AdViewController: UIViewController {
         self.navigationItem.title = NSLocalizedString("Aluguéis", comment: "")
         
         self.addButton.accessibilityLabel = NSLocalizedString("Adicionar imóvel", comment: "")
+        self.addButton.width = 44.0
+        
         
     }
     

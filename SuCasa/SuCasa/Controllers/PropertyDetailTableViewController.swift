@@ -32,15 +32,11 @@ class PropertyDetailTableViewController: UITableViewController {
     var info = "Gosto de viajar, conhecer novas pessoas e culturas. Tenho dois cachorros, Buck e Gula, muito dóceis e também adoram fazer novas amizades."
     var languages = "Idiomas: Português, Espanhol, Francês"
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        fixDynamicFonts()
-    }
-    
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
-        self.view.layoutSubviews()
+        self.fixDynamicFonts()
         tableView.reloadData()
+        self.view.setNeedsLayout()
     }
     
     override func viewDidLoad() {

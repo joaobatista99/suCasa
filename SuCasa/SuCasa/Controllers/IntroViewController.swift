@@ -31,7 +31,7 @@ class IntroViewController: UIViewController {
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
-        self.view.layoutSubviews()
+        self.view.setNeedsLayout()
     }
     
     override func viewDidLoad() {

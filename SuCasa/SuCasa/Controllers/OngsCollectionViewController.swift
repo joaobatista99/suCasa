@@ -21,15 +21,12 @@ class OngsCollectionViewController: UIViewController {
     @IBOutlet weak var ongsCollectionTitleLabel: UILabel!
     @IBOutlet weak var ongsCollectionDescriptionLabel: UILabel!
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        fixDynamicFonts()
-    }
-    
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
-        self.view.layoutSubviews()
+        self.fixDynamicFonts()
+        self.view.setNeedsLayout()
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +49,6 @@ class OngsCollectionViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.tabBar.isHidden = true
-        self.fixDynamicFonts()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

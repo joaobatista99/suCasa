@@ -78,7 +78,7 @@
 //MARK: LocationViewController
 
 "Onde fica sua acomodação?" = "Onde fica sua acomodação?";
-"Somente as ONGs próximas receberão sua localização exata para poder instruir os insteressados." = "Oomente as ONGs próximas receberão sua localização exata para poder instruir os insteressados.";
+"Somente as ONGs próximas receberão sua localização exata para poder instruir os insteressados." = "Somente as ONGs próximas receberão sua localização exata para poder instruir os insteressados.";
 "Usar minha localização atual" = "Usar minha localização atual";
 "País/Região" =  "País/Região";
 "Endereço" = "Endereço";
@@ -139,7 +139,7 @@
 "%d Lugar" = "%d Lugar";
 "%d Quarto" = "%d Quarto";
 "%d mês" = "%d mês";
-"em média/mês" = "em média/mês";
+"em média/mês" = "em média por mês";
 "Contato" = "Contato";
 "ContatoHint" = "Entre em contato";
 "ImagensLabel" = "Imagens da propriedade";
