@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -50,19 +50,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecione a opção que o descreve melhor:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U8U-aM-epX">
-                                <rect key="frame" x="15" y="192.66666666666666" width="372.66666666666669" height="27"/>
+                                <rect key="frame" x="15" y="193" width="372.5" height="27"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Como é seu espaço?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="geo-E2-BFf">
-                                <rect key="frame" x="15" y="112.00000000000001" width="372.66666666666669" height="40.666666666666671"/>
+                                <rect key="frame" x="15" y="112" width="372.5" height="41"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Selecione uma" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xpu-u7-dOE">
-                                <rect key="frame" x="15" y="224.66666666666666" width="372.66666666666669" height="53.666666666666657"/>
+                                <rect key="frame" x="15" y="225" width="372.5" height="53.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -73,13 +73,13 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agora escolha um tipo de propriedade:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ejh-Jq-xHE">
-                                <rect key="frame" x="15" y="301.33333333333331" width="372.66666666666669" height="27"/>
+                                <rect key="frame" x="15" y="301.5" width="372.5" height="27"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Selecione o tipo de propriedade" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FiH-tB-wFi">
-                                <rect key="frame" x="15" y="333.33333333333331" width="372.66666666666669" height="53.666666666666686"/>
+                                <rect key="frame" x="15" y="333.5" width="372.5" height="54"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -90,21 +90,21 @@
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ma-Al-cBT">
-                                <rect key="frame" x="15" y="279.33333333333331" width="372.66666666666669" height="2"/>
+                                <rect key="frame" x="15" y="279.5" width="372.5" height="2"/>
                                 <color key="backgroundColor" red="0.79611998799999995" green="0.79994738099999996" blue="0.80392277239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="gTN-93-DqY"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2TB-wp-Uxa">
-                                <rect key="frame" x="15" y="388" width="372.66666666666669" height="2"/>
+                                <rect key="frame" x="15" y="388.5" width="372.5" height="2"/>
                                 <color key="backgroundColor" red="0.79611998799999995" green="0.79994738099999996" blue="0.80392277239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="73s-5g-Hvm"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VxP-A5-IyD">
-                                <rect key="frame" x="48.333333333333343" y="767" width="317.33333333333326" height="55"/>
+                                <rect key="frame" x="48.5" y="767" width="317" height="55"/>
                                 <color key="backgroundColor" red="0.34842607380000001" green="0.1212797984" blue="0.16470670700000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="VxP-A5-IyD" secondAttribute="height" multiplier="5.76" id="yLv-9j-bNc"/>
@@ -205,16 +205,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O marcador está no local correto?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dMM-Pj-HZV">
-                                <rect key="frame" x="15" y="53.999999999999986" width="372.66666666666669" height="163.66666666666663"/>
+                                <rect key="frame" x="15" y="54" width="372.5" height="164"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="34"/>
                                 <color key="textColor" red="0.39241147040000002" green="0.40347844360000001" blue="0.443143338" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pyW-y4-0Tg">
-                                <rect key="frame" x="0.0" y="191.66666666666663" width="414" height="681"/>
+                                <rect key="frame" x="0.0" y="192" width="414" height="681"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llU-lj-bPH">
-                                <rect key="frame" x="270.66666666666669" y="727.33333333333337" width="103.33333333333331" height="40.333333333333371"/>
+                                <rect key="frame" x="270.5" y="727.5" width="103.5" height="40"/>
                                 <color key="backgroundColor" red="0.38467586040000001" green="0.097716085610000003" blue="0.15748378630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
                                 <state key="normal" title="Próximo">
@@ -301,25 +301,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjJ-yn-m9f">
-                                <rect key="frame" x="0.66666666666665719" y="98.333333333333314" width="412.66666666666674" height="753.33333333333348"/>
+                                <rect key="frame" x="0.5" y="98.5" width="413" height="753"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZTW-F6-pWP">
-                                        <rect key="frame" x="20" y="8" width="371.33333333333331" height="753.33333333333337"/>
+                                        <rect key="frame" x="20" y="8" width="371.5" height="753"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantos hóspedes podem ficar?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UIP-44-0zE">
-                                                <rect key="frame" x="0.0" y="0.0" width="371.33333333333331" height="113"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="371.5" height="107.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total de hóspedes" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6cl-yx-R6l">
-                                                <rect key="frame" x="0.0" y="210.66666666666669" width="371.33333333333331" height="22.666666666666657"/>
+                                                <rect key="frame" x="0.0" y="209" width="371.5" height="22.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Selecione" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d9F-lM-bcY">
-                                                <rect key="frame" x="0.0" y="238.3333333333334" width="371.33333333333331" height="45.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="236.5" width="371.5" height="53.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -330,20 +330,20 @@
                                                 </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ywj-kT-yH1">
-                                                <rect key="frame" x="0.0" y="284.66666666666669" width="371.33333333333331" height="2"/>
+                                                <rect key="frame" x="0.0" y="291" width="371.5" height="2"/>
                                                 <color key="backgroundColor" red="0.88213974240000004" green="0.88627272840000004" blue="0.89029622080000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="OH2-dW-d2c"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número quartos para hóspedes" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k5D-K7-cdx">
-                                                <rect key="frame" x="0.0" y="306.66666666666669" width="371.33333333333331" height="22.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="313" width="371.5" height="22.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Selecione" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i1Q-gJ-NUa">
-                                                <rect key="frame" x="0.0" y="334.33333333333337" width="371.33333333333331" height="45"/>
+                                                <rect key="frame" x="0.0" y="340.5" width="371.5" height="54"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -353,14 +353,14 @@
                                                 </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdb-cR-Uyg">
-                                                <rect key="frame" x="0.0" y="380.33333333333337" width="371.33333333333331" height="2"/>
+                                                <rect key="frame" x="0.0" y="395.5" width="371.5" height="2"/>
                                                 <color key="backgroundColor" red="0.85102236269999998" green="0.85484880210000003" blue="0.85882478949999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="twq-Uk-y5f"/>
                                                 </constraints>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Selecione" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OxW-aV-zSh">
-                                                <rect key="frame" x="0.0" y="427.00000000000006" width="371.33333333333331" height="45.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="442" width="371.5" height="53.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -370,20 +370,20 @@
                                                 </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NBC-Jt-1tB">
-                                                <rect key="frame" x="0.0" y="473.33333333333331" width="371.33333333333331" height="2"/>
+                                                <rect key="frame" x="0.0" y="496.5" width="371.5" height="2"/>
                                                 <color key="backgroundColor" red="0.85077053309999995" green="0.85489839320000005" blue="0.85892719029999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="r6J-Re-e3H"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número de camas para hóspedes" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="43Q-AY-gwA">
-                                                <rect key="frame" x="0.0" y="399.33333333333337" width="371.33333333333331" height="22.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="414.5" width="371.5" height="22.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Garanta que você tem camas suficientes para acomodar confortavelmente todos os seus hóspedes." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dts-vJ-OMi">
-                                                <rect key="frame" x="0.0" y="128" width="371.33333333333331" height="67.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="122.5" width="371.5" height="71.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -396,9 +396,7 @@
                                             <constraint firstItem="43Q-AY-gwA" firstAttribute="leading" secondItem="ZTW-F6-pWP" secondAttribute="leading" id="6Rb-sY-1eF"/>
                                             <constraint firstItem="OxW-aV-zSh" firstAttribute="width" secondItem="ZTW-F6-pWP" secondAttribute="width" id="6jQ-pB-vDb"/>
                                             <constraint firstItem="43Q-AY-gwA" firstAttribute="top" secondItem="qdb-cR-Uyg" secondAttribute="bottom" constant="17" id="7k2-AY-oO4"/>
-                                            <constraint firstItem="d9F-lM-bcY" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.06" id="8Ih-h0-Xae"/>
                                             <constraint firstItem="Ywj-kT-yH1" firstAttribute="width" secondItem="ZTW-F6-pWP" secondAttribute="width" id="8RN-Bi-MXE"/>
-                                            <constraint firstItem="k5D-K7-cdx" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.03" id="9Qh-og-W36"/>
                                             <constraint firstItem="6cl-yx-R6l" firstAttribute="top" secondItem="dts-vJ-OMi" secondAttribute="bottom" constant="15" id="AB1-as-rqb"/>
                                             <constraint firstItem="Ywj-kT-yH1" firstAttribute="leading" secondItem="ZTW-F6-pWP" secondAttribute="leading" id="BxT-1G-guV"/>
                                             <constraint firstItem="dts-vJ-OMi" firstAttribute="leading" secondItem="ZTW-F6-pWP" secondAttribute="leading" id="Ewd-aO-UwR"/>
@@ -412,30 +410,24 @@
                                             <constraint firstItem="43Q-AY-gwA" firstAttribute="width" secondItem="ZTW-F6-pWP" secondAttribute="width" id="Rr9-7B-hGf"/>
                                             <constraint firstItem="dts-vJ-OMi" firstAttribute="top" secondItem="UIP-44-0zE" secondAttribute="bottom" constant="15.000000000000014" id="SU1-UE-xAm"/>
                                             <constraint firstItem="Ywj-kT-yH1" firstAttribute="top" secondItem="d9F-lM-bcY" secondAttribute="bottom" constant="1" id="UWX-eH-M4f"/>
-                                            <constraint firstItem="UIP-44-0zE" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.15" id="Wr8-Qv-ghW"/>
                                             <constraint firstItem="NBC-Jt-1tB" firstAttribute="leading" secondItem="ZTW-F6-pWP" secondAttribute="leading" id="Z37-gf-eIc"/>
                                             <constraint firstItem="UIP-44-0zE" firstAttribute="top" secondItem="ZTW-F6-pWP" secondAttribute="top" id="bZb-cr-ZmJ"/>
-                                            <constraint firstItem="i1Q-gJ-NUa" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.06" id="dZt-vr-Rw2"/>
-                                            <constraint firstItem="dts-vJ-OMi" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.09" id="e3q-Ut-64u"/>
                                             <constraint firstItem="OxW-aV-zSh" firstAttribute="leading" secondItem="ZTW-F6-pWP" secondAttribute="leading" id="hRk-kw-Y7h"/>
                                             <constraint firstItem="qdb-cR-Uyg" firstAttribute="top" secondItem="i1Q-gJ-NUa" secondAttribute="bottom" constant="1.0000000000000568" id="i5V-Lt-1RS"/>
                                             <constraint firstItem="k5D-K7-cdx" firstAttribute="leading" secondItem="ZTW-F6-pWP" secondAttribute="leading" id="igw-ud-oAN"/>
-                                            <constraint firstItem="6cl-yx-R6l" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.03" id="kZw-rw-feV"/>
                                             <constraint firstItem="i1Q-gJ-NUa" firstAttribute="leading" secondItem="ZTW-F6-pWP" secondAttribute="leading" id="lYD-wy-taP"/>
                                             <constraint firstItem="i1Q-gJ-NUa" firstAttribute="width" secondItem="ZTW-F6-pWP" secondAttribute="width" id="lZS-4n-Kkn"/>
                                             <constraint firstItem="i1Q-gJ-NUa" firstAttribute="top" secondItem="k5D-K7-cdx" secondAttribute="bottom" constant="4.9999999999999432" id="m1Z-W3-vOn"/>
                                             <constraint firstItem="NBC-Jt-1tB" firstAttribute="top" secondItem="OxW-aV-zSh" secondAttribute="bottom" constant="1" id="mZ7-Tw-m6c"/>
-                                            <constraint firstItem="OxW-aV-zSh" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.06" id="mfu-Zg-krb"/>
                                             <constraint firstItem="NBC-Jt-1tB" firstAttribute="width" secondItem="ZTW-F6-pWP" secondAttribute="width" id="oRd-vB-bVp"/>
                                             <constraint firstItem="UIP-44-0zE" firstAttribute="width" secondItem="ZTW-F6-pWP" secondAttribute="width" id="ocy-9t-JCT"/>
                                             <constraint firstItem="6cl-yx-R6l" firstAttribute="width" secondItem="ZTW-F6-pWP" secondAttribute="width" id="pdZ-gg-Vlq"/>
                                             <constraint firstItem="qdb-cR-Uyg" firstAttribute="leading" secondItem="ZTW-F6-pWP" secondAttribute="leading" id="sv5-6b-q8b"/>
-                                            <constraint firstItem="43Q-AY-gwA" firstAttribute="height" secondItem="ZTW-F6-pWP" secondAttribute="height" multiplier="0.03" id="wOQ-uz-Cq8"/>
                                             <constraint firstItem="dts-vJ-OMi" firstAttribute="width" secondItem="ZTW-F6-pWP" secondAttribute="width" id="zad-70-NRJ"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPl-p2-L6R">
-                                        <rect key="frame" x="47.666666666666657" y="650.33333333333326" width="317.33333333333337" height="55"/>
+                                        <rect key="frame" x="48" y="676" width="317" height="55"/>
                                         <color key="backgroundColor" red="0.3445302844" green="0.1211597249" blue="0.1725511253" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="hPl-p2-L6R" secondAttribute="height" multiplier="5.76" id="F7r-Qj-Sgv"/>
@@ -462,7 +454,7 @@
                                     <constraint firstAttribute="trailing" secondItem="ZTW-F6-pWP" secondAttribute="trailing" id="cnO-wO-w93"/>
                                     <constraint firstItem="ZTW-F6-pWP" firstAttribute="height" secondItem="jjJ-yn-m9f" secondAttribute="height" id="hyf-cA-Io4"/>
                                     <constraint firstItem="hPl-p2-L6R" firstAttribute="centerX" secondItem="jjJ-yn-m9f" secondAttribute="centerX" id="l22-LB-89c"/>
-                                    <constraint firstItem="ZTW-F6-pWP" firstAttribute="bottom" secondItem="hPl-p2-L6R" secondAttribute="bottom" constant="56" id="xqt-9g-C1H"/>
+                                    <constraint firstItem="hPl-p2-L6R" firstAttribute="top" secondItem="NBC-Jt-1tB" secondAttribute="bottom" constant="169.33332824707031" id="rLt-Pa-Hft"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="OkA-L0-DUP"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="UQF-UW-1Vb"/>
@@ -470,11 +462,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="OxW-aV-zSh" firstAttribute="height" secondItem="666-Db-bR3" secondAttribute="height" multiplier="0.06" id="10X-nQ-Kcx"/>
                             <constraint firstItem="jjJ-yn-m9f" firstAttribute="centerY" secondItem="bp1-Kz-17w" secondAttribute="centerY" id="2OE-Rz-yjl"/>
                             <constraint firstItem="jjJ-yn-m9f" firstAttribute="centerX" secondItem="bp1-Kz-17w" secondAttribute="centerX" id="IcV-kK-xnc"/>
                             <constraint firstItem="jjJ-yn-m9f" firstAttribute="height" secondItem="bp1-Kz-17w" secondAttribute="height" multiplier="0.973285" id="Ld8-hP-6Sw"/>
+                            <constraint firstItem="k5D-K7-cdx" firstAttribute="height" secondItem="666-Db-bR3" secondAttribute="height" multiplier="0.025" id="MV1-83-cPm"/>
+                            <constraint firstItem="UIP-44-0zE" firstAttribute="height" secondItem="666-Db-bR3" secondAttribute="height" multiplier="0.12" id="O7J-uY-4yM"/>
+                            <constraint firstItem="6cl-yx-R6l" firstAttribute="height" secondItem="666-Db-bR3" secondAttribute="height" multiplier="0.025" id="Rso-bi-k4p"/>
+                            <constraint firstItem="i1Q-gJ-NUa" firstAttribute="height" secondItem="666-Db-bR3" secondAttribute="height" multiplier="0.06" id="dg0-0o-p1a"/>
+                            <constraint firstItem="43Q-AY-gwA" firstAttribute="height" secondItem="666-Db-bR3" secondAttribute="height" multiplier="0.025" id="fwe-xO-6oM"/>
                             <constraint firstItem="jjJ-yn-m9f" firstAttribute="width" secondItem="bp1-Kz-17w" secondAttribute="width" multiplier="0.996779" id="nSy-ah-Qcx"/>
                             <constraint firstItem="hPl-p2-L6R" firstAttribute="width" secondItem="666-Db-bR3" secondAttribute="width" multiplier="0.766" id="o9G-Cw-Rt5"/>
+                            <constraint firstItem="dts-vJ-OMi" firstAttribute="height" secondItem="666-Db-bR3" secondAttribute="height" multiplier="0.08" id="upS-m8-Z9o"/>
+                            <constraint firstItem="d9F-lM-bcY" firstAttribute="height" secondItem="666-Db-bR3" secondAttribute="height" multiplier="0.06" id="yMO-i5-aqP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bp1-Kz-17w"/>
                     </view>
@@ -496,17 +496,18 @@
                         <outlet property="TitleGuestsLabel" destination="UIP-44-0zE" id="kRR-b1-odK"/>
                         <outlet property="bedNumberTextField" destination="OxW-aV-zSh" id="jj7-7V-GIE"/>
                         <outlet property="bedroomNumberTextField" destination="i1Q-gJ-NUa" id="KSK-Qr-dzP"/>
-                        <outlet property="descriptionGuestsHeight" destination="e3q-Ut-64u" id="KCl-iY-bTL"/>
+                        <outlet property="descriptionGuestsHeight" destination="upS-m8-Z9o" id="lKx-e8-tDv"/>
                         <outlet property="descriptionGuestsLabel" destination="dts-vJ-OMi" id="Wjw-UV-EOv"/>
-                        <outlet property="howManyGuestsConstraint" destination="Wr8-Qv-ghW" id="TPc-eF-hfL"/>
+                        <outlet property="howManyGuestsConstraint" destination="O7J-uY-4yM" id="EJV-42-1Yn"/>
                         <outlet property="nextButton" destination="hPl-p2-L6R" id="r0Q-Cs-ENv"/>
-                        <outlet property="numberOfBedsHeight" destination="wOQ-uz-Cq8" id="qkC-Kd-e3d"/>
+                        <outlet property="nextButtonTopViewConstraint" destination="rLt-Pa-Hft" id="DpB-nI-sKh"/>
+                        <outlet property="numberOfBedsHeight" destination="fwe-xO-6oM" id="07G-ls-Iil"/>
                         <outlet property="numberOfBedsLabel" destination="43Q-AY-gwA" id="O4r-RB-XpZ"/>
-                        <outlet property="numberOfRoomsHeight" destination="9Qh-og-W36" id="gKa-p4-duS"/>
+                        <outlet property="numberOfRoomsHeight" destination="MV1-83-cPm" id="UwD-Hh-YO7"/>
                         <outlet property="numberOfRoomsLabel" destination="k5D-K7-cdx" id="W7S-fY-zkF"/>
                         <outlet property="scrollHeightConstraint" destination="hyf-cA-Io4" id="Buk-5f-tpA"/>
                         <outlet property="scrollView" destination="jjJ-yn-m9f" id="de2-9F-2jZ"/>
-                        <outlet property="totalGuestsHeight" destination="kZw-rw-feV" id="SlG-8n-p3D"/>
+                        <outlet property="totalGuestsHeight" destination="Rso-bi-k4p" id="06p-bU-OX2"/>
                         <outlet property="totalGuestsLabel" destination="6cl-yx-R6l" id="NK7-rO-Dm8"/>
                         <outlet property="totalGuestsTextField" destination="d9F-lM-bcY" id="4jZ-fC-wP9"/>
                         <outlet property="viewNumberBed" destination="NBC-Jt-1tB" id="XVQ-0y-j7C"/>
@@ -537,19 +538,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Onde fica sua acomodação?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="14C-KB-qrg">
-                                                <rect key="frame" x="20.666666666666657" y="24.000000000000007" width="372.66666666666674" height="89.666666666666686"/>
+                                                <rect key="frame" x="20.5" y="24" width="373" height="89.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                 <color key="textColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Somente as ONGs próximas receberão sua localização exata para poder instruir os insteressados." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QQm-ew-UD2">
-                                                <rect key="frame" x="20.666666666666657" y="123.66666666666666" width="372.66666666666674" height="71.666666666666657"/>
+                                                <rect key="frame" x="20.5" y="123.5" width="373" height="72"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JI-Pg-TXM" customClass="RoundedBorderButton" customModule="SuCasa" customModuleProvider="target">
-                                                <rect key="frame" x="20.666666666666657" y="215.33333333333331" width="372.66666666666674" height="44.666666666666686"/>
+                                                <rect key="frame" x="20.5" y="215.5" width="373" height="44.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <state key="normal" title="Usar minha localização atual">
@@ -568,13 +569,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="País/Região" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwh-BE-IOw">
-                                                <rect key="frame" x="20.666666666666657" y="295" width="372.66666666666674" height="18"/>
+                                                <rect key="frame" x="20.5" y="295" width="373" height="18"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Selecione" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y2w-gQ-lbF">
-                                                <rect key="frame" x="20.666666666666657" y="318" width="372.66666666666674" height="53.666666666666686"/>
+                                                <rect key="frame" x="20.5" y="318" width="373" height="54"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -585,20 +586,20 @@
                                                 </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dCW-XL-RBw">
-                                                <rect key="frame" x="20.666666666666657" y="372.66666666666669" width="372.66666666666674" height="2"/>
+                                                <rect key="frame" x="20.5" y="373" width="373" height="2"/>
                                                 <color key="backgroundColor" red="0.87037628889999996" green="0.87450736760000003" blue="0.87853282690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="r9x-bv-Tfa"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Endereço" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUB-SZ-hxs">
-                                                <rect key="frame" x="20.666666666666657" y="389.66666666666669" width="372.66666666666674" height="18"/>
+                                                <rect key="frame" x="20.5" y="390" width="373" height="17.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ex.: Rua das Hortências, 123" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KaQ-l2-RYj">
-                                                <rect key="frame" x="20.666666666666657" y="412.66666666666669" width="372.66666666666674" height="53.666666666666686"/>
+                                                <rect key="frame" x="20.5" y="412.5" width="373" height="54"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -609,20 +610,20 @@
                                                 </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="niI-QC-XYr">
-                                                <rect key="frame" x="20.666666666666657" y="467.33333333333337" width="372.66666666666674" height="2"/>
+                                                <rect key="frame" x="20.5" y="467.5" width="373" height="2"/>
                                                 <color key="backgroundColor" red="0.8664550781" green="0.87058556080000005" blue="0.87461173530000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="z54-xa-4ti"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cidade" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afx-3u-ib8">
-                                                <rect key="frame" x="20.666666666666657" y="484.33333333333337" width="372.66666666666674" height="18"/>
+                                                <rect key="frame" x="20.5" y="484.5" width="373" height="18"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Selecione" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gpc-Qs-dnY">
-                                                <rect key="frame" x="20.666666666666657" y="507.33333333333343" width="372.66666666666674" height="53.666666666666686"/>
+                                                <rect key="frame" x="20.5" y="507.5" width="373" height="53.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -633,13 +634,13 @@
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CEP" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7RV-50-hbJ">
-                                                <rect key="frame" x="20.666666666666657" y="579" width="372.66666666666674" height="18"/>
+                                                <rect key="frame" x="20.5" y="579" width="373" height="18"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite seu CEP" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DdU-ik-n7R">
-                                                <rect key="frame" x="20.666666666666657" y="602" width="372.66666666666674" height="53.666666666666629"/>
+                                                <rect key="frame" x="20.5" y="602" width="373" height="54"/>
                                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="continue" textContentType="postal-code"/>
@@ -649,27 +650,27 @@
                                                 </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nhe-aS-OOo">
-                                                <rect key="frame" x="20.666666666666657" y="656.66666666666663" width="372.66666666666674" height="2"/>
+                                                <rect key="frame" x="20.5" y="657" width="373" height="2"/>
                                                 <color key="backgroundColor" red="0.91362601519999997" green="0.91378277539999997" blue="0.91361618040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="LU2-3G-5mV"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bZ-lJ-2qF">
-                                                <rect key="frame" x="20.666666666666657" y="562" width="372.66666666666674" height="2"/>
+                                                <rect key="frame" x="20.5" y="562" width="373" height="2"/>
                                                 <color key="backgroundColor" red="0.87048107389999996" green="0.87056988479999997" blue="0.87456589939999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="FfT-P5-LeP"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complemento" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Jn-uf-ikW">
-                                                <rect key="frame" x="20.666666666666657" y="673.66666666666663" width="372.66666666666674" height="18"/>
+                                                <rect key="frame" x="20.5" y="674" width="373" height="17.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="0.39253824949999999" green="0.40316331389999999" blue="0.45098674300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Complemento (Opcional)" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hIA-zA-bLa" userLabel="Complement TextField">
-                                                <rect key="frame" x="20.666666666666657" y="696.66666666666663" width="372.66666666666674" height="53.666666666666629"/>
+                                                <rect key="frame" x="20.5" y="696.5" width="373" height="54"/>
                                                 <color key="textColor" red="0.39248406889999998" green="0.4032950401" blue="0.4431427121" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -679,14 +680,14 @@
                                                 </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdr-mN-XeN">
-                                                <rect key="frame" x="20.666666666666657" y="751.33333333333337" width="372.66666666666674" height="2"/>
+                                                <rect key="frame" x="20.5" y="751.5" width="373" height="2"/>
                                                 <color key="backgroundColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="JNu-mM-oSX"/>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQL-zN-L5M">
-                                                <rect key="frame" x="48.333333333333343" y="772.33333333333337" width="317.33333333333326" height="53"/>
+                                                <rect key="frame" x="48.5" y="772.5" width="317" height="53"/>
                                                 <color key="backgroundColor" red="0.38467586040000001" green="0.097716085610000003" blue="0.15748378630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 <state key="normal" title="Próximo">
@@ -703,7 +704,7 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tun-Bw-N4I">
-                                                <rect key="frame" x="20.666666666666657" y="278" width="372.66666666666674" height="2"/>
+                                                <rect key="frame" x="20.5" y="278" width="373" height="2"/>
                                                 <color key="backgroundColor" red="0.87048107389999996" green="0.87056988479999997" blue="0.87456589939999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                         </subviews>
@@ -876,20 +877,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adicione fotos do seu espaço" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Yf-tV-XAG">
-                                <rect key="frame" x="15" y="112" width="372.66666666666669" height="116.33333333333331"/>
+                                <rect key="frame" x="15" y="112" width="372.5" height="116.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84r-ja-z2W">
-                                <rect key="frame" x="15" y="233.33333333333334" width="372.66666666666669" height="107.66666666666666"/>
+                                <rect key="frame" x="15" y="233.5" width="372.5" height="107.5"/>
                                 <string key="text">As fotos ajudam os hóspedes a imaginarem como é ficar na sua acomodação. Você pode começar com uma foto e adicionar outras depois de publicar.</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7d-eY-IXf" customClass="RoundedBorderButton" customModule="SuCasa" customModuleProvider="target">
-                                <rect key="frame" x="20.666666666666657" y="351" width="372.66666666666674" height="53.666666666666686"/>
+                                <rect key="frame" x="20.5" y="351" width="373" height="54"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <state key="normal" title="Adicionar Fotos">
@@ -908,7 +909,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjP-vQ-Wbf">
-                                <rect key="frame" x="48.333333333333343" y="792" width="317.33333333333326" height="55"/>
+                                <rect key="frame" x="48.5" y="792" width="317" height="55"/>
                                 <color key="backgroundColor" red="0.38467586040000001" green="0.097716085610000003" blue="0.15748378630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qjP-vQ-Wbf" secondAttribute="height" multiplier="5.76" id="v2S-yD-FNV"/>
@@ -927,7 +928,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fotos Adicionadas!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0f-hj-HUu">
-                                <rect key="frame" x="62" y="409.66666666666669" width="290" height="32.333333333333314"/>
+                                <rect key="frame" x="62" y="410" width="290" height="32"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -998,25 +999,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dê um título ao seu espaço" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PMM-QG-wo0">
-                                <rect key="frame" x="15" y="112" width="372.66666666666669" height="81.666666666666686"/>
+                                <rect key="frame" x="15" y="112" width="372.5" height="82"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Atraia os hóspedes com um título de anúncio que destaque o que há de especial em sua acomodação." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fhp-49-kgx">
-                                <rect key="frame" x="20.666666666666657" y="201.66666666666666" width="372.66666666666674" height="64.333333333333343"/>
+                                <rect key="frame" x="20.5" y="202" width="373" height="64.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DpX-p8-uOh">
-                                <rect key="frame" x="20.666666666666657" y="286" width="372.66666666666674" height="20.333333333333314"/>
+                                <rect key="frame" x="20.5" y="286.5" width="373" height="20.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Adicione seu título" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2OF-4o-c46">
-                                <rect key="frame" x="20.666666666666657" y="316.33333333333331" width="372.66666666666674" height="53.666666666666686"/>
+                                <rect key="frame" x="20.5" y="317" width="373" height="54"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -1027,20 +1028,20 @@
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ON9-sY-BSG">
-                                <rect key="frame" x="20.666666666666657" y="371" width="372.66666666666674" height="2"/>
+                                <rect key="frame" x="20.5" y="372" width="373" height="2"/>
                                 <color key="backgroundColor" red="0.79611998799999995" green="0.79994738099999996" blue="0.80392277239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="678-u1-StP"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descreva as regras da casa" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVA-5z-Cif">
-                                <rect key="frame" x="20.666666666666657" y="393" width="372.66666666666674" height="27"/>
+                                <rect key="frame" x="20.5" y="394" width="373" height="26.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Adicione suas regras" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kWp-ma-xGL">
-                                <rect key="frame" x="20.666666666666657" y="430" width="372.66666666666674" height="53.666666666666686"/>
+                                <rect key="frame" x="20.5" y="430.5" width="373" height="54"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.38853228090000003" green="0.40343052149999997" blue="0.44706541300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -1051,14 +1052,14 @@
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2mN-MO-iNZ">
-                                <rect key="frame" x="20.666666666666657" y="484.66666666666669" width="372.66666666666674" height="2"/>
+                                <rect key="frame" x="20.5" y="485.5" width="373" height="2"/>
                                 <color key="backgroundColor" red="0.79611998799999995" green="0.79994738099999996" blue="0.80392277239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="6Xa-GK-XoV"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="db6-bB-vKm">
-                                <rect key="frame" x="49.666666666666657" y="767.33333333333337" width="314.66666666666674" height="54.666666666666629"/>
+                                <rect key="frame" x="49.5" y="767.5" width="315" height="54.5"/>
                                 <color key="backgroundColor" red="0.38467586040000001" green="0.097716085610000003" blue="0.15748378630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="db6-bB-vKm" secondAttribute="height" multiplier="5.76" id="Gei-ir-DPw"/>
@@ -1155,25 +1156,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mensalidade" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDs-Oc-clO">
-                                <rect key="frame" x="20.666666666666657" y="112.00000000000001" width="372.66666666666674" height="40.666666666666671"/>
+                                <rect key="frame" x="20.5" y="112" width="373" height="41"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Defina um valor mínimo que seu hóspede possa pagar e qual o máximo de tempo que  ele pode ficar." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kia-77-vts">
-                                <rect key="frame" x="20.666666666666657" y="172.66666666666666" width="372.66666666666674" height="64.333333333333343"/>
+                                <rect key="frame" x="20.5" y="173" width="373" height="64.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mensalidade Mínima" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7x-Eo-CVu">
-                                <rect key="frame" x="20.666666666666657" y="257" width="372.66666666666674" height="20.666666666666686"/>
+                                <rect key="frame" x="20.5" y="257.5" width="373" height="20.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Adicione o valor R$" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dFC-DT-yez">
-                                <rect key="frame" x="20.666666666666657" y="282.66666666666669" width="372.66666666666674" height="53.666666666666686"/>
+                                <rect key="frame" x="20.5" y="283" width="373" height="54"/>
                                 <color key="textColor" red="0.39627143739999998" green="0.4035708308" blue="0.43529903889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="continue"/>
@@ -1183,20 +1184,20 @@
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R7u-AL-4CV">
-                                <rect key="frame" x="20.666666666666657" y="337.33333333333331" width="372.66666666666674" height="2"/>
+                                <rect key="frame" x="20.5" y="338" width="373" height="2"/>
                                 <color key="backgroundColor" red="0.85490775109999995" green="0.85489159820000005" blue="0.85490256549999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="0qw-q8-Lke"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Período Máximo" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ju-KO-ctd">
-                                <rect key="frame" x="20.666666666666657" y="359.33333333333331" width="372.66666666666674" height="20.333333333333314"/>
+                                <rect key="frame" x="20.5" y="360" width="373" height="20.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Adicione a quantidade de meses" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nQ7-2p-Ixq">
-                                <rect key="frame" x="20.666666666666657" y="384.66666666666669" width="372.66666666666674" height="54"/>
+                                <rect key="frame" x="20.5" y="385.5" width="373" height="53.5"/>
                                 <color key="textColor" red="0.39627143739999998" green="0.4035708308" blue="0.43529903889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="continue"/>
@@ -1206,14 +1207,14 @@
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uS3-gf-RZS">
-                                <rect key="frame" x="20.666666666666657" y="439.66666666666669" width="372.66666666666674" height="2"/>
+                                <rect key="frame" x="20.5" y="440" width="373" height="2"/>
                                 <color key="backgroundColor" red="0.85490775109999995" green="0.85489159820000005" blue="0.85490256549999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="TFx-hH-NVY"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSH-to-Q74">
-                                <rect key="frame" x="48.333333333333343" y="767" width="317.33333333333326" height="55"/>
+                                <rect key="frame" x="48.5" y="767" width="317" height="55"/>
                                 <color key="backgroundColor" red="0.34842604399999999" green="0.1173097119" blue="0.1647070944" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jSH-to-Q74" secondAttribute="height" multiplier="5.76" id="No9-TM-iC7"/>
@@ -1313,13 +1314,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parabéns, seu anúncio foi criado com sucesso!" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyx-zG-Oje">
-                                <rect key="frame" x="41.333333333333343" y="318.66666666666669" width="331.33333333333326" height="122.66666666666669"/>
+                                <rect key="frame" x="41.5" y="318.5" width="331" height="123"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaS-US-KkY">
-                                <rect key="frame" x="350.33333333333331" y="107.00000000000001" width="44.666666666666686" height="44.666666666666671"/>
+                                <rect key="frame" x="350" y="107" width="45" height="45"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="TaS-US-KkY" secondAttribute="height" multiplier="1:1" id="Jdb-JE-hUK"/>

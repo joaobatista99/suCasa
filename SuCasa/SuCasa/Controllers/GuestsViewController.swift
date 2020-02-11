@@ -32,6 +32,7 @@ class GuestsViewController: UIViewController {
     @IBOutlet weak var totalGuestsHeight: NSLayoutConstraint!
     @IBOutlet weak var scrollHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var howManyGuestsConstraint: NSLayoutConstraint!
+    @IBOutlet weak var nextButtonTopViewConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var viewTotalGuests: UIView!
     @IBOutlet weak var viewNumberRooms: UIView!
@@ -64,18 +65,20 @@ class GuestsViewController: UIViewController {
             
         
             if TitleGuestsLabel.font.pointSize >= 40.0 {
-                descriptionGuestsHeight = descriptionGuestsHeight.changeMultiplier(multiplier: 0.23)
-                numberOfRoomsHeight = numberOfRoomsHeight.changeMultiplier(multiplier: 0.08)
-                numberOfBedsHeight =  numberOfBedsHeight.changeMultiplier(multiplier: 0.08)
-                totalGuestsHeight = totalGuestsHeight.changeMultiplier(multiplier: 0.04)
-                howManyGuestsConstraint = howManyGuestsConstraint.changeMultiplier(multiplier: 0.15)
-                scrollHeightConstraint = scrollHeightConstraint.changeMultiplier(multiplier: 1.8)
+                descriptionGuestsHeight = descriptionGuestsHeight.changeMultiplier(multiplier: 0.3)
+                numberOfRoomsHeight = numberOfRoomsHeight.changeMultiplier(multiplier: 0.055)
+                numberOfBedsHeight =  numberOfBedsHeight.changeMultiplier(multiplier: 0.055)
+                totalGuestsHeight = totalGuestsHeight.changeMultiplier(multiplier: 0.055)
+                howManyGuestsConstraint = howManyGuestsConstraint.changeMultiplier(multiplier: 0.12)
+                nextButtonTopViewConstraint.constant = 100
+                scrollHeightConstraint = scrollHeightConstraint.changeMultiplier(multiplier: 1.5)
             } else {
-                descriptionGuestsHeight = descriptionGuestsHeight.changeMultiplier(multiplier: 0.09)
-                numberOfRoomsHeight = numberOfRoomsHeight.changeMultiplier(multiplier: 0.03)
-                numberOfBedsHeight =  numberOfBedsHeight.changeMultiplier(multiplier: 0.03)
-                totalGuestsHeight = totalGuestsHeight.changeMultiplier(multiplier: 0.03)
-                howManyGuestsConstraint = howManyGuestsConstraint.changeMultiplier(multiplier: 0.15)
+                descriptionGuestsHeight = descriptionGuestsHeight.changeMultiplier(multiplier: 0.08)
+                numberOfRoomsHeight = numberOfRoomsHeight.changeMultiplier(multiplier: 0.025)
+                numberOfBedsHeight =  numberOfBedsHeight.changeMultiplier(multiplier: 0.025)
+                totalGuestsHeight = totalGuestsHeight.changeMultiplier(multiplier: 0.025)
+                howManyGuestsConstraint = howManyGuestsConstraint.changeMultiplier(multiplier: 0.12)
+                nextButtonTopViewConstraint.constant = 169
                 scrollHeightConstraint = scrollHeightConstraint.changeMultiplier(multiplier: 1)
 
             }
@@ -87,7 +90,7 @@ class GuestsViewController: UIViewController {
                 TitleGuestsLabel.font  =  TitleGuestsLabel.font.preferredFont(withTextStyle: .largeTitle, maxSize:33.0)
                 descriptionGuestsLabel.font  = descriptionGuestsLabel.font.preferredFont(withTextStyle: .headline, maxSize: 27.0)
                 totalGuestsLabel.font = totalGuestsLabel.font.preferredFont(withTextStyle: .headline, maxSize:27.0)
-                numberOfRoomsLabel.font = numberOfRoomsLabel.font.preferredFont(withTextStyle: .headline, maxSize:27.0)
+                numberOfRoomsLabel.font = numberOfRoomsLabel.font.preferredFont(withTextStyle: .headline, maxSize:25.0)
                 numberOfBedsLabel.font = numberOfBedsLabel.font?.preferredFont(withTextStyle: .headline, maxSize:27.0)
                 totalGuestsTextField.font = totalGuestsTextField.font?.preferredFont(withTextStyle: .body, maxSize: 27.0)
                 bedroomNumberTextField.font = bedroomNumberTextField.font?.preferredFont(withTextStyle: .body, maxSize: 27.0)
@@ -95,18 +98,21 @@ class GuestsViewController: UIViewController {
                 nextButton.titleLabel?.font = nextButton.titleLabel?.font.preferredFont(withTextStyle: .title2, maxSize:33.0)
                 
                 if TitleGuestsLabel.font.pointSize >= 33.0 {
-                    scrollHeightConstraint = scrollHeightConstraint.changeMultiplier(multiplier: 2.5)
-                    descriptionGuestsHeight = descriptionGuestsHeight.changeMultiplier(multiplier: 0.19)
-                    numberOfRoomsHeight = numberOfRoomsHeight.changeMultiplier(multiplier: 0.08)
-                    numberOfBedsHeight =  numberOfBedsHeight.changeMultiplier(multiplier: 0.08)
-                    totalGuestsHeight = totalGuestsHeight.changeMultiplier(multiplier: 0.08)
-                    howManyGuestsConstraint = howManyGuestsConstraint.changeMultiplier(multiplier: 0.12)
+                    scrollHeightConstraint = scrollHeightConstraint.changeMultiplier(multiplier: 2.0)
+                    descriptionGuestsHeight = descriptionGuestsHeight.changeMultiplier(multiplier: 0.32)
+                    numberOfRoomsHeight = numberOfRoomsHeight.changeMultiplier(multiplier: 0.11)
+                    numberOfBedsHeight =  numberOfBedsHeight.changeMultiplier(multiplier: 0.11)
+                    totalGuestsHeight = totalGuestsHeight.changeMultiplier(multiplier: 0.11)
+                    howManyGuestsConstraint = howManyGuestsConstraint.changeMultiplier(multiplier: 0.18)
+                    nextButtonTopViewConstraint.constant = 20
                 } else {
-                    descriptionGuestsHeight = descriptionGuestsHeight.changeMultiplier(multiplier: 0.09)
-                    numberOfRoomsHeight = numberOfRoomsHeight.changeMultiplier(multiplier: 0.03)
-                    numberOfBedsHeight =  numberOfBedsHeight.changeMultiplier(multiplier: 0.03)
-                    totalGuestsHeight = totalGuestsHeight.changeMultiplier(multiplier: 0.03)
+                    scrollHeightConstraint = scrollHeightConstraint.changeMultiplier(multiplier: 1.6)
+                    descriptionGuestsHeight = descriptionGuestsHeight.changeMultiplier(multiplier: 0.15)
+                    numberOfRoomsHeight = numberOfRoomsHeight.changeMultiplier(multiplier: 0.06)
+                    numberOfBedsHeight =  numberOfBedsHeight.changeMultiplier(multiplier: 0.06)
+                    totalGuestsHeight = totalGuestsHeight.changeMultiplier(multiplier: 0.06)
                     howManyGuestsConstraint = howManyGuestsConstraint.changeMultiplier(multiplier: 0.15)
+                    nextButtonTopViewConstraint.constant = 36
                 }
         }
         
