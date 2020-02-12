@@ -139,15 +139,15 @@
 "%d Lugar" = "%d Lugar";
 "%d Quarto" = "%d Quarto";
 "%d mês" = "%d mês";
-"em média/mês" = "em média por mês";
+"em média/mês" = "em média/mês";
 "Contato" = "Contato";
 "ContatoHint" = "Entre em contato";
 "ImagensLabel" = "Imagens da propriedade";
 "InformaçãoDoProprietário" = "Informações do Proprietário.";
 "InformaçãoDoImóvel" = "Informação Do Imóvel.";
 "PeríodoMáximodeEstadia" = "Período Máximo de Estadia.";
-
-
+"anos" = "anos";
+"Idiomas" = "Idiomas : Português, Espanhol, Francês";
 
 //MARK: PickerOptions
 "Apartamento" = "Apartamento";

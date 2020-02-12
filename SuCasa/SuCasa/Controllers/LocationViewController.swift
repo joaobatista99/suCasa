@@ -180,23 +180,14 @@ class LocationViewController: UIViewController {
     }
     
     func setLocalizedStrings(){
-        //"Próximo" = "Next";
         nextButton.setTitle(NSLocalizedString("Próximo", comment: "botão de proximo"), for: .normal)
-        //"Onde fica sua acomodação?" = "Where is your accomodation located?"
         locationTitleLabel.text = NSLocalizedString("Onde fica sua acomodação?", comment: "")
-        //"Somente as ONGs próximas receberão sua localização exata para poder instruir os insteressados." = "Only nearby NGOs will receive your exact location in order to instruct those interested.";
         locationDescriptionLabel.text = NSLocalizedString("Somente as ONGs próximas receberão sua localização exata para poder instruir os insteressados.", comment: "")
-        //"Usar minha localização atual" = "Use my current location";
-        useCurrentLocButton.setTitle(NSLocalizedString("Usar minha localização atual", comment: ""), for: .normal)  
-        //"País/Região" =  "Country/Region";
+        useCurrentLocButton.setTitle(NSLocalizedString("Usar minha localização atual", comment: ""), for: .normal)
         countryLabel.text = NSLocalizedString("País/Região", comment: "")
-        //"Endereço" = "Adress";
         adressLabel.text = NSLocalizedString("Endereço", comment: "")
-        //"Cidade" = "City";
         cityLabel.text =  NSLocalizedString("Cidade", comment: "")
-        //"CEP" = "ZIP code";
         ZIPLabel.text = NSLocalizedString("CEP", comment: "")
-        //"Complemento" = "Complement";
         complementLabel.text = NSLocalizedString("Complemento", comment: "")
     }
     
@@ -239,8 +230,6 @@ class LocationViewController: UIViewController {
         toolbar.sizeToFit()
         
         self.postalCodeTextField.inputAccessoryView = toolbar
-        
-        
     }
     
     //dismiss keyboard if users touches screen
@@ -307,21 +296,15 @@ class LocationViewController: UIViewController {
                         self.nextButton.isHidden = false
                     }
                 }
-                
             }
-            
         }
     }
     
     @IBAction func proceedToNextView(_ sender: Any) {
         property.address    = adressTextField.text!
-        
         property.country    = countryTextField.text!
-        
         property.city       = cityTextField.text!
-        
         property.postalCode = Int(postalCodeTextField.text!)!
-        
         property.complement = complementTextField.text!
     }
     
@@ -369,16 +352,13 @@ class LocationViewController: UIViewController {
         }
     }
     
-    
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addPhotos",
             let locationVC = segue.destination as? AddPhotosViewController {
             locationVC.property = self.property
         }
     }
-    
-    
     
     //function to check if textfields are populated
     func isTextFieldsFilled() -> Bool{
@@ -400,7 +380,6 @@ class LocationViewController: UIViewController {
         return true
     }
 }
-
 
 extension LocationViewController : UITextFieldDelegate {
     

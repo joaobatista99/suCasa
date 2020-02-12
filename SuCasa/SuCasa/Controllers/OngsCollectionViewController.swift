@@ -131,8 +131,7 @@ extension OngsCollectionViewController :  UICollectionViewDataSource, UICollecti
         
     }
     
-    
-    
+
     //setting line space between cells
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         

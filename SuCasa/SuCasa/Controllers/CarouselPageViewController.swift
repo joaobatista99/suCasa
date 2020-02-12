@@ -70,8 +70,6 @@ class CarouselPageViewController: UIPageViewController {
                 }
             }
         }
-        
-        
     }
     
     fileprivate func populateItems(imageUrl: URL, completionHandler: @escaping(_ photos: UIImageView) -> Void) {
@@ -90,9 +88,6 @@ class CarouselPageViewController: UIPageViewController {
                                 completionHandler(image)
                             }
         }
-        
-        
-        
     }
     
     fileprivate func createCarouselItemControler(image: UIImage) -> UIViewController {
@@ -102,8 +97,6 @@ class CarouselPageViewController: UIPageViewController {
         
         return newController
     }
-    
-    
 }
 
 extension CarouselPageViewController: UIPageViewControllerDataSource {
@@ -146,8 +139,6 @@ extension CarouselPageViewController: UIPageViewControllerDataSource {
         
         return items[nextIndex]
     }
-    
-    
 }
 
 

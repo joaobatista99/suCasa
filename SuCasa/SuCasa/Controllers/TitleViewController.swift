@@ -72,8 +72,6 @@ class TitleViewController: UIViewController {
             }else{
                 rulesHeightConstraint = rulesHeightConstraint.changeMultiplier(multiplier: 0.03)
             }
-            
-            
         }
     }
     
@@ -102,8 +100,7 @@ class TitleViewController: UIViewController {
         nextButton.isHidden = true
         
         self.navigationController?.navigationBar.tintColor = Colors.buttonColor
-        
-        
+ 
     }
     
     func setLocalizedStrings(){

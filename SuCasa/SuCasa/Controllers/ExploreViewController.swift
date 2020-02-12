@@ -162,11 +162,12 @@ class ExploreViewController: UIViewController {
         
         self.distance = LocationUtil.shared.distanceBetweenCoordinates(placeLoc: self.propertyLocation)
         
-        self.distance = self.distance / 1000
         
+        
+        let distanceInMeters = Measurement(value: self.distance, unit: UnitLength.meters)
         let distanceFormatter = MeasurementFormatter()
         distanceFormatter.locale = Locale.current
-        let distanceLocalized = distanceFormatter.string(for: self.distance)
+        let distanceLocalized = distanceFormatter.string(for: distanceInMeters)
         
         let distanceString = distanceLocalized ?? String(format: "%.1f", self.distance) + "Km"
         
@@ -301,7 +302,15 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             let currencyFormatter = NumberFormatter()
             currencyFormatter.usesGroupingSeparator = true
             currencyFormatter.numberStyle = .currency
-            currencyFormatter.locale = Locale.current
+            
+            if property.country.caseInsensitiveCompare("Estados Unidos") == .orderedSame || property.country.caseInsensitiveCompare("United States") == . orderedSame {
+                currencyFormatter.locale = Locale(identifier: "en_US")
+            }
+                
+            else if property.country.caseInsensitiveCompare("Brasil") == .orderedSame || property.country.caseInsensitiveCompare("Brazil") == . orderedSame  {
+                currencyFormatter.locale = Locale(identifier: "pt_BR")
+            }
+            
             let priceString = currencyFormatter.string(from: NSNumber(value: property.price))!
             
             let formatString = NSLocalizedString("Disponível para %d pessoas",
@@ -359,7 +368,14 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             let currencyFormatter = NumberFormatter()
             currencyFormatter.usesGroupingSeparator = true
             currencyFormatter.numberStyle = .currency
-            currencyFormatter.locale = Locale.current
+            
+            var localeIdentifier = "pt_BR"
+            if property.country.caseInsensitiveCompare("Estados Unidos") == .orderedSame || property.country.caseInsensitiveCompare("United States") == . orderedSame {
+                localeIdentifier = "en_US"
+            }
+            
+            currencyFormatter.locale = Locale(identifier: localeIdentifier)
+            
             let priceString = currencyFormatter.string(from: NSNumber(value: property.price))!
             
             let formatString = NSLocalizedString("Disponível para %d pessoas",

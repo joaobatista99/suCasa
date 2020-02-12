@@ -15,18 +15,5 @@ class TabBarViewController: UITabBarController {
         self.tabBar.items![0].title = NSLocalizedString("Explore", comment: "Explore - tab")
         self.tabBar.items![1].title = NSLocalizedString("Aluguéis", comment: "Aluguéis - tab")
         self.tabBar.items![2].title = NSLocalizedString("Perfil", comment: "Perfil - tab")
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

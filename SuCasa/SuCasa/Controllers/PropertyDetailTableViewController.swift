@@ -28,9 +28,9 @@ class PropertyDetailTableViewController: UITableViewController {
     
     let screenSize : CGRect = UIScreen.main.bounds
     
-    var name = "José Alfredo 36 anos"
+    var name = "José Alfredo 36 " + NSLocalizedString("anos", comment: "")
     var info = "Gosto de viajar, conhecer novas pessoas e culturas. Tenho dois cachorros, Buck e Gula, muito dóceis e também adoram fazer novas amizades."
-    var languages = "Idiomas: Português, Espanhol, Francês"
+    var languages = NSLocalizedString("Idiomas", comment: "")     
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
@@ -45,7 +45,6 @@ class PropertyDetailTableViewController: UITableViewController {
         self.tableView.delegate = self
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight = 250
-        
         
         if let property = self.property {
             self.mainTitle.text = property.title
@@ -63,18 +62,15 @@ class PropertyDetailTableViewController: UITableViewController {
             monthsCell.accessibilityLabel = NSLocalizedString("PeríodoMáximodeEstadia", comment: "") + String.localizedStringWithFormat(formattedStringMonths, property.monthsAvailable)
             
             self.fixDynamicFonts()
-            
         }
     }
     
     func fixDynamicFonts(){
-        
         mainTitle.font = mainTitle.font.preferredFont(withTextStyle: .body, maxSize: 23.0)
         nameAndAgeLabel.font = nameAndAgeLabel.font.preferredFont(withTextStyle: .body, maxSize:23.0)
         descriptionLabel.font = descriptionLabel.font.preferredFont(withTextStyle: .body, maxSize:23.0)
         languagesLabel.font = languagesLabel.font.preferredFont(withTextStyle: .body, maxSize: 23.0)
         months.font = months.font.preferredFont(withTextStyle: .body, maxSize:23.0)
-        
     }
     
     

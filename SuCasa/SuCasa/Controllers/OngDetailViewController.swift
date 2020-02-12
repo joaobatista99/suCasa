@@ -44,7 +44,6 @@ class OngDetailViewController: UIViewController {
         setLocalizedStrings()
         
         self.navigationController?.navigationBar.tintColor = Colors.buttonColor
-        
     }
     
     func fixDynamicFonts(){
@@ -68,8 +67,6 @@ class OngDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        
         tabBarController?.tabBar.isHidden = true
     }
     

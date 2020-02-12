@@ -132,13 +132,15 @@
 "%d Lugar" = "%d Place";
 "%d Quarto"= "%d Room";
 "%d mês" = "%d month";
-"em média/mês" = "average per month";
+"em média/mês" = "average/month";
 "Contato" = "Contact";
 "ContatoHint" = "Contact";
 "ImagensLabel" = "Property images";
 "InformaçãoDoProprietário" = "Landlord Informations.";
 "InformaçãoDoImóvel" = "Property Information.";
 "PeríodoMáximodeEstadia" = "Maximum Stay Period.";
+"anos" = "years old";
+"Idiomas" = "Languages : Portuguese, Spanish, French";
 
 //MARK: PickerOptions
 "Apartamento" = "Apartment";

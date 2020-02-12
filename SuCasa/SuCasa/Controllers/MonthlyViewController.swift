@@ -46,8 +46,6 @@ class MonthlyViewController: UIViewController {
     func fixDynamicFonts(){
         
         if screenSize.height >= 667.0 {
-            
-           
             titleLabel.font  =  titleLabel.font.preferredFont(withTextStyle: .largeTitle, maxSize: 40.0)
             monthlyLabel.font  =  monthlyLabel.font.preferredFont(withTextStyle: .headline, maxSize: 35.0)
             periodLabel.font  =  periodLabel.font.preferredFont(withTextStyle: .headline, maxSize: 35.0)
@@ -62,10 +60,8 @@ class MonthlyViewController: UIViewController {
                 monthlyHeightConstraint = monthlyHeightConstraint.changeMultiplier(multiplier: 0.03)
                 periodHeightConstraint = periodHeightConstraint.changeMultiplier(multiplier: 0.03)
             }
-            
         }
         else if screenSize.height < 667.0 {
-           
             titleLabel.font  =  titleLabel.font.preferredFont(withTextStyle: .largeTitle, maxSize: 33.0)
             monthlyLabel.font  =  monthlyLabel.font.preferredFont(withTextStyle: .headline, maxSize: 23.0)
             periodLabel.font  =  periodLabel.font.preferredFont(withTextStyle: .headline, maxSize: 23.0)
@@ -80,11 +76,7 @@ class MonthlyViewController: UIViewController {
                 monthlyHeightConstraint = monthlyHeightConstraint.changeMultiplier(multiplier: 0.03)
                 periodHeightConstraint = periodHeightConstraint.changeMultiplier(multiplier: 0.03)
             }
-            
-            
         }
-        
-        
     }
     
     override func viewDidLoad() {
@@ -110,8 +102,6 @@ class MonthlyViewController: UIViewController {
         nextButton.isHidden = true
         
         self.navigationController?.navigationBar.tintColor = Colors.buttonColor
-        
-        
     }
     
     func setLocalizedStrings(){
@@ -141,9 +131,6 @@ class MonthlyViewController: UIViewController {
             self.notification.notificationOccurred(.success)
             self.performSegue(withIdentifier: "doneId", sender: self)
         }
-        
-        
-        
     }
     
     private func assignTextFieldsToProperty() {
@@ -179,7 +166,6 @@ class MonthlyViewController: UIViewController {
     
     /// This method will be called when the done button at the picker view has been pressed
     @objc func doneButton() {
-        
         //End editing will hide the keyboard
         self.view.endEditing(true)
     }
@@ -215,7 +201,6 @@ class MonthlyViewController: UIViewController {
         
         monsthsQuantity.inputAccessoryView = toolBar
         monthly.inputAccessoryView         = toolBar
-        
     }
     
     func isTextFieldsFilled() -> Bool{
@@ -258,8 +243,6 @@ class MonthlyViewController: UIViewController {
             break
         }
     }
-    
-    
 }
 
 extension MonthlyViewController: UITextFieldDelegate {
@@ -274,5 +257,4 @@ extension MonthlyViewController: UITextFieldDelegate {
         }
         return false
     }
-    
 }

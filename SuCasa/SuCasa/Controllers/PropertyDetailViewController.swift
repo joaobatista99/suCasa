@@ -45,8 +45,6 @@ class PropertyDetailViewController: UIViewController {
         self.propertyLocation = CLLocation(latitude: property.coordinates.latitude, longitude: property.coordinates.longitude)
         self.distance = LocationUtil.shared.distanceBetweenCoordinates(placeLoc: self.propertyLocation)
         
-        self.distance = self.distance/1000
-        
         self.navigationController?.navigationBar.tintColor = .white
         
         setupLocalization()
@@ -54,7 +52,6 @@ class PropertyDetailViewController: UIViewController {
         self.contactButton.accessibilityHint = NSLocalizedString("ContatoHint", comment: "")
         
         self.pageControl.accessibilityLabel = NSLocalizedString("ImagensLabel", comment: "")
-        
     }
     
     
@@ -69,17 +66,24 @@ class PropertyDetailViewController: UIViewController {
         let currencyFormatter = NumberFormatter()
         currencyFormatter.usesGroupingSeparator = true
         currencyFormatter.numberStyle = .currency
-        currencyFormatter.locale = Locale.current
+        
+        if property.country.caseInsensitiveCompare("Estados Unidos") == .orderedSame || property.country.caseInsensitiveCompare("United States") == . orderedSame {
+            currencyFormatter.locale = Locale(identifier: "en_US")
+        }
+        else if property.country.caseInsensitiveCompare("Brasil") == .orderedSame || property.country.caseInsensitiveCompare("Brazil") == . orderedSame  {
+            currencyFormatter.locale = Locale(identifier: "pt_BR")
+        }
+        
         let priceString = currencyFormatter.string(from: NSNumber(value: property.price))!
         
         self.priceLabel.text = priceString
         
         self.priceLabel.accessibilityLabel = priceString + NSLocalizedString("em média/mês", comment: "")
         
+        let distanceInMeters = Measurement(value: self.distance, unit: UnitLength.meters)
         let distanceFormatter = MeasurementFormatter()
         distanceFormatter.locale = Locale.current
-        let distanceLocalized = distanceFormatter.string(for: self.distance)
-        
+        let distanceLocalized = distanceFormatter.string(for: distanceInMeters)
         
         self.distanceLabel.text = NSLocalizedString("APROX. ", comment: "") + (distanceLocalized ?? String(format: "%.1f", self.distance) + "Km")
         
@@ -118,8 +122,6 @@ class PropertyDetailViewController: UIViewController {
             let ongsViewController = segue.destination as? OngsCollectionViewController {
             ongsViewController.ongs = self.ongs
         }
-        
-        
     }
     
     func fixDynamicFonts(){
@@ -142,14 +144,11 @@ class PropertyDetailViewController: UIViewController {
             constraintImageToPriceLabel.constant = 40.0
             constraintIconToView.constant = 50.0
         }
-        
-        
     }
     
     @IBAction func contactButton(_ sender: Any) {
         self.performSegue(withIdentifier: "showOngs", sender: self)
     }
-    
 }
 
 extension PropertyDetailViewController: CarouselPageViewControllerDelegate {
@@ -162,9 +161,6 @@ extension PropertyDetailViewController: CarouselPageViewControllerDelegate {
     func carouselPageViewController(carouselPageViewController: CarouselPageViewController, didUpdatePageIndex index: Int) {
         pageControl.currentPage = index
     }
-    
-    
-    
 }
 
 
