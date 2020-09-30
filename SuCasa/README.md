@@ -14,8 +14,8 @@ Com isso, fizemos mais alguns brainstorm e decidimos focar na parte de moradia, 
 
 
 ## Vídeo promocional 
-Veja o vídeo promocional que fizemos:
 
+Veja o vídeo promocional que fizemos:
 [![Promo SuCasa video](https://i.ytimg.com/vi/oWF0W7bP9ys/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCcUV3pusFuq5549gtau_nnMLdUfw)](https://www.youtube.com/watch?v=oWF0W7bP9ys)
 
 					Gravado e editado por toda a equipe 
