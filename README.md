@@ -14,7 +14,7 @@ Com isso, fizemos mais alguns brainstorm e decidimos focar na parte de moradia, 
 
 
 ## Vídeo promocional 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/oWF0W7bP9ys" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/oWF0W7bP9ys" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>
 
 					Gravado e editado por toda a equipe 
 
