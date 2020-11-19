@@ -1,5 +1,5 @@
 # SuCasa 🏠
-### Sucasa és mi casa
+### Mi casa és SuCasa
 
 Projeto desenvolvido para o Challenge de Empreendedorismo social do Apple Developer Academy pelos alunos Arthur Rodrigues, João Victor Batista, Lucas Gois e Gabriela Resende.
 
